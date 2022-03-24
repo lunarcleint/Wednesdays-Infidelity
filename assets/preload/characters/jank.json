@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Janc Idle instancia",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Janc Idle instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				185,
 				59
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Left instancia",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Janc Left instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-18,
 				56
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Rigth instancia",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Janc Rigth instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				32,
 				73
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Up instancia",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Janc Up instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				98,
 				-9
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "ikNode_",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ikNode_"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		-85,
 		195
 	],
-	"healthicon": "mouse",
+	"healthicon": "battered",
 	"flip_x": false,
 	"healthbar_colors": [
 		82,
@@ -70,8 +70,8 @@
 		81
 	],
 	"camera_position": [
-		-120,
-		30
+		-170,
+		-40
 	],
 	"sing_duration": 4,
 	"scale": 1

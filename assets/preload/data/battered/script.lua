@@ -4,7 +4,7 @@ function opponentNoteHit()
         setProperty('health', health- 0.01);
     end
 end
-local xx = 720;
+local xx = 520;
 local yy = 550;
 local xx2 = 820;
 local yy2 = 550;
