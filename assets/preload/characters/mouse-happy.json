@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Smiler mouse Idle"
+		},
+		{
+			"offsets": [
+				10,
+				60
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "risa",
+			"indices": [],
+			"name": "laugh"
+		},
+		{
+			"offsets": [
+				-38,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Smiler Mouse Up"
+		},
+		{
+			"offsets": [
+				-8,
+				46
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Smiler Mouse Rigth"
+		},
+		{
+			"offsets": [
+				-5,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Smiler Mouse Left"
+		},
+		{
+			"offsets": [
+				-32,
+				-129
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Smiler Mouse Down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Happy_Mouse",
+	"position": [
+		-215,
+		15
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		89,
+		81
+	],
+	"camera_position": [
+		-120,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

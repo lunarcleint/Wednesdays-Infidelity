@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pantalla.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pantalla0000" x="0" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0001" x="0" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0002" x="1920" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0003" x="1920" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0004" x="3840" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0005" x="3840" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0006" x="5760" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0007" x="5760" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0008" x="5760" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0009" x="5760" y="0" width="1920" height="1079"/>
+	<SubTexture name="pantalla0010" x="0" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0011" x="0" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0012" x="1920" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0013" x="1920" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0014" x="3840" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0015" x="3840" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0016" x="5760" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0017" x="5760" y="1079" width="1920" height="1079"/>
+	<SubTexture name="pantalla0018" x="0" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0019" x="0" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0020" x="1920" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0021" x="1920" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0022" x="3840" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0023" x="3840" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0024" x="3840" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0025" x="5760" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0026" x="5760" y="2158" width="1920" height="1079"/>
+	<SubTexture name="pantalla0027" x="0" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0028" x="0" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0029" x="1920" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0030" x="1920" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0031" x="1920" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0032" x="1920" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0033" x="3840" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0034" x="3840" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0035" x="5760" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0036" x="5760" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0037" x="3840" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0038" x="3840" y="3237" width="1920" height="1079"/>
+	<SubTexture name="pantalla0039" x="0" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0040" x="0" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0041" x="0" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0042" x="1920" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0043" x="1920" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0044" x="3840" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0045" x="3840" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0046" x="5760" y="4316" width="1920" height="1079"/>
+	<SubTexture name="pantalla0047" x="5760" y="4316" width="1920" height="1079"/>
+</TextureAtlas>

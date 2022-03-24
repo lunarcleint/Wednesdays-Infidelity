@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MOUSENOTE_assets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jeringa0000" x="0" y="0" width="159" height="170" frameX="0" frameY="-2" frameWidth="159" frameHeight="172"/>
+	<SubTexture name="jeringa0001" x="159" y="0" width="159" height="171" frameX="0" frameY="-1" frameWidth="159" frameHeight="172"/>
+	<SubTexture name="jeringa0002" x="318" y="0" width="159" height="172"/>
+	<SubTexture name="jeringa0003" x="0" y="172" width="159" height="169" frameX="0" frameY="-3" frameWidth="159" frameHeight="172"/>
+</TextureAtlas>

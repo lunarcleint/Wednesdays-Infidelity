@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SCREAMER.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SCREAMER instancia 10000" x="0" y="0" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10001" x="1918" y="0" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10002" x="3836" y="0" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10003" x="5754" y="0" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10004" x="0" y="1082" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10005" x="1918" y="1082" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10006" x="3836" y="1082" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10007" x="5754" y="1082" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10008" x="0" y="2164" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10009" x="1918" y="2164" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10010" x="3836" y="2164" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10011" x="5754" y="2164" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10012" x="0" y="3246" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10013" x="1918" y="3246" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10014" x="3836" y="3246" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10015" x="5754" y="3246" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10016" x="0" y="4328" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10017" x="1918" y="4328" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10018" x="3836" y="4328" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER instancia 10019" x="5754" y="4328" width="1918" height="1082"/>
+</TextureAtlas>

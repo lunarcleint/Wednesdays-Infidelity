@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				90
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Janc Idle instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				185,
+				59
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Janc Left instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				56
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Janc Rigth instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				32,
+				73
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Janc Up instancia",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				98,
+				-9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ikNode_",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Janc_Mouse",
+	"position": [
+		-85,
+		195
+	],
+	"healthicon": "mouse",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		89,
+		81
+	],
+	"camera_position": [
+		-120,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

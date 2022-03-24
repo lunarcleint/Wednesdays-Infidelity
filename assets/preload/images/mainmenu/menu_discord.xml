@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_discord.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="discord basic0000" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0001" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0002" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0003" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0004" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0005" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0006" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0007" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord basic0008" x="0" y="0" width="235" height="60"/>
+	<SubTexture name="discord white0000" x="0" y="60" width="234" height="59"/>
+	<SubTexture name="discord white0001" x="0" y="60" width="234" height="59"/>
+	<SubTexture name="discord white0002" x="0" y="60" width="234" height="59"/>
+</TextureAtlas>

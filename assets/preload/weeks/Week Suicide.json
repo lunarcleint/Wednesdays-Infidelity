@@ -1,0 +1,48 @@
+{
+	"storyName": "Is Suicide Really the Best Option...?",
+	"hideFreeplay": false,
+	"weekBackground": "suicide",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Wistfulness",
+			"face",
+			[
+				82,
+				89,
+				81
+			]
+		],
+		[
+			"Dejection",
+			"dad",
+			[
+				82,
+				89,
+				81
+			]
+		],
+		[
+			"Unknown Suffering",
+			"mouse",
+			[
+				82,
+				89,
+				81
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Custom Week"
+}

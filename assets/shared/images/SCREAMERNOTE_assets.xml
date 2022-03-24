@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SCREAMERNOTE_assets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue instancia 10000" x="0" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10001" x="0" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10002" x="163" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10003" x="326" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10004" x="326" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10005" x="489" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10006" x="652" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10007" x="652" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10008" x="815" y="0" width="163" height="159"/>
+	<SubTexture name="blue instancia 10009" x="815" y="0" width="163" height="159"/>
+	<SubTexture name="green instancia 10000" x="0" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10001" x="0" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10002" x="163" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10003" x="326" y="159" width="163" height="164"/>
+	<SubTexture name="green instancia 10004" x="326" y="159" width="163" height="164"/>
+	<SubTexture name="green instancia 10005" x="489" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10006" x="652" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10007" x="652" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10008" x="815" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="green instancia 10009" x="815" y="159" width="163" height="159" frameX="0" frameY="-5" frameWidth="163" frameHeight="164"/>
+	<SubTexture name="purple instancia 10000" x="0" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10001" x="0" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10002" x="160" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10003" x="320" y="323" width="160" height="166" frameX="-4" frameY="0" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10004" x="320" y="323" width="160" height="166" frameX="-4" frameY="0" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10005" x="480" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10006" x="640" y="323" width="164" height="163" frameX="0" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10007" x="640" y="323" width="164" height="163" frameX="0" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10008" x="804" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="purple instancia 10009" x="804" y="323" width="160" height="163" frameX="-4" frameY="-3" frameWidth="164" frameHeight="166"/>
+	<SubTexture name="red instancia 10000" x="0" y="489" width="163" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10001" x="0" y="489" width="163" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10002" x="163" y="489" width="163" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10003" x="326" y="489" width="162" height="169" frameX="0" frameY="0" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10004" x="326" y="489" width="162" height="169" frameX="0" frameY="0" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10005" x="488" y="489" width="170" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10006" x="658" y="489" width="174" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10007" x="658" y="489" width="174" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10008" x="832" y="489" width="162" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+	<SubTexture name="red instancia 10009" x="832" y="489" width="162" height="163" frameX="0" frameY="-6" frameWidth="174" frameHeight="169"/>
+</TextureAtlas>

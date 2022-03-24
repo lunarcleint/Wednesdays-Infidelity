@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-53,
+				-45
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "",
+			"fps": 24,
+			"name": "",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				12,
+				350
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				11,
+				371
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "BF NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				10,
+				370
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "BF NOTE DOWN0"
+		},
+		{
+			"offsets": [
+				13,
+				376
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "BF NOTE UP0"
+		},
+		{
+			"offsets": [
+				2,
+				373
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				17,
+				379
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": true,
+			"name": "BF NOTE LEFT MISS"
+		},
+		{
+			"offsets": [
+				5,
+				381
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": true,
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				14,
+				367
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": true,
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				228,
+				91
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": true,
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				-33,
+				-51
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": true,
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				16,
+				382
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": true,
+			"name": "BF NOTE RIGHT MISS"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF_FINAL",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-suicide",
+	"flip_x": true,
+	"healthbar_colors": [
+		125,
+		128,
+		142
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
