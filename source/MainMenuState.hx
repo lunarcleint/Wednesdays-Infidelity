@@ -85,79 +85,22 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var menuItem:FlxSprite = new FlxSprite(150, 50);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[0]);
-		menuItem.animation.addByPrefix('idle', optionShit[0] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[0] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 0;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
+		for (i in 0...optionShit.length) {
+			var menuItem:FlxSprite = new FlxSprite(150 + (30 * i), 50 + (70 * i));
+			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
+			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
+			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+			menuItem.animation.play('idle');
+			menuItem.ID = i;
+			menuItems.add(menuItem);
+			var scr:Float = (optionShit.length - 2) * 0.135;
+			if(optionShit.length < 4) scr = 0;
+			menuItem.scrollFactor.set(0, scr);
+			menuItem.antialiasing = true;
+		}
 
-		var menuItem:FlxSprite = new FlxSprite(180, 120);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[1]);
-		menuItem.animation.addByPrefix('idle', optionShit[1] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[1] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 1;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
-
-		var menuItem:FlxSprite = new FlxSprite(210, 190);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[2]);
-		menuItem.animation.addByPrefix('idle', optionShit[2] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[2] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 2;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
-
-		var menuItem:FlxSprite = new FlxSprite(240, 250);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[3]);
-		menuItem.animation.addByPrefix('idle', optionShit[3] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[3] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 3;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
-
-		var menuItem:FlxSprite = new FlxSprite(290, 330);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[4]);
-		menuItem.animation.addByPrefix('idle', optionShit[4] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[4] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 4;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
-
-		var menuItem:FlxSprite = new FlxSprite(330, 410);
-		menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[5]);
-		menuItem.animation.addByPrefix('idle', optionShit[5] + " basic", 24);
-		menuItem.animation.addByPrefix('selected', optionShit[5] + " white", 24);
-		menuItem.animation.play('idle');
-		menuItem.ID = 5;
-		menuItems.add(menuItem);
-		var scr:Float = (optionShit.length - 2) * 0.135;
-		if(optionShit.length < 4) scr = 0;
-		menuItem.scrollFactor.set(0, scr);
-		menuItem.antialiasing = true;
-
-		FlxG.camera.shake(0.001, 4000);
+		if (ClientPrefs.shake)
+			FlxG.camera.shake(0.001, 4000);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Wednesday's Infidelity PART 2", 12);
 		versionShit.scrollFactor.set();
