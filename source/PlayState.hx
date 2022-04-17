@@ -461,6 +461,7 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.characterName = 'bf-suicide';
 
 				var sexi:BGSprite = new BGSprite('backgrounds/VecindarioBG', -600, -200, 0.9, 0.9);
+				sexi.antialiasing = ClientPrefs.globalAntialiasing;
 				sexi.updateHitbox();
 				add(sexi);
 
@@ -481,6 +482,7 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.characterName = 'bf-suicide';
 
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
+				nosexi.antialiasing = ClientPrefs.globalAntialiasing;
 				nosexi.updateHitbox();
 				add(nosexi);
 
@@ -495,7 +497,9 @@ class PlayState extends MusicBeatState
 				daStatic.animation.play('static');
 			
 			case 'inferno': //Week Final
-				var inferno:BGSprite = new BGSprite('backgrounds/BG_INFERNO', -600, -200);
+				var inferno:BGSprite = new BGSprite('backgrounds/BG_INFERNO', -750, -450);
+				inferno.scale.set(1.4, 1.4);
+				inferno.antialiasing = ClientPrefs.globalAntialiasing;
 				inferno.updateHitbox();
 				add(inferno);
 
@@ -510,11 +514,13 @@ class PlayState extends MusicBeatState
 				daStatic.animation.play('static');
 
 			case 'susNightmare': //Week SUS
-				var inferno:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
-				inferno.updateHitbox();
-				add(inferno);
+				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
+				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
+				nightmare.updateHitbox();
+				add(nightmare);
 
 				gfSus = new BGSprite('backgrounds/gf-amogus', 1300, 400, ['amongus-gf']);
+				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
 				add(gfSus);
 
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
@@ -1421,6 +1427,10 @@ class PlayState extends MusicBeatState
 				// head bopping for bg characters on Mall
 				if(curStage == 'susNightmare') {
 					gfSus.dance(true);
+					pantalla.animation.play('idle');
+				}
+
+				if(curStage == 'inferno') {
 					pantalla.animation.play('idle');
 				}
 
@@ -4371,6 +4381,9 @@ class PlayState extends MusicBeatState
 
 			case 'susNightmare':
 				gfSus.dance(true);
+				pantalla.animation.play('idle');
+
+			case 'inferno':
 				pantalla.animation.play('idle');
 
 			case 'mall':
