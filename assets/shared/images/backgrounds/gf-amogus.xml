@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf-amogus.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="amongus-gf0000" x="0" y="0" width="422" height="404"/>
+	<SubTexture name="amongus-gf0001" x="0" y="0" width="422" height="404"/>
+	<SubTexture name="amongus-gf0002" x="422" y="0" width="422" height="404"/>
+	<SubTexture name="amongus-gf0003" x="422" y="0" width="422" height="404"/>
+	<SubTexture name="amongus-gf0004" x="0" y="404" width="422" height="404"/>
+	<SubTexture name="amongus-gf0005" x="0" y="404" width="422" height="404"/>
+	<SubTexture name="amongus-gf0006" x="422" y="404" width="422" height="404"/>
+	<SubTexture name="amongus-gf0007" x="422" y="404" width="422" height="404"/>
+	<SubTexture name="amongus-gf0008" x="0" y="808" width="422" height="404"/>
+	<SubTexture name="amongus-gf0009" x="0" y="808" width="422" height="404"/>
+	<SubTexture name="amongus-gf0010" x="422" y="808" width="422" height="404"/>
+	<SubTexture name="amongus-gf0011" x="422" y="808" width="422" height="404"/>
+	<SubTexture name="amongus-gf0012" x="0" y="1212" width="422" height="404"/>
+	<SubTexture name="amongus-gf0013" x="0" y="1212" width="422" height="404"/>
+</TextureAtlas>

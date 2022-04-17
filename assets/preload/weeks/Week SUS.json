@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"Neddle Mouse",
+			"sus",
+			[
+				28,
+				17,
+				29
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "sus",
+	"difficulties": "",
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"storyName": "SUS...?",
+	"weekName": "Week SUS",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

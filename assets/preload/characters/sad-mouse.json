@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				8,
 				61
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Sad Mouse Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Sad Mouse Down"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Sad Mouse Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Sad Mouse Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				25,
 				99
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Sad Mouse Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sad Mouse Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				42,
 				116
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Sad Mouse Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sad Mouse Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				2,
 				83
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Sad Mouse Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Sad Mouse Up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				150
 			],
-			"anim": "suicide",
+			"loop": true,
 			"fps": 24,
-			"name": "Suicide",
-			"indices": []
+			"anim": "suicide",
+			"indices": [],
+			"name": "Suicide"
 		}
 	],
 	"no_antialiasing": false,
@@ -73,12 +73,12 @@
 		-215,
 		65
 	],
-	"healthicon": "mouse",
+	"healthicon": "badend",
 	"flip_x": false,
 	"healthbar_colors": [
-		82,
-		89,
-		81
+		43,
+		46,
+		40
 	],
 	"camera_position": [
 		-120,

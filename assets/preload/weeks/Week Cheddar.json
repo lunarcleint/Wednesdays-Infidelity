@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"Cravings",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "cheddar",
+	"difficulties": "",
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"storyName": "Cheddar",
+	"weekName": "Week Cheddar",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

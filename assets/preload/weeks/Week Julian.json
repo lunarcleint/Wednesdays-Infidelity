@@ -1,0 +1,41 @@
+{
+	"storyName": "Brick of Friendship",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "julian",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Carnival in Toyland",
+			"julian",
+			[
+				132,
+				132,
+				132
+			]
+		],
+		[
+			"Spring March",
+			"julian",
+			[
+				132,
+				132,
+				132
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week Julian"
+}

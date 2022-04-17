@@ -1,5 +1,6 @@
 {
 	"storyName": "Is Suicide Really the Best Option...?",
+	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "suicide",
 	"weekBefore": "tutorial",
@@ -9,15 +10,11 @@
 		253
 	],
 	"startUnlocked": true,
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"Wistfulness",
-			"face",
+			"mouse-sad",
 			[
 				82,
 				89,
@@ -43,6 +40,11 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
-	"weekName": "Custom Week"
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week W.I"
 }

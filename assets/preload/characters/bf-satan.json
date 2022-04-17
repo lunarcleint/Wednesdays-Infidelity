@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				8
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				-28
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				24
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				65
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MISS LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				35,
+				24
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MISS DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				83
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MISS UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				42
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MISS RIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-5,
+				94
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "BF DEATH LOOP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				191
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "BF DEATH CPNFIRM",
+			"indices": []
+		},
+		{
+			"offsets": [
+				67,
+				93
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "BF DEATH FIRST"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/inferno_BF",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

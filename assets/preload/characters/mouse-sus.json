@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "M SUS IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-20
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "M SUS LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-190,
+				-60
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "M SUS DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				90
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "M SUS UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				100
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "M SUS RIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Mickey_sus_remastered",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "sus",
+	"flip_x": false,
+	"healthbar_colors": [
+		28,
+		17,
+		29
+	],
+	"camera_position": [
+		80,
+		20
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

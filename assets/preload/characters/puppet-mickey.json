@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-12,
 				-6
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				50,
 				-60
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Down"
+			"fps": 24,
+			"name": "Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				80,
 				10
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Up"
+			"fps": 24,
+			"name": "Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				80,
 				-70
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Right"
+			"fps": 24,
+			"name": "Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -62,15 +62,15 @@
 		0,
 		130
 	],
-	"healthicon": "dad",
+	"healthicon": "julian",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		132,
+		132,
+		132
 	],
 	"camera_position": [
-		-40,
+		-200,
 		10
 	],
 	"sing_duration": 6.1,

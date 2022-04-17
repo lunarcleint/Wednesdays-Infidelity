@@ -252,6 +252,9 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
+	// GF Amongus / Sus
+	var gfSus:BGSprite;
+
 	//Achievement shit
 	var keysPressed:Array<Bool> = [];
 	var boyfriendIdleTime:Float = 0.0;
@@ -450,7 +453,8 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
-				case 'vecindario': //Week Suicide
+
+			case 'vecindario': //Week Suicide
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
 				GameOverSubstate.loopSoundName = 'gameOver';
 				GameOverSubstate.endSoundName = 'gameOverEnd';
@@ -479,6 +483,7 @@ class PlayState extends MusicBeatState
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
 				nosexi.updateHitbox();
 				add(nosexi);
+
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -488,6 +493,40 @@ class PlayState extends MusicBeatState
 				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
 				add(daStatic);
 				daStatic.animation.play('static');
+			
+			case 'inferno': //Week Final
+				var inferno:BGSprite = new BGSprite('backgrounds/BG_INFERNO', -600, -200);
+				inferno.updateHitbox();
+				add(inferno);
+
+				var daStatic:FlxSprite = new FlxSprite(0, 0);
+				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+				daStatic.setGraphicSize(FlxG.width, FlxG.height);
+				daStatic.alpha = 0.05;
+				daStatic.screenCenter();
+				daStatic.cameras = [camOther];
+				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+				add(daStatic);
+				daStatic.animation.play('static');
+
+			case 'susNightmare': //Week SUS
+				var inferno:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
+				inferno.updateHitbox();
+				add(inferno);
+
+				gfSus = new BGSprite('backgrounds/gf-amogus', 1300, 400, ['amongus-gf']);
+				add(gfSus);
+
+				var daStatic:FlxSprite = new FlxSprite(0, 0);
+				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+				daStatic.setGraphicSize(FlxG.width, FlxG.height);
+				daStatic.alpha = 0.05;
+				daStatic.screenCenter();
+				daStatic.cameras = [camOther];
+				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+				add(daStatic);
+				daStatic.animation.play('static');
+
 		}
 
 		if(isPixelStage) {
@@ -1380,12 +1419,9 @@ class PlayState extends MusicBeatState
 				}
 
 				// head bopping for bg characters on Mall
-				if(curStage == 'mall') {
-					if(!ClientPrefs.lowQuality)
-						upperBoppers.dance(true);
-	
-					bottomBoppers.dance(true);
-					santa.dance(true);
+				if(curStage == 'susNightmare') {
+					gfSus.dance(true);
+					pantalla.animation.play('idle');
 				}
 
 				if(curStage == 'vecindario') {
@@ -4328,6 +4364,13 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'vecindario':
+				pantalla.animation.play('idle');
+
+			case 'bobux':
+				pantalla.animation.play('idle');
+
+			case 'susNightmare':
+				gfSus.dance(true);
 				pantalla.animation.play('idle');
 
 			case 'mall':
