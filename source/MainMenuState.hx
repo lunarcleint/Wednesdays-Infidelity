@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.shake(0.001, 4000);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Wednesday's Infidelity v1.0", 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Wednesday's Infidelity PART 2", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);

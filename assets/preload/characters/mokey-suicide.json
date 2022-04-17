@@ -5,10 +5,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "IdleMokey"
 		},
 		{
@@ -16,10 +16,10 @@
 				155,
 				-2
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "LeftNote"
 		},
 		{
@@ -27,10 +27,10 @@
 				78,
 				-35
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "DownNote"
 		},
 		{
@@ -38,10 +38,10 @@
 				71,
 				142
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "UpNote"
 		},
 		{
@@ -49,10 +49,10 @@
 				-50,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "RightNote"
 		},
 		{
@@ -60,10 +60,10 @@
 				162,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "transforming",
-			"loop": false,
+			"indices": [],
 			"name": "TransformingBruh"
 		},
 		{
@@ -71,10 +71,10 @@
 				93,
 				56
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "cry",
-			"loop": false,
+			"indices": [],
 			"name": "CryingAnim"
 		}
 	],
@@ -84,12 +84,12 @@
 		0,
 		0
 	],
-	"healthicon": "face",
+	"healthicon": "mokey",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		124,
+		124,
+		124
 	],
 	"camera_position": [
 		-50,

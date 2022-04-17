@@ -256,6 +256,13 @@ class PlayState extends MusicBeatState
 	// GF Amongus / Sus
 	var gfSus:BGSprite;
 
+	//Inferno / Satán
+	var satanAparicion:FlxSprite;
+	var satanJijijija:FlxSprite;
+
+	//Black / Kriman't
+	var blackFuck:FlxSprite;
+
 	//Achievement shit
 	var keysPressed:Array<Bool> = [];
 	var boyfriendIdleTime:Float = 0.0;
@@ -504,6 +511,28 @@ class PlayState extends MusicBeatState
 				add(daStatic);
 				daStatic.animation.play('static');
 
+			case 'stageMokey': //Song Kriman't
+				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+				stageWhite.scale.set(5, 5);
+				stageWhite.updateHitbox();
+				add(stageWhite);
+
+				blackFuck = new FlxSprite().makeGraphic(1280, 720, FlxColor.BLACK);
+				blackFuck.cameras = [camOther];
+				blackFuck.alpha = 0;
+				blackFuck.screenCenter(X);
+				add(blackFuck);
+
+				var daStatic:FlxSprite = new FlxSprite(0, 0);
+				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+				daStatic.setGraphicSize(FlxG.width, FlxG.height);
+				daStatic.alpha = 0.05;
+				daStatic.screenCenter();
+				daStatic.cameras = [camOther];
+				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+				add(daStatic);
+				daStatic.animation.play('static');
+
 			case 'bobux': //Week Suicide
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
 				GameOverSubstate.loopSoundName = 'gameOver';
@@ -531,6 +560,22 @@ class PlayState extends MusicBeatState
 				inferno.antialiasing = ClientPrefs.globalAntialiasing;
 				inferno.updateHitbox();
 				add(inferno);
+
+				satanAparicion = new FlxSprite(-280, -370);
+				satanAparicion.frames = Paths.getSparrowAtlas('backgrounds/SATAN_APARITION');
+				satanAparicion.animation.addByPrefix('aparicion', 'SATAN APARICION', 24, false);
+				satanAparicion.antialiasing = ClientPrefs.globalAntialiasing;
+				satanAparicion.visible = false;
+				satanAparicion.updateHitbox();
+				add(satanAparicion);
+
+				satanJijijija = new FlxSprite(-280, -370);
+				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/JUJUJUJA');
+				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
+				satanJijijija.antialiasing = ClientPrefs.globalAntialiasing;
+				satanJijijija.visible = false;
+				satanJijijija.updateHitbox();
+				add(satanJijijija);
 
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
@@ -1490,6 +1535,11 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curStage == 'vecindario') {
+					grain.visible = true;
+					grain.animation.play('idle');
+				}
+
+				if(curStage == 'stageMokey') {
 					grain.visible = true;
 					grain.animation.play('idle');
 				}
@@ -4380,6 +4430,55 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			if (curSong == "Kriman't")
+			{
+				switch(curStep)
+				{
+					case 992:
+						FlxG.camera.flash(FlxColor.BLACK, 5);
+						pausables.push(FlxTween.tween(blackFuck, {alpha: 1}, 0.5));
+					case 1050:
+						pausables.push(FlxTween.tween(blackFuck, {alpha: 0}, 2));
+				}
+			}
+
+			if (curSong == 'Hellhole')
+			{
+				switch(curStep)
+				{
+					case 1340:
+						satanAparicion.visible = true;
+						satanAparicion.animation.play("aparicion", false);
+					case 1343:
+						satanAparicion.visible = false;
+					case 1376:
+						satanJijijija.visible = true;
+						satanJijijija.animation.play("jijijija", true);
+					case 1392:
+						satanJijijija.visible = false;
+					case 1440:
+						satanJijijija.visible = true;
+						satanJijijija.animation.play("jijijija", true);
+					case 1456:
+						satanJijijija.visible = false;
+					case 1792:
+						satanJijijija.visible = true;
+						satanJijijija.animation.play("jijijija", true);
+					case 1808:
+						satanJijijija.visible = false;
+					case 1856:
+						satanJijijija.visible = true;
+						satanJijijija.animation.play("jijijija", true);
+					case 1867:
+						satanJijijija.visible = false;
+					case 1868:
+						satanAparicion.visible = true;
+						satanAparicion.animation.reverse();
+					case 1872:
+						satanAparicion.visible = false;
+				}
+			}
+
 		if(curStep == lastStepHit) {
 			return;
 		}
@@ -4476,6 +4575,10 @@ class PlayState extends MusicBeatState
 				if (gfSus != null)
 					gfSus.dance(true);
 				
+				grain.visible = true;
+				grain.animation.play('idle');
+
+			case 'stageMokey':
 				grain.visible = true;
 				grain.animation.play('idle');
 
