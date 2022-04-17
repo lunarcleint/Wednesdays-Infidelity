@@ -302,7 +302,10 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('selected');
-				FlxG.camera.flash(FlxColor.BLACK, 0.2);
+				if (ClientPrefs.flashing) {
+					FlxG.camera.flash(FlxColor.BLACK, 0.2, function () {}, true);
+				}
+				//FlxG.camera.flash(FlxColor.BLACK, 0.2);
 				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
 				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
 				spr.offset.y = 0.15 * spr.frameHeight;

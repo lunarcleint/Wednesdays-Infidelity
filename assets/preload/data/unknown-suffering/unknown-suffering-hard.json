@@ -867,12 +867,6 @@
 						30900,
 						2,
 						0
-					],
-					[
-						30600,
-						5,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": false
@@ -919,12 +913,6 @@
 						32100,
 						0,
 						0
-					],
-					[
-						31875,
-						6,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": false
@@ -966,12 +954,6 @@
 						33450,
 						1,
 						0
-					],
-					[
-						33075,
-						7,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": false
@@ -1039,12 +1021,6 @@
 						35700,
 						1,
 						0
-					],
-					[
-						35250,
-						0,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": true
@@ -1091,12 +1067,6 @@
 						36900,
 						3,
 						0
-					],
-					[
-						36525,
-						3,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": true
@@ -1649,12 +1619,6 @@
 						51450,
 						0,
 						0
-					],
-					[
-						50775,
-						2,
-						0,
-						"Speed Note"
 					]
 				],
 				"mustHitSection": true
@@ -3012,12 +2976,6 @@
 						80250,
 						1,
 						0
-					],
-					[
-						79650,
-						2,
-						0,
-						"Speed Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3063,12 +3021,6 @@
 						81300,
 						3,
 						525
-					],
-					[
-						80925,
-						0,
-						0,
-						"Speed Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3879,12 +3831,6 @@
 						100200,
 						6,
 						1125
-					],
-					[
-						100125,
-						0,
-						0,
-						"Speed Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4357,16 +4303,9 @@
 						1125
 					],
 					[
-						109575,
-						0,
-						0,
-						"Speed Note"
-					],
-					[
 						109425,
 						3,
-						0,
-						"No Animation"
+						0
 					]
 				],
 				"typeOfSection": 0,
@@ -4407,72 +4346,6 @@
 						111000,
 						2,
 						525
-					],
-					[
-						111075,
-						0,
-						0,
-						"Speed Note"
-					],
-					[
-						111150,
-						1,
-						0,
-						"Speed Note"
-					],
-					[
-						111225,
-						0,
-						0,
-						"Speed Note"
-					],
-					[
-						111300,
-						1,
-						0,
-						"Speed Note"
-					],
-					[
-						111375,
-						0,
-						0,
-						"Speed Note"
-					],
-					[
-						111450,
-						1,
-						0,
-						"Speed Note"
-					],
-					[
-						111525,
-						0,
-						0,
-						"Speed Note"
-					],
-					[
-						111075,
-						3,
-						0,
-						"Speed Note"
-					],
-					[
-						111225,
-						3,
-						0,
-						"Speed Note"
-					],
-					[
-						111375,
-						3,
-						0,
-						"Speed Note"
-					],
-					[
-						111525,
-						3,
-						0,
-						"Speed Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4483,14 +4356,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						112275,
-						6,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4499,14 +4365,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						113400,
-						5,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4515,14 +4374,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						114900,
-						4,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4531,14 +4383,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						116175,
-						3,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4547,14 +4392,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						117150,
-						6,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4563,14 +4401,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						118425,
-						1,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4579,14 +4410,7 @@
 				"bpm": 200
 			},
 			{
-				"sectionNotes": [
-					[
-						119625,
-						6,
-						0,
-						"Speed Note"
-					]
-				],
+				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -4813,14 +4637,44 @@
 				"bpm": 200
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 200
 			},
 			{
 				"gfSection": false,
@@ -4966,102 +4820,42 @@
 				]
 			],
 			[
-				30300,
+				30600,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"dad"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				30450,
+				33075,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				31575,
+				40800,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"dad"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				31725,
+				43200,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				32775,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				32925,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				35025,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				35175,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				36300,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				36450,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
@@ -5076,102 +4870,42 @@
 				]
 			],
 			[
-				50475,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
 				50700,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				79425,
+				55500,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"dad"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				79575,
+				75000,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				80625,
+				84600,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				80850,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				99750,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				99975,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				109275,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				109425,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
@@ -5186,142 +4920,22 @@
 				]
 			],
 			[
-				111975,
+				112275,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"dad"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
 			[
-				112200,
+				119625,
 				[
 					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				113100,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				113325,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				114600,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				114825,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				115800,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				116100,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				116850,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				117075,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				118125,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				118350,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
-					]
-				]
-			],
-			[
-				119325,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"dad"
-					]
-				]
-			],
-			[
-				119550,
-				[
-					[
-						"Play Animation",
-						"dodge",
-						"bf"
+						"Do Syringe",
+						"",
+						""
 					]
 				]
 			],
@@ -5342,7 +4956,7 @@
 		"stage": "bobux",
 		"arrowSkin": "",
 		"validScore": true,
-		"speed": 3,
+		"speed": 3.6,
 		"bpm": 200
 	}
 }

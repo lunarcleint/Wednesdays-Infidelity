@@ -57,52 +57,7 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		#if (polymod && !html5)
-		if (sys.FileSystem.exists('mods/')) {
-			var folders:Array<String> = [];
-			for (file in sys.FileSystem.readDirectory('mods/')) {
-				var path = haxe.io.Path.join(['mods/', file]);
-				if (sys.FileSystem.isDirectory(path)) {
-					folders.push(file);
-				}
-			}
-			if(folders.length > 0) {
-				polymod.Polymod.init({modRoot: "mods", dirs: folders});
-			}
-		}
-		#end
 		
-		#if CHECK_FOR_UPDATES
-		if(!closedState) {
-			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt");
-			
-			http.onData = function (data:String)
-			{
-				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.psychEngineVersion.trim();
-				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
-				if(updateVersion != curVersion) {
-					trace('versions arent matching!');
-					mustUpdate = true;
-				}
-			}
-			
-			http.onError = function (error) {
-				trace('error: $error');
-			}
-			
-			http.request();
-		}
-		#end
-
-		FlxG.game.focusLostFramerate = 60;
-		FlxG.sound.muteKeys = muteKeys;
-		FlxG.sound.volumeDownKeys = volumeDownKeys;
-		FlxG.sound.volumeUpKeys = volumeUpKeys;
-
-		PlayerSettings.init();
-
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		// DEBUG BULLSHIT
@@ -110,27 +65,11 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
-		ClientPrefs.loadPrefs();
-
-		Highscore.load();
-
-		if (FlxG.save.data.weekCompleted != null)
-		{
-			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
-		}
-
-		FlxG.mouse.visible = false;
 		#if FREEPLAY
 		MusicBeatState.switchState(new FreeplayState());
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
-			FlxTransitionableState.skipNextTransIn = true;
-			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new FlashingState());
-		} else {
 			#if desktop
 			DiscordClient.initialize();
 			Application.current.onExit.add (function (exitCode) {
@@ -141,7 +80,6 @@ class TitleState extends MusicBeatState
 			{
 				startIntro();
 			});
-		}
 		#end
 	}
 
@@ -208,7 +146,7 @@ class TitleState extends MusicBeatState
 		add(credGroup);
 		textGroup = new FlxGroup();
 
-		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		blackScreen = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 		credGroup.add(blackScreen);
 
 		credTextShit = new Alphabet(0, 0, "", true);
@@ -297,7 +235,9 @@ class TitleState extends MusicBeatState
 			{
 				if(titleText != null) titleText.animation.play('press');
 
-				FlxG.camera.flash(FlxColor.BLACK, 2.3);
+				if (ClientPrefs.flashing)
+					FlxG.camera.flash(FlxColor.BLACK, 2.3);
+
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 				titleText.visible = false;
@@ -309,9 +249,9 @@ class TitleState extends MusicBeatState
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					if (mustUpdate) {
-						MusicBeatState.switchState(new OutdatedState());
+						MusicBeatState.switchState(new MainMenuState());
 					} else {
-						MusicBeatState.switchState(new OutdatedState());
+						MusicBeatState.switchState(new MainMenuState());
 					}
 					closedState = true;
 				});
@@ -342,7 +282,7 @@ class TitleState extends MusicBeatState
 							FlxG.save.data.psykaEasterEgg = !FlxG.save.data.psykaEasterEgg;
 							FlxG.sound.play(Paths.sound('secretSound'));
 
-							var black:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+							var black:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 							black.alpha = 0;
 							add(black);
 
@@ -464,7 +404,9 @@ class TitleState extends MusicBeatState
 				case 60:
 					deleteCoolText();
 				case 63:
-					FlxG.camera.shake(0.004, 4000);
+					if (ClientPrefs.shake) {
+						FlxG.camera.shake(0.004, 4000);
+					}
 					createCoolText([curWacky[0]]);
 				case 74:
 					addMoreText(curWacky[1]);
@@ -484,7 +426,9 @@ class TitleState extends MusicBeatState
 		{
 			remove(logoSpr);
 
-			FlxG.camera.flash(FlxColor.BLACK, 2.3);
+			if (ClientPrefs.flashing)
+				FlxG.camera.flash(FlxColor.BLACK, 2.3);
+			
 			remove(credGroup);
 			skippedIntro = true;
 		}

@@ -60,7 +60,16 @@ class VisualsUISubState extends BaseOptionsMenu
 			"Uncheck this if you're sensitive to flashing lights!",
 			'flashing',
 			'bool',
-			true);
+			true
+		);
+		addOption(option);
+
+		var option:Option = new Option('Screen Shake',
+			"Uncheck this if you're sensitive to Screen Shaking!",
+			'shake',
+			'bool',
+			true
+		);
 		addOption(option);
 
 		var option:Option = new Option('Camera Zooms',
