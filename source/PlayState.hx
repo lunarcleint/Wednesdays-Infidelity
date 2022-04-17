@@ -513,7 +513,7 @@ class PlayState extends MusicBeatState
 				add(daStatic);
 				daStatic.animation.play('static');
 
-			case 'susNightmare': //Week SUS yeah
+			case 'susNightmare': //Week SUS
 				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
 				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
 				nightmare.updateHitbox();
