@@ -559,7 +559,7 @@ class PlayState extends MusicBeatState
 				satanAparicion.updateHitbox();
 				add(satanAparicion);
 
-				satanJijijija = new FlxSprite(-280, -370);
+				satanJijijija = new FlxSprite(-250, -350);
 				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/JUJUJUJA');
 				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
 				satanJijijija.antialiasing = ClientPrefs.globalAntialiasing;
@@ -1520,6 +1520,7 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curStage == 'inferno') {
+					gf.visible = false;
 					grain.visible = true;
 					grain.animation.play('idle');
 				}
@@ -4483,31 +4484,42 @@ class PlayState extends MusicBeatState
 						satanAparicion.visible = true;
 						satanAparicion.animation.play("aparicion", false);
 					case 1343:
+						gf.visible = true;
 						satanAparicion.visible = false;
 					case 1376:
+						gf.visible = false;
 						satanJijijija.visible = true;
 						satanJijijija.animation.play("jijijija", true);
 					case 1392:
+						gf.visible = true;
 						satanJijijija.visible = false;
 					case 1440:
+						gf.visible = false;
 						satanJijijija.visible = true;
 						satanJijijija.animation.play("jijijija", true);
 					case 1456:
+						gf.visible = true;
 						satanJijijija.visible = false;
 					case 1792:
+						gf.visible = false;
 						satanJijijija.visible = true;
 						satanJijijija.animation.play("jijijija", true);
 					case 1808:
+						gf.visible = true;
 						satanJijijija.visible = false;
 					case 1856:
+						gf.visible = false;
 						satanJijijija.visible = true;
 						satanJijijija.animation.play("jijijija", true);
 					case 1867:
+						gf.visible = true;
 						satanJijijija.visible = false;
 					case 1868:
+						gf.visible = false;
 						satanAparicion.visible = true;
 						satanAparicion.animation.reverse();
 					case 1872:
+						gf.visible = false;
 						satanAparicion.visible = false;
 				}
 			}
