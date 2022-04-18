@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IdleDance"
+			"fps": 24,
+			"name": "IdleDance",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				185,
 				-40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LeftNote"
+			"fps": 24,
+			"name": "LeftNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-42,
 				-237
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DownNote"
+			"fps": 24,
+			"name": "DownNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				130,
 				396
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "UpNote"
+			"fps": 24,
+			"name": "UpNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-20,
 				60
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RightNote"
+			"fps": 24,
+			"name": "RightNote",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				130,
+				93
+			],
+			"anim": "die",
+			"fps": 24,
+			"name": "AnimationShit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "IdleColorBlacc",
+			"indices": []
 		},
 		{
 			"offsets": [
 				10,
 				151
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "laugh",
-			"indices": [],
-			"name": "Laugh"
-		},
-		{
-			"offsets": [
-				130,
-				93
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "die",
-			"indices": [],
-			"name": "AnimationShit"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle-alt",
-			"indices": [],
-			"name": "IdleColorBlacc"
+			"name": "Laugh"
 		}
 	],
 	"no_antialiasing": false,
