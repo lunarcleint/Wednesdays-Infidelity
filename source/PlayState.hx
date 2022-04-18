@@ -5005,7 +5005,7 @@ class PlayState extends MusicBeatState
 		var songLowercase:String = Paths.formatToSongPath('???');
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson(StringTools.replace(poop, songLowercase));
+		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
@@ -5020,7 +5020,7 @@ class PlayState extends MusicBeatState
 		var songLowercase:String = Paths.formatToSongPath('last-day');
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson(StringTools.replace(poop, songLowercase));
+		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
