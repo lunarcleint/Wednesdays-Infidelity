@@ -18,7 +18,7 @@ class FlxVideo extends FlxBasic {
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
-	public static var skippable:Bool = true;
+	var skippable:Bool = true;
 
 	public function new(name:String, ?skippable:Bool = true) {
 		super();
