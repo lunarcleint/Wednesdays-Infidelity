@@ -5003,7 +5003,7 @@ class PlayState extends MusicBeatState
 		persistentUpdate = false;
 
 		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-		if(diffic == null) diffic = '2';
+		if(diffic == 'hard') diffic = '2';
 
 		PlayState.SONG = Song.loadFromJson('????' + diffic);
 		PlayState.isStoryMode = true;
@@ -5018,7 +5018,7 @@ class PlayState extends MusicBeatState
 		persistentUpdate = false;
 
 		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-		if(diffic == null) diffic = '2';
+		if(diffic == 'hard') diffic = '2';
 
 		PlayState.SONG = Song.loadFromJson('last-day' + diffic);
 		PlayState.isStoryMode = true;
