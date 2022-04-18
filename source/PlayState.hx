@@ -119,6 +119,7 @@ class PlayState extends MusicBeatState
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
+	var curDifficulty:Int = 1;
 
 	public var vocals:FlxSound;
 
@@ -223,6 +224,7 @@ class PlayState extends MusicBeatState
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
+	public static var weekMisses:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
@@ -1099,6 +1101,9 @@ class PlayState extends MusicBeatState
 					if(daSong == 'roses') FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 
+				case 'unknown-suffering':
+					startVideo("TransformUN");
+
 				default:
 					startCountdown();
 			}
@@ -1260,6 +1265,92 @@ class PlayState extends MusicBeatState
 		}
 		char.x += char.positionArray[0];
 		char.y += char.positionArray[1];
+	}
+
+	public function videoBadEnding(name:String):Void {
+		#if VIDEOS_ALLOWED
+		var foundFile:Bool = false;
+		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+		#if sys
+		if(FileSystem.exists(fileName)) {
+			foundFile = true;
+		}
+		#end
+
+		if(!foundFile) {
+			fileName = Paths.video(name);
+			#if sys
+			if(FileSystem.exists(fileName)) {
+			#else
+			if(OpenFlAssets.exists(fileName)) {
+			#end
+				foundFile = true;
+			}
+		}
+
+		if(foundFile) {
+			inCutscene = true;
+			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			bg.scrollFactor.set();
+			bg.cameras = [camHUD];
+			add(bg);
+
+			(new FlxVideo(fileName)).finishCallback = function() {
+				remove(bg);
+				endSong();
+			}
+			return;
+		}
+		else
+		{
+			FlxG.log.warn('Couldnt find video file: ' + fileName);
+			endSong();
+		}
+		#end
+		endSong();
+	}
+
+	public function videoGoodEnding(name:String):Void {
+		#if VIDEOS_ALLOWED
+		var foundFile:Bool = false;
+		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+		#if sys
+		if(FileSystem.exists(fileName)) {
+			foundFile = true;
+		}
+		#end
+
+		if(!foundFile) {
+			fileName = Paths.video(name);
+			#if sys
+			if(FileSystem.exists(fileName)) {
+			#else
+			if(OpenFlAssets.exists(fileName)) {
+			#end
+				foundFile = true;
+			}
+		}
+
+		if(foundFile) {
+			inCutscene = true;
+			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			bg.scrollFactor.set();
+			bg.cameras = [camHUD];
+			add(bg);
+
+			(new FlxVideo(fileName)).finishCallback = function() {
+				remove(bg);
+				endSong();
+			}
+			return;
+		}
+		else
+		{
+			FlxG.log.warn('Couldnt find video file: ' + fileName);
+			endSong();
+		}
+		#end
+		endSong();
 	}
 
 	public function startVideo(name:String):Void {
@@ -3099,9 +3190,45 @@ class PlayState extends MusicBeatState
 	{
 		finishSong(false);
 	}
+
+	function badEndingVideo():Void
+	{
+		videoBadEnding("BadEnding");
+	}
+
+	function goodEndingVideo():Void
+	{
+		videoGoodEnding("GoodEnding");
+	}
+
+	function chooseEnd():Void
+	{
+		if (weekMisses >= 30)
+			badEnding();
+		else
+			goodEnding();
+	}
+
 	public function finishSong(?ignoreNoteOffset:Bool = false):Void
 	{
 		var finishCallback:Void->Void = endSong; //In case you want to change it in a specific song.
+
+		if (isStoryMode)
+		{
+			switch (SONG.song)
+			{
+				case 'Unknown Suffering':
+					{
+						finishCallback = chooseEnd;
+					}
+				case 'Last Day':
+					{
+						finishCallback = badEndingVideo;
+					}
+				default:
+					{endSong();}
+			}
+		}
 
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
@@ -3193,6 +3320,7 @@ class PlayState extends MusicBeatState
 			{
 				campaignScore += songScore;
 				campaignMisses += songMisses;
+				campaignMisses += weekMisses;
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
@@ -3724,6 +3852,7 @@ class PlayState extends MusicBeatState
 		//For testing purposes
 		//trace(daNote.missHealth);
 		songMisses++;
+		weekMisses++;
 		vocals.volume = 0;
 		if(!practiceMode) songScore -= 10;
 		
@@ -3770,6 +3899,7 @@ class PlayState extends MusicBeatState
 			if(!practiceMode) songScore -= 10;
 			if(!endingSong) {
 				songMisses++;
+				weekMisses++;
 			}
 			totalPlayed++;
 			RecalculateRating();
@@ -4866,4 +4996,28 @@ class PlayState extends MusicBeatState
 
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
+
+	function goodEnding() {
+		persistentUpdate = false;
+
+		PlayState.SONG = Song.loadFromJson('????');
+		PlayState.isStoryMode = true;
+		PlayState.storyDifficulty = 2;
+
+		Lib.application.window.title = "Wednesday's Infidelity";
+
+		FlxG.sound.music.volume = 0;
+	}
+
+	function badEnding() {
+		persistentUpdate = false;
+
+		PlayState.SONG = Song.loadFromJson('last-day');
+		PlayState.isStoryMode = true;
+		PlayState.storyDifficulty = 2;
+
+		Lib.application.window.title = "Wednesday's Infidelity";
+
+		FlxG.sound.music.volume = 0;
+	}
 }
