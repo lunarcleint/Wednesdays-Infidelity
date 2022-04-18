@@ -119,7 +119,7 @@ class PlayState extends MusicBeatState
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
-	var curDifficulty:Int = 1;
+	var curDifficulty:Int = 2;
 
 	public var vocals:FlxSound;
 
@@ -5002,9 +5002,12 @@ class PlayState extends MusicBeatState
 	function goodEnding() {
 		persistentUpdate = false;
 
-		PlayState.SONG = Song.loadFromJson('????');
+		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
+		if(diffic == null) diffic = '2';
+
+		PlayState.SONG = Song.loadFromJson('????' + diffic);
 		PlayState.isStoryMode = true;
-		PlayState.storyDifficulty = 2;
+		PlayState.storyDifficulty = curDifficulty;
 
 		Lib.application.window.title = "Wednesday's Infidelity";
 
@@ -5014,9 +5017,12 @@ class PlayState extends MusicBeatState
 	function badEnding() {
 		persistentUpdate = false;
 
-		PlayState.SONG = Song.loadFromJson('last-day');
+		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
+		if(diffic == null) diffic = '2';
+
+		PlayState.SONG = Song.loadFromJson('last-day' + diffic);
 		PlayState.isStoryMode = true;
-		PlayState.storyDifficulty = 2;
+		PlayState.storyDifficulty = curDifficulty;
 
 		Lib.application.window.title = "Wednesday's Infidelity";
 
