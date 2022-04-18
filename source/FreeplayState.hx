@@ -18,6 +18,7 @@ import lime.utils.Assets;
 import flixel.system.FlxSound;
 import openfl.utils.Assets as OpenFlAssets;
 import WeekData;
+import openfl.Lib;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
@@ -307,6 +308,7 @@ class FreeplayState extends MusicBeatState
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			MusicBeatState.switchState(new MainMenuState());
+			Lib.application.window.title = "Wednesday's Infidelity";
 		}
 
 		if(ctrl)
@@ -370,6 +372,8 @@ class FreeplayState extends MusicBeatState
 			}else{
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
+
+			Lib.application.window.title = "Wednesday's Infidelity";
 
 			FlxG.sound.music.volume = 0;
 					
@@ -511,6 +515,8 @@ class FreeplayState extends MusicBeatState
 		{
 			curDifficulty = newPos;
 		}
+
+		Lib.application.window.title = "Wednesday's Infidelity - " + songs[curSelected].songName + " [" + CoolUtil.difficulties[curDifficulty] + "]";
 	}
 
 	private function positionHighscore() {

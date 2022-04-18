@@ -18,6 +18,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 import lime.utils.Assets;
+import openfl.Lib;
 
 using StringTools;
 
@@ -39,6 +40,7 @@ class CreditsState extends MusicBeatState
 
 	override function create()
 	{
+		Lib.application.window.title = "Wednesday's Infidelity - Credits";
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -220,6 +222,7 @@ class CreditsState extends MusicBeatState
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
+				Lib.application.window.title = "Wednesday's Infidelity";
 				MusicBeatState.switchState(new MainMenuState());
 				quitting = true;
 			}

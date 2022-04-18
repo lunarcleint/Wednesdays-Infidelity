@@ -14,6 +14,7 @@ import flixel.util.FlxTimer;
 import options.Option;
 import CheckboxThingie;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import openfl.Lib;
 
 class OutdatedState extends MusicBeatState
 {
@@ -92,6 +93,8 @@ class OutdatedState extends MusicBeatState
 		}
 
 		FlxG.mouse.visible = false;
+
+		Lib.application.window.title = "Wednesday's Infidelity - WARNING";
 
 		warnImage = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre','preload'));
 		warnImage.antialiasing = ClientPrefs.globalAntialiasing;
@@ -264,6 +267,7 @@ class OutdatedState extends MusicBeatState
 				FlxTween.tween(warnText, {alpha: 0}, 1, {
 					onComplete: function (twn:FlxTween) {
 						warnImage.visible = false;
+						Lib.application.window.title = "Wednesday's Infidelity";
 						MusicBeatState.switchState(new TitleState());
 					}
 				});

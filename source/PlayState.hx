@@ -1745,6 +1745,8 @@ class PlayState extends MusicBeatState
 		
 		curSong = songData.song;
 
+		Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
+
 		if (SONG.needsVoices)
 			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
 		else
@@ -1995,6 +1997,7 @@ class PlayState extends MusicBeatState
 	{
 		if (paused)
 		{
+			Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "] - PAUSED";
 			if (FlxG.sound.music != null)
 			{
 				FlxG.sound.music.pause();
@@ -2050,6 +2053,8 @@ class PlayState extends MusicBeatState
 	{
 		if (paused)
 		{
+			Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
+
 			if (FlxG.sound.music != null && !startingSong)
 			{
 				resyncVocals();
@@ -2301,6 +2306,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
 		{
 			openChartEditor();
+			Lib.application.window.title = "Wednesday's Infidelity";
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -2337,6 +2343,7 @@ class PlayState extends MusicBeatState
 			paused = true;
 			cancelMusicFadeTween();
 			MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
+			Lib.application.window.title = "Wednesday's Infidelity";
 		}
 
 		if (startingSong)
@@ -3169,6 +3176,8 @@ class PlayState extends MusicBeatState
 				#end
 			}
 
+			Lib.application.window.title = "Wednesday's Infidelity";
+			
 			if (chartingMode)
 			{
 				openChartEditor();

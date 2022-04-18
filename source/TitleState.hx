@@ -27,6 +27,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Assets;
+import openfl.Lib;
 
 using StringTools;
 
@@ -57,6 +58,8 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+
+		Lib.application.window.title = "Wednesday's Infidelity - Title";
 		
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
@@ -248,6 +251,7 @@ class TitleState extends MusicBeatState
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
+					Lib.application.window.title = "Wednesday's Infidelity";
 					if (mustUpdate) {
 						MusicBeatState.switchState(new MainMenuState());
 					} else {
