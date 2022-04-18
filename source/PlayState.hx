@@ -5002,9 +5002,9 @@ class PlayState extends MusicBeatState
 	function goodEnding() {
 		persistentUpdate = false;
 
-		var poop:String = Highscore.formatSong('???', curDifficulty);
+		var difficulty:String = CoolUtil.getDifficultyFilePath();
 
-		PlayState.SONG = StringTools.replace(poop, "null", "hard");
+		PlayState.SONG = Song.loadFromJson(StringTools.replace('last-day' + difficulty, "-null", "-hard"), 'last-day');
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
@@ -5016,9 +5016,9 @@ class PlayState extends MusicBeatState
 	function badEnding() {
 		persistentUpdate = false;
 
-		var poop:String = Highscore.formatSong('last-day', curDifficulty);
+		var difficulty:String = CoolUtil.getDifficultyFilePath();
 
-		PlayState.SONG = StringTools.replace(poop,"null", "hard");
+		PlayState.SONG = Song.loadFromJson(StringTools.replace('last-day' + difficulty, "-null", "-hard"), 'last-day');
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
