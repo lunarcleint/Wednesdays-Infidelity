@@ -491,11 +491,6 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'vecindario': //Week Suicide
-				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
-				GameOverSubstate.loopSoundName = 'gameOver';
-				GameOverSubstate.endSoundName = 'gameOverEnd';
-				GameOverSubstate.characterName = 'bf-suicide';
-
 				var sexi:BGSprite = new BGSprite('backgrounds/VecindarioBG', -600, -200, 0.9, 0.9);
 				sexi.antialiasing = ClientPrefs.globalAntialiasing;
 				sexi.updateHitbox();
@@ -534,11 +529,6 @@ class PlayState extends MusicBeatState
 				daStatic.animation.play('static');
 
 			case 'bobux': //Week Suicide
-				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
-				GameOverSubstate.loopSoundName = 'gameOver';
-				GameOverSubstate.endSoundName = 'gameOverEnd';
-				GameOverSubstate.characterName = 'bf-suicide';
-
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
 				nosexi.antialiasing = ClientPrefs.globalAntialiasing;
 				nosexi.updateHitbox();
@@ -2175,19 +2165,19 @@ class PlayState extends MusicBeatState
 	{
 
 		if (doingDodge && canDodge && FlxG.keys.justPressed.SPACE && !_onCoolDown && !cpuControlled && !dodging && !paused)
+		{
+			_onCoolDown = true;
+			dodging = true;
+			new FlxTimer(dodgeTimers).start(dodgingInfo["lasting"], function(timer:FlxTimer)
 			{
-				_onCoolDown = true;
-				dodging = true;
-				new FlxTimer(dodgeTimers).start(dodgingInfo["lasting"], function(timer:FlxTimer)
-				{
-					dodging = false;
-					boyfriend.dance();
-					new FlxTimer(dodgeTimers).start(dodgingInfo["cooldown"], function(timer:FlxTimer)
-						{
-							_onCoolDown = false;
-						});
-				});
-			}
+				dodging = false;
+				boyfriend.dance();
+				new FlxTimer(dodgeTimers).start(dodgingInfo["cooldown"], function(timer:FlxTimer)
+					{
+						_onCoolDown = false;
+					});
+			});
+		}
 	
 		
 		if (boyfriend.animation.curAnim.name == "dodge" && !dodging)
@@ -2205,9 +2195,43 @@ class PlayState extends MusicBeatState
 			if (dodgeTimers != null)
 				dodgeTimers.update(elapsed);
 		}
+
 		if (FlxG.keys.justPressed.NINE)
 		{
 			startDodge();
+		}
+
+		switch (boyfriend.curCharacter) {
+			case "bf-sus":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+                GameOverSubstate.loopSoundName = 'gameOver';
+                GameOverSubstate.endSoundName = 'gameOverEnd';
+                GameOverSubstate.characterName = 'bf-sus';
+			case "bf-suicide":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf-suicide';
+			case "bf-satan":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf-satan';
+			case "bf-portal":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf-portal';
+			case "bf":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf';
+			default:
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf';
 		}
 
 		callOnLuas('onUpdate', [elapsed]);
