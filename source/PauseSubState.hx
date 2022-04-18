@@ -14,6 +14,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
 import flixel.util.FlxStringUtil;
+import openfl.Lib;
 
 class PauseSubState extends MusicBeatSubstate
 {
@@ -259,6 +260,7 @@ class PauseSubState extends MusicBeatSubstate
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					PlayState.changedDifficulty = false;
 					PlayState.chartingMode = false;
+					Lib.application.window.title = "Wednesday's Infidelity";
 			}
 		}
 	}

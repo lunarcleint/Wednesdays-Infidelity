@@ -24,6 +24,7 @@ import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
 import Controls;
+import openfl.Lib;
 
 using StringTools;
 
@@ -47,6 +48,7 @@ class OptionsState extends MusicBeatState
 			case 'Adjust Delay and Combo':
 				LoadingState.loadAndSwitchState(new options.NoteOffsetState());
 		}
+		Lib.application.window.title = "Wednesday's Infidelity - Options - " + options[curSelected];
 	}
 
 	var selectorLeft:Alphabet;
@@ -85,11 +87,14 @@ class OptionsState extends MusicBeatState
 		ClientPrefs.saveSettings();
 
 		super.create();
+
+		Lib.application.window.title = "Wednesday's Infidelity - Options";
 	}
 
 	override function closeSubState() {
 		super.closeSubState();
 		ClientPrefs.saveSettings();
+		Lib.application.window.title = "Wednesday's Infidelity - Options";
 	}
 
 	override function update(elapsed:Float) {
@@ -104,6 +109,9 @@ class OptionsState extends MusicBeatState
 
 		if (controls.BACK) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
+
+			Lib.application.window.title = "Wednesday's Infidelity";
+
 			MusicBeatState.switchState(new MainMenuState());
 		}
 

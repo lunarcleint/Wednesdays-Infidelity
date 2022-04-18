@@ -21,6 +21,7 @@ import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 import flixel.graphics.FlxGraphic;
 import WeekData;
+import openfl.Lib;
 
 using StringTools;
 
@@ -54,6 +55,8 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
+		Lib.application.window.title = "Wednesday's Infidelity - Story Menu";
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
@@ -261,6 +264,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
+			Lib.application.window.title = "Wednesday's Infidelity";
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
@@ -315,6 +319,7 @@ class StoryMenuState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
+				Lib.application.window.title = "Wednesday's Infidelity";
 				FreeplayState.destroyFreeplayVocals();
 			});
 		} else {

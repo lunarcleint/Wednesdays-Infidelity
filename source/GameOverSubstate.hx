@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import openfl.Lib;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -39,6 +40,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance.callOnLuas('onGameOverStart', []);
 
 		super.create();
+		Lib.application.window.title = "Wednesday's Infidelity - GAME OVER";
 	}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float)
@@ -90,6 +92,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (controls.BACK)
 		{
+			Lib.application.window.title = "Wednesday's Infidelity";
 			FlxG.sound.music.stop();
 			PlayState.deathCounter = 0;
 			PlayState.seenCutscene = false;
@@ -152,6 +155,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
 				{
+					Lib.application.window.title = "Wednesday's Infidelity";
 					MusicBeatState.resetState();
 				});
 			});

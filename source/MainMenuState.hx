@@ -19,6 +19,7 @@ import flixel.util.FlxColor;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
+import openfl.Lib;
 
 using StringTools;
 
@@ -39,6 +40,7 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		Lib.application.window.title = "Wednesday's Infidelity - Main Menu";
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -197,6 +199,7 @@ class MainMenuState extends MusicBeatState
 							FlxG.camera.shake(0.008, 0.08);
 							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
+								Lib.application.window.title = "Wednesday's Infidelity";
 								var daChoice:String = optionShit[curSelected];
 
 								switch (daChoice)
