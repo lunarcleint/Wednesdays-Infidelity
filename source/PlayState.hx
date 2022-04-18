@@ -288,11 +288,11 @@ class PlayState extends MusicBeatState
 	private var keysArray:Array<Dynamic>;
 
 	//WENSDAY INF 
-	private var pausables:Array<Dynamic> = [];
+	private var pausables:Array<Dynamic> = []; //why is this here again you cant pause? -lunar
 
-	public var devil:FlxSprite;
-
-	public var grain:FlxSprite;
+	var devil:FlxSprite;
+	var jumps:FlxSprite;
+	var grain:FlxSprite;
 
 	// DODGE 
 
@@ -647,6 +647,17 @@ class PlayState extends MusicBeatState
 		devil.visible = false;
 		add(devil);
 		devil.animation.play('scape');
+
+		jumps = new FlxSprite(0,0);
+		jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
+		jumps.setGraphicSize(FlxG.width, FlxG.height);
+		jumps.screenCenter();
+		jumps.cameras = [camOther];
+		jumps.animation.addByPrefix('scape','SCREAMER instancia ', 24, false);
+		jumps.visible = false;
+		jumps.animation.play('scape');
+		jumps.screenCenter();
+		add(jumps);
 		
 		if(curStage == 'spooky') {
 			add(halloweenWhite);
@@ -4038,17 +4049,28 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	function diablo() //thanks vs sonic.exe
-		{
-			devil.animation.play('scape');
-			devil.visible = true;
-			devil.screenCenter();
+	function diablo() {
+		devil.animation.play('scape');
+		devil.visible = true;
+		devil.screenCenter();
 	
-			devil.animation.finishCallback = function(pog:String)
-			{
-				devil.visible = false;
-			}
+		devil.animation.finishCallback = function(pog:String)
+		{
+			devil.visible = false;
 		}
+	}
+
+	function jump() {
+		jumps.animation.play('scape');
+		jumps.visible = true;
+		jumps.screenCenter();
+
+		FlxG.sound.play(Paths.sound('static'));
+
+		jumps.animation.finishCallback = function(name:String) {
+			jumps.visible = false;
+		}
+	}
 
 	function startDodge() {
 		if (doingDodge) return;
@@ -4271,35 +4293,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 	}
-
-	function jump() //thanks vs sonic.exe
-		{
-			trace ('try stop');
-	
-			var jumps:FlxSprite = new FlxSprite(0,0);
-	
-			jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
-	
-			jumps.setGraphicSize(FlxG.width, FlxG.height);
-	
-			jumps.screenCenter();
-			
-			jumps.cameras = [camOther];
-	
-			jumps.animation.addByPrefix('scape','SCREAMER instancia ', 24, false);
-	
-			jumps.animation.play('scape');
-	
-			add(jumps);
-	
-			FlxG.sound.play(Paths.sound('static'));
-	
-			jumps.animation.finishCallback = function(pog:String)
-				{
-					trace('ended HITSTATICLAWL');
-					remove(jumps);
-				}
-		}
 
 	public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null) {
 		var skin:String = 'noteSplashes';
