@@ -2329,10 +2329,12 @@ class PlayState extends MusicBeatState
 				dodgeTimers.update(elapsed);
 		}
 
+		/*
 		if (FlxG.keys.justPressed.NINE)
 		{
 			startDodge();
 		}
+		*/
 
 		switch (boyfriend.curCharacter) {
 			case "bf-sus":
