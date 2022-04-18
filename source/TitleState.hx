@@ -430,7 +430,7 @@ class TitleState extends MusicBeatState
 		{
 			remove(logoSpr);
 
-			if (ClientPrefs.flashing)
+			//if (ClientPrefs.flashing)
 				FlxG.camera.flash(FlxColor.BLACK, 2.3);
 			
 			remove(credGroup);

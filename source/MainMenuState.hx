@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxTimer;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -196,26 +197,20 @@ class MainMenuState extends MusicBeatState
 						else
 						{
 							FlxTween.tween(FlxG.camera, {zoom: 2.1}, 2, {ease: FlxEase.expoInOut});
-							FlxG.camera.shake(0.008, 0.08);
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-							{
-								Lib.application.window.title = "Wednesday's Infidelity";
-								var daChoice:String = optionShit[curSelected];
+							if (ClientPrefs.shake)
+								FlxG.camera.shake(0.008, 0.08);
 
-								switch (daChoice)
+							if (ClientPrefs.flashing) {
+								FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 								{
-									case 'story_mode':
-										MusicBeatState.switchState(new StoryMenuState());
-									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
-									case 'options':
-										MusicBeatState.switchState(new options.OptionsState());
-								}
-							});
+									switchState();
+								});
+							} else {
+								new FlxTimer().start(1,function(tmr:FlxTimer) {
+									switchState();
+								});
+							}
+
 						}
 					});
 				}
@@ -227,6 +222,25 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
+		}
+	}
+
+	function switchState() {
+		Lib.application.window.title = "Wednesday's Infidelity";
+		var daChoice:String = optionShit[curSelected];
+
+		switch (daChoice)
+		{
+			case 'story_mode':
+				MusicBeatState.switchState(new StoryMenuState());
+			case 'freeplay':
+				MusicBeatState.switchState(new FreeplayState());
+			case 'awards':
+				MusicBeatState.switchState(new AchievementsMenuState());
+			case 'credits':
+				MusicBeatState.switchState(new CreditsState());
+			case 'options':
+				MusicBeatState.switchState(new options.OptionsState());
 		}
 	}
 
