@@ -2234,7 +2234,7 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
-			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			//DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
 		#end
 
@@ -2394,7 +2394,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (FlxG.keys.justPressed.ENTER)
+		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown)
 			{
 				diablo();
 			}

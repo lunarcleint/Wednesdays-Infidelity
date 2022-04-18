@@ -114,7 +114,7 @@ class WarningState extends MusicBeatState
 			\n\n
 			You have been warned.\n
 			Press SPACE to continue.",
-			22);
+			21);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		warnText.screenCenter(XY);
 		warnText.y += 40;

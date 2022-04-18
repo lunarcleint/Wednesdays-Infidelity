@@ -18,8 +18,13 @@ class FlxVideo extends FlxBasic {
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
-	public function new(name:String) {
+	public static var skippable:Bool = true;
+
+	public function new(name:String, ?skippable:Bool = true) {
 		super();
+
+		if (skippable != null)
+			this.skippable = skippable;
 
 		#if web
 		var player:Video = new Video();
@@ -65,6 +70,17 @@ class FlxVideo extends FlxBasic {
 		FlxG.addChildBelowMouse(vlcBitmap);
 		vlcBitmap.play(checkFile(name));
 		#end
+
+		FlxG.stage.addEventListener(Event.ENTER_FRAME, onupdate);
+	}
+
+	function onupdate(e:Event)
+	{
+		if ((FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.SPACE) && vlcBitmap != null && skippable) {
+			onVLCComplete();
+
+			destroy();
+		}
 	}
 
 	#if desktop
@@ -96,10 +112,13 @@ class FlxVideo extends FlxBasic {
 	function fixVolume(e:Event)
 	{
 		// shitty volume fix
-		vlcBitmap.volume = 0;
-		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
-			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+		if (vlcBitmap != null) {
+			vlcBitmap.volume = 0;
+			if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
+				vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+			}
 		}
+	
 	}
 
 	public function onVLCComplete()
@@ -113,6 +132,8 @@ class FlxVideo extends FlxBasic {
 		{
 			FlxG.game.removeChild(vlcBitmap);
 		}
+
+		vlcBitmap = null;
 
 		if (finishCallback != null)
 		{
