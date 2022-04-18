@@ -1,65 +1,65 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Mouse idle"
+			"fps": 24,
+			"name": "Mouse idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				14
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "Mouse Left"
+			"fps": 24,
+			"name": "Mouse Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				10,
 				-160
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Mouse Down"
+			"fps": 24,
+			"name": "Mouse Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				39
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Mouse Up"
+			"fps": 24,
+			"name": "Mouse Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-1,
 				2
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Mouse Rigth"
+			"fps": 24,
+			"name": "Mouse Rigth",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/good_ending_mouse",
 	"position": [
-		0,
+		-170,
 		0
 	],
 	"healthicon": "face",

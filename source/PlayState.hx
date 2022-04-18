@@ -119,7 +119,7 @@ class PlayState extends MusicBeatState
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
-	var curDifficulty:Int = 1;
+	var curDifficulty:Int = 0;
 
 	public var vocals:FlxSound;
 
@@ -224,10 +224,14 @@ class PlayState extends MusicBeatState
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
-	public static var weekMisses:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+
+	//Week Misses / Endings
+	public static var weekMisses:Int = 0;
+	public var weekMissesTxt:FlxText;
+	var weekMissesBar:FlxSprite;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -464,6 +468,13 @@ class PlayState extends MusicBeatState
 		boyfriendGroup = new FlxSpriteGroup(BF_X, BF_Y);
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
+
+		//Week Misses
+		weekMissesBar = new FlxSprite(800, 550).loadGraphic(Paths.image('weekMissesBar', 'shared'));
+		weekMissesBar.antialiasing = ClientPrefs.globalAntialiasing;
+		weekMissesBar.scale.set(0.7, 0.7);
+		weekMissesBar.alpha = 0.8;
+		add(weekMissesBar);
 
 		switch (curStage)
 		{
@@ -981,6 +992,13 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
+		weekMissesTxt = new FlxText(-75, weekMissesBar.y + 18, FlxG.width, "", 20);
+		weekMissesTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		weekMissesTxt.scrollFactor.set();
+		weekMissesTxt.borderSize = 1.25;
+		weekMissesTxt.visible = !ClientPrefs.hideHud;
+		add(weekMissesTxt);
+
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
@@ -999,6 +1017,8 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		weekMissesBar.cameras = [camHUD];
+		weekMissesTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
@@ -2275,6 +2295,11 @@ class PlayState extends MusicBeatState
 					});
 			});
 		}
+
+		if (isStoryMode)
+			weekMissesBar.visible = true;
+		else
+			weekMissesBar.visible = false;
 	
 		
 		if (boyfriend.animation.curAnim.name == "dodge" && !dodging)
@@ -2358,6 +2383,10 @@ class PlayState extends MusicBeatState
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingName + ' [' + ratingFC + ']';//peeps wanted no integer rating
+		}
+
+		if (isStoryMode)  {
+			weekMissesTxt.text = 'Week Misses: ' + weekMisses;
 		}
 
 		if(botplayTxt.visible) {
@@ -3514,14 +3543,6 @@ class PlayState extends MusicBeatState
 				});
 			}
 		}
-
-		/* if (combo > 60)
-				daRating = 'sick';
-			else if (combo > 12)
-				daRating = 'good'
-			else if (combo > 4)
-				daRating = 'bad';
-		 */
 
 		var pixelShitPart1:String = "";
 		var pixelShitPart2:String = '';
@@ -5002,8 +5023,14 @@ class PlayState extends MusicBeatState
 	function goodEnding() {
 		persistentUpdate = false;
 
-		var songLowercase:String = Paths.formatToSongPath('???');
+		var songLowercase:String = Paths.formatToSongPath('sunsets');
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
+
+		prevCamFollow = camFollow;
+		prevCamFollowPos = camFollowPos;
 
 		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 		PlayState.isStoryMode = true;
@@ -5011,7 +5038,9 @@ class PlayState extends MusicBeatState
 
 		Lib.application.window.title = "Wednesday's Infidelity";
 
-		FlxG.sound.music.volume = 0;
+		FlxG.sound.music.stop();
+		cancelMusicFadeTween();
+		LoadingState.loadAndSwitchState(new PlayState());
 	}
 
 	function badEnding() {
@@ -5020,12 +5049,20 @@ class PlayState extends MusicBeatState
 		var songLowercase:String = Paths.formatToSongPath('last-day');
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
+
+		prevCamFollow = camFollow;
+		prevCamFollowPos = camFollowPos;
+
 		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
 		Lib.application.window.title = "Wednesday's Infidelity";
 
-		FlxG.sound.music.volume = 0;
+		FlxG.sound.music.stop();
+		cancelMusicFadeTween();
+		LoadingState.loadAndSwitchState(new PlayState());
 	}
 }
