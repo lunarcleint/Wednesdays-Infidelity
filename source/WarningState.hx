@@ -16,7 +16,7 @@ import CheckboxThingie;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import openfl.Lib;
 
-class OutdatedState extends MusicBeatState
+class WarningState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
@@ -114,7 +114,7 @@ class OutdatedState extends MusicBeatState
 			\n\n
 			You have been warned.\n
 			Press SPACE to continue.",
-			24);
+			22);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		warnText.screenCenter(XY);
 		warnText.y += 40;

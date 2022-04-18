@@ -2698,6 +2698,8 @@ class PlayState extends MusicBeatState
 				gfSpeed = value;
 
 			case 'Blammed Lights':
+				if (!ClientPrefs.flashing) return;
+
 				var lightId:Int = Std.parseInt(value1);
 				if(Math.isNaN(lightId)) lightId = 0;
 
