@@ -143,9 +143,4 @@
 	<SubTexture name="laugh0037" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
 	<SubTexture name="laugh0038" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
 	<SubTexture name="laugh0039" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
-	<SubTexture name="laugh0040" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
-	<SubTexture name="laugh0041" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
-	<SubTexture name="laugh0042" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
-	<SubTexture name="laugh0043" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
-	<SubTexture name="laugh0044" x="7437" y="4017" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
 </TextureAtlas>
