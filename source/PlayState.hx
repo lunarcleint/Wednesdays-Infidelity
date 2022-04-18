@@ -2218,6 +2218,11 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.loopSoundName = 'gameOver';
 				GameOverSubstate.endSoundName = 'gameOverEnd';
 				GameOverSubstate.characterName = 'bf-suicide';
+			case "bf-retro":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'bf-suicide';
 			case "bf-satan":
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
 				GameOverSubstate.loopSoundName = 'gameOver';
