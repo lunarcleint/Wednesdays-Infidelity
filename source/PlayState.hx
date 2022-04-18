@@ -2119,7 +2119,9 @@ class PlayState extends MusicBeatState
 	{
 		if (paused)
 		{
-			Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "] - PAUSED";
+			if (health > 0)
+				Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "] - PAUSED";
+
 			if (FlxG.sound.music != null)
 			{
 				FlxG.sound.music.pause();
@@ -2175,7 +2177,8 @@ class PlayState extends MusicBeatState
 	{
 		if (paused)
 		{
-			Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
+			if (health > 0)
+				Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
 
 			if (FlxG.sound.music != null && !startingSong)
 			{
