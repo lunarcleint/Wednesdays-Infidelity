@@ -5002,9 +5002,10 @@ class PlayState extends MusicBeatState
 	function goodEnding() {
 		persistentUpdate = false;
 
-		var difficulty:String = CoolUtil.getDifficultyFilePath();
+		var songLowercase:String = Paths.formatToSongPath('???');
+		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson(StringTools.replace('last-day' + difficulty, "-null", "-hard"), 'last-day');
+		PlayState.SONG = Song.loadFromJson(StringTools.replace(poop, songLowercase, "-null", "-hard"));
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
@@ -5016,9 +5017,10 @@ class PlayState extends MusicBeatState
 	function badEnding() {
 		persistentUpdate = false;
 
-		var difficulty:String = CoolUtil.getDifficultyFilePath();
+		var songLowercase:String = Paths.formatToSongPath('last-day');
+		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson(StringTools.replace('last-day' + difficulty, "-null", "-hard"), 'last-day');
+		PlayState.SONG = Song.loadFromJson(StringTools.replace(poop, songLowercase, "-null", "-hard"));
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
