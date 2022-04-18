@@ -119,7 +119,7 @@ class PlayState extends MusicBeatState
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
-	var curDifficulty:Int = 2;
+	var curDifficulty:Int = 1;
 
 	public var vocals:FlxSound;
 
@@ -5002,10 +5002,9 @@ class PlayState extends MusicBeatState
 	function goodEnding() {
 		persistentUpdate = false;
 
-		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-		if(diffic == 'hard') diffic = '2';
+		var poop:String = Highscore.formatSong('???', curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson('????' + diffic);
+		PlayState.SONG = StringTools.replace(poop, "null", "hard");
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
@@ -5017,10 +5016,9 @@ class PlayState extends MusicBeatState
 	function badEnding() {
 		persistentUpdate = false;
 
-		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-		if(diffic == 'hard') diffic = '2';
+		var poop:String = Highscore.formatSong('last-day', curDifficulty);
 
-		PlayState.SONG = Song.loadFromJson('last-day' + diffic);
+		PlayState.SONG = StringTools.replace(poop,"null", "hard");
 		PlayState.isStoryMode = true;
 		PlayState.storyDifficulty = curDifficulty;
 
