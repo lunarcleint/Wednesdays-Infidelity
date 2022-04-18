@@ -449,6 +449,8 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = newPos;
 		}
 		updateText();
+
+		Lib.application.window.title = "Wednesday's Infidelity - Story Menu - " + leWeek.weekName; 
 	}
 
 	function weekIsLocked(name:String):Bool {

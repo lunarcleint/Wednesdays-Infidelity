@@ -239,7 +239,7 @@ class TitleState extends MusicBeatState
 				if(titleText != null) titleText.animation.play('press');
 
 				if (ClientPrefs.flashing)
-					FlxG.camera.flash(FlxColor.BLACK, 2.3);
+					FlxG.camera.flash(FlxColor.BLACK, 2.3, null, true);
 
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
@@ -431,7 +431,7 @@ class TitleState extends MusicBeatState
 			remove(logoSpr);
 
 			//if (ClientPrefs.flashing)
-				FlxG.camera.flash(FlxColor.BLACK, 2.3);
+				FlxG.camera.flash(FlxColor.BLACK, 2.3, null, true);
 			
 			remove(credGroup);
 			skippedIntro = true;

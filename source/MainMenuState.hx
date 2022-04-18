@@ -263,7 +263,7 @@ class MainMenuState extends MusicBeatState
 			{
 				spr.animation.play('selected');
 				if (ClientPrefs.flashing) {
-					FlxG.camera.flash(FlxColor.BLACK, 0.2, function () {}, true);
+					FlxG.camera.flash(FlxColor.BLACK, 0.2, null, true);
 				}
 				//FlxG.camera.flash(FlxColor.BLACK, 0.2);
 				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
