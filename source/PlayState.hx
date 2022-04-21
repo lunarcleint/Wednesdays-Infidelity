@@ -4314,7 +4314,7 @@ class PlayState extends MusicBeatState
 		}
 
 		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-		splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
+		splash.setupNoteSplash(x + 28, y + 14, data, skin, hue, sat, brt);
 		grpNoteSplashes.add(splash);
 	}
 
