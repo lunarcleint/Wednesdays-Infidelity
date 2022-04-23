@@ -1,96 +1,96 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IdleDance",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IdleDance"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				185,
+				184,
 				-40
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "LeftNote",
-			"indices": []
+			"indices": [],
+			"name": "LeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-42,
-				-237
+				-38,
+				-234
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "DownNote",
-			"indices": []
+			"indices": [],
+			"name": "DownNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				130,
-				396
+				129,
+				393
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "UpNote",
-			"indices": []
+			"indices": [],
+			"name": "UpNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-20,
-				60
+				-12,
+				58
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "RightNote",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RightNote"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				130,
 				93
 			],
-			"anim": "die",
+			"loop": true,
 			"fps": 24,
-			"name": "AnimationShit",
-			"indices": []
+			"anim": "die",
+			"indices": [],
+			"name": "AnimationShit"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				1,
 				0
 			],
-			"anim": "idle-alt",
+			"loop": false,
 			"fps": 24,
-			"name": "IdleColorBlacc",
-			"indices": []
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "IdleColorBlacc"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				10,
+				5,
 				151
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "laugh",
-			"loop": false,
-			"name": "Laugh"
+			"fps": 24,
+			"name": "Laugh",
+			"indices": []
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/Sad_Mokey_Crazy_Lmao_Assets",
+	"no_antialiasing": true,
+	"image": "characters/Sad_Mokey_Crazy_Lmao_Asset",
 	"position": [
 		-100,
 		-45

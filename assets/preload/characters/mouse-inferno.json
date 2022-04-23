@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MIKI IDLE"
+			"fps": 24,
+			"name": "MIKI IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				21,
 				-20
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MIKI LEFT"
+			"fps": 24,
+			"name": "MIKI LEFT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-50,
-				-10
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-49,
+				-7
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MIKI DOWN"
-		},
-		{
-			"offsets": [
-				-20,
-				-20
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "Miki UP"
+			"name": "MIKI DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				-14,
+				-26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Miki UP",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				-37,
 				12
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MIKI RIGHT"
+			"fps": 24,
+			"name": "MIKI RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

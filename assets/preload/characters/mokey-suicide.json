@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IdleMokey"
-		},
-		{
-			"offsets": [
-				155,
-				-2
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "LeftNote"
+			"name": "IdleMokey",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				150,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LeftNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				84,
+				-33
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DownNote",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				78,
-				-35
+				143
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "DownNote"
-		},
-		{
-			"offsets": [
-				71,
-				142
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "UpNote"
+			"fps": 24,
+			"name": "UpNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-50,
+				-35,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RightNote"
+			"fps": 24,
+			"name": "RightNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				162,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "transforming",
-			"indices": [],
-			"name": "TransformingBruh"
+			"fps": 24,
+			"name": "TransformingBruh",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				93,
+				94,
 				56
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "cry",
-			"indices": [],
-			"name": "CryingAnim"
+			"fps": 24,
+			"name": "CryingAnim",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Janc Idle instancia"
+			"fps": 24,
+			"name": "Janc Idle instancia",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				185,
+				165,
 				59
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Janc Left instancia"
+			"fps": 24,
+			"name": "Janc Left instancia",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-18,
-				56
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-31,
+				50
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Janc Rigth instancia"
+			"fps": 24,
+			"name": "Janc Rigth instancia",
+			"indices": []
 		},
 		{
-			"offsets": [
-				32,
-				73
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				16,
+				80
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "Janc Up instancia"
+			"fps": 24,
+			"name": "Janc Up instancia",
+			"indices": []
 		},
 		{
-			"offsets": [
-				98,
-				-9
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				58,
+				-19
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "ikNode_"
+			"fps": 24,
+			"name": "ikNode_",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
