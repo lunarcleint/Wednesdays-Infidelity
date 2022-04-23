@@ -3,61 +3,61 @@
 		{
 			"loop": false,
 			"offsets": [
-				-1,
-				0
+				-2,
+				1
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "M SUS IDLE",
+			"name": "Mickey SUS idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				80,
-				-20
+				170,
+				-33
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "M SUS LEFT",
+			"name": "Mickey SUS izquierda",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-190,
-				-60
+				129,
+				-61
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "M SUS DOWN",
+			"name": "Mickey SUS down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-10,
-				90
+				222,
+				168
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "M SUS UP",
+			"name": "Mickey SUS arriba",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-10,
-				100
+				134,
+				0
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "M SUS RIGHT",
+			"name": "Mickey SUS derecha",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Mickey_sus_remastered",
+	"image": "characters/Mickey_SUS",
 	"position": [
 		0,
 		0

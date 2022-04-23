@@ -8,6 +8,15 @@
 				17,
 				29
 			]
+		],
+		[
+			"Corpse",
+			"sus",
+			[
+				28,
+				17,
+				29
+			]
 		]
 	],
 	"hiddenUntilUnlocked": false,
@@ -27,6 +36,6 @@
 		253
 	],
 	"hideStoryMode": false,
-	"weekBefore": "tutorial",
+	"weekBefore": "Week Julian",
 	"startUnlocked": true
 }
