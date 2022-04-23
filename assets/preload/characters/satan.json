@@ -5,54 +5,54 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN IDLE"
 		},
 		{
 			"offsets": [
 				0,
-				0
+				8
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN LEFT"
 		},
 		{
 			"offsets": [
 				50,
-				-170
+				-150
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN DOWN"
 		},
 		{
 			"offsets": [
 				30,
-				180
+				124
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN UP"
 		},
 		{
 			"offsets": [
-				-40,
-				0
+				-54,
+				7
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN RIGHT"
 		},
 		{
@@ -60,10 +60,10 @@
 				90,
 				320
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "spawn",
-			"loop": false,
+			"indices": [],
 			"name": "SATAN APARICION"
 		}
 	],
@@ -81,8 +81,8 @@
 		161
 	],
 	"camera_position": [
-		0,
-		0
+		-230,
+		-300
 	],
 	"sing_duration": 6.1,
 	"scale": 1
