@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-2,
-				1
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Mickey SUS idle"
-		},
-		{
 			"offsets": [
 				150,
 				-33
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Mickey SUS izquierda"
+			"fps": 24,
+			"name": "Mickey SUS izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				119,
 				-64
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Mickey SUS down"
+			"fps": 24,
+			"name": "Mickey SUS down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				212,
 				171
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Mickey SUS arriba"
+			"fps": 24,
+			"name": "Mickey SUS arriba",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				140,
 				1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Mickey SUS derecha",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-2,
+				1
+			],
 			"indices": [],
-			"name": "Mickey SUS derecha"
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "Mickey SUS idle"
 		}
 	],
 	"no_antialiasing": false,
