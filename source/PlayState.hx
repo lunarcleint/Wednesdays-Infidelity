@@ -524,6 +524,17 @@ class PlayState extends MusicBeatState
 				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
 				add(chedderguybg);
 
+				var daStatic:FlxSprite = new FlxSprite(0, 0);
+				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+				daStatic.setGraphicSize(FlxG.width, FlxG.height);
+				daStatic.alpha = 0.05;
+				daStatic.screenCenter();
+				daStatic.cameras = [camOther];
+				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+				add(daStatic);
+				daStatic.animation.play('static');
+
+
 			case 'stageMokey': //Song Kriman't
 				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 				stageWhite.scale.set(5, 5);
@@ -713,7 +724,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#end
-		
+
 
 		// STAGE SCRIPTS
 		#if (MODS_ALLOWED && LUA_ALLOWED)
@@ -780,12 +791,12 @@ class PlayState extends MusicBeatState
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
-		
+
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
-		
+
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
 		{
@@ -1162,7 +1173,7 @@ class PlayState extends MusicBeatState
 		} else if(ClientPrefs.pauseMusic != 'None') {
 			CoolUtil.precacheMusic(Paths.formatToSongPath(ClientPrefs.pauseMusic));
 		}
-
+		
 		#if desktop
 		// Updating Discord Rich Presence.
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
@@ -1658,6 +1669,11 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curStage == 'stageMokey') {
+					grain.visible = true;
+					grain.animation.play('idle');
+				}
+				
+				if(curStage == 'chedder') {
 					grain.visible = true;
 					grain.animation.play('idle');
 				}
