@@ -92,7 +92,8 @@ class ChartingState extends MusicBeatState
 		['camHud & camera On', "."],
 		['Flash Black', "Flash en negro"],
 		['Flash White', "Flash en blanco"],
-		['Do Syringe', "where this event is currently places is when mickey will attack \n(this means this event start early then it is placed)\nthe player will see 1 of 3 effects randomly chosen."]
+		['Do Syringe', "where this event is currently places is when mickey will attack \n(this means this event start early then it is placed)\nthe player will see 1 of 3 effects randomly chosen."],
+		['Fade Cameras',"value 1: alpha \nvalue 2: duration \n if duration is 0 then it will be instant."]
 	];
 
 	var _file:FileReference;

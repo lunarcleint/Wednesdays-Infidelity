@@ -294,6 +294,8 @@ class PlayState extends MusicBeatState
 	var jumps:FlxSprite;
 	var grain:FlxSprite;
 
+	var chedderguybg:BGSprite;
+
 	// DODGE 
 
 	var spaceBar:FlxSprite;
@@ -518,6 +520,9 @@ class PlayState extends MusicBeatState
 				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
 				add(daStatic);
 				daStatic.animation.play('static');
+			case 'chedder': //Week Chedder
+				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
+				add(chedderguybg);
 
 			case 'stageMokey': //Song Kriman't
 				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
@@ -3152,6 +3157,21 @@ class PlayState extends MusicBeatState
 			case 'camHud & camera Off':
 				camHUD.visible = false;
 				camGame.visible = false;
+
+			case 'Fade Cameras':
+				var val1:Float = Std.parseFloat(value1); //alpha
+				var val2:Float = Std.parseFloat(value2); //duration
+				if (val2 == 0)
+				{
+					camHUD.alpha = val1;
+					camGame.alpha = val1;
+				}
+				else
+				{
+					FlxTween.tween(camHUD, {alpha: val1},val2);
+					FlxTween.tween(camGame, {alpha: val1},val2);
+				}
+				
 
 			case 'camHud & camera On':
 				camHUD.visible = true;

@@ -1,0 +1,39 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "chedder",
+		"player1": "bf-retro",
+		"player2": "cheese",
+		"player3": null,
+		"events": [
+			[
+				12888.8888888889,
+				[
+					[
+						"Fade Cameras",
+						"0",
+						"4"
+					]
+				]
+			],
+			[
+				21333.3333333333,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 135,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Cravings"
+	}
+}
