@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				21,
 				-20
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-49,
 				-7
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-14,
 				-26
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Miki UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Miki UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-37,
 				12
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MIKI RIGHT"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,12 +62,12 @@
 		-410,
 		-40
 	],
-	"healthicon": "face",
+	"healthicon": "mouse",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		70,
+		73,
+		69
 	],
 	"camera_position": [
 		-230,

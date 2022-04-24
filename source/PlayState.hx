@@ -588,7 +588,7 @@ class PlayState extends MusicBeatState
 				satanAparicion.updateHitbox();
 				add(satanAparicion);
 
-				satanJijijija = new FlxSprite(-250, -350);
+				satanJijijija = new FlxSprite(-250, -325);
 				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/JUJUJUJA');
 				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
 				satanJijijija.antialiasing = ClientPrefs.globalAntialiasing;
