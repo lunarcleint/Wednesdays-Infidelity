@@ -6,7 +6,7 @@
 				0
 			],
 			"loop": false,
-			"fps": 24,
+			"fps": 28,
 			"anim": "idle",
 			"indices": [],
 			"name": "Idle"
@@ -17,7 +17,7 @@
 				-5
 			],
 			"loop": false,
-			"fps": 24,
+			"fps": 28,
 			"anim": "singLEFT",
 			"indices": [],
 			"name": "left"
@@ -28,7 +28,7 @@
 				-50
 			],
 			"loop": false,
-			"fps": 24,
+			"fps": 28,
 			"anim": "singDOWN",
 			"indices": [],
 			"name": "Down"
@@ -39,7 +39,7 @@
 				23
 			],
 			"loop": false,
-			"fps": 24,
+			"fps": 28,
 			"anim": "singUP",
 			"indices": [],
 			"name": "Up"
@@ -50,7 +50,7 @@
 				-70
 			],
 			"loop": false,
-			"fps": 24,
+			"fps": 28,
 			"anim": "singRIGHT",
 			"indices": [],
 			"name": "Right"
@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/puppet-mickey",
 	"position": [
-		0,
-		130
+		20,
+		270
 	],
 	"healthicon": "julian",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		132
 	],
 	"camera_position": [
-		-200,
+		-100,
 		10
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4.00000000000001,
 	"scale": 1
 }
