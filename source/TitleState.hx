@@ -58,6 +58,7 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+		//DiscordClient.changePresence("In the Menus", null);
 
 		Lib.application.window.title = "Wednesday's Infidelity - Title";
 		
@@ -68,22 +69,7 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		#if FREEPLAY
-		MusicBeatState.switchState(new FreeplayState());
-		#elseif CHARTING
-		MusicBeatState.switchState(new ChartingState());
-		#else
-			#if desktop
-			DiscordClient.initialize();
-			Application.current.onExit.add (function (exitCode) {
-				DiscordClient.shutdown();
-			});
-			#end
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				startIntro();
-			});
-		#end
+		new FlxTimer().start(1, function(tmr:FlxTimer) {startIntro();});
 	}
 
 	var logoBl:FlxSprite;

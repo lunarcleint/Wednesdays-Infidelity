@@ -46,6 +46,7 @@
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
 	<define name="MODS_ALLOWED" if="desktop" />
 	<define name="LUA_ALLOWED" if="desktop" />
+	<define name="PRIVATE_BUILD"/> <!-- COMMENT THIS IN FINAL BUILD--> 
 	<!--<define name="ACHIEVEMENTS_ALLOWED" /> ARE WE GONNA ADD ACHEIVEMENTS? -->
 	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits"/>
 	<define name="PSYCH_WATERMARKS"/> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->

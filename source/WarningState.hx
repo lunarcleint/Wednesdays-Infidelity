@@ -15,6 +15,7 @@ import options.Option;
 import CheckboxThingie;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import openfl.Lib;
+import Discord.DiscordClient;
 
 class WarningState extends MusicBeatState
 {
@@ -93,6 +94,19 @@ class WarningState extends MusicBeatState
 		}
 
 		FlxG.mouse.visible = false;
+
+		#if FREEPLAY
+		MusicBeatState.switchState(new FreeplayState());
+		#elseif CHARTING
+		MusicBeatState.switchState(new ChartingState());
+		#else
+			#if desktop
+			DiscordClient.initialize();
+			Application.current.onExit.add (function (exitCode) {
+				DiscordClient.shutdown();
+			});
+			#end
+		#end
 
 		Lib.application.window.title = "Wednesday's Infidelity - WARNING";
 
