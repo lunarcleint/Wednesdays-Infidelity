@@ -4376,6 +4376,13 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	private var notesplashOffsets:Array<Array<Float>> = [
+		[4,4],
+		[24,8],
+		[30,10],
+		[5,8]
+	];
+
 	public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null) {
 		var skin:String = 'noteSplashes';
 		if(PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0) skin = PlayState.SONG.splashSkin;
@@ -4391,7 +4398,7 @@ class PlayState extends MusicBeatState
 		}
 
 		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-		splash.setupNoteSplash(x + 28, y + 14, data, skin, hue, sat, brt);
+		splash.setupNoteSplash(x + notesplashOffsets[data][0], y + notesplashOffsets[data][1], data, skin, hue, sat, brt);
 		grpNoteSplashes.add(splash);
 	}
 
