@@ -41,6 +41,9 @@ function onUpdate()
             if getProperty('dad.animation.curAnim.name') == 'idle' then
                 triggerEvent('Camera Follow Pos',xx,yy)
             end
+            if getProperty('dad.animation.curAnim.name') == 'hey' then
+                triggerEvent('Camera Follow Pos',xx - 130,yy)
+            end
         else
             setProperty('defaultCamZoom',1.0)
             if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
