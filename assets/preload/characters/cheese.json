@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Cheddar-idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Cheddar-idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-19
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Cheddar-left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Cheddar-left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				67,
 				-173
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Cheddar-down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Cheddar-down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				90
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Cheddar-up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Cheddar-up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				1,
+				0,
 				-62
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Cheddar-right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Cheddar-right"
 		}
 	],
 	"no_antialiasing": false,
