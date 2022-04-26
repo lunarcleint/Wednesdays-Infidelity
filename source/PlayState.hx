@@ -386,7 +386,11 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
+			#if PRIVATE_BUILD
+				detailsText = "Story Mode: " + 'CLASSIFIED'; //how did we forget this noooooo
+			#else
+				detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
+			#end
 		}
 		else
 		{
