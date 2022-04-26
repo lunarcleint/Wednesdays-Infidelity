@@ -659,8 +659,9 @@ class PlayState extends MusicBeatState
 		spaceBar.visible = false;
 		add(spaceBar);
 
+
 		devil = new FlxSprite(0,0);
-		devil.frames = Paths.getSparrowAtlas('satan_jumpscare', 'shared');
+		devil.frames = Paths.getSparrowAtlas(PlayState.SONG.stage == "susNightmare" ? "SATAN_AMONGUS" : "satan_jumpscare", 'shared');
 		devil.screenCenter();
 		devil.antialiasing = true;
 		devil.cameras = [camOther];
@@ -4134,7 +4135,7 @@ class PlayState extends MusicBeatState
 	}
 
 	function diablo() {
-		devil.animation.play('scape');
+		devil.animation.play('scape', true);
 		devil.visible = true;
 		devil.screenCenter();
 	
