@@ -1,4 +1,16 @@
 {
+	"storyName": "SUS...?",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "sus",
+	"weekBefore": "Week Julian",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"Neddle Mouse",
@@ -10,7 +22,7 @@
 			]
 		],
 		[
-			"Corpse",
+			"Unknown Defeat",
 			"sus",
 			[
 				28,
@@ -19,23 +31,11 @@
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "sus",
-	"difficulties": "",
 	"weekCharacters": [
 		"dad",
 		"dad",
 		"dad"
 	],
-	"storyName": "SUS...?",
-	"weekName": "Week SUS",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
-	"hideStoryMode": false,
-	"weekBefore": "Week Julian",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week SUS"
 }
