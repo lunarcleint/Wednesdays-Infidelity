@@ -288,7 +288,6 @@ class PlayState extends MusicBeatState
 	private var keysArray:Array<Dynamic>;
 
 	//WENSDAY INF 
-	private var pausables:Array<Dynamic> = []; //why is this here again you cant pause? -lunar
 
 	var devil:FlxSprite;
 	var jumps:FlxSprite;
@@ -1701,7 +1700,7 @@ class PlayState extends MusicBeatState
 					case 0:
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 					case 1:
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.scrollFactor.set();
 						countdownReady.updateHitbox();
@@ -1722,7 +1721,7 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
 					case 2:
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.25}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.25}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 						countdownSet.scrollFactor.set();
 
@@ -1742,7 +1741,7 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 					case 3:
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.35}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.35}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 						countdownGo.scrollFactor.set();
 
@@ -4619,7 +4618,7 @@ class PlayState extends MusicBeatState
 		
 						var introAlts:Array<String> = introAssets.get('default');
 
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.scrollFactor.set();
 						countdownReady.updateHitbox();
@@ -4645,7 +4644,7 @@ class PlayState extends MusicBeatState
 		
 						var introAlts:Array<String> = introAssets.get('default');
 
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.25}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.25}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 						countdownSet.scrollFactor.set();
 
@@ -4670,7 +4669,7 @@ class PlayState extends MusicBeatState
 		
 						var introAlts:Array<String> = introAssets.get('default');
 						
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.35}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD}));
+						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom + 0.35}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 						countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 						countdownGo.scrollFactor.set();
 
@@ -4715,9 +4714,9 @@ class PlayState extends MusicBeatState
 				{
 					case 992:
 						FlxG.camera.flash(FlxColor.BLACK, 5);
-						pausables.push(FlxTween.tween(blackFuck, {alpha: 1}, 0.5));
+						FlxTween.tween(blackFuck, {alpha: 1}, 0.5);
 					case 1050:
-						pausables.push(FlxTween.tween(blackFuck, {alpha: 0}, 2));
+						FlxTween.tween(blackFuck, {alpha: 0}, 2);
 				}
 			}
 
