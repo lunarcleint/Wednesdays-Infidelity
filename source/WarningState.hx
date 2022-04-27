@@ -114,24 +114,29 @@ class WarningState extends MusicBeatState
 		warnImage.antialiasing = ClientPrefs.globalAntialiasing;
 		warnImage.updateHitbox();
 		warnImage.screenCenter(X);
-		warnImage.alpha = 0.5;
+		warnImage.alpha = 0.2;
 		add(warnImage);
 
-		var warnTitle = new Alphabet(0, 40, "Warning!", true, false, 0, 1.25);
+		var warnTitle = new Alphabet(0, 40, "Warning!", true, false, 0, 1.175);
 		warnTitle.screenCenter(X);
+		for (letter in warnTitle.lettersArray) {
+			letter.antialiasing = true;
+		}
 		add(warnTitle);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"This mod contains Flashing Lights, Loud Effects, and Screen Shake.\n
-			 Press Select Your Options \n
+			"This mod contains Flashing Lights, Loud Effects, and Screen Shake.
+			 Press Select Your Options 
 			(*These can be changed later*)" + "\n
 			\n\n
-			You have been warned.\n
+
+			You have been warned.
 			Press SPACE to continue.",
 			21);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		warnText.screenCenter(XY);
 		warnText.y += 40;
+		warnText.x += 12;
 		add(warnText);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
@@ -278,7 +283,7 @@ class WarningState extends MusicBeatState
 						warnImage.visible = false;
 					}
 				});
-				FlxTween.tween(warnText, {alpha: 0}, 1, {
+				FlxTween.tween(FlxG.camera, {alpha: 0}, 1, {
 					onComplete: function (twn:FlxTween) {
 						warnImage.visible = false;
 						Lib.application.window.title = "Wednesday's Infidelity";
