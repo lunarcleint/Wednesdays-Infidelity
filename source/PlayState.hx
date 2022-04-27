@@ -667,7 +667,6 @@ class PlayState extends MusicBeatState
 		devil.animation.addByPrefix('scape','SATANN', 24, false);
 		devil.visible = false;
 		add(devil);
-		devil.animation.play('scape');
 
 		jumps = new FlxSprite(0,0);
 		jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
