@@ -48,6 +48,13 @@ class HealthIcon extends FlxSprite
 			iconOffsets[1] = (width - 150) / 2;
 			updateHitbox();
 
+			switch (char) {
+				case "gf":
+					iconOffsets [1] -= 10;
+			}
+
+			trace(char);
+
 			animation.add(char, [0, 1], 0, false, isPlayer);
 			animation.play(char);
 			this.char = char;

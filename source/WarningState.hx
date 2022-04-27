@@ -136,7 +136,7 @@ class WarningState extends MusicBeatState
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		warnText.screenCenter(XY);
 		warnText.y += 40;
-		warnText.x += 12;
+		warnText.x += 4;
 		add(warnText);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
