@@ -175,7 +175,7 @@ class MainMenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'discord')
 				{
-					CoolUtil.browserLoad('https://discord.gg/CvB7p9UeXf');
+					CoolUtil.browserLoad('https://discord.gg/U4SbwdNHpX');
 				}
 				else
 				{
