@@ -1,158 +1,169 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-8,
 				20
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "BF idle dance",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				8,
 				45
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE LEFT MISS",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF NOTE LEFT MISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-35,
 				21
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE DOWN MISS",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-36,
 				65
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE UP MISS",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-101,
 				98
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE RIGHT MISS",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF NOTE RIGHT MISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				47,
 				1
 			],
-			"anim": "firstDeath",
+			"loop": false,
 			"fps": 24,
-			"name": "BF dies",
-			"indices": []
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-63,
 				5
 			],
-			"anim": "deathLoop",
+			"loop": true,
 			"fps": 24,
-			"name": "BF Dead Loop",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-52,
 				-3
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "BF Dead confirm",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-45,
 				-16
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE DOWN instancia",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF NOTE DOWN instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				9,
 				19
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE LEFT instancia",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF NOTE LEFT instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-101,
 				22
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE RIGHT instancia",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF NOTE RIGHT instancia"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-28,
 				30
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE UP instancia",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF NOTE UP instancia"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-11,
 				20
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "dodge",
-			"indices": [],
-			"name": "boyfriend dodge instancia "
+			"fps": 24,
+			"name": "boyfriend dodge instancia ",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-37,
 				21
 			],
-			"anim": "at",
+			"loop": false,
 			"fps": 24,
-			"name": "BF Jeringa instancia ",
-			"indices": []
+			"anim": "at",
+			"indices": [],
+			"name": "BF Jeringa instancia "
+		},
+		{
+			"offsets": [
+				-5,
+				18
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "BF H"
 		}
 	],
 	"no_antialiasing": false,

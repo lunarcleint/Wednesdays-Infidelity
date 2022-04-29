@@ -479,6 +479,7 @@ class PlayState extends MusicBeatState
 		weekMissesBar.antialiasing = ClientPrefs.globalAntialiasing;
 		weekMissesBar.scale.set(0.7, 0.7);
 		weekMissesBar.alpha = 0.8;
+		weekMissesBar.visible = !ClientPrefs.hideHud;
 		add(weekMissesBar);
 
 		switch (curStage)
@@ -1031,7 +1032,7 @@ class PlayState extends MusicBeatState
 		weekMissesTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		weekMissesTxt.scrollFactor.set();
 		weekMissesTxt.borderSize = 1.25;
-		weekMissesTxt.visible = !ClientPrefs.hideHud;
+		weekMissesTxt.visible = weekMissesBar.visible; //smh
 		add(weekMissesTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -1158,7 +1159,8 @@ class PlayState extends MusicBeatState
 
 				case 'unknown-suffering':
 					startVideo("TransformUN");
-
+				case 'wistfulness':
+					startVideo('StoryStart');
 				default:
 					startCountdown();
 			}
@@ -2363,7 +2365,7 @@ class PlayState extends MusicBeatState
 			});
 		}
 
-		if (isStoryMode)
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && !ClientPrefs.hideHud)
 			weekMissesBar.visible = true;
 		else
 			weekMissesBar.visible = false;
@@ -2454,7 +2456,7 @@ class PlayState extends MusicBeatState
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingName + ' [' + ratingFC + ']';//peeps wanted no integer rating
 		}
 
-		if (isStoryMode)  {
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide')  {
 			weekMissesTxt.text = 'Week Misses: ' + weekMisses;
 		}
 
