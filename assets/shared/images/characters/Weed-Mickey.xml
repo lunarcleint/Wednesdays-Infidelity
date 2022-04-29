@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Weed-Mickey.png"><SubTexture name="Weed-Mickey idle0000" x="0" y="0" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey idle0001" x="767" y="0" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey idle0002" x="1534" y="0" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey idle0003" x="2301" y="0" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey idle0004" x="0" y="799" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey idle0005" x="767" y="799" width="767" height="799" frameX="0" frameY="0" frameWidth="767" frameHeight="799" />
+<SubTexture name="Weed-Mickey left0000" x="1534" y="799" width="687" height="733" frameX="0" frameY="0" frameWidth="687" frameHeight="733" />
+<SubTexture name="Weed-Mickey left0001" x="2221" y="799" width="687" height="733" frameX="0" frameY="0" frameWidth="687" frameHeight="733" />
+<SubTexture name="Weed-Mickey left0002" x="0" y="1598" width="687" height="733" frameX="0" frameY="0" frameWidth="687" frameHeight="733" />
+<SubTexture name="Weed-Mickey right0000" x="687" y="1598" width="870" height="781" frameX="0" frameY="0" frameWidth="870" frameHeight="781" />
+<SubTexture name="Weed-Mickey right0001" x="1557" y="1598" width="870" height="781" frameX="0" frameY="0" frameWidth="870" frameHeight="781" />
+<SubTexture name="Weed-Mickey right0002" x="2427" y="1598" width="870" height="781" frameX="0" frameY="0" frameWidth="870" frameHeight="781" />
+<SubTexture name="Weed-Mickey up0000" x="0" y="2379" width="642" height="798" frameX="0" frameY="0" frameWidth="642" frameHeight="798" />
+<SubTexture name="Weed-Mickey up0001" x="642" y="2379" width="642" height="798" frameX="0" frameY="0" frameWidth="642" frameHeight="798" />
+<SubTexture name="Weed-Mickey up0002" x="1284" y="2379" width="642" height="798" frameX="0" frameY="0" frameWidth="642" frameHeight="798" />
+<SubTexture name="Weed-Mickey down0000" x="1926" y="2379" width="672" height="672" frameX="0" frameY="0" frameWidth="672" frameHeight="672" />
+<SubTexture name="Weed-Mickey down0001" x="0" y="3177" width="672" height="672" frameX="0" frameY="0" frameWidth="672" frameHeight="672" />
+<SubTexture name="Weed-Mickey down0002" x="672" y="3177" width="672" height="672" frameX="0" frameY="0" frameWidth="672" frameHeight="672" />
+</TextureAtlas>

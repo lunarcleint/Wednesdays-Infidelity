@@ -538,7 +538,25 @@ class PlayState extends MusicBeatState
 				add(daStatic);
 				daStatic.animation.play('static');
 
+			case 'reefer': //Song Reefer Madness
+				var stupig:FlxSprite = new FlxSprite(-650, -100).loadGraphic(Paths.image('backgrounds/Snoop-Dog-Approved-BG'), 'shared');
+				add(stupig);
 
+				blackFuck = new FlxSprite().makeGraphic(1280, 720, FlxColor.BLACK);
+				blackFuck.cameras = [camOther];
+				blackFuck.alpha = 0;
+				blackFuck.screenCenter(X);
+				add(blackFuck);
+
+				var daStatic:FlxSprite = new FlxSprite(0, 0);
+				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+				daStatic.setGraphicSize(FlxG.width, FlxG.height);
+				daStatic.alpha = 0.05;
+				daStatic.screenCenter();
+				daStatic.cameras = [camOther];
+				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+				add(daStatic);
+				daStatic.animation.play('static');
 			case 'stageMokey': //Song Kriman't
 				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 				stageWhite.scale.set(5, 5);
@@ -4870,6 +4888,10 @@ class PlayState extends MusicBeatState
 				grain.animation.play('idle');
 
 			case 'stageMokey':
+				grain.visible = true;
+				grain.animation.play('idle');
+
+			case 'reefer':
 				grain.visible = true;
 				grain.animation.play('idle');
 

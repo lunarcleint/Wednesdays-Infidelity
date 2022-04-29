@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 18,
+			"anim": "idle",
+			"indices": [],
+			"name": "Weed-Mickey idle"
+		},
+		{
+			"offsets": [
+				248,
+				-90
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Weed-Mickey left"
+		},
+		{
+			"offsets": [
+				52,
+				-139
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Weed-Mickey down"
+		},
+		{
+			"offsets": [
+				71,
+				5
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Weed-Mickey up"
+		},
+		{
+			"offsets": [
+				84,
+				-43
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Weed-Mickey right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Weed-Mickey",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "munchies",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		213,
+		213
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
