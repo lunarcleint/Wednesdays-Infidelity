@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 28,
-			"name": "Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
 		},
 		{
 			"offsets": [
-				-15,
-				-5
+				-14,
+				-6
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 32,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "left"
+			"indices": [],
+			"name": "LEFT"
 		},
 		{
 			"offsets": [
-				27,
-				-50
+				35,
+				-55
 			],
-			"indices": [],
-			"fps": 32,
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Down"
+			"indices": [],
+			"name": "DOWN"
 		},
 		{
 			"offsets": [
-				80,
-				23
+				79,
+				22
 			],
-			"indices": [],
-			"fps": 32,
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Up"
+			"indices": [],
+			"name": "UP"
 		},
 		{
 			"offsets": [
-				32,
-				-70
+				34,
+				-77
 			],
-			"indices": [],
-			"fps": 32,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "Right"
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RIGHT"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/puppet-mickey",
 	"position": [
 		20,
-		270
+		280
 	],
 	"healthicon": "julian",
 	"flip_x": false,
