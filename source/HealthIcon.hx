@@ -46,12 +46,18 @@ class HealthIcon extends FlxSprite
 			loadGraphic(file, true, Math.floor(width / 2), Math.floor(height)); //Then load it fr
 			iconOffsets[0] = (width - 150) / 2;
 			iconOffsets[1] = (width - 150) / 2;
-			updateHitbox();
-
 			switch (char) {
 				case "gf":
 					iconOffsets [1] -= 10;
+				case "badend bf" | "hellholebf":
+					iconOffsets [0] += 8;
+					iconOffsets [1] -= 10;
+				case "satan":
+					iconOffsets [1] += 20;
+				case "crazy-mokey" | "mokey" :
+					iconOffsets [1] += 10;
 			}
+			updateHitbox();
 
 			trace(char);
 

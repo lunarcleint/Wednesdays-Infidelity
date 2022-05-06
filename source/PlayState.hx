@@ -1268,9 +1268,17 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	public function reloadHealthBarColors() {
-		healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
+	public function reloadHealthBarColors(?dadisgf:Bool = false) {
+		if (dadisgf)
+		{
+			healthBar.createFilledBar(FlxColor.fromRGB(gf.healthColorArray[0], gf.healthColorArray[1], gf.healthColorArray[2]),
 			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+		}
+		else
+		{
+			healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
+			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+		}
 			
 		healthBar.updateBar();
 	}
@@ -1861,6 +1869,20 @@ class PlayState extends MusicBeatState
 	var previousFrameTime:Int = 0;
 	var lastReportedPlayheadPosition:Int = 0;
 	var songTime:Float = 0;
+
+	function changeDadIcon(gf:Bool = false) //mostly used just so i can update satans icon in
+	{
+		if (gf)
+		{
+			iconP2.changeIcon(this.gf.healthIcon);
+			reloadHealthBarColors(true);
+		}
+		else
+		{
+			iconP2.changeIcon(dad.healthIcon);
+			reloadHealthBarColors();
+		}
+	}
 
 	function startSong():Void
 	{
@@ -4121,6 +4143,22 @@ class PlayState extends MusicBeatState
 					}
 
 				}
+			if (curSong == 'Hellhole')
+				{
+					notehealthdmg = 0.035;
+	
+					if (health > 0.1)
+	
+					if (note.isSustainNote)
+					{
+						health -= notehealthdmg / 2;
+					}
+					else
+					{
+						health -= notehealthdmg;
+					}
+	
+				}
 
 
 			if(char != null)
@@ -4749,6 +4787,8 @@ class PlayState extends MusicBeatState
 					case 1343:
 						gf.alpha = 1;
 						satanAparicion.alpha = 0;
+					case 1345:
+						changeDadIcon(true);
 					case 1376:
 						gf.alpha = 0;
 						satanJijijija.alpha = 1;
@@ -4783,6 +4823,7 @@ class PlayState extends MusicBeatState
 						//satanAparicion.animation.play("aparicion", false);
 						satanAparicion.animation.reverse();
 					case 1872:
+						changeDadIcon(false);
 						gf.alpha = 0;
 						satanAparicion.alpha = 0;
 				}
