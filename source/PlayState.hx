@@ -515,28 +515,9 @@ class PlayState extends MusicBeatState
 				sexi.updateHitbox();
 				add(sexi);
 
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
 			case 'chedder': //Week Chedder
 				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
 				add(chedderguybg);
-
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
 
 			case 'reefer': //Song Reefer Madness
 				var stupig:FlxSprite = new FlxSprite(-650, -100).loadGraphic(Paths.image('backgrounds/Snoop-Dog-Approved-BG'), 'shared');
@@ -548,15 +529,6 @@ class PlayState extends MusicBeatState
 				blackFuck.screenCenter(X);
 				add(blackFuck);
 
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
 			case 'stageMokey': //Song Kriman't
 				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 				stageWhite.scale.set(5, 5);
@@ -569,31 +541,11 @@ class PlayState extends MusicBeatState
 				blackFuck.screenCenter(X);
 				add(blackFuck);
 
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
-
 			case 'bobux': //Week Suicide
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
 				nosexi.antialiasing = ClientPrefs.globalAntialiasing;
 				nosexi.updateHitbox();
 				add(nosexi);
-
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
 			
 			case 'inferno': //Week Final
 				var inferno:BGSprite = new BGSprite('backgrounds/BG_INFERNO', -750, -450);
@@ -619,16 +571,6 @@ class PlayState extends MusicBeatState
 				satanJijijija.updateHitbox();
 				add(satanJijijija);
 
-				var daStatic:FlxSprite = new FlxSprite(0, 0);
-				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
-				daStatic.setGraphicSize(FlxG.width, FlxG.height);
-				daStatic.alpha = 0.05;
-				daStatic.screenCenter();
-				daStatic.cameras = [camOther];
-				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
-				add(daStatic);
-				daStatic.animation.play('static');
-
 			case 'susNightmare': //Week SUS
 				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
 				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
@@ -639,6 +581,9 @@ class PlayState extends MusicBeatState
 				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
 				add(gfSus);
 
+		}
+		switch(curStage){ //did another switch for stages here just to make sure it layers properly and it looks clean!! :P
+			case 'vecindario' | 'chedder' | 'reefer' | 'stageMokey' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -647,8 +592,7 @@ class PlayState extends MusicBeatState
 				daStatic.cameras = [camOther];
 				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
 				add(daStatic);
-				daStatic.animation.play('static');
-
+				daStatic.animation.play('static');	
 		}
 
 		if(isPixelStage) {
@@ -1691,35 +1635,14 @@ class PlayState extends MusicBeatState
 				}
 
 				// head bopping for bg characters on Mall
-				if(curStage == 'susNightmare') {
-					gfSus.dance(true);
-					grain.visible = true;
-					grain.animation.play('idle');
-				}
-
-				if(curStage == 'inferno') {
-					grain.visible = true;
-					grain.animation.play('idle');
-				}
-
-				if(curStage == 'vecindario') {
-					grain.visible = true;
-					grain.animation.play('idle');
-				}
-
-				if(curStage == 'stageMokey') {
-					grain.visible = true;
-					grain.animation.play('idle');
-				}
-				
-				if(curStage == 'chedder') {
-					grain.visible = true;
-					grain.animation.play('idle');
-				}
-
-				if(curStage == 'bobux') {
-					grain.visible = true;
-					grain.animation.play('idle');
+				switch(curStage){
+					case 'vecindario' | 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland' | 'chedder': //make sure to also add the stage name here too
+						grain.visible = true;
+						grain.animation.play('idle');
+					case 'susNightmare':
+						gfSus.dance(true);
+						grain.visible = true;
+						grain.animation.play('idle');
 				}
 
 				switch (swagCounter)
@@ -4917,7 +4840,7 @@ class PlayState extends MusicBeatState
 			case 'vecindario':
 				grain.animation.play('idle');
 
-			case 'bobux':
+			case 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland': //add stage names here to make the grain appear
 				grain.visible = true;
 				grain.animation.play('idle');
 
@@ -4925,18 +4848,6 @@ class PlayState extends MusicBeatState
 				if (gfSus != null)
 					gfSus.dance(true);
 				
-				grain.visible = true;
-				grain.animation.play('idle');
-
-			case 'stageMokey':
-				grain.visible = true;
-				grain.animation.play('idle');
-
-			case 'reefer':
-				grain.visible = true;
-				grain.animation.play('idle');
-
-			case 'inferno':
 				grain.visible = true;
 				grain.animation.play('idle');
 
