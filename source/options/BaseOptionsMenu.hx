@@ -59,7 +59,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		
 		
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		bg.color = 0xFFffffff;
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
@@ -340,8 +340,8 @@ class BaseOptionsMenu extends MusicBeatSubstate
 			boyfriend.destroy();
 		}
 
-		boyfriend = new Character(840, 170, 'bf', true);
-		boyfriend.setGraphicSize(Std.int(boyfriend.width * 0.75));
+		boyfriend = new Character(800, 170, 'bf-retro', true);
+		boyfriend.setGraphicSize(Std.int(boyfriend.width * 0.95));
 		boyfriend.updateHitbox();
 		boyfriend.dance();
 		insert(1, boyfriend);
