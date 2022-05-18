@@ -637,7 +637,7 @@ class PlayState extends MusicBeatState
 		jumps.screenCenter();
 		jumps.cameras = [camOther];
 		jumps.animation.addByPrefix('scape','SCREAMER instancia ', 24, false);
-		jumps.visible = false;
+		jumps.alpha = 0.00001;
 		jumps.animation.play('scape');
 		jumps.screenCenter();
 		add(jumps);
@@ -4126,13 +4126,13 @@ class PlayState extends MusicBeatState
 
 	function jump() {
 		jumps.animation.play('scape');
-		jumps.visible = true;
+		jumps.alpha = 1;
 		jumps.screenCenter();
 
 		FlxG.sound.play(Paths.sound('static'));
 
 		jumps.animation.finishCallback = function(name:String) {
-			jumps.visible = false;
+			jumps.alpha = 0;
 		}
 	}
 

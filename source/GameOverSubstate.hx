@@ -117,7 +117,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			if (boyfriend.animation.curAnim.finished)
 			{
-				coolStartDeath();
+				coolStartDeath(1.5);
 				boyfriend.startedDeath = true;
 			}
 		}
