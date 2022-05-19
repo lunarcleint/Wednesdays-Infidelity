@@ -3,17 +3,6 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "IdleMokey",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
 				150,
 				-1
 			],
@@ -76,6 +65,39 @@
 			"fps": 24,
 			"name": "CryingAnim",
 			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "IdleMokey",
+			"indices": [
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "IdleMokey"
 		}
 	],
 	"no_antialiasing": false,
@@ -95,6 +117,6 @@
 		-50,
 		30
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4.00000000000001,
 	"scale": 1
 }

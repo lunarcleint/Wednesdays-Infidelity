@@ -2,17 +2,6 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "IdleDance"
-		},
-		{
-			"offsets": [
 				184,
 				-40
 			],
@@ -67,17 +56,6 @@
 			"name": "AnimationShit"
 		},
 		{
-			"offsets": [
-				1,
-				0
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle-alt",
-			"indices": [],
-			"name": "IdleColorBlacc"
-		},
-		{
 			"loop": false,
 			"offsets": [
 				5,
@@ -87,6 +65,52 @@
 			"fps": 24,
 			"name": "Laugh",
 			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "IdleDance",
+			"indices": [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IdleDance",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": true,
+			"name": "IdleColorBlacc"
 		}
 	],
 	"no_antialiasing": true,
@@ -106,6 +130,6 @@
 		0,
 		0
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4.00000000000001,
 	"scale": 1
 }

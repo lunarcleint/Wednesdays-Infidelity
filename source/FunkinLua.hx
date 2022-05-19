@@ -288,6 +288,11 @@ class FunkinLua {
 				spr.loadGraphic(Paths.image(image));
 			}
 		});
+		Lua_helper.add_callback(lua, "addVCREffect", function(camera:String,glitchFactor:Float = 0.0,distortion:Bool=true,perspectiveOn:Bool=true,vignetteMoving:Bool=true) {
+			
+			PlayState.instance.addShaderToCamera(camera, new Shaders.VCRDistortionEffect(glitchFactor,distortion,perspectiveOn,vignetteMoving));
+			
+		});
 		Lua_helper.add_callback(lua, "loadFrames", function(variable:String, image:String, spriteType:String = "sparrow") {
 			var spr:FlxSprite = getObjectDirectly(variable);
 			if(spr != null && image != null && image.length > 0)
