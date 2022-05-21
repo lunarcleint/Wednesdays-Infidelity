@@ -93,6 +93,23 @@ class WarningState extends MusicBeatState
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
 
+		if (FlxG.save.data.beatmainweek == null) //W.I SAVES
+		{
+			FlxG.save.data.beatmainweek = false;
+		}
+		if (FlxG.save.data.gotbadending == null)
+		{
+			FlxG.save.data.gotbadending = false;
+		}
+		if (FlxG.save.data.gotgoodending == null)
+		{
+			FlxG.save.data.gotgoodending = false;
+		}
+		if (FlxG.save.data.beathell == null)
+		{
+			FlxG.save.data.beathell = false;
+		}
+
 		FlxG.mouse.visible = false;
 
 		#if FREEPLAY

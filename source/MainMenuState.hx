@@ -100,6 +100,13 @@ class MainMenuState extends MusicBeatState
 			if(optionShit.length < 4) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = true;
+
+			if (optionShit[i] == 'freeplay' && FlxG.save.data.beatmainweek == false)
+			{
+				var newShader:ColorSwap = new ColorSwap();
+				menuItem.shader = newShader.shader;
+				newShader.brightness = -0.8;
+			}
 		}
 
 		if (ClientPrefs.shake)
@@ -176,6 +183,10 @@ class MainMenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'discord')
 				{
 					CoolUtil.browserLoad('https://discord.gg/U4SbwdNHpX');
+				}
+				else if (FlxG.save.data.beatmainweek == false && optionShit[curSelected] == 'freeplay')
+				{
+					FlxG.sound.play(Paths.sound('lockedSound'));
 				}
 				else
 				{

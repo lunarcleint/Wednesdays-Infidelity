@@ -5,6 +5,7 @@ import Discord.DiscordClient;
 #end
 import editors.ChartingState;
 import flash.text.TextField;
+import flixel.util.FlxTimer;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
@@ -22,6 +23,7 @@ import openfl.Lib;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
+import flixel.input.keyboard.FlxKey;
 
 using StringTools;
 
@@ -51,6 +53,10 @@ class FreeplayState extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
+	var daStatic:FlxSprite;
+
+	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.SIX, FlxKey.SIX, FlxKey.SIX];
+	var lastKeysPressed:Array<FlxKey> = [];
 	override function create()
 	{
 		Paths.clearStoredMemory();
@@ -86,7 +92,38 @@ class FreeplayState extends MusicBeatState
 				{
 					colors = [146, 113, 253];
 				}
-				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+				switch(song[0])
+				{
+					case 'Sunsets':
+						if (FlxG.save.data.gotgoodending == false) 
+						{
+							continue;
+						}
+						else
+						{
+							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));	
+						}
+					case 'Last Day':
+						if (FlxG.save.data.gotbadending == false) 
+						{
+							continue;
+						}
+						else
+						{
+							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));	
+						}
+					case 'Hellhole':
+						if (FlxG.save.data.beathell == false) 
+						{
+							continue;
+						}
+						else
+						{
+							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));	
+						}
+					default:
+						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
+				}
 			}
 		}
 		WeekData.loadTheFirstEnabledMod();
@@ -193,6 +230,18 @@ class FreeplayState extends MusicBeatState
 		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
+
+		daStatic = new FlxSprite(0, 0);
+		daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
+		daStatic.setGraphicSize(FlxG.width, FlxG.height);
+		//daStatic.alpha = 0.05;
+		daStatic.alpha = 0.00001;
+		daStatic.screenCenter();
+		daStatic.scrollFactor.set(0,0);
+		daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
+		add(daStatic);
+		daStatic.animation.play('static');	
+
 		super.create();
 	}
 
@@ -231,9 +280,11 @@ class FreeplayState extends MusicBeatState
 	var instPlaying:Int = -1;
 	private static var vocals:FlxSound = null;
 	var holdTime:Float = 0;
+
+	var stopmusic:Bool = false;
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music.volume < 0.7)
+		if (FlxG.sound.music.volume < 0.7 && !stopmusic)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
@@ -379,6 +430,74 @@ class FreeplayState extends MusicBeatState
 					
 			destroyFreeplayVocals();
 		}
+		if (FlxG.save.data.beatmainweek && FlxG.save.data.gotbadending)
+			{
+				var finalKey:FlxKey = FlxG.keys.firstJustPressed();
+				if(finalKey != FlxKey.NONE && finalKey == FlxKey.SIX) {
+					lastKeysPressed.push(finalKey); //Convert int to FlxKey
+					FlxG.sound.play(Paths.sound('scrollMenu'),0.7);
+					if(lastKeysPressed.length > easterEggKeyCombination.length)
+					{
+						lastKeysPressed.shift();
+					}
+					
+					if(lastKeysPressed.length == easterEggKeyCombination.length)
+					{
+						var isDifferent:Bool = false;
+						for (i in 0...lastKeysPressed.length) {
+							if(lastKeysPressed[i] != easterEggKeyCombination[i]) {
+								isDifferent = true;
+								break;
+							}
+						}
+
+						if(!isDifferent) {
+							persistentUpdate = false;
+							var songLowercase:String = Paths.formatToSongPath('hellhole');
+							var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+							/*#if MODS_ALLOWED
+							if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
+							#else
+							if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
+							#end
+								poop = songLowercase;
+								curDifficulty = 1;
+								trace('Couldnt find file');
+							}*/
+							trace(poop);
+				
+							PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+							PlayState.isStoryMode = true;
+							PlayState.storyDifficulty = curDifficulty;
+							PlayState.storyWeek = 0;
+				
+							trace('very spooky');
+							if(colorTween != null) {
+								colorTween.cancel();
+							}
+						
+				
+							Lib.application.window.title = "Wednesday's Infidelity";
+				
+							FlxG.sound.music.volume = 0;
+							stopmusic = true;
+							FlxG.camera.flash(FlxColor.BLACK,1.2);
+							FlxG.sound.play(Paths.sound('hellholeSFX'));
+							
+							FlxTween.tween(daStatic,{alpha: 0.5},1.4);
+
+							new FlxTimer().start(1.4, function(tmr:FlxTimer)
+							{
+								LoadingState.loadAndSwitchState(new PlayState());
+							});
+									
+							destroyFreeplayVocals();
+							lastKeysPressed = [];
+						}
+					}				
+			}
+
+			}
 		else if(controls.RESET)
 		{
 			persistentUpdate = false;

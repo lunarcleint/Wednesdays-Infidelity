@@ -1346,7 +1346,7 @@ class PlayState extends MusicBeatState
 			add(bg);
 
 			(new FlxVideo(fileName)).finishCallback = function() {
-				remove(bg);
+				//remove(bg);
 				endSong();
 			}
 			return;
@@ -1389,7 +1389,7 @@ class PlayState extends MusicBeatState
 			add(bg);
 
 			(new FlxVideo(fileName)).finishCallback = function() {
-				remove(bg);
+				//remove(bg);
 				endSong();
 			}
 			return;
@@ -1432,7 +1432,10 @@ class PlayState extends MusicBeatState
 			add(bg);
 
 			(new FlxVideo(fileName)).finishCallback = function() {
-				remove(bg);
+				if (!endingSong)
+				{
+					remove(bg);
+				}
 				startAndEnd();
 			}
 			return;
@@ -2347,7 +2350,7 @@ class PlayState extends MusicBeatState
 			});
 		}
 
-		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && !ClientPrefs.hideHud)
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && !ClientPrefs.hideHud && Paths.formatToSongPath(SONG.song) != 'hellhole')
 			weekMissesBar.visible = true;
 		else
 			weekMissesBar.visible = false;
@@ -2438,7 +2441,7 @@ class PlayState extends MusicBeatState
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingName + ' [' + ratingFC + ']';//peeps wanted no integer rating
 		}
 
-		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide')  {
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && Paths.formatToSongPath(SONG.song) != 'hellhole')  {
 			weekMissesTxt.text = 'Week Misses: ' + weekMisses;
 		}
 
@@ -3487,6 +3490,7 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.sound.music.loopTime = 15920;
 
 					cancelMusicFadeTween();
 					if(FlxTransitionableState.skipNextTransIn) {
@@ -3494,6 +3498,18 @@ class PlayState extends MusicBeatState
 					}
 					MusicBeatState.switchState(new StoryMenuState());
 
+					if (WeekData.getWeekFileName() == 'Week Suicide')
+					{
+						if (Paths.formatToSongPath(SONG.song) == 'sunsets')
+							FlxG.save.data.gotgoodending = true;
+						if (Paths.formatToSongPath(SONG.song) == 'last-day')
+							FlxG.save.data.gotbadending = true;
+						if (!FlxG.save.data.beatmainweek) 
+							FlxG.save.data.beatmainweek = true;
+						if (Paths.formatToSongPath(SONG.song) == 'hellhole')
+							FlxG.save.data.beathell = true;
+						FlxG.save.flush();
+					}
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
@@ -3556,6 +3572,8 @@ class PlayState extends MusicBeatState
 				}
 				MusicBeatState.switchState(new FreeplayState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				FlxG.sound.music.loopTime = 15920;
+				FlxG.sound.music.time = 15920;
 				changedDifficulty = false;
 			}
 			transitioning = true;
