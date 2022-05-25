@@ -299,6 +299,8 @@ class PlayState extends MusicBeatState
 
 	// DODGE 
 
+	private var dodgeKeys:Array<FlxKey> = [];
+
 	var spaceBar:FlxSprite;
 
 	var dodgeTimers = new FlxTimerManager();
@@ -338,6 +340,11 @@ class PlayState extends MusicBeatState
 
 		debugKeysChart = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_1'));
 		debugKeysCharacter = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('debug_2'));
+
+		// Mechanics
+
+		dodgeKeys = ClientPrefs.copyKey(ClientPrefs.keyBinds.get('dodge'));
+
 		PauseSubState.songName = null; //Reset to default
 
 		keysArray = [
@@ -2227,7 +2234,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (doingDodge && canDodge && FlxG.keys.justPressed.SPACE && !_onCoolDown && !cpuControlled && !dodging && !paused)
+		if (doingDodge && canDodge && FlxG.keys.anyJustPressed(dodgeKeys) && !_onCoolDown && !cpuControlled && !dodging && !paused)
 		{
 			_onCoolDown = true;
 			dodging = true;
@@ -4160,9 +4167,9 @@ class PlayState extends MusicBeatState
 	function doEffect() {
 
 		if (chrom != null) {
-			chrom.shader.rOffset.value = [-0.002, -0.002];
-			chrom.shader.gOffset.value = [-0.002, -0.002];
-			chrom.shader.bOffset.value = [0.002, -0.002];
+			chrom.shader.rOffset.value = [0, -0.006];
+			chrom.shader.gOffset.value = [-0.006, -0.006];
+			chrom.shader.bOffset.value = [0.006, -0.006];
 		}
 
 		var random:Int = FlxG.random.int(0,2);
