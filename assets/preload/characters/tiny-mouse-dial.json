@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "dial",
+			"loop": false,
+			"name": "MIKI DIAL"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/too-slow/TOO_SLOW_DIALOGUE",
+	"position": [
+		-85,
+		95
+	],
+	"healthicon": "mouse",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		89,
+		81
+	],
+	"camera_position": [
+		-50,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="TOO SLOW SATAN MOUSE.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="JUJUJUJA0000" x="0" y="0" width="673" height="687" frameX="-15" frameY="-32" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0001" x="0" y="0" width="673" height="687" frameX="-15" frameY="-32" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0002" x="673" y="0" width="685" height="707" frameX="0" frameY="-12" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0003" x="673" y="0" width="685" height="707" frameX="0" frameY="-12" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0004" x="1358" y="0" width="690" height="700" frameX="-6" frameY="-19" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0005" x="1358" y="0" width="690" height="700" frameX="-6" frameY="-19" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0006" x="2048" y="0" width="691" height="719" frameX="-4" frameY="0" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="JUJUJUJA0007" x="2048" y="0" width="691" height="719" frameX="-4" frameY="0" frameWidth="696" frameHeight="719"/>
+	<SubTexture name="SATAN MIKI DOWN0000" x="2739" y="0" width="535" height="769" frameX="-19" frameY="-24" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0001" x="2739" y="0" width="535" height="769" frameX="-19" frameY="-24" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0002" x="3274" y="0" width="554" height="769" frameX="0" frameY="-24" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0003" x="3274" y="0" width="554" height="769" frameX="0" frameY="-24" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0004" x="0" y="769" width="529" height="793" frameX="-25" frameY="0" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0005" x="0" y="769" width="529" height="793" frameX="-25" frameY="0" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0006" x="529" y="769" width="493" height="699" frameX="-46" frameY="-85" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI DOWN0007" x="1022" y="769" width="454" height="676" frameX="-57" frameY="-108" frameWidth="554" frameHeight="793"/>
+	<SubTexture name="SATAN MIKI IDLE0000" x="1476" y="769" width="722" height="679" frameX="0" frameY="-15" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0001" x="1476" y="769" width="722" height="679" frameX="0" frameY="-15" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0002" x="2198" y="769" width="717" height="691" frameX="-7" frameY="-3" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0003" x="2198" y="769" width="717" height="691" frameX="-7" frameY="-3" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0004" x="2915" y="769" width="711" height="694" frameX="-4" frameY="0" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0005" x="2915" y="769" width="711" height="694" frameX="-4" frameY="0" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0006" x="0" y="1562" width="683" height="667" frameX="-25" frameY="-27" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0007" x="0" y="1562" width="683" height="667" frameX="-25" frameY="-27" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0008" x="683" y="1562" width="695" height="681" frameX="-10" frameY="-13" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0009" x="683" y="1562" width="695" height="681" frameX="-10" frameY="-13" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0010" x="1378" y="1562" width="687" height="691" frameX="-17" frameY="-3" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0011" x="1378" y="1562" width="687" height="691" frameX="-17" frameY="-3" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0012" x="2065" y="1562" width="690" height="692" frameX="-14" frameY="-2" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0013" x="2065" y="1562" width="690" height="692" frameX="-14" frameY="-2" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0014" x="2755" y="1562" width="677" height="668" frameX="-27" frameY="-26" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI IDLE0015" x="2755" y="1562" width="677" height="668" frameX="-27" frameY="-26" frameWidth="724" frameHeight="694"/>
+	<SubTexture name="SATAN MIKI LEFT0000" x="3432" y="1562" width="658" height="742" frameX="0" frameY="-17" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0001" x="3432" y="1562" width="658" height="742" frameX="0" frameY="-17" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0002" x="0" y="2304" width="634" height="747" frameX="-10" frameY="-12" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0003" x="0" y="2304" width="634" height="747" frameX="-10" frameY="-12" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0004" x="634" y="2304" width="603" height="759" frameX="-13" frameY="0" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0005" x="634" y="2304" width="603" height="759" frameX="-13" frameY="0" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0006" x="1237" y="2304" width="512" height="716" frameX="-97" frameY="-43" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI LEFT0007" x="1749" y="2304" width="516" height="657" frameX="-112" frameY="-102" frameWidth="658" frameHeight="759"/>
+	<SubTexture name="SATAN MIKI RIGHT0000" x="2265" y="2304" width="633" height="777" frameX="-4" frameY="-12" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0001" x="2265" y="2304" width="633" height="777" frameX="-4" frameY="-12" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0002" x="2898" y="2304" width="632" height="789" frameX="0" frameY="0" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0003" x="2898" y="2304" width="632" height="789" frameX="0" frameY="0" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0004" x="3530" y="2304" width="499" height="788" frameX="-83" frameY="-1" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0005" x="3530" y="2304" width="499" height="788" frameX="-83" frameY="-1" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0006" x="0" y="3093" width="534" height="761" frameX="-137" frameY="-28" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI RIGHT0007" x="534" y="3093" width="549" height="701" frameX="-214" frameY="-88" frameWidth="763" frameHeight="789"/>
+	<SubTexture name="SATAN MIKI UP0000" x="1083" y="3093" width="640" height="648" frameX="0" frameY="0" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0001" x="1083" y="3093" width="640" height="648" frameX="0" frameY="0" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0002" x="1723" y="3093" width="645" height="644" frameX="-17" frameY="-4" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0003" x="1723" y="3093" width="645" height="644" frameX="-17" frameY="-4" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0004" x="2368" y="3093" width="616" height="638" frameX="-25" frameY="-10" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0005" x="2368" y="3093" width="616" height="638" frameX="-25" frameY="-10" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0006" x="2984" y="3093" width="550" height="612" frameX="-58" frameY="-42" frameWidth="662" frameHeight="654"/>
+	<SubTexture name="SATAN MIKI UP0007" x="3534" y="3093" width="510" height="562" frameX="-77" frameY="-89" frameWidth="662" frameHeight="654"/>
+</TextureAtlas>
