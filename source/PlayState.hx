@@ -2227,7 +2227,7 @@ class PlayState extends MusicBeatState
 
 		if (chrom != null) {
 			var objToLerp:Array<Dynamic> = [chrom.shader.rOffset.value, chrom.shader.bOffset.value, chrom.shader.gOffset.value];
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 1.8, 0, 1);
+			var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4, 0, 1);
 			for (obj in objToLerp) {
 				obj[0] = FlxMath.lerp(obj[0], 0, lerpVal);
 				obj[1] = FlxMath.lerp(obj[1], 0, lerpVal);
@@ -2275,13 +2275,6 @@ class PlayState extends MusicBeatState
 			if (dodgeTimers != null)
 				dodgeTimers.update(elapsed);
 		}
-
-		/*
-		if (FlxG.keys.justPressed.NINE)
-		{
-			startDodge();
-		}
-		*/
 
 		switch (boyfriend.curCharacter) {
 			case "bf-sus":
