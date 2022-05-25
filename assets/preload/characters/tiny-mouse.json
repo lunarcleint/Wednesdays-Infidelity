@@ -1,0 +1,88 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-72
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Miki DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MIKI LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-57,
+				-8
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MIKI RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-28,
+				26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MIKI UP",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"name": "MIKI IDLE"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/too-slow/TOO_SLOW_SAD_MIKI",
+	"position": [
+		-65,
+		345
+	],
+	"healthicon": "mickey",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		89,
+		81
+	],
+	"camera_position": [
+		-50,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

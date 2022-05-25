@@ -7,10 +7,18 @@ local followchars = true;
 local del = 0;
 local del2 = 0;
 
+local small = false;
+
+function onCreatePost()
+    if dadName == 'tiny-mouse' then
+        small = true
+    end
+end
+
 function onUpdate()
     if followchars == true then
         if mustHitSection == false then
-            setProperty('defaultCamZoom',0.8)
+            if small == true then setProperty('defaultCamZoom',1.0)  yy = 550  else setProperty('defaultCamZoom',0.8) yy = 513 end
             if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
                 triggerEvent('Camera Follow Pos',xx-ofs,yy)
             end
@@ -40,6 +48,15 @@ function onUpdate()
             end
             if getProperty('dad.animation.curAnim.name') == 'idle' then
                 triggerEvent('Camera Follow Pos',xx,yy)
+                if getProperty('camHUD.alpha') == not 1 then
+                    doTweenAlpha('camtween','camHUD',1,0.3,'linear')
+                end
+            end
+            if getProperty('dad.animation.curAnim.name') == 'dial' or getProperty('dad.animation.curAnim.name') == 'die' then
+                triggerEvent('Camera Follow Pos',xx,yy)
+                if getProperty('camHUD.alpha') == not 0 then
+                    doTweenAlpha('camtween','camHUD',0,0.5,'linear')
+                end
             end
         else
             setProperty('defaultCamZoom',1.0)
@@ -69,4 +86,12 @@ end
 
 function opponentNoteHit(id,data,type,sus)
 	triggerEvent('Screen Shake','0.2,0.008','0.2,0.008')
+end
+
+function onStepHit()
+    if curStep == 1443 then
+        if songName == 'Too Slow Encore' then
+            small = false
+        end
+    end
 end
