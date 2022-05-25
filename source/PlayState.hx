@@ -1105,8 +1105,6 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
-		trace(daSong);
-
 		switch (daSong) //shaders
 		{
 			case 'last-day':
