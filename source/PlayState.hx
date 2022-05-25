@@ -326,7 +326,7 @@ class PlayState extends MusicBeatState
 
 	public var shaderUpdates:Array<Float->Void> = [];
 
-	public var shader_chromatic_abberation:ChromaticAberrationEffect;
+	public var chrom:ChromaticAberrationEffect;
 	public var camGameShaders:Array<ShaderEffect> = [];
 	public var camHUDShaders:Array<ShaderEffect> = [];
 	public var camOtherShaders:Array<ShaderEffect> = [];
@@ -365,11 +365,10 @@ class PlayState extends MusicBeatState
 		practiceMode = ClientPrefs.getGameplaySetting('practice', false);
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
 
-		shader_chromatic_abberation = new ChromaticAberrationEffect();
-
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
@@ -1106,10 +1105,16 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
+		trace(daSong);
+
 		switch (daSong) //shaders
 		{
 			case 'last-day':
 				addShaderToCamera('camGame', new Shaders.VCRDistortionEffect(0.4,true,false,false));
+			case 'unknown-suffering':
+				chrom = new Shaders.ChromaticAberrationEffect();
+		
+				addShaderToCamera("camHUD", chrom);
 		}
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
@@ -2212,6 +2217,15 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+
+		if (chrom != null) {
+			var objToLerp:Array<Dynamic> = [chrom.shader.rOffset.value, chrom.shader.bOffset.value, chrom.shader.gOffset.value];
+			var lerpVal:Float = CoolUtil.boundTo(elapsed * 1.8, 0, 1);
+			for (obj in objToLerp) {
+				obj[0] = FlxMath.lerp(obj[0], 0, lerpVal);
+				obj[1] = FlxMath.lerp(obj[1], 0, lerpVal);
+			}
+		}
 
 		if (doingDodge && canDodge && FlxG.keys.justPressed.SPACE && !_onCoolDown && !cpuControlled && !dodging && !paused)
 		{
@@ -4147,6 +4161,13 @@ class PlayState extends MusicBeatState
 	}
 
 	function doEffect() {
+
+		if (chrom != null) {
+			chrom.shader.rOffset.value = [-0.002, -0.002];
+			chrom.shader.gOffset.value = [-0.002, -0.002];
+			chrom.shader.bOffset.value = [0.002, -0.002];
+		}
+
 		var random:Int = FlxG.random.int(0,2);
 
 		songSpeed += 0.1;

@@ -292,10 +292,12 @@ class TitleState extends MusicBeatState
 			}
 		}
 
-		//if (pressedEnter && !skippedIntro)
-		//{
-		//	skipIntro();
-		//}
+		#if PRIVATE_BUILD
+		if (pressedEnter && !skippedIntro)
+		{
+			skipIntro();
+		}
+		#end
 
 		if(swagShader != null)
 		{
