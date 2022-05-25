@@ -70,17 +70,6 @@ class FlxVideo extends FlxBasic {
 		FlxG.addChildBelowMouse(vlcBitmap);
 		vlcBitmap.play(checkFile(name));
 		#end
-
-		FlxG.stage.addEventListener(Event.ENTER_FRAME, onupdate);
-	}
-
-	function onupdate(e:Event)
-	{
-		if ((FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.SPACE) && vlcBitmap != null && skippable) {
-			onVLCComplete();
-
-			destroy();
-		}
 	}
 
 	#if desktop
