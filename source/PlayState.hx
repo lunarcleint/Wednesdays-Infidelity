@@ -229,11 +229,6 @@ class PlayState extends MusicBeatState
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
-	//Week Misses / Endings
-	public static var weekMisses:Int = 0;
-	public var weekMissesTxt:FlxText;
-	var weekMissesBar:FlxSprite;
-
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
@@ -295,6 +290,12 @@ class PlayState extends MusicBeatState
 	var grain:FlxSprite;
 
 	var chedderguybg:BGSprite;
+
+	//Week Misses / Endings
+
+	public static var weekMisses:Int = 0;
+	public var weekMissesTxt:FlxText;
+	var weekMissesBar:FlxSprite;
 
 	// DODGE 
 
@@ -1067,7 +1068,23 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case 'unknown-suffering':
-					startVideo("TransformUN");
+					startVideo("TransformUN",function () {
+						grain.visible = true;
+						grain.animation.play('idle');
+
+						var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+						black.cameras = [camOther];
+						add(black);
+
+						FlxTween.tween(black, {alpha: 0}, 0.2, {
+							onComplete: function (twn:FlxTween) {
+								remove(black);
+								black.destroy();
+
+								startAndEnd();
+							}
+						});
+					});
 				case 'wistfulness':
 					startVideo('StoryStart', function () {
 						grain.visible = true;
@@ -2225,10 +2242,15 @@ class PlayState extends MusicBeatState
 			});
 		}
 
-		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && !ClientPrefs.hideHud && Paths.formatToSongPath(SONG.song) != 'hellhole')
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && !ClientPrefs.hideHud && Paths.formatToSongPath(SONG.song) != 'hellhole') {
 			weekMissesBar.visible = true;
-		else
+			weekMissesTxt.visible = true;
+		}
+		else {
 			weekMissesBar.visible = false;
+			weekMissesTxt.visible = false;
+		}
+			
 	
 		
 		if (boyfriend.animation.curAnim.name == "dodge" && !dodging)
@@ -2317,7 +2339,7 @@ class PlayState extends MusicBeatState
 		}
 
 		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && Paths.formatToSongPath(SONG.song) != 'hellhole')  {
-			weekMissesTxt.text = 'Week Misses: ' + weekMisses;
+			weekMissesTxt.text = 'Week Misses: ' + (weekMisses + songMisses);
 		}
 
 		if(botplayTxt.visible) {
@@ -3139,7 +3161,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxTween.tween(camHUD, {alpha: val1},val2);
 					FlxTween.tween(camGame, {alpha: val1},val2);
-					FlxTween.tween(grain, {alpha: val1},val2);
+					FlxTween.tween(camOther, {alpha: val1},val2);
 				}
 				
 
@@ -3234,6 +3256,11 @@ class PlayState extends MusicBeatState
 
 		if (isStoryMode)
 		{
+			weekMisses += songMisses;
+
+			weekMissesBar.visible = false;
+			weekMissesTxt.visible = false;
+
 			switch (SONG.song)
 			{
 				case 'Unknown Suffering':
@@ -3884,7 +3911,7 @@ class PlayState extends MusicBeatState
 		//For testing purposes
 		//trace(daNote.missHealth);
 		songMisses++;
-		weekMisses++;
+		
 		vocals.volume = 0;
 		if(!practiceMode) songScore -= 10;
 		
@@ -3926,7 +3953,6 @@ class PlayState extends MusicBeatState
 			if(!practiceMode) songScore -= 10;
 			if(!endingSong) {
 				songMisses++;
-				weekMisses++;
 			}
 			totalPlayed++;
 			RecalculateRating();
