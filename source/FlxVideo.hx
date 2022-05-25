@@ -18,13 +18,8 @@ class FlxVideo extends FlxBasic {
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
-	var skippable:Bool = true;
-
-	public function new(name:String, ?skippable:Bool = true) {
+	public function new(name:String) {
 		super();
-
-		if (skippable != null)
-			this.skippable = skippable;
 
 		#if web
 		var player:Video = new Video();
@@ -85,29 +80,14 @@ class FlxVideo extends FlxBasic {
 
 		return pDir + fileName;
 	}
-	
-	public static function onFocus() {
-		if(vlcBitmap != null) {
-			vlcBitmap.resume();
-		}
-	}
-	
-	public static function onFocusLost() {
-		if(vlcBitmap != null) {
-			vlcBitmap.pause();
-		}
-	}
 
 	function fixVolume(e:Event)
 	{
 		// shitty volume fix
-		if (vlcBitmap != null) {
-			vlcBitmap.volume = 0;
-			if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
-				vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
-			}
+		vlcBitmap.volume = 0;
+		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
+			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
 		}
-	
 	}
 
 	public function onVLCComplete()
@@ -121,8 +101,6 @@ class FlxVideo extends FlxBasic {
 		{
 			FlxG.game.removeChild(vlcBitmap);
 		}
-
-		vlcBitmap = null;
 
 		if (finishCallback != null)
 		{

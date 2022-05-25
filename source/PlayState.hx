@@ -1078,7 +1078,23 @@ class PlayState extends MusicBeatState
 				case 'unknown-suffering':
 					startVideo("TransformUN");
 				case 'wistfulness':
-					startVideo('StoryStart');
+					startVideo('StoryStart', function () {
+						grain.visible = true;
+						grain.animation.play('idle');
+
+						var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+						black.cameras = [camOther];
+						add(black);
+
+						FlxTween.tween(black, {alpha: 0}, 1, {
+							onComplete: function (twn:FlxTween) {
+								remove(black);
+								black.destroy();
+
+								startAndEnd();
+							}
+						});
+					});
 				default:
 					startCountdown();
 			}
@@ -1260,7 +1276,8 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function videoBadEnding(name:String):Void {
+	public function startVideo(name:String, ?finishedCallback:Void->Void):Void {
+		if (finishedCallback == null) finishedCallback = startAndEnd;
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
 		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
@@ -1288,111 +1305,29 @@ class PlayState extends MusicBeatState
 			bg.cameras = [camHUD];
 			add(bg);
 
-			(new FlxVideo(fileName)).finishCallback = function() {
-				//remove(bg);
-				endSong();
-			}
-			return;
-		}
-		else
-		{
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
-			endSong();
-		}
-		#end
-		endSong();
-	}
+			var video = new FlxVideo(fileName);
 
-	public function videoGoodEnding(name:String):Void {
-		#if VIDEOS_ALLOWED
-		var foundFile:Bool = false;
-		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-		#if sys
-		if(FileSystem.exists(fileName)) {
-			foundFile = true;
-		}
-		#end
-
-		if(!foundFile) {
-			fileName = Paths.video(name);
-			#if sys
-			if(FileSystem.exists(fileName)) {
-			#else
-			if(OpenFlAssets.exists(fileName)) {
-			#end
-				foundFile = true;
-			}
-		}
-
-		if(foundFile) {
-			inCutscene = true;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
-
-			(new FlxVideo(fileName)).finishCallback = function() {
-				//remove(bg);
-				endSong();
-			}
-			return;
-		}
-		else
-		{
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
-			endSong();
-		}
-		#end
-		endSong();
-	}
-
-	public function startVideo(name:String):Void {
-		#if VIDEOS_ALLOWED
-		var foundFile:Bool = false;
-		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-		#if sys
-		if(FileSystem.exists(fileName)) {
-			foundFile = true;
-		}
-		#end
-
-		if(!foundFile) {
-			fileName = Paths.video(name);
-			#if sys
-			if(FileSystem.exists(fileName)) {
-			#else
-			if(OpenFlAssets.exists(fileName)) {
-			#end
-				foundFile = true;
-			}
-		}
-
-		if(foundFile) {
-			inCutscene = true;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
-
-			(new FlxVideo(fileName)).finishCallback = function() {
+			video.finishCallback = function() {
 				if (!endingSong)
 				{
 					remove(bg);
 				}
-				startAndEnd();
+				video.destroy();
+				video = null;
+				finishedCallback();
 			}
 			return;
 		}
 		else
 		{
 			FlxG.log.warn('Couldnt find video file: ' + fileName);
-			startAndEnd();
+			finishedCallback();
 		}
 		#end
-		startAndEnd();
+		finishedCallback();
 	}
 
-	function startAndEnd()
+	function startAndEnd():Void
 	{
 		if(endingSong)
 			endSong();
@@ -3209,6 +3144,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxTween.tween(camHUD, {alpha: val1},val2);
 					FlxTween.tween(camGame, {alpha: val1},val2);
+					FlxTween.tween(grain, {alpha: val1},val2);
 				}
 				
 
@@ -3297,24 +3233,6 @@ class PlayState extends MusicBeatState
 		finishSong(false);
 	}
 
-	function badEndingVideo():Void
-	{
-		videoBadEnding("BadEnding");
-	}
-
-	function goodEndingVideo():Void
-	{
-		videoGoodEnding("GoodEnding");
-	}
-
-	function chooseEnd():Void
-	{
-		if (weekMisses >= 30)
-			badEnding();
-		else
-			goodEnding();
-	}
-
 	public function finishSong(?ignoreNoteOffset:Bool = false):Void
 	{
 		var finishCallback:Void->Void = endSong; //In case you want to change it in a specific song.
@@ -3325,11 +3243,22 @@ class PlayState extends MusicBeatState
 			{
 				case 'Unknown Suffering':
 					{
-						finishCallback = chooseEnd;
+						finishCallback = function ()
+							{
+								if (weekMisses >= 30)
+									sendToSong('last-day');
+								else
+									sendToSong('sunsets');
+							}
+							;
 					}
 				case 'Last Day':
 					{
-						finishCallback = badEndingVideo;
+						finishCallback = function ()
+							{
+								startVideo("BadEnding", function () {endSong();});
+							}
+						;
 					}
 				default:
 					{endSong();}
@@ -5113,33 +5042,12 @@ class PlayState extends MusicBeatState
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
 
-	function goodEnding() {
+	function sendToSong(name:String) {
+		if (name == null) return;
+		
 		persistentUpdate = false;
 
-		var songLowercase:String = Paths.formatToSongPath('sunsets');
-		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-
-		FlxTransitionableState.skipNextTransIn = true;
-		FlxTransitionableState.skipNextTransOut = true;
-
-		prevCamFollow = camFollow;
-		prevCamFollowPos = camFollowPos;
-
-		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-		PlayState.isStoryMode = true;
-		PlayState.storyDifficulty = curDifficulty;
-
-		Lib.application.window.title = "Wednesday's Infidelity";
-
-		FlxG.sound.music.stop();
-		cancelMusicFadeTween();
-		LoadingState.loadAndSwitchState(new PlayState());
-	}
-
-	function badEnding() {
-		persistentUpdate = false;
-
-		var songLowercase:String = Paths.formatToSongPath('last-day');
+		var songLowercase:String = Paths.formatToSongPath(name);
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
 		FlxTransitionableState.skipNextTransIn = true;

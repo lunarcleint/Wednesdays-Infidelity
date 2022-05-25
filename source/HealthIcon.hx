@@ -59,8 +59,6 @@ class HealthIcon extends FlxSprite
 			}
 			updateHitbox();
 
-			trace(char);
-
 			animation.add(char, [0, 1], 0, false, isPlayer);
 			animation.play(char);
 			this.char = char;
