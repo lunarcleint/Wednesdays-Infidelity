@@ -110,7 +110,7 @@ class MainMenuState extends MusicBeatState
 		}
 
 		if (ClientPrefs.shake)
-			FlxG.camera.shake(0.001, 4000);
+			FlxG.camera.shake(0.001, 99999999999);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Wednesday's Infidelity PART 2", 12);
 		versionShit.scrollFactor.set();
@@ -124,6 +124,13 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		var resetText:FlxText = new FlxText(0, FlxG.height - 24, 0, "PRESS DELETE TO RESET PROGRESS", 12);
+		resetText.scrollFactor.set();
+		resetText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		resetText.x = (FlxG.width - resetText.width) - 12;
+		resetText.visible = FlxG.save.data.beatmainweek;
+		add(resetText);
 
 		changeItem();
 
@@ -233,6 +240,12 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
+			if (FlxG.keys.justPressed.DELETE) {
+				selectedSomethin = true;
+				openSubState(new ResetScoreSubState(function () {
+					selectedSomethin = false;
+				}));
+			}
 		}
 	}
 

@@ -37,7 +37,7 @@ class TitleState extends MusicBeatState
 	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
 	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 
-	static var initialized:Bool = false;
+	public static var initialized:Bool = false;
 
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
@@ -397,7 +397,7 @@ class TitleState extends MusicBeatState
 					deleteCoolText();
 				case 63:
 					if (ClientPrefs.shake) {
-						FlxG.camera.shake(0.004, 4000);
+						FlxG.camera.shake(0.004, 99999999999);
 					}
 					createCoolText([curWacky[0]]);
 				case 74:

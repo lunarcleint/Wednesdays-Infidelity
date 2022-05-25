@@ -12,6 +12,7 @@ import openfl.display._internal.stats.DrawCallContext;
 import openfl.Lib;
 #end
 import openfl.system.System;
+import flixel.math.FlxMath;
 
 /**
 	The FPS class provides an easy-to-use monitor to display
@@ -50,6 +51,8 @@ class FPS extends TextField
 		currentTime = 0;
 		times = [];
 
+		width = 150;
+
 		#if flash
 		addEventListener(Event.ENTER_FRAME, function(e)
 		{
@@ -87,7 +90,7 @@ class FPS extends TextField
 
 		cacheCount = currentCount;
 
-		var mem:Float = Math.round(System.totalMemory / 1024 / 1024 * 100)/100;
+		var mem:Float = Math.round(Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1)));
 		if (mem > memPeak) memPeak = mem;
 
 		if (visible)

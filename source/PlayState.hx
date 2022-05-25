@@ -175,9 +175,6 @@ class PlayState extends MusicBeatState
 	public static var chartingMode:Bool = false;
 
 	//Gameplay settings
-	public var healthGain:Float = 1;
-	public var healthLoss:Float = 1;
-	public var instakillOnMiss:Bool = false;
 	public var cpuControlled:Bool = false;
 	public var practiceMode:Bool = false;
 
@@ -358,12 +355,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		// Gameplay settings
-		healthGain = ClientPrefs.getGameplaySetting('healthgain', 1);
-		healthLoss = ClientPrefs.getGameplaySetting('healthloss', 1);
-		instakillOnMiss = ClientPrefs.getGameplaySetting('instakill', false);
-		practiceMode = ClientPrefs.getGameplaySetting('practice', false);
-		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
+		cpuControlled = ClientPrefs.botPlay;
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
@@ -1756,16 +1748,9 @@ class PlayState extends MusicBeatState
 	private function generateSong(dataPath:String):Void
 	{
 		// FlxG.log.add(ChartParser.parse());
-		songSpeedType = ClientPrefs.getGameplaySetting('scrolltype','multiplicative');
 
-		switch(songSpeedType)
-		{
-			case "multiplicative":
-				songSpeed = SONG.speed * ClientPrefs.getGameplaySetting('scrollspeed', 1);
-			case "constant":
-				songSpeed = ClientPrefs.getGameplaySetting('scrollspeed', 1);
-		}
-		
+		songSpeed = SONG.speed;
+
 		var songData = SONG;
 		Conductor.changeBPM(songData.bpm);
 		
@@ -2718,7 +2703,7 @@ class PlayState extends MusicBeatState
 
 	public var isDead:Bool = false; //Don't mess with this on Lua!!!
 	function doDeathCheck(?skipHealthCheck:Bool = false) {
-		if (((skipHealthCheck && instakillOnMiss) || health <= 0) && !practiceMode && !isDead)
+		if (((skipHealthCheck && false) || health <= 0) && !practiceMode && !isDead)
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', []);
 			if(ret != FunkinLua.Function_Stop) {
@@ -3110,14 +3095,12 @@ class PlayState extends MusicBeatState
 				if(bgGirls != null) bgGirls.swapDanceType();
 			
 			case 'Change Scroll Speed':
-				if (songSpeedType == "constant")
-					return;
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
 				if(Math.isNaN(val1)) val1 = 1;
 				if(Math.isNaN(val2)) val2 = 0;
 
-				var newValue:Float = SONG.speed * ClientPrefs.getGameplaySetting('scrollspeed', 1) * val1;
+				var newValue:Float = SONG.speed * val1;
 
 				if(val2 <= 0)
 				{
@@ -3298,12 +3281,12 @@ class PlayState extends MusicBeatState
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					health -= 0.05;
 				}
 			});
 			for (daNote in unspawnNotes) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					health -= 0.05;
 				}
 			}
 
@@ -3395,7 +3378,7 @@ class PlayState extends MusicBeatState
 						FlxG.save.flush();
 					}
 					// if ()
-					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) {
+					if(!practiceMode && !cpuControlled) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
 						if (SONG.validScore)
@@ -3896,12 +3879,7 @@ class PlayState extends MusicBeatState
 		});
 		combo = 0;
 
-		health -= daNote.missHealth * healthLoss;
-		if(instakillOnMiss)
-		{
-			vocals.volume = 0;
-			doDeathCheck(true);
-		}
+		health -= daNote.missHealth;
 
 		//For testing purposes
 		//trace(daNote.missHealth);
@@ -3935,12 +3913,7 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			health -= 0.05 * healthLoss;
-			if(instakillOnMiss)
-			{
-				vocals.volume = 0;
-				doDeathCheck(true);
-			}
+			health -= 0.05;
 
 			if(ClientPrefs.ghostTapping) return;
 
@@ -4179,7 +4152,7 @@ class PlayState extends MusicBeatState
 					noteAngleTweens.remove(tween);
 				}
 
-				playerStrums.forEach(function(note:StrumNote)
+				strumLineNotes.forEach(function(note:StrumNote)
 				{
 					noteAngleTweens.push(FlxTween.tween(note, {angle: note.angle + FlxG.random.float(-40,40)}, FlxG.random.float(15,20)));
 				});
@@ -4191,7 +4164,7 @@ class PlayState extends MusicBeatState
 					noteXYTweens.remove(tween);
 				}
 
-				playerStrums.forEach(function(note:StrumNote)
+				strumLineNotes.forEach(function(note:StrumNote)
 				{
 					noteXYTweens.push(FlxTween.tween(note, {x: note.x + FlxG.random.float(-30,30), y: note.y+ FlxG.random.float(-35,35)}, FlxG.random.float(15,20)));
 				});
@@ -4261,7 +4234,7 @@ class PlayState extends MusicBeatState
 				popUpScore(note);
 				if(combo > 9999) combo = 9999;
 			}
-			health += note.hitHealth * healthGain;
+			health += note.hitHealth;
 
 			if(!note.noAnimation) {
 				var daAlt = '';

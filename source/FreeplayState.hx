@@ -24,6 +24,7 @@ import openfl.Lib;
 import sys.FileSystem;
 #end
 import flixel.input.keyboard.FlxKey;
+import flixel.tweens.FlxEase;
 
 using StringTools;
 
@@ -220,7 +221,7 @@ class FreeplayState extends MusicBeatState
 		add(textBG);
 
 		#if PRELOAD_ALL
-		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
+		var leText:String = "Press SPACE to listen to the Song";
 		var size:Int = 16;
 		#else
 		var leText:String = "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
@@ -229,6 +230,7 @@ class FreeplayState extends MusicBeatState
 		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, size);
 		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
+		text.screenCenter(X);
 		add(text);
 
 		daStatic = new FlxSprite(0, 0);
@@ -362,12 +364,8 @@ class FreeplayState extends MusicBeatState
 			Lib.application.window.title = "Wednesday's Infidelity";
 		}
 
-		if(ctrl)
-		{
-			persistentUpdate = false;
-			openSubState(new GameplayChangersSubstate());
-		}
-		else if(space)
+
+		if(space)
 		{
 			if(instPlaying != curSelected)
 			{
@@ -455,19 +453,9 @@ class FreeplayState extends MusicBeatState
 							persistentUpdate = false;
 							var songLowercase:String = Paths.formatToSongPath('hellhole');
 							var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-							/*#if MODS_ALLOWED
-							if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
-							#else
-							if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
-							#end
-								poop = songLowercase;
-								curDifficulty = 1;
-								trace('Couldnt find file');
-							}*/
-							trace(poop);
 				
 							PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-							PlayState.isStoryMode = true;
+							//PlayState.isStoryMode = true;
 							PlayState.storyDifficulty = curDifficulty;
 							PlayState.storyWeek = 0;
 				
@@ -475,9 +463,8 @@ class FreeplayState extends MusicBeatState
 							if(colorTween != null) {
 								colorTween.cancel();
 							}
-						
-				
-							Lib.application.window.title = "Wednesday's Infidelity";
+					
+							Lib.application.window.title = "666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
 				
 							FlxG.sound.music.volume = 0;
 							stopmusic = true;
@@ -485,6 +472,8 @@ class FreeplayState extends MusicBeatState
 							FlxG.sound.play(Paths.sound('hellholeSFX'));
 							
 							FlxTween.tween(daStatic,{alpha: 0.5},1.4);
+
+							FlxTween.tween(FlxG.camera, {zoom : 1.6}, 1.4, {ease: FlxEase.circIn});
 
 							new FlxTimer().start(1.4, function(tmr:FlxTimer)
 							{
@@ -498,12 +487,7 @@ class FreeplayState extends MusicBeatState
 			}
 
 			}
-		else if(controls.RESET)
-		{
-			persistentUpdate = false;
-			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
-			FlxG.sound.play(Paths.sound('scrollMenu'));
-		}
+
 		super.update(elapsed);
 	}
 
