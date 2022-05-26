@@ -255,18 +255,7 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	// GF Amongus / Sus
-	var gfSus:BGSprite;
-
-	//Inferno / Satán
-	var satanAparicion:FlxSprite;
-	var satanJijijija:FlxSprite;
-
-	//Black / Kriman't
-	var blackFuck:FlxSprite;
-
-	//Pausables
-	var pausables:Array<Dynamic> = [];
+	public var camZoomingDecay:Float = 1;
 
 	//Achievement shit
 	var keysPressed:Array<Bool> = [];
@@ -293,6 +282,19 @@ class PlayState extends MusicBeatState
 	var grain:FlxSprite;
 
 	var chedderguybg:BGSprite;
+
+	// GF Amongus / Sus
+	var gfSus:BGSprite;
+
+	//Inferno / Satán
+	var satanAparicion:FlxSprite;
+	var satanJijijija:FlxSprite;
+	
+	//Black / Kriman't
+	var blackFuck:FlxSprite;
+	
+	//Pausables
+	var pausables:Array<Dynamic> = [];
 
 	//Week Misses / Endings
 
@@ -1078,7 +1080,7 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case 'unknown-suffering':
-					startVideo("TransformUN",function () {
+					startVideo("TransformUN", function () {
 						grain.visible = true;
 						grain.animation.play('idle');
 
@@ -1086,7 +1088,7 @@ class PlayState extends MusicBeatState
 						black.cameras = [camOther];
 						add(black);
 
-						FlxTween.tween(black, {alpha: 0}, 0.2, {
+						FlxTween.tween(black, {alpha: 0}, 0.6, {
 							onComplete: function (twn:FlxTween) {
 								remove(black);
 								black.destroy();
@@ -1094,7 +1096,7 @@ class PlayState extends MusicBeatState
 								startAndEnd();
 							}
 						});
-					});
+					}, FlxG.save.data.beatmainweek);
 				case 'wistfulness':
 					startVideo('StoryStart', function () {
 						grain.visible = true;
@@ -1112,7 +1114,7 @@ class PlayState extends MusicBeatState
 								startAndEnd();
 							}
 						});
-					});
+					},  FlxG.save.data.beatmainweek);
 				default:
 					startCountdown();
 			}
@@ -1298,7 +1300,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String, ?finishedCallback:Void->Void):Void {
+	public function startVideo(name:String, ?finishedCallback:Void->Void, ?skippable:Bool = false):Void {
 		if (finishedCallback == null) finishedCallback = startAndEnd;
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
@@ -1327,7 +1329,7 @@ class PlayState extends MusicBeatState
 			bg.cameras = [camHUD];
 			add(bg);
 
-			var video = new FlxVideo(fileName);
+			var video = new FlxVideo(fileName, skippable);
 
 			video.finishCallback = function() {
 				if (!endingSong)
@@ -2395,7 +2397,7 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown)
+		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown && !inCutscene)
 			{
 				diablo();
 			}
@@ -2490,10 +2492,10 @@ class PlayState extends MusicBeatState
 		}
 
 		if (camZooming)
-		{
-			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
-			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
-		}
+			{
+				FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
+				camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
+			}
 
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
@@ -3291,7 +3293,7 @@ class PlayState extends MusicBeatState
 					{
 						finishCallback = function ()
 							{
-								startVideo("BadEnding", function () {endSong();});
+								startVideo("BadEnding", function () {endSong();}, FlxG.save.data.gotbadending);
 							}
 						;
 					}
@@ -4452,13 +4454,8 @@ class PlayState extends MusicBeatState
 		}
 
 		if(ClientPrefs.camZooms) {
-			FlxG.camera.zoom += 0.015;
-			camHUD.zoom += 0.03;
-
-			if(!camZooming) { //Just a way for preventing it to be permanently zoomed until Skid & Pump hits a note
-				FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.5);
-				FlxTween.tween(camHUD, {zoom: 1}, 0.5);
-			}
+			FlxG.camera.zoom += 0.020;
+			camHUD.zoom += 0.06;
 		}
 
 		if(ClientPrefs.flashing) {

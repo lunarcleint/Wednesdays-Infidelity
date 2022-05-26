@@ -163,10 +163,13 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music.volume < 0.8)
-		{
-			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+		if (FlxG.sound.music != null) {
+			if (FlxG.sound.music.volume < 0.8)
+			{
+				FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+			}
 		}
+
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
@@ -240,10 +243,14 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
-			if (FlxG.keys.justPressed.DELETE) {
+			if (#if PRIVATE_BUILD true #else FlxG.save.data.beatmainweek #end && FlxG.keys.justPressed.DELETE ) {
 				selectedSomethin = true;
 				openSubState(new ResetScoreSubState(function () {
 					selectedSomethin = false;
+				}, function () {
+					FlxTween.tween(FlxG.camera, {alpha: 0}, 1,{ onComplete:function (twn:FlxTween) {
+						Sys.exit(0);
+					}});
 				}));
 			}
 		}

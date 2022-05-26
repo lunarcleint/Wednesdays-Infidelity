@@ -9,6 +9,8 @@ import vlc.VlcBitmap;
 #end
 import flixel.FlxBasic;
 import flixel.FlxG;
+import lime.app.Application;
+import PlayerSettings;
 
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
@@ -18,7 +20,11 @@ class FlxVideo extends FlxBasic {
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
-	public function new(name:String) {
+	public var skipable:Bool = false;
+
+	public function new(name:String, ?skip:Bool) {
+		if (skip != null) skipable = skip;
+
 		super();
 
 		#if web
@@ -65,6 +71,8 @@ class FlxVideo extends FlxBasic {
 		FlxG.addChildBelowMouse(vlcBitmap);
 		vlcBitmap.play(checkFile(name));
 		#end
+
+		FlxG.stage.addEventListener(Event.ENTER_FRAME, newUpdate);
 	}
 
 	#if desktop
@@ -87,6 +95,17 @@ class FlxVideo extends FlxBasic {
 		vlcBitmap.volume = 0;
 		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
 			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+		}
+	}
+
+	function newUpdate(e:Event) {
+		if (PlayerSettings.player1.controls.ACCEPT && skipable) {
+			onVLCComplete();
+
+			FlxG.stage.removeEventListener(Event.ENTER_FRAME, fixVolume);
+			FlxG.stage.removeEventListener(Event.ENTER_FRAME, newUpdate);
+
+			destroy();
 		}
 	}
 
