@@ -103,7 +103,3 @@ function onUpdate()
         triggerEvent('Camera Follow Pos','','')
     end
 end
-
-function opponentNoteHit(id,data,type,sus)
-	triggerEvent('Screen Shake','0.2,0.008','0.2,0.008')
-end

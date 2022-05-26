@@ -265,6 +265,9 @@ class PlayState extends MusicBeatState
 	//Black / Kriman't
 	var blackFuck:FlxSprite;
 
+	//Pausables
+	var pausables:Array<Dynamic> = [];
+
 	//Achievement shit
 	var keysPressed:Array<Bool> = [];
 	var boyfriendIdleTime:Float = 0.0;
@@ -1559,7 +1562,9 @@ class PlayState extends MusicBeatState
 						grain.visible = true;
 						grain.animation.play('idle');
 					case 'susNightmare':
-						gfSus.dance(true);
+						if (curBeat % 1 == 0) {
+							gfSus.dance(true);
+						}
 						grain.visible = true;
 						grain.animation.play('idle');
 				}
@@ -2062,6 +2067,10 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			for (tween in pausables) {
+				tween.active = false;
+			}
+
 			for (tween in modchartTweens) {
 				tween.active = false;
 			}
@@ -2117,6 +2126,10 @@ class PlayState extends MusicBeatState
 				if(char != null && char.colorTween != null) {
 					char.colorTween.active = true;
 				}
+			}
+
+			for (tween in pausables) {
+				tween.active = true;
 			}
 			
 			for (tween in modchartTweens) {
@@ -4002,10 +4015,15 @@ class PlayState extends MusicBeatState
 				char = gf;
 			}
 
+			switch (dad.curCharacter) {
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
+					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
+			}
+
 			var notehealthdmg:Float = 0.00;
 
-			if (curSong == 'Dejection')
-				{
+			switch (dad.curCharacter) {
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
 					notehealthdmg = 0.025;
 
 					if (health > 0.1)
@@ -4018,42 +4036,7 @@ class PlayState extends MusicBeatState
 					{
 						health -= notehealthdmg;
 					}
-
-				}
-
-			if (curSong == 'Unknown Suffering')
-				{
-					notehealthdmg = 0.035;
-
-					if (health > 0.1)
-
-					if (note.isSustainNote)
-					{
-						health -= notehealthdmg / 2;
-					}
-					else
-					{
-						health -= notehealthdmg;
-					}
-
-				}
-			if (curSong == 'Hellhole')
-				{
-					notehealthdmg = 0.035;
-	
-					if (health > 0.1)
-	
-					if (note.isSustainNote)
-					{
-						health -= notehealthdmg / 2;
-					}
-					else
-					{
-						health -= notehealthdmg;
-					}
-	
-				}
-
+			}
 
 			if(char != null)
 			{
@@ -4678,6 +4661,17 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			if (curSong == 'Needle Mouse')
+			{
+				switch(curStep)
+				{
+					case 1:
+						pausables.push(FlxTween.tween(FlxG.camera, {zoom: 1.5}, 13, {ease: FlxEase.quadInOut, onComplete: function (tween:FlxTween) {defaultCamZoom = 1.5;}}));
+					case 128:
+						pausables.push(FlxTween.tween(FlxG.camera, {zoom: 0.67}, 0.5, {ease: FlxEase.quadInOut, onComplete: function (tween:FlxTween) {defaultCamZoom = 0.67;}}));
+				}
+			}
+
 			if (curSong == 'Hellhole')
 			{
 				switch(curStep)
@@ -4756,6 +4750,12 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
+		if (curSong == 'Too Slow Encore' && curBeat >= 440 && curBeat < 504 && camZooming && FlxG.camera.zoom < 1.35)
+		{
+			FlxG.camera.zoom += 0.030;
+			camHUD.zoom += 0.10;
+		}
+
 		if (generatedMusic)
 		{
 			notes.sort(FlxSort.byY, ClientPrefs.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
@@ -4824,7 +4824,9 @@ class PlayState extends MusicBeatState
 
 			case 'susNightmare':
 				if (gfSus != null)
-					gfSus.dance(true);
+					if (curBeat % 1 == 0) {
+						gfSus.dance(true);
+					}
 				
 				grain.visible = true;
 				grain.animation.play('idle');
