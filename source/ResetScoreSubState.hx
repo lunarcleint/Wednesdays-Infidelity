@@ -21,11 +21,18 @@ class ResetScoreSubState extends MusicBeatSubstate
 
 	public var finishedCallback:Void->Void;
 
-	public function new(?finished:Void->Void)
+	public var accepted:Void->Void;
+
+	public function new(?finished:Void->Void, ?yes:Void->Void)
 	{
 		super();
 
-		finishedCallback = finished;
+		if (finished != null)
+			finishedCallback = finished;
+
+		if (yes != null) 
+			accepted = yes;
+		
 
 		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
@@ -89,17 +96,7 @@ class ResetScoreSubState extends MusicBeatSubstate
 
 					FlxG.save.flush();
 					
-					FlxTween.tween(FlxG.camera, {alpha: 0}, 1,{ onComplete:function (twn:FlxTween) {
-						close();
-
-						FlxG.sound.music.stop();
-
-						TitleState.initialized = false;
-
-						MainMenuState.curSelected = 0;
-
-						FlxG.switchState(new WarningState());
-					}});
+					fadeOut(accepted);
 					
 				}else {
 					FlxG.sound.play(Paths.sound('cancelMenu'), 1);
@@ -112,7 +109,16 @@ class ResetScoreSubState extends MusicBeatSubstate
 		super.update(elapsed);
 	}
 
-	function fadeOut() {
+	function fadeOut(?callback:Void->Void) {
+
+		if (callback == null) {
+			callback = function () {
+				if (finishedCallback != null) {
+					finishedCallback();
+				}
+			};
+		}
+
 		var objs:Array<Dynamic> = [text, yesText, noText, bg];
 		for (obj in objs) {
 			FlxTween.tween(obj, {alpha: 0}, 0.5, {onComplete: function (twn:FlxTween) {}});
@@ -120,9 +126,7 @@ class ResetScoreSubState extends MusicBeatSubstate
 		
 		(new FlxTimer()).start(0.5, function (tmr:FlxTimer) {
 			close();
-			if (finishedCallback != null) {
-				finishedCallback();
-			}
+			callback();
 		});
 	}
 

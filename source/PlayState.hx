@@ -1075,7 +1075,7 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case 'unknown-suffering':
-					startVideo("TransformUN",function () {
+					startVideo("TransformUN", function () {
 						grain.visible = true;
 						grain.animation.play('idle');
 
@@ -1083,7 +1083,7 @@ class PlayState extends MusicBeatState
 						black.cameras = [camOther];
 						add(black);
 
-						FlxTween.tween(black, {alpha: 0}, 0.2, {
+						FlxTween.tween(black, {alpha: 0}, 0.6, {
 							onComplete: function (twn:FlxTween) {
 								remove(black);
 								black.destroy();
@@ -1091,7 +1091,7 @@ class PlayState extends MusicBeatState
 								startAndEnd();
 							}
 						});
-					});
+					}, FlxG.save.data.beatmainweek);
 				case 'wistfulness':
 					startVideo('StoryStart', function () {
 						grain.visible = true;
@@ -1109,7 +1109,7 @@ class PlayState extends MusicBeatState
 								startAndEnd();
 							}
 						});
-					});
+					},  FlxG.save.data.beatmainweek);
 				default:
 					startCountdown();
 			}
@@ -1295,7 +1295,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String, ?finishedCallback:Void->Void):Void {
+	public function startVideo(name:String, ?finishedCallback:Void->Void, ?skippable:Bool = false):Void {
 		if (finishedCallback == null) finishedCallback = startAndEnd;
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
@@ -1324,7 +1324,7 @@ class PlayState extends MusicBeatState
 			bg.cameras = [camHUD];
 			add(bg);
 
-			var video = new FlxVideo(fileName);
+			var video = new FlxVideo(fileName, skippable);
 
 			video.finishCallback = function() {
 				if (!endingSong)
@@ -2382,7 +2382,7 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown)
+		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown && !inCutscene)
 			{
 				diablo();
 			}
@@ -3278,7 +3278,7 @@ class PlayState extends MusicBeatState
 					{
 						finishCallback = function ()
 							{
-								startVideo("BadEnding", function () {endSong();});
+								startVideo("BadEnding", function () {endSong();}, FlxG.save.data.gotbadending);
 							}
 						;
 					}
