@@ -1,80 +1,79 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				184,
 				-40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LeftNote"
+			"fps": 24,
+			"name": "LeftNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-38,
 				-234
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DownNote"
+			"fps": 24,
+			"name": "DownNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				129,
 				393
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "UpNote"
+			"fps": 24,
+			"name": "UpNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-12,
 				58
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RightNote"
-		},
-		{
-			"offsets": [
-				130,
-				93
-			],
-			"loop": true,
 			"fps": 24,
-			"anim": "die",
-			"indices": [],
-			"name": "AnimationShit"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				5,
-				151
-			],
-			"anim": "laugh",
-			"fps": 24,
-			"name": "Laugh",
+			"name": "RightNote",
 			"indices": []
 		},
 		{
 			"loop": true,
 			"offsets": [
+				130,
+				93
+			],
+			"anim": "die",
+			"fps": 24,
+			"name": "AnimationShit",
+			"indices": []
+		},
+		{
+			"offsets": [
+				5,
+				151
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "laugh",
+			"indices": [],
+			"name": "Laugh"
+		},
+		{
+			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "IdleDance",
+			"anim": "idle-loop",
 			"indices": [
 				5,
 				6,
@@ -82,38 +81,39 @@
 				8,
 				9,
 				10
-			]
+			],
+			"name": "IdleDance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IdleDance",
+			"anim": "idle",
 			"indices": [
 				0,
 				1,
 				2,
 				3,
 				4
-			]
+			],
+			"name": "IdleDance"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				1,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle-alt",
-			"loop": true,
-			"name": "IdleColorBlacc"
+			"fps": 24,
+			"name": "IdleColorBlacc",
+			"indices": []
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/Sad_Mokey_Crazy_Lmao_Assets",
 	"position": [
 		-100,
@@ -124,7 +124,7 @@
 	"healthbar_colors": [
 		84,
 		84,
-		84
+		104
 	],
 	"camera_position": [
 		0,
