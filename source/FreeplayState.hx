@@ -396,15 +396,7 @@ class FreeplayState extends MusicBeatState
 			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			/*#if MODS_ALLOWED
-			if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
-			#else
-			if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
-			#end
-				poop = songLowercase;
-				curDifficulty = 1;
-				trace('Couldnt find file');
-			}*/
+
 			trace(poop);
 
 			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
@@ -459,12 +451,12 @@ class FreeplayState extends MusicBeatState
 							PlayState.storyDifficulty = curDifficulty;
 							PlayState.storyWeek = 0;
 				
-							trace('very spooky');
+							trace('Very Spooky'); // Man Wtfff, This is Incredible! - Jloor
 							if(colorTween != null) {
 								colorTween.cancel();
 							}
 					
-							Lib.application.window.title = "666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
+							Lib.application.window.title = "66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
 				
 							FlxG.sound.music.volume = 0;
 							stopmusic = true;

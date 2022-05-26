@@ -4018,14 +4018,14 @@ class PlayState extends MusicBeatState
 			}
 
 			switch (dad.curCharacter) {
-				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' | 'mouse-phase2' | 'mouse-smile' | 'mouse-happy':
 					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
 			}
 
 			var notehealthdmg:Float = 0.00;
 
 			switch (dad.curCharacter) {
-				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' | 'mouse-phase2' | 'mouse-smile' | 'mouse-happy':
 					notehealthdmg = 0.025;
 
 					if (health > 0.1)
