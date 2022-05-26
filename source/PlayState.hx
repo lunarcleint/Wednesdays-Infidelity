@@ -255,18 +255,7 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	// GF Amongus / Sus
-	var gfSus:BGSprite;
-
-	//Inferno / Satán
-	var satanAparicion:FlxSprite;
-	var satanJijijija:FlxSprite;
-
-	//Black / Kriman't
-	var blackFuck:FlxSprite;
-
-	//Pausables
-	var pausables:Array<Dynamic> = [];
+	public var camZoomingDecay:Float = 1;
 
 	//Achievement shit
 	var keysPressed:Array<Bool> = [];
@@ -293,6 +282,19 @@ class PlayState extends MusicBeatState
 	var grain:FlxSprite;
 
 	var chedderguybg:BGSprite;
+
+	// GF Amongus / Sus
+	var gfSus:BGSprite;
+
+	//Inferno / Satán
+	var satanAparicion:FlxSprite;
+	var satanJijijija:FlxSprite;
+	
+	//Black / Kriman't
+	var blackFuck:FlxSprite;
+	
+	//Pausables
+	var pausables:Array<Dynamic> = [];
 
 	//Week Misses / Endings
 
@@ -2490,10 +2492,10 @@ class PlayState extends MusicBeatState
 		}
 
 		if (camZooming)
-		{
-			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
-			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125), 0, 1));
-		}
+			{
+				FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
+				camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, CoolUtil.boundTo(1 - (elapsed * 3.125 * camZoomingDecay), 0, 1));
+			}
 
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
@@ -4452,13 +4454,8 @@ class PlayState extends MusicBeatState
 		}
 
 		if(ClientPrefs.camZooms) {
-			FlxG.camera.zoom += 0.015;
-			camHUD.zoom += 0.03;
-
-			if(!camZooming) { //Just a way for preventing it to be permanently zoomed until Skid & Pump hits a note
-				FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.5);
-				FlxTween.tween(camHUD, {zoom: 1}, 0.5);
-			}
+			FlxG.camera.zoom += 0.020;
+			camHUD.zoom += 0.06;
 		}
 
 		if(ClientPrefs.flashing) {
