@@ -84,10 +84,6 @@ function onUpdate()
     end
 end
 
-function opponentNoteHit(id,data,type,sus)
-	triggerEvent('Screen Shake','0.2,0.008','0.2,0.008')
-end
-
 function onStepHit()
     if curStep == 1443 then
         if songName == 'Too Slow Encore' then
