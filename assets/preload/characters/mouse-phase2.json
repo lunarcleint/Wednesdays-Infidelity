@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "smile mouse idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "smile mouse idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-16,
 				96
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "smile mouse up",
-			"indices": []
+			"indices": [],
+			"name": "smile mouse up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-8,
-				55
+				-5,
+				60
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "smile mouse rigth",
-			"indices": []
+			"indices": [],
+			"name": "smile mouse rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				37,
-				36
+				63,
+				66
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "smile mouse left",
-			"indices": []
+			"indices": [],
+			"name": "smile mouse left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				6,
-				-99
+				-27,
+				-119
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "smile mouse down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "smile mouse down"
 		}
 	],
 	"no_antialiasing": false,
