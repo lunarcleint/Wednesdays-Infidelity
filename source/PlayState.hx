@@ -3966,8 +3966,18 @@ class PlayState extends MusicBeatState
 
 		if(char != null && char.hasMissAnimations)
 		{
+			if(daNote.noteType == 'Jeringe Note') { 
+                if(char.animOffsets.exists('at') && char.curCharacter.startsWith('jank')) {
+					doEffect();
+					char.specialAnim = true;
+                    char.playAnim('at', true);
+                }
+            }
+
 			var daAlt = '';
 			if(daNote.noteType == 'Alt Animation') daAlt = '-alt';
+
+			if(daNote.noteType == 'Jeringe Note') daAlt = '-shoot';
 
 			var animToPlay:String = singAnimations[Std.int(Math.abs(daNote.noteData))] + 'miss' + daAlt;
 			if (!char.specialAnim)
@@ -4019,6 +4029,11 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
+		if(note.noteType == 'Jeringe Note') {
+            var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + '-shoot';
+                dad.playAnim(animToPlay);
+        }
+
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
@@ -4044,7 +4059,7 @@ class PlayState extends MusicBeatState
 			}
 
 			switch (dad.curCharacter) {
-				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' | 'mouse-phase2' | 'mouse-smile' | 'mouse-happy':
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
 					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
 			}
 
@@ -4259,9 +4274,13 @@ class PlayState extends MusicBeatState
 				jump();
 			}
 
+			if(note.noteType == 'Jeringe Note') {
+				boyfriend.playAnim('dodge', true);
+			}
+
 			if(note.noteType == 'Speed Note') {
-				SONG.speed += 0.2;
-				songMisses += 1;
+				doEffect();
+				boyfriend.specialAnim = true;
 				boyfriend.playAnim('at', true);
 			}
 
@@ -4276,6 +4295,8 @@ class PlayState extends MusicBeatState
 			if(!note.noAnimation) {
 				var daAlt = '';
 				if(note.noteType == 'Alt Animation') daAlt = '-alt';
+
+				if(note.noteType == 'Jeringe Note') daAlt = '-shoot';
 	
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 

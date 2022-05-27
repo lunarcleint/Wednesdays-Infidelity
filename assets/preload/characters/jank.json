@@ -1,141 +1,143 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				90
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Janc Idle instancia"
+			"fps": 24,
+			"name": "Janc Idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				165,
-				59
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				208,
+				68
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Janc Left instancia"
+			"fps": 24,
+			"name": "Janc Left",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-31,
-				50
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-26,
+				62
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Janc Rigth instancia"
+			"fps": 24,
+			"name": "Janc Rigth",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				16,
-				80
+				104
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Janc Up instancia"
+			"fps": 24,
+			"name": "Janc Up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				58,
-				-19
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				68,
+				5
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "ikNode_"
+			"fps": 24,
+			"name": "Janc Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				165,
-				59
+				118,
+				78
 			],
-			"indices": [
-				3,
-				4,
-				5,
-				6,
-				7,
-				8
-			],
+			"anim": "hey",
 			"fps": 24,
-			"anim": "singLEFT-loop",
-			"loop": true,
-			"name": "Janc Left instancia 1"
+			"name": "hanktaunt",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-31,
-				50
+				158,
+				35
 			],
-			"indices": [
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10
-			],
+			"anim": "singLEFT-shoot",
 			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"loop": true,
-			"name": "Janc Rigth instancia 1"
+			"name": "Hank Left Shoot",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				16,
-				80
+				-5,
+				65
 			],
-			"indices": [
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10
-			],
+			"anim": "singRIGHT-shoot",
 			"fps": 24,
-			"anim": "singUP-loop",
-			"loop": true,
-			"name": "Janc Up instancia 1"
+			"name": "Hank right shoot",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				58,
-				-19
+				10,
+				132
 			],
-			"indices": [
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10
-			],
+			"anim": "singUP-shoot",
 			"fps": 24,
-			"anim": "singDOWN-loop",
-			"loop": true,
-			"name": "ikNode_1"
+			"name": "Hank Up shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				100
+			],
+			"anim": "singDOWN-shoot",
+			"fps": 24,
+			"name": "Hank Down Shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				62
+			],
+			"anim": "scream",
+			"fps": 24,
+			"name": "Hank screamright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				25,
+				108
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "HankScaredIdle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Janc_Mouse",
 	"position": [
 		-85,
-		195
+		205
 	],
 	"healthicon": "battered",
 	"flip_x": false,
