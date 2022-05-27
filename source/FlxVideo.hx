@@ -23,7 +23,11 @@ class FlxVideo extends FlxBasic {
 	public var skipable:Bool = false;
 
 	public function new(name:String, ?skip:Bool) {
+		#if PRIVATE_BUILD 
+		skipable = true;
+		#else 
 		if (skip != null) skipable = skip;
+		#end
 
 		super();
 

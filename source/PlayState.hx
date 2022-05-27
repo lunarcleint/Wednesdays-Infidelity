@@ -329,9 +329,12 @@ class PlayState extends MusicBeatState
 
 	var camTween:FlxTween = null;
 
+	public var chrom:ChromaticAberrationEffect;
+
+	public var vcr:VCRDistortionEffect;
+
 	public var shaderUpdates:Array<Float->Void> = [];
 
-	public var chrom:ChromaticAberrationEffect;
 	public var camGameShaders:Array<ShaderEffect> = [];
 	public var camHUDShaders:Array<ShaderEffect> = [];
 	public var camOtherShaders:Array<ShaderEffect> = [];
@@ -1115,6 +1118,23 @@ class PlayState extends MusicBeatState
 							}
 						});
 					},  FlxG.save.data.beatmainweek);
+
+				case 'dejection':
+					grain.visible = true;
+					grain.animation.play('idle');
+
+					var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+					black.cameras = [camOther];
+					add(black);
+
+					FlxTween.tween(black, {alpha: 0}, 1, {
+						onComplete: function (twn:FlxTween) {
+							remove(black);
+							black.destroy();
+
+							startAndEnd();
+						}
+					});
 				default:
 					startCountdown();
 			}
@@ -1129,7 +1149,9 @@ class PlayState extends MusicBeatState
 		switch (daSong) //shaders
 		{
 			case 'last-day':
-				addShaderToCamera('camGame', new Shaders.VCRDistortionEffect(0.4,true,false,false));
+				vcr = new Shaders.VCRDistortionEffect(0.4,true,false,false);
+
+				addShaderToCamera('camGame', vcr);
 			case 'unknown-suffering':
 				chrom = new Shaders.ChromaticAberrationEffect();
 		
@@ -3178,14 +3200,16 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camGame, {alpha: val1},val2);
 					FlxTween.tween(camOther, {alpha: val1},val2);
 				}
-				
-
+			
 			case 'camHud & camera On':
 				camHUD.visible = true;
 				camGame.visible = true;
 
 			case 'Do Syringe': 
 				startDodge();
+
+			case 'camGame Off':
+				camGame.visible = false;
 
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
@@ -4718,6 +4742,21 @@ class PlayState extends MusicBeatState
 						changeDadIcon(false);
 						gf.alpha = 0;
 						satanAparicion.alpha = 0;
+				}
+			}
+
+			if (curSong == "Wistfulness") {
+				switch(curStep) {
+					case 536:
+						vcr = new Shaders.VCRDistortionEffect(4,true,false,false);
+
+						addShaderToCamera('camGame', vcr);
+					case 542:
+						camGame.setFilters([]);
+						
+						camGameShaders = [];
+
+						vcr = null;
 				}
 			}
 

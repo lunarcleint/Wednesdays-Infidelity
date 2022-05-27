@@ -251,6 +251,7 @@ class MainMenuState extends MusicBeatState
 					FlxTween.tween(FlxG.camera, {alpha: 0}, 1,{ onComplete:function (twn:FlxTween) {
 						Sys.exit(0);
 					}});
+					FlxTween.tween(FlxG.sound, {volume: 0}, 1);
 				}));
 			}
 		}

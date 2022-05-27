@@ -17,6 +17,7 @@ class ResetScoreSubState extends MusicBeatSubstate
 	var yesText:Alphabet;
 	var noText:Alphabet;
 	var text:Alphabet;
+	var text2:Alphabet; // IM SO LAZY
 	var selectedsomething:Bool = false;
 
 	public var finishedCallback:Void->Void;
@@ -45,11 +46,17 @@ class ResetScoreSubState extends MusicBeatSubstate
 		text.alpha = 0;
 		add(text);
 
-		yesText = new Alphabet(0, text.y + 150, 'Yes', true);
+		text2 = new Alphabet(0, text.y + 120, "This will close your game", true);
+		text2.screenCenter(X);
+		alphabetArray.push(text2);
+		text2.alpha = 0;
+		add(text2);
+
+		yesText = new Alphabet(0, text2.y + 150, 'Yes', true);
 		yesText.screenCenter(X);
 		yesText.x -= 200;
 		add(yesText);
-		noText = new Alphabet(0, text.y + 150, 'No', true);
+		noText = new Alphabet(0, text2.y + 150, 'No', true);
 		noText.screenCenter(X);
 		noText.x += 200;
 		add(noText);
@@ -119,7 +126,7 @@ class ResetScoreSubState extends MusicBeatSubstate
 			};
 		}
 
-		var objs:Array<Dynamic> = [text, yesText, noText, bg];
+		var objs:Array<Dynamic> = [text, text2, yesText, noText, bg];
 		for (obj in objs) {
 			FlxTween.tween(obj, {alpha: 0}, 0.5, {onComplete: function (twn:FlxTween) {}});
 		}
