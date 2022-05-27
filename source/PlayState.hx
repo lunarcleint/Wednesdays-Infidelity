@@ -333,6 +333,8 @@ class PlayState extends MusicBeatState
 
 	public var vcr:VCRDistortionEffect;
 
+	public var distort:DistortionEffect;
+
 	public var shaderUpdates:Array<Float->Void> = [];
 
 	public var camGameShaders:Array<ShaderEffect> = [];
@@ -4748,15 +4750,15 @@ class PlayState extends MusicBeatState
 			if (curSong == "Wistfulness") {
 				switch(curStep) {
 					case 536:
-						vcr = new Shaders.VCRDistortionEffect(4,true,false,false);
+						distort = new Shaders.DistortionEffect(9);
 
-						addShaderToCamera('camGame', vcr);
+						addShaderToCamera('camGame', distort);
 					case 542:
 						camGame.setFilters([]);
-						
+
 						camGameShaders = [];
 
-						vcr = null;
+						distort = null;
 				}
 			}
 
