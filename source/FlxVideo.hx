@@ -106,9 +106,6 @@ class FlxVideo extends FlxBasic {
 		if (PlayerSettings.player1.controls.ACCEPT && skipable) {
 			onVLCComplete();
 
-			FlxG.stage.removeEventListener(Event.ENTER_FRAME, fixVolume);
-			FlxG.stage.removeEventListener(Event.ENTER_FRAME, newUpdate);
-
 			destroy();
 		}
 	}
@@ -124,6 +121,9 @@ class FlxVideo extends FlxBasic {
 		{
 			FlxG.game.removeChild(vlcBitmap);
 		}
+
+		FlxG.stage.removeEventListener(Event.ENTER_FRAME, fixVolume);
+		FlxG.stage.removeEventListener(Event.ENTER_FRAME, newUpdate);
 
 		if (finishCallback != null)
 		{
