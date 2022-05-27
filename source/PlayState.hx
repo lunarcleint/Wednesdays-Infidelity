@@ -4753,7 +4753,11 @@ class PlayState extends MusicBeatState
 						distort = new Shaders.DistortionEffect(9);
 
 						addShaderToCamera('camGame', distort);
-					case 542:
+
+					case 544:
+						distort.setGlitchModifier(1);
+
+					case 670:
 						camGame.setFilters([]);
 
 						camGameShaders = [];
