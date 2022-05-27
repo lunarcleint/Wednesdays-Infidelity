@@ -4787,6 +4787,39 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			if (curSong == "Too Slow Encore") {
+				switch(curStep) {
+					case 928:
+						FlxTween.tween(camHUD, {alpha: 0}, 1);
+					case 930:
+						vocals.volume = 1;
+						camZooming = false;
+						FlxTween.tween(FlxG.camera, {zoom : 1.5}, 1);
+						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 110);
+					case 1012:
+						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 0.2);
+						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 50);
+					case 1043:
+						FlxTween.tween(camHUD, {alpha: 1}, 1);
+						FlxTween.tween(FlxG.camera, {zoom : 1}, 1);
+					case 2016:
+						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt, botplayTxt];
+
+						opponentStrums.forEach(function(spr:StrumNote) {
+							objs.push(spr);
+						});
+
+						for (obj in objs) {
+							FlxTween.tween(obj, {alpha: 0}, 0.2, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	
+						}
+						
+						vocals.volume = 1;
+						camZooming = false;
+						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 1);
+						camFollow.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y + 60);
+				}
+			}
+
 		if(curStep == lastStepHit) {
 			return;
 		}
@@ -4811,12 +4844,6 @@ class PlayState extends MusicBeatState
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
 			return;
-		}
-
-		if (curSong == 'Too Slow Encore' && curBeat >= 440 && curBeat < 504 && camZooming && FlxG.camera.zoom < 1.35)
-		{
-			FlxG.camera.zoom += 0.030;
-			camHUD.zoom += 0.10;
 		}
 
 		if (generatedMusic)

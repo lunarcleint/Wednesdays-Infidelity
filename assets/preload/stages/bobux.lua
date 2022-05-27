@@ -9,6 +9,8 @@ local del2 = 0;
 
 local small = false;
 
+local active = true
+
 function onCreatePost()
     if dadName == 'tiny-mouse' then
         small = true
@@ -16,78 +18,95 @@ function onCreatePost()
 end
 
 function onUpdate()
-    if followchars == true then
-        if mustHitSection == false then
-            if small == true then setProperty('defaultCamZoom',1.0)  yy = 550  else setProperty('defaultCamZoom',0.8) yy = 513 end
-            if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
-                triggerEvent('Camera Follow Pos',xx-ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singRIGHT' then
-                triggerEvent('Camera Follow Pos',xx+ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singUP' then
-                triggerEvent('Camera Follow Pos',xx,yy-ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singDOWN' then
-                triggerEvent('Camera Follow Pos',xx,yy+ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singLEFT-alt' then
-                triggerEvent('Camera Follow Pos',xx-ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singRIGHT-alt' then
-                triggerEvent('Camera Follow Pos',xx+ofs,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singUP-alt' then
-                triggerEvent('Camera Follow Pos',xx,yy-ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' then
-                triggerEvent('Camera Follow Pos',xx,yy+ofs)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
-                triggerEvent('Camera Follow Pos',xx,yy)
-            end
-            if getProperty('dad.animation.curAnim.name') == 'idle' then
-                triggerEvent('Camera Follow Pos',xx,yy)
-                if getProperty('camHUD.alpha') == not 1 then
-                    doTweenAlpha('camtween','camHUD',1,0.3,'linear')
+    if active then 
+        if followchars == true then
+            if mustHitSection == false then
+                if small == true then setProperty('defaultCamZoom',1.0)  yy = 550  else setProperty('defaultCamZoom',0.8) yy = 513 end
+                if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
+                    triggerEvent('Camera Follow Pos',xx-ofs,yy)
                 end
-            end
-            if getProperty('dad.animation.curAnim.name') == 'dial' or getProperty('dad.animation.curAnim.name') == 'die' then
-                triggerEvent('Camera Follow Pos',xx,yy)
-                if getProperty('camHUD.alpha') == not 0 then
-                    doTweenAlpha('camtween','camHUD',0,0.5,'linear')
+                if getProperty('dad.animation.curAnim.name') == 'singRIGHT' then
+                    triggerEvent('Camera Follow Pos',xx+ofs,yy)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singUP' then
+                    triggerEvent('Camera Follow Pos',xx,yy-ofs)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singDOWN' then
+                    triggerEvent('Camera Follow Pos',xx,yy+ofs)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singLEFT-alt' then
+                    triggerEvent('Camera Follow Pos',xx-ofs,yy)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singRIGHT-alt' then
+                    triggerEvent('Camera Follow Pos',xx+ofs,yy)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singUP-alt' then
+                    triggerEvent('Camera Follow Pos',xx,yy-ofs)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' then
+                    triggerEvent('Camera Follow Pos',xx,yy+ofs)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
+                    triggerEvent('Camera Follow Pos',xx,yy)
+                end
+                if getProperty('dad.animation.curAnim.name') == 'idle' then
+                    triggerEvent('Camera Follow Pos',xx,yy)
+                    if getProperty('camHUD.alpha') == not 1 then
+                        doTweenAlpha('camtween','camHUD',1,0.3,'linear')
+                    end
+                end
+                if getProperty('dad.animation.curAnim.name') == 'dial' or getProperty('dad.animation.curAnim.name') == 'die' then
+                    triggerEvent('Camera Follow Pos',xx,yy)
+                    if getProperty('camHUD.alpha') == not 0 then
+                        doTweenAlpha('camtween','camHUD',0,0.5,'linear')
+                    end
+                end
+            else
+                setProperty('defaultCamZoom',1.0)
+                if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
+                    triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
+                end
+                if getProperty('boyfriend.animation.curAnim.name') == 'singRIGHT' then
+                    triggerEvent('Camera Follow Pos',xx2+ofs,yy2)
+                end
+                if getProperty('boyfriend.animation.curAnim.name') == 'singUP' then
+                    triggerEvent('Camera Follow Pos',xx2,yy2-ofs)
+                end
+                if getProperty('boyfriend.animation.curAnim.name') == 'singDOWN' then
+                    triggerEvent('Camera Follow Pos',xx2,yy2+ofs)
+                end
+                if getProperty('boyfriend.animation.curAnim.name') == 'idle-alt' then
+                    triggerEvent('Camera Follow Pos',xx2,yy2)
+                end
+                if getProperty('boyfriend.animation.curAnim.name') == 'idle' then
+                    triggerEvent('Camera Follow Pos',xx2,yy2)
                 end
             end
         else
-            setProperty('defaultCamZoom',1.0)
-            if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
-                triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
-            end
-            if getProperty('boyfriend.animation.curAnim.name') == 'singRIGHT' then
-                triggerEvent('Camera Follow Pos',xx2+ofs,yy2)
-            end
-            if getProperty('boyfriend.animation.curAnim.name') == 'singUP' then
-                triggerEvent('Camera Follow Pos',xx2,yy2-ofs)
-            end
-            if getProperty('boyfriend.animation.curAnim.name') == 'singDOWN' then
-                triggerEvent('Camera Follow Pos',xx2,yy2+ofs)
-            end
-            if getProperty('boyfriend.animation.curAnim.name') == 'idle-alt' then
-                triggerEvent('Camera Follow Pos',xx2,yy2)
-            end
-            if getProperty('boyfriend.animation.curAnim.name') == 'idle' then
-                triggerEvent('Camera Follow Pos',xx2,yy2)
-            end
+            triggerEvent('Camera Follow Pos','','')
         end
-    else
-        triggerEvent('Camera Follow Pos','','')
     end
 end
 
 function onStepHit()
-    if curStep == 1443 then
-        if songName == 'Too Slow Encore' then
+    if songName == 'Too Slow Encore' then
+        if curStep == 1443 then
             small = false
+        end
+
+        if curStep == 928 then 
+            active = false
+            followchars = false
+        end 
+
+        if curStep == 1043 then 
+            active = true
+            followchars = true
+        end
+
+        if curStep == 2016 then
+            active = false
+            followchars = false
         end
     end
 end
