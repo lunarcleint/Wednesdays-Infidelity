@@ -329,10 +329,15 @@ class PlayState extends MusicBeatState
 
 	var camTween:FlxTween = null;
 
+	var cinematicBars:Map<String, FlxSprite> = [
+		"top" => null,
+		"bottom" => null,
+	];
+
+
+	// Shaders
 	public var chrom:ChromaticAberrationEffect;
-
 	public var vcr:VCRDistortionEffect;
-
 	public var distort:DistortionEffect;
 
 	public var shaderUpdates:Array<Float->Void> = [];
@@ -1082,6 +1087,7 @@ class PlayState extends MusicBeatState
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
+			trace(daSong);
 			switch (daSong)
 			{
 				case 'unknown-suffering':
@@ -4183,6 +4189,37 @@ class PlayState extends MusicBeatState
 	
 	}
 
+	function addCinematicBars(speed:Float) {
+		if (cinematicBars["top"] == null) {
+			cinematicBars["top"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / 7), FlxColor.BLACK);
+			cinematicBars["top"].screenCenter(X);
+			cinematicBars["top"].cameras = [camHUD];
+			cinematicBars["top"].y = 0 - cinematicBars["top"].height; //offscreen
+			insert(members.indexOf(timeBarBG) - 1, cinematicBars["top"]);
+		}
+
+		if (cinematicBars["bottom"] == null) {
+			cinematicBars["bottom"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / 7), FlxColor.BLACK);
+			cinematicBars["bottom"].screenCenter(X);
+			cinematicBars["bottom"].cameras = [camHUD];
+			cinematicBars["bottom"].y = FlxG.height; //offscreen
+			insert(members.indexOf(timeBarBG) - 1, cinematicBars["bottom"]);
+		}
+		
+		FlxTween.tween(cinematicBars["top"], {y: 0}, speed, {ease: FlxEase.circInOut});
+		FlxTween.tween(cinematicBars["bottom"], {y: FlxG.height - cinematicBars["bottom"].height}, speed, {ease: FlxEase.circInOut});
+	}
+
+	function removeCinematicBars(speed:Float) {
+		if (cinematicBars["top"] != null) {
+			FlxTween.tween(cinematicBars["top"], {y: 0 - cinematicBars["top"].height}, speed, {ease: FlxEase.circInOut});
+		}
+
+		if (cinematicBars["bottom"] != null) {
+			FlxTween.tween(cinematicBars["bottom"], {y: FlxG.height}, speed, {ease: FlxEase.circInOut});
+		}
+	}
+
 	function doEffect() {
 
 		if (chrom != null) {
@@ -4690,6 +4727,7 @@ class PlayState extends MusicBeatState
 					case 1552:
 						FlxTween.tween(camHUD, {alpha: 0}, 3.5);
 						FlxTween.tween(camGame, {alpha: 0}, 3.5);
+						FlxTween.tween(camOther, {alpha: 0}, 3.5);
 				}
 			}
 
@@ -4710,9 +4748,55 @@ class PlayState extends MusicBeatState
 				switch(curStep)
 				{
 					case 1:
+						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt];
+
+						strumLineNotes.forEach(function(spr:StrumNote) {
+							objs.push(spr);
+						});
+
+						for (obj in objs) {
+							FlxTween.tween(obj, {alpha: 0}, 1, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	
+						}
+
+						new FlxTimer().start(2, function (tmr:FlxTimer) {
+							addCinematicBars(2);
+						});
+
 						pausables.push(FlxTween.tween(FlxG.camera, {zoom: 1.5}, 13, {ease: FlxEase.quadInOut, onComplete: function (tween:FlxTween) {defaultCamZoom = 1.5;}}));
+
 					case 128:
-						pausables.push(FlxTween.tween(FlxG.camera, {zoom: 0.67}, 0.5, {ease: FlxEase.quadInOut, onComplete: function (tween:FlxTween) {defaultCamZoom = 0.67;}}));
+						removeCinematicBars(1);
+
+						new FlxTimer().start(1, function (tmr:FlxTimer) {
+							var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt];
+
+							strumLineNotes.forEach(function(spr:StrumNote) {
+								objs.push(spr);
+							});
+	
+							for (obj in objs) {
+								obj.visible = true;
+								FlxTween.tween(obj, {alpha: 1}, 1);	
+							}
+						});
+
+					case 888: 
+						addCinematicBars(0.7);
+
+					case 1014:
+						removeCinematicBars(1);
+					
+					case 1399:
+						addCinematicBars(1);
+					case 1657:
+						removeCinematicBars(0.5);
+
+					case 1788:
+						addCinematicBars(0.5);
+
+					case 1914:
+						removeCinematicBars(0.5);
+
 				}
 			}
 
@@ -4833,9 +4917,6 @@ class PlayState extends MusicBeatState
 	var lightningOffset:Int = 8;
 
 	var lastBeatHit:Int = -1;
-	
-	
-	
 	
 	override function beatHit()
 	{

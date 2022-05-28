@@ -1,0 +1,44 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "susNightmare",
+		"player1": "bf-sus",
+		"player2": "mouse-sus",
+		"player3": null,
+		"events": [
+			[
+				217600,
+				[
+					[
+						"camGame Off",
+						"",
+						""
+					],
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				221000,
+				[
+					[
+						"Fade Cameras",
+						"0",
+						"1.27"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 150,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Needle Mouse"
+	}
+}
