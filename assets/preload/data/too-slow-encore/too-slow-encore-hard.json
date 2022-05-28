@@ -5173,60 +5173,64 @@
 				"sectionNotes": [
 					[
 						140794.184183937,
-						2,
+						6,
 						0
 					],
 					[
 						140879.898469652,
-						3,
+						7,
 						0
 					],
 					[
 						140965.612755366,
-						0,
-						257.142857142857
-					],
-					[
-						141308.469898223,
-						1,
-						0
-					],
-					[
-						141479.898469652,
-						2,
-						257.142857142857
-					],
-					[
-						141822.755612509,
-						3,
-						257.142857142857
-					],
-					[
-						140965.612755366,
-						6,
+						4,
 						257.142857142857
 					],
 					[
 						141308.469898223,
 						5,
-						85.7142857142857
+						0
 					],
 					[
 						141479.898469652,
-						7,
+						6,
 						257.142857142857
 					],
 					[
 						141822.755612509,
-						4,
+						7,
 						257.142857142857
+					],
+					[
+						140965.612755366,
+						2,
+						257.142857142857,
+						"No Animation"
+					],
+					[
+						141308.469898223,
+						1,
+						85.7142857142857,
+						"No Animation"
+					],
+					[
+						141479.898469652,
+						3,
+						257.142857142857,
+						"No Animation"
+					],
+					[
+						141822.755612509,
+						0,
+						257.142857142857,
+						"No Animation"
 					]
 				],
 				"altAnim": false,
 				"gfSection": false,
 				"bpm": 135,
 				"changeBPM": false,
-				"mustHitSection": true
+				"mustHitSection": false
 			},
 			{
 				"lengthInSteps": 16,
@@ -9394,14 +9398,34 @@
 				"bpm": 135
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 135,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 135,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 135
 			},
 			{
 				"gfSection": false,

@@ -334,6 +334,8 @@ class PlayState extends MusicBeatState
 		"bottom" => null,
 	];
 
+	var camBars:FlxCamera;
+
 
 	// Shaders
 	public var chrom:ChromaticAberrationEffect;
@@ -382,13 +384,16 @@ class PlayState extends MusicBeatState
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
+		camBars = new FlxCamera();
 		camHUD = new FlxCamera();
-
 		camOther = new FlxCamera();
+
+		camBars.bgColor.alpha = 0;
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camBars);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
@@ -431,24 +436,9 @@ class PlayState extends MusicBeatState
 		var songName:String = Paths.formatToSongPath(SONG.song);
 
 		curStage = PlayState.SONG.stage;
-		//trace('stage is: ' + curStage);
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
-				case 'spookeez' | 'south' | 'monster':
-					curStage = 'spooky';
-				case 'pico' | 'blammed' | 'philly' | 'philly-nice':
-					curStage = 'philly';
-				case 'milf' | 'satin-panties' | 'high':
-					curStage = 'limo';
-				case 'cocoa' | 'eggnog':
-					curStage = 'mall';
-				case 'winter-horrorland':
-					curStage = 'mallEvil';
-				case 'senpai' | 'roses':
-					curStage = 'school';
-				case 'thorns':
-					curStage = 'schoolEvil';
 				default:
 					curStage = 'stage';
 			}
@@ -4040,7 +4030,7 @@ class PlayState extends MusicBeatState
                 dad.playAnim(animToPlay);
         }
 
-		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
+		if (Paths.formatToSongPath(SONG.song) != 'tutorial' && !note.noAnimation)
 			camZooming = true;
 
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
@@ -4189,21 +4179,21 @@ class PlayState extends MusicBeatState
 	
 	}
 
-	function addCinematicBars(speed:Float) {
+	function addCinematicBars(speed:Float, ?thickness:Float = 7) {
 		if (cinematicBars["top"] == null) {
-			cinematicBars["top"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / 7), FlxColor.BLACK);
+			cinematicBars["top"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / thickness), FlxColor.BLACK);
 			cinematicBars["top"].screenCenter(X);
-			cinematicBars["top"].cameras = [camHUD];
+			cinematicBars["top"].cameras = [camBars];
 			cinematicBars["top"].y = 0 - cinematicBars["top"].height; //offscreen
-			insert(members.indexOf(timeBarBG) - 1, cinematicBars["top"]);
+			add(cinematicBars["top"]);
 		}
 
 		if (cinematicBars["bottom"] == null) {
-			cinematicBars["bottom"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / 7), FlxColor.BLACK);
+			cinematicBars["bottom"] = new FlxSprite(0,0).makeGraphic(FlxG.width, Std.int(FlxG.height / thickness), FlxColor.BLACK);
 			cinematicBars["bottom"].screenCenter(X);
-			cinematicBars["bottom"].cameras = [camHUD];
+			cinematicBars["bottom"].cameras = [camBars];
 			cinematicBars["bottom"].y = FlxG.height; //offscreen
-			insert(members.indexOf(timeBarBG) - 1, cinematicBars["bottom"]);
+			add(cinematicBars["bottom"]);
 		}
 		
 		FlxTween.tween(cinematicBars["top"], {y: 0}, speed, {ease: FlxEase.circInOut});
@@ -4748,15 +4738,7 @@ class PlayState extends MusicBeatState
 				switch(curStep)
 				{
 					case 1:
-						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt];
-
-						strumLineNotes.forEach(function(spr:StrumNote) {
-							objs.push(spr);
-						});
-
-						for (obj in objs) {
-							FlxTween.tween(obj, {alpha: 0}, 1, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	
-						}
+						FlxTween.tween(camHUD, {alpha: 0}, 1);	
 
 						new FlxTimer().start(2, function (tmr:FlxTimer) {
 							addCinematicBars(2);
@@ -4768,16 +4750,7 @@ class PlayState extends MusicBeatState
 						removeCinematicBars(1);
 
 						new FlxTimer().start(1, function (tmr:FlxTimer) {
-							var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt];
-
-							strumLineNotes.forEach(function(spr:StrumNote) {
-								objs.push(spr);
-							});
-	
-							for (obj in objs) {
-								obj.visible = true;
-								FlxTween.tween(obj, {alpha: 1}, 1);	
-							}
+							FlxTween.tween(camHUD, {alpha: 1}, 1);	
 						});
 
 					case 888: 
@@ -4875,17 +4848,34 @@ class PlayState extends MusicBeatState
 				switch(curStep) {
 					case 928:
 						FlxTween.tween(camHUD, {alpha: 0}, 1);
+						addCinematicBars(1, 12);
 					case 930:
 						vocals.volume = 1;
 						camZooming = false;
 						FlxTween.tween(FlxG.camera, {zoom : 1.5}, 1);
-						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 110);
+						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 120);
 					case 1012:
 						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 0.2);
 						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 50);
 					case 1043:
+						removeCinematicBars(1);
 						FlxTween.tween(camHUD, {alpha: 1}, 1);
 						FlxTween.tween(FlxG.camera, {zoom : 1}, 1);
+					case 1488: 
+						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt, botplayTxt];
+						opponentStrums.forEach(function(spr:StrumNote) {objs.push(spr);});
+						for (obj in objs) {FlxTween.tween(obj, {alpha: 0}, 0.2);}
+						addCinematicBars(0.2);
+						camZooming = false;
+						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 0.2);
+						camFollow.set(dad.getGraphicMidpoint().x - 175 , dad.getGraphicMidpoint().y + 60);
+
+					case 1504:
+						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt, botplayTxt];
+						opponentStrums.forEach(function(spr:StrumNote) {objs.push(spr);});
+						for (obj in objs) {FlxTween.tween(obj, {alpha: 1}, 0.2);}
+						removeCinematicBars(0.2);
+
 					case 2016:
 						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt, botplayTxt];
 
@@ -4896,11 +4886,13 @@ class PlayState extends MusicBeatState
 						for (obj in objs) {
 							FlxTween.tween(obj, {alpha: 0}, 0.2, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	
 						}
+
+						addCinematicBars(0.6);
 						
 						vocals.volume = 1;
 						camZooming = false;
 						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 1);
-						camFollow.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y + 60);
+						camFollow.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y + 70);
 				}
 			}
 

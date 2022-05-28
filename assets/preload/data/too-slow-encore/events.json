@@ -292,13 +292,18 @@
 				]
 			],
 			[
-				141479.898469652,
+				141443.469898223,
 				[
 					[
 						"Change Character",
 						"dad",
 						"mutant-mouse"
-					],
+					]
+				]
+			],
+			[
+				141479.898469652,
+				[
 					[
 						"Play Animation",
 						"transform",
@@ -498,7 +503,7 @@
 		"gfVersion": "gf-invisible",
 		"bpm": 135,
 		"arrowSkin": "",
-		"needsVoices": false,
+		"needsVoices": true,
 		"song": "Too Slow Encore"
 	}
 }
