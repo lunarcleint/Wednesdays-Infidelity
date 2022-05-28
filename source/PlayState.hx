@@ -1781,7 +1781,12 @@ class PlayState extends MusicBeatState
 		}
 
 		// Song duration in a float, useful for the time left feature
-		songLength = FlxG.sound.music.length;
+		if (curSong != "Kriman't") {
+			songLength = FlxG.sound.music.length;
+		} else {
+			songLength = 130 * 1000;
+		}
+		
 		FlxTween.tween(timeBar, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 		FlxTween.tween(timeTxt, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 		
@@ -4722,11 +4727,42 @@ class PlayState extends MusicBeatState
 			{
 				switch(curStep)
 				{
+					case 960:
+						addCinematicBars(0.75, 12);
+
+						camZooming = false;
+
+						FlxTween.tween(FlxG.camera, {zoom: 1.4}, 5);
+
+						FlxTween.tween(camHUD, {alpha: 0}, 1);
+
+						camFollow.set(dad.getGraphicMidpoint().x - 170, dad.getGraphicMidpoint().y);
+
 					case 992:
 						FlxG.camera.flash(FlxColor.BLACK, 5);
 						FlxTween.tween(blackFuck, {alpha: 1}, 0.5);
 					case 1050:
+						songLength = FlxG.sound.music.length;
 						FlxTween.tween(blackFuck, {alpha: 0}, 2);
+						
+					case 1112: 
+						removeCinematicBars(1);
+
+						FlxTween.tween(camHUD, {alpha: 1}, 1, {startDelay: 1});
+					case 2144:
+						addCinematicBars(1, 12);
+
+						camZooming = false;
+
+						FlxTween.tween(FlxG.camera, {zoom: 1.4}, 1);
+
+						FlxTween.tween(camHUD, {alpha: 0}, 1);
+
+						camFollow.set(dad.getGraphicMidpoint().x - 50, dad.getGraphicMidpoint().y - 40);
+					case 2181: 
+						FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.quadInOut});
+
+						camFollow.set(dad.getGraphicMidpoint().x - 40, dad.getGraphicMidpoint().y - 100);
 				}
 			}
 
