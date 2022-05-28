@@ -56,7 +56,7 @@ class FreeplaySelectorState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('4-'));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('friplay_copia'));
 		bg.scrollFactor.set(0, 0);
 		//bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.updateHitbox();
@@ -68,31 +68,33 @@ class FreeplaySelectorState extends MusicBeatState
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		add(camFollowPos);
+
+		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var mickey:FlxSprite = new FlxSprite(250,-100).loadGraphic(Paths.image('menubackgrounds/menu_suicide'));
+		var mickey:FlxSprite = new FlxSprite(250,-50).loadGraphic(Paths.image('menubackgrounds/menu_suicide'));
 		mickey.ID = 0;
 		menuItems.add(mickey);
 
-		var julian:FlxSprite = new FlxSprite(mickey.x,mickey.y +180).loadGraphic(Paths.image('menubackgrounds/menu_julian'));
+		var julian:FlxSprite = new FlxSprite(mickey.x,mickey.y +230).loadGraphic(Paths.image('menubackgrounds/menu_julian'));
 		julian.ID = 1;
 		menuItems.add(julian);
 
-		var chedder:FlxSprite = new FlxSprite(mickey.x, julian.y +180).loadGraphic(Paths.image('menubackgrounds/menu_cheddar'));
+		var chedder:FlxSprite = new FlxSprite(mickey.x, julian.y +230).loadGraphic(Paths.image('menubackgrounds/menu_cheddar'));
 		chedder.ID = 2;
 		menuItems.add(chedder);
 
-		var sus:FlxSprite = new FlxSprite(mickey.x, chedder.y +180).loadGraphic(Paths.image('menubackgrounds/menu_sus'));
+		var sus:FlxSprite = new FlxSprite(mickey.x, chedder.y +230).loadGraphic(Paths.image('menubackgrounds/menu_sus'));
 		sus.ID = 3;
 		menuItems.add(sus);
 
-		mickey.setGraphicSize(Std.int(mickey.width * 0.45));
-		julian.setGraphicSize(Std.int(julian.width * 0.45));
-		chedder.setGraphicSize(Std.int(chedder.width * 0.45));
-		sus.setGraphicSize(Std.int(sus.width * 0.45));
+		mickey.setGraphicSize(Std.int(mickey.width * 0.55));
+		julian.setGraphicSize(Std.int(julian.width * 0.55));
+		chedder.setGraphicSize(Std.int(chedder.width * 0.55));
+		sus.setGraphicSize(Std.int(sus.width * 0.6));
 
 		if (ClientPrefs.shake)
 			FlxG.camera.shake(0.001, 99999999999);
@@ -114,8 +116,8 @@ class FreeplaySelectorState extends MusicBeatState
 		}
 
 
-		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
-		//camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+		var lerpVal:Float = CoolUtil.boundTo(elapsed * 8, 0, 1);
+		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		if (!selectedSomethin)
 		{
@@ -190,17 +192,24 @@ class FreeplaySelectorState extends MusicBeatState
 			var newShader:ColorSwap = new ColorSwap();
 			spr.shader = newShader.shader;
 			newShader.brightness = -0.8;
-			spr.setGraphicSize(Std.int(spr.width * 0.45));
+			spr.setGraphicSize(Std.int(spr.width * 0.55));
 
 			if (spr.ID == curSelected)
 			{
 				spr.shader = null;
-				spr.setGraphicSize(Std.int(spr.width * 0.47));
+				spr.setGraphicSize(Std.int(spr.width * 0.57));
 				if (ClientPrefs.flashing) {
 					FlxG.camera.flash(FlxColor.BLACK, 0.2, null, true);
 				}
 				//FlxG.camera.flash(FlxColor.BLACK, 0.2);
-				//camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
+				if (spr.ID == 3)
+				{
+					camFollow.setPosition(700, spr.getGraphicMidpoint().y + 200);
+				}
+				else
+				{
+					camFollow.setPosition(700, 350);
+				}
 				FlxG.log.add(spr.frameWidth);
 			}
 		});
