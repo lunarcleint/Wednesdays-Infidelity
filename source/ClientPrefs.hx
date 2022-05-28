@@ -14,7 +14,6 @@ class ClientPrefs {
 	public static var flashing:Bool = true;
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
-	public static var lowQuality:Bool = false;
 	public static var framerate:Int = 60;
 	public static var cursing:Bool = true;
 	public static var violence:Bool = true;
@@ -38,6 +37,7 @@ class ClientPrefs {
 	public static var goodWindow:Int = 90;
 	public static var badWindow:Int = 135;
 	public static var safeFrames:Float = 10;
+	public static var shaders:Bool = true;
 
 	//Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
@@ -81,7 +81,6 @@ class ClientPrefs {
 		FlxG.save.data.shake = shake;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
-		FlxG.save.data.lowQuality = lowQuality;
 		FlxG.save.data.framerate = framerate;
 		//FlxG.save.data.cursing = cursing;
 		//FlxG.save.data.violence = violence;
@@ -108,6 +107,7 @@ class ClientPrefs {
 		FlxG.save.data.hitsoundVolume = hitsoundVolume;
 		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.botPlay = botPlay;
+		FlxG.save.data.shaders = shaders;
 	
 		FlxG.save.flush();
 
@@ -144,9 +144,6 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.noteSplashes != null) {
 			noteSplashes = FlxG.save.data.noteSplashes;
-		}
-		if(FlxG.save.data.lowQuality != null) {
-			lowQuality = FlxG.save.data.lowQuality;
 		}
 		if(FlxG.save.data.framerate != null) {
 			framerate = FlxG.save.data.framerate;
@@ -233,6 +230,11 @@ class ClientPrefs {
 		if (FlxG.save.data.botPlay != null)
 		{
 			botPlay = FlxG.save.data.botPlay;
+		}
+
+		if (FlxG.save.data.shaders != null)
+		{
+			shaders = FlxG.save.data.shaders;
 		}
 
 		var save:FlxSave = new FlxSave();

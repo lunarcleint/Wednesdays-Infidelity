@@ -72,6 +72,14 @@ class VisualsUISubState extends BaseOptionsMenu
 		);
 		addOption(option);
 
+		var option:Option = new Option('Shaders',
+			"Uncheck this if you don't want Shaders!",
+			'shaders',
+			'bool',
+			true
+		);
+		addOption(option);
+
 		var option:Option = new Option('Camera Zooms',
 			"If unchecked, the camera won't zoom in on a beat hit.",
 			'camZooms',

@@ -144,10 +144,10 @@ class WarningState extends MusicBeatState
 		warnText = new FlxText(0, 0, FlxG.width,
 			"This mod contains Flashing Lights, Loud Effects, and Screen Shake.
 			 Press Select Your Options 
-			(*These can be changed later*)" + "\n
+			" + "\n
 			\n\n
 
-			You have been warned.
+			
 			Press SPACE to continue.",
 			21);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -182,7 +182,17 @@ class WarningState extends MusicBeatState
 		);
 		addOption(option);
 
+		var option:Option = new Option('Shaders',
+			"Uncheck this if you don't want Shaders!",
+			'shaders',
+			'bool',
+			true
+		);
+		addOption(option);
+
 		genOptions();
+
+		//FlxG.camera.zoom = 0.3;
 	}
 
 	public function addOption(option:Option) {
@@ -202,7 +212,11 @@ class WarningState extends MusicBeatState
 				//optionText.yAdd = 100;
 				optionText.targetY = i;
 				optionText.screenCenter(Y);
-				optionText.y += 80;
+				optionText.y += 10;
+				if (i >= 2) {
+					optionText.y += 130;
+					optionText.screenCenter(X);
+				}
 				grpOptions.add(optionText);
 	
 				if(optionsArray[i].type == 'bool') {
@@ -234,6 +248,10 @@ class WarningState extends MusicBeatState
 		if (curSelected >= optionsArray.length)
 			curSelected = 0;
 
+		if (curSelected < 2) {
+			lastTop = curSelected;
+		}
+
 		var bullShit:Int = 0;
 
 		for (item in grpOptions.members) {
@@ -263,6 +281,8 @@ class WarningState extends MusicBeatState
 		}
 	}
 
+	public var lastTop:Int = 0; // make the menu feel good
+
 	override function update(elapsed:Float)
 	{
 		if(!leftState) {
@@ -284,11 +304,32 @@ class WarningState extends MusicBeatState
 			}
 
 			if (FlxG.keys.justPressed.LEFT) {
-				changeSelection(1);
+				changeSelection(-1);
 			}
 
 			if (FlxG.keys.justPressed.RIGHT) {
-				changeSelection(-1);
+				changeSelection(1);
+			}
+
+			if (FlxG.keys.justPressed.UP) {
+				if (curSelected < 2) {
+					curSelected = 2;
+					changeSelection();
+				} else {
+					curSelected = lastTop;
+					changeSelection();
+				}
+
+			}
+
+			if (FlxG.keys.justPressed.DOWN) {
+				if (curSelected >= 2) {
+					curSelected = lastTop;
+					changeSelection();
+				} else {
+					curSelected = 2;
+					changeSelection();
+				}
 			}
 
 			if (FlxG.keys.justPressed.SPACE) {

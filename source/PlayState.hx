@@ -509,22 +509,23 @@ class PlayState extends MusicBeatState
 				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 				stageFront.updateHitbox();
 				add(stageFront);
-				if(!ClientPrefs.lowQuality) {
-					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
-					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
-					stageLight.updateHitbox();
-					add(stageLight);
-					var stageLight:BGSprite = new BGSprite('stage_light', 1225, -100, 0.9, 0.9);
-					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
-					stageLight.updateHitbox();
-					stageLight.flipX = true;
-					add(stageLight);
+				
+				var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
+				stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+				stageLight.updateHitbox();
+				add(stageLight);
 
-					var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
-					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-					stageCurtains.updateHitbox();
-					add(stageCurtains);
-				}
+				var stageLight:BGSprite = new BGSprite('stage_light', 1225, -100, 0.9, 0.9);
+				stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+				stageLight.updateHitbox();
+				stageLight.flipX = true;
+				add(stageLight);
+
+				var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
+				stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+				stageCurtains.updateHitbox();
+				add(stageCurtains);
+				
 
 			case 'vecindario': //Week Suicide
 				var sexi:BGSprite = new BGSprite('backgrounds/VecindarioBG', -600, -200, 0.9, 0.9);
@@ -1144,17 +1145,20 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
-		switch (daSong) //shaders
-		{
-			case 'last-day':
-				vcr = new Shaders.VCRDistortionEffect(0.4,true,false,false);
+		if (ClientPrefs.shaders) {
+			switch (daSong) //shaders
+			{
+				case 'last-day':
+					vcr = new Shaders.VCRDistortionEffect(0.4,true,false,false);
 
-				addShaderToCamera('camGame', vcr);
-			case 'unknown-suffering':
-				chrom = new Shaders.ChromaticAberrationEffect();
-		
-				addShaderToCamera("camHUD", chrom);
+					addShaderToCamera('camGame', vcr);
+				case 'unknown-suffering':
+					chrom = new Shaders.ChromaticAberrationEffect();
+			
+					addShaderToCamera("camHUD", chrom);
+			}
 		}
+	
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
 		if(ClientPrefs.hitsoundVolume > 0) CoolUtil.precacheSound('hitsound');
@@ -2713,7 +2717,7 @@ class PlayState extends MusicBeatState
 
 	public function addShaderToCamera(cam:String,effect:ShaderEffect){//STOLE FROM ANDROMEDA
 		
-		if (ClientPrefs.lowQuality) return;
+		if (!ClientPrefs.shaders) return;
 	  
 	  
 		switch(cam.toLowerCase()) {
@@ -2991,12 +2995,6 @@ class PlayState extends MusicBeatState
 
 					FlxG.camera.zoom += camZoom;
 					camHUD.zoom += hudZoom;
-				}
-
-			case 'Trigger BG Ghouls':
-				if(curStage == 'schoolEvil' && !ClientPrefs.lowQuality) {
-					bgGhouls.dance(true);
-					bgGhouls.visible = true;
 				}
 
 			case 'Play Animation':
@@ -4514,7 +4512,6 @@ class PlayState extends MusicBeatState
 	function lightningStrikeShit():Void
 	{
 		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
-		if(!ClientPrefs.lowQuality) halloweenBG.animation.play('halloweem bg lightning strike');
 
 		lightningStrikeBeat = curBeat;
 		lightningOffset = FlxG.random.int(8, 24);
@@ -4541,7 +4538,7 @@ class PlayState extends MusicBeatState
 
 	function killHenchmen():Void
 	{
-		if(!ClientPrefs.lowQuality && ClientPrefs.violence && curStage == 'limo') {
+		if(ClientPrefs.violence && curStage == 'limo') {
 			if(limoKillingState < 1) {
 				limoMetalPole.x = -400;
 				limoMetalPole.visible = true;
@@ -4825,7 +4822,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			if (curSong == "Wistfulness") {
+			if (curSong == "Wistfulness" && ClientPrefs.shaders) {
 				switch(curStep) {
 					case 536:
 						distort = new Shaders.DistortionEffect(9);
@@ -4973,10 +4970,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'school':
-				if(!ClientPrefs.lowQuality) {
-					bgGirls.dance();
-				}
 
 			case 'vecindario':
 				grain.animation.play('idle');
@@ -4993,52 +4986,6 @@ class PlayState extends MusicBeatState
 				
 				grain.visible = true;
 				grain.animation.play('idle');
-
-			case 'mall':
-				if(!ClientPrefs.lowQuality) {
-					upperBoppers.dance(true);
-				}
-
-				if(heyTimer <= 0) bottomBoppers.dance(true);
-				santa.dance(true);
-
-			case 'limo':
-				if(!ClientPrefs.lowQuality) {
-					grpLimoDancers.forEach(function(dancer:BackgroundDancer)
-					{
-						dancer.dance();
-					});
-				}
-
-				if (FlxG.random.bool(10) && fastCarCanDrive)
-					fastCarDrive();
-			case "philly":
-				if (!trainMoving)
-					trainCooldown += 1;
-
-				if (curBeat % 4 == 0)
-				{
-					phillyCityLights.forEach(function(light:BGSprite)
-					{
-						light.visible = false;
-					});
-
-					curLight = FlxG.random.int(0, phillyCityLights.length - 1, [curLight]);
-
-					phillyCityLights.members[curLight].visible = true;
-					phillyCityLights.members[curLight].alpha = 1;
-				}
-
-				if (curBeat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
-				{
-					trainCooldown = FlxG.random.int(-4, 0);
-					trainStart();
-				}
-		}
-
-		if (curStage == 'spooky' && FlxG.random.bool(10) && curBeat > lightningStrikeBeat + lightningOffset)
-		{
-			lightningStrikeShit();
 		}
 		lastBeatHit = curBeat;
 

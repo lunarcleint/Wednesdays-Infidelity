@@ -171,7 +171,6 @@ class FunkinLua {
 		set('noteOffset', ClientPrefs.noteOffset);
 		set('healthBarAlpha', ClientPrefs.healthBarAlpha);
 		set('noResetButton', ClientPrefs.noReset);
-		set('lowQuality', ClientPrefs.lowQuality);
 
 		#if windows
 		set('buildTarget', 'windows');
