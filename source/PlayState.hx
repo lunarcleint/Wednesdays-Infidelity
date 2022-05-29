@@ -4028,11 +4028,6 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-		if(note.noteType == 'Jeringe Note') {
-            var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + '-shoot';
-                dad.playAnim(animToPlay);
-        }
-
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial' && !note.noAnimation)
 			camZooming = true;
 
@@ -4040,6 +4035,11 @@ class PlayState extends MusicBeatState
 			dad.playAnim('hey', true);
 			dad.specialAnim = true;
 			dad.heyTimer = 0.6;
+		}
+		else if(note.noteType == 'Jeringe Note') {
+			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + '-shoot';
+				dad.playAnim(animToPlay);
+				dad.holdTimer = 0;
 		} else if(!note.noAnimation) {
 			var altAnim:String = "";
 
@@ -4305,7 +4305,12 @@ class PlayState extends MusicBeatState
 			}
 
 			if(note.noteType == 'Jeringe Note') {
+				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + '-shoot';
+                dad.playAnim(animToPlay);
+				dad.holdTimer = 0;
+				boyfriend.specialAnim = true;
 				boyfriend.playAnim('dodge', true);
+				boyfriend.holdTimer = 0;
 			}
 
 			if(note.noteType == 'Speed Note') {
@@ -4322,7 +4327,7 @@ class PlayState extends MusicBeatState
 			}
 			health += note.hitHealth;
 
-			if(!note.noAnimation) {
+			if(!note.noAnimation && note.noteType != 'Jeringe Note') {
 				var daAlt = '';
 				if(note.noteType == 'Alt Animation') daAlt = '-alt';
 

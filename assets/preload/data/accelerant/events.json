@@ -1,0 +1,84 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "reefer",
+		"player1": "bf-retro",
+		"player2": "jank",
+		"player3": null,
+		"events": [
+			[
+				61097.5609756098,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf-donald-extra"
+					],
+					[
+						"Play Animation",
+						"appear",
+						"gf"
+					]
+				]
+			],
+			[
+				61463.4146341464,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf-donald"
+					],
+					[
+						"Alt Idle Animation",
+						"dad",
+						"-alt"
+					]
+				]
+			],
+			[
+				85564.0243902438,
+				[
+					[
+						"Play Animation",
+						"singUP-shoot",
+						"dad"
+					]
+				]
+			],
+			[
+				85609.7560975609,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf-donald-extra"
+					],
+					[
+						"Play Animation",
+						"death",
+						"gf"
+					]
+				]
+			],
+			[
+				86341.4634146341,
+				[
+					[
+						"Alt Idle Animation",
+						"dad",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-accelerant",
+		"bpm": 164,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Accelerant"
+	}
+}

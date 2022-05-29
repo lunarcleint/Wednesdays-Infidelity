@@ -69,6 +69,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+		#if PRIVATE_BUILD
+			var option:Option = new Option('Botplay',
+			"If checked,bungus",
+			'botPlay',
+			'bool',
+			false);
+			addOption(option);
+		#end
 
 		var option:Option = new Option('Hitsound Volume',
 			'Funny notes does \"Tick!\" when you hit them."',
