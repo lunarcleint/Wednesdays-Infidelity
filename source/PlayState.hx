@@ -4308,9 +4308,8 @@ class PlayState extends MusicBeatState
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + '-shoot';
                 dad.playAnim(animToPlay);
 				dad.holdTimer = 0;
-				boyfriend.specialAnim = true;
 				boyfriend.playAnim('dodge', true);
-				boyfriend.holdTimer = 0;
+				boyfriend.specialAnim = true;
 			}
 
 			if(note.noteType == 'Speed Note') {
