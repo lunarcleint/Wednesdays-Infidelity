@@ -289,6 +289,11 @@ class PlayState extends MusicBeatState
 	//Inferno / Satán
 	var satanAparicion:FlxSprite;
 	var satanJijijija:FlxSprite;
+
+	var infernogroundparts:Map<String, FlxSprite> = [
+		"p1" => null,
+		"p2" => null
+	];
 	
 	//Black / Kriman't
 	var blackFuck:FlxSprite;
@@ -566,11 +571,12 @@ class PlayState extends MusicBeatState
 				add(nosexi);
 			
 			case 'inferno': //Week Final
-				var inferno:BGSprite = new BGSprite('backgrounds/BG_INFERNO', -750, -450);
-				inferno.scale.set(1.4, 1.4);
-				inferno.antialiasing = ClientPrefs.globalAntialiasing;
-				inferno.updateHitbox();
-				add(inferno);
+				var infernosky:BGSprite = new BGSprite('backgrounds/SKY', -920, -800);
+				infernosky.scale.set(0.9, 0.9);
+				infernosky.antialiasing = ClientPrefs.globalAntialiasing;
+				infernosky.updateHitbox();
+				infernosky.scrollFactor.set(0.8,0.8);
+				add(infernosky);
 
 				satanAparicion = new FlxSprite(-280, -370);
 				satanAparicion.frames = Paths.getSparrowAtlas('backgrounds/SATAN_APARITION');
@@ -580,6 +586,20 @@ class PlayState extends MusicBeatState
 				satanAparicion.updateHitbox();
 				add(satanAparicion);
 
+				satanAparicion.animation.callback = function (name:String, frameNumber:Int, frameIndex:Int) {
+					if (name == "aparicion" && frameNumber == 6 && infernogroundparts["p2"] != null) {
+						remove(satanAparicion);
+						insert(members.indexOf(infernogroundparts["p2"]), satanAparicion);
+					}
+				};
+
+				var infernogroundp1:BGSprite = new BGSprite('backgrounds/infernogroundp1', -920, -110);
+				infernogroundp1.antialiasing = ClientPrefs.globalAntialiasing;
+				infernogroundp1.updateHitbox();
+				infernogroundp1.scrollFactor.set(1,1);
+				add(infernogroundp1);
+				infernogroundparts.set("p1", infernogroundp1);
+
 				satanJijijija = new FlxSprite(-250, -325);
 				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/JUJUJUJA');
 				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
@@ -588,6 +608,13 @@ class PlayState extends MusicBeatState
 				satanJijijija.alpha = 0.00001; //preloading purposes
 				satanJijijija.updateHitbox();
 				add(satanJijijija);
+
+				var infernogroundp2:BGSprite = new BGSprite('backgrounds/infernogroundp2', -920, -110);
+				infernogroundp2.antialiasing = ClientPrefs.globalAntialiasing;
+				infernogroundp2.updateHitbox();
+				infernogroundp2.scrollFactor.set(1,1);
+				add(infernogroundp2);
+				infernogroundparts.set("p2", infernogroundp2);
 
 			case 'susNightmare': //Week SUS
 				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
@@ -618,6 +645,11 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gfGroup); //Needed for blammed lights
+
+		if (curStage == 'inferno') {
+			remove(gfGroup);
+			insert(members.indexOf(infernogroundparts["p2"]), gfGroup);
+		}
 
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
@@ -4814,12 +4846,23 @@ class PlayState extends MusicBeatState
 			{
 				switch(curStep)
 				{
+					case 1312:
+						addCinematicBars(1);
+
+						FlxTween.tween(camHUD, {alpha: 0}, 1);
+
+						defaultCamZoom = 0.6;
+
+						camFollow.set(600, 120);
+
 					case 1340:
 						satanAparicion.alpha = 1;
 						satanAparicion.animation.play("aparicion", false);
 					case 1343:
 						gf.alpha = 1;
 						satanAparicion.alpha = 0;
+					case 1344: 
+						FlxTween.tween(camHUD, {alpha: 1}, 1);
 					case 1345:
 						changeDadIcon(true);
 					case 1376:
@@ -4844,6 +4887,10 @@ class PlayState extends MusicBeatState
 						gf.alpha = 1;
 						satanJijijija.alpha = 0;
 					case 1856:
+						defaultCamZoom = 0.6;
+
+						camFollow.set(600, 120);
+
 						gf.alpha = 0;
 						satanJijijija.alpha = 1;
 						satanJijijija.animation.play("jijijija", true);
@@ -4851,14 +4898,68 @@ class PlayState extends MusicBeatState
 						gf.alpha = 1;
 						satanJijijija.alpha = 0;
 					case 1868:
+						removeCinematicBars(1);
+
 						gf.alpha = 0;
 						satanAparicion.alpha = 1;
-						//satanAparicion.animation.play("aparicion", false);
-						satanAparicion.animation.reverse();
-					case 1872:
-						changeDadIcon(false);
-						gf.alpha = 0;
-						satanAparicion.alpha = 0;
+
+						satanAparicion.animation.callback = function (name:String, frameNumber:Int, frameIndex:Int) {
+							if (name == "aparicion" && frameNumber == 6 && infernogroundparts["p1"] != null) {
+								remove(satanAparicion);
+								insert(members.indexOf(infernogroundparts["p1"]) - 1, satanAparicion);
+							}
+							if (name == "aparicion" && frameNumber == 0) {
+								changeDadIcon(false);
+								gf.alpha = 0;
+								satanAparicion.alpha = 0;
+								remove(satanAparicion);
+							}
+						};
+
+						satanAparicion.animation.play("aparicion", true, true);
+					
+					case 2384:
+						addCinematicBars(1.5);
+
+						var arr:Array<Dynamic> = [scoreTxt, timeBar, timeBarBG, timeTxt, Main.fpsVar];
+
+						for (obj in arr) {
+							FlxTween.tween(obj, {alpha: 0}, 1.5);
+						}
+
+					case 2896:
+
+						removeCinematicBars(0.000000000000000000001);
+
+						camGame.visible = false;
+
+						camHUD.visible = false;
+					
+					case 2912:
+
+						camGame.visible = true;
+
+						camHUD.visible = true;
+
+						var arr:Array<Dynamic> = [scoreTxt, timeBar, timeBarBG, timeTxt, Main.fpsVar];
+
+						for (obj in arr) {
+							FlxTween.tween(obj, {alpha: 1}, 1);
+						}
+
+					case 3552:
+
+						addCinematicBars(1);
+
+						var arr:Array<Dynamic> = [scoreTxt, timeBar, timeBarBG, timeTxt, Main.fpsVar];
+
+						for (obj in arr) {
+							FlxTween.tween(obj, {alpha: 0}, 1);
+						}
+
+					case 3680: // IM GONNA CRY ITS SO SAD 😭 -lunar
+						FlxTween.tween(camHUD, {alpha: 0}, 1.4);
+						FlxTween.tween(Main.fpsVar, {alpha: 1}, 2);
 				}
 			}
 
@@ -4915,17 +5016,9 @@ class PlayState extends MusicBeatState
 
 					case 2016:
 						var objs:Array<Dynamic>= [healthBar, healthBarBG, iconP1, iconP2, scoreTxt, timeBar, timeBarBG, timeTxt, botplayTxt];
-
-						opponentStrums.forEach(function(spr:StrumNote) {
-							objs.push(spr);
-						});
-
-						for (obj in objs) {
-							FlxTween.tween(obj, {alpha: 0}, 0.2, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	
-						}
-
-						addCinematicBars(0.6);
-						
+						opponentStrums.forEach(function(spr:StrumNote) {objs.push(spr);});
+						for (obj in objs) {FlxTween.tween(obj, {alpha: 0}, 0.2, {onComplete: function (twn:FlxTween) {obj.visible = false;}});	}
+						addCinematicBars(0.6);	
 						vocals.volume = 1;
 						camZooming = false;
 						FlxTween.tween(FlxG.camera, {zoom : 1.2}, 1);
