@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DONALD ASSETS.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DONALD DOWN0000" x="0" y="0" width="884" height="1357" frameX="0" frameY="-32" frameWidth="884" frameHeight="1389"/>
+	<SubTexture name="DONALD DOWN0001" x="0" y="0" width="884" height="1357" frameX="0" frameY="-32" frameWidth="884" frameHeight="1389"/>
+	<SubTexture name="DONALD DOWN0002" x="884" y="0" width="884" height="1382" frameX="0" frameY="-7" frameWidth="884" frameHeight="1389"/>
+	<SubTexture name="DONALD DOWN0003" x="884" y="0" width="884" height="1382" frameX="0" frameY="-7" frameWidth="884" frameHeight="1389"/>
+	<SubTexture name="DONALD DOWN0004" x="1768" y="0" width="884" height="1389"/>
+	<SubTexture name="DONALD DOWN0005" x="1768" y="0" width="884" height="1389"/>
+	<SubTexture name="DONALD IDLE0000" x="2652" y="0" width="956" height="1404" frameX="-2" frameY="-12" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0001" x="3608" y="0" width="956" height="1404" frameX="-2" frameY="-12" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0002" x="4564" y="0" width="950" height="1416" frameX="-3" frameY="0" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0003" x="5514" y="0" width="950" height="1416" frameX="-3" frameY="0" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0004" x="6464" y="0" width="963" height="1398" frameX="-1" frameY="-18" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0005" x="6464" y="0" width="963" height="1398" frameX="-1" frameY="-18" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0006" x="0" y="1416" width="970" height="1388" frameX="0" frameY="-28" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0007" x="0" y="1416" width="970" height="1388" frameX="0" frameY="-28" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0008" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0009" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0010" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0011" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0012" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0013" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0014" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD IDLE0015" x="970" y="1416" width="972" height="1386" frameX="0" frameY="-30" frameWidth="972" frameHeight="1416"/>
+	<SubTexture name="DONALD LEFT0000" x="1942" y="1416" width="1004" height="1310" frameX="0" frameY="-18" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD LEFT0001" x="1942" y="1416" width="1004" height="1310" frameX="0" frameY="-18" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD LEFT0002" x="2946" y="1416" width="999" height="1323" frameX="-7" frameY="-5" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD LEFT0003" x="2946" y="1416" width="999" height="1323" frameX="-7" frameY="-5" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD LEFT0004" x="3945" y="1416" width="995" height="1328" frameX="-10" frameY="0" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD LEFT0005" x="3945" y="1416" width="995" height="1328" frameX="-10" frameY="0" frameWidth="1006" frameHeight="1328"/>
+	<SubTexture name="DONALD RIGHT0000" x="4940" y="1416" width="859" height="1453" frameX="-5" frameY="0" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD RIGHT0001" x="4940" y="1416" width="859" height="1453" frameX="-5" frameY="0" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD RIGHT0002" x="5799" y="1416" width="834" height="1447" frameX="-4" frameY="-6" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD RIGHT0003" x="5799" y="1416" width="834" height="1447" frameX="-4" frameY="-6" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD RIGHT0004" x="6633" y="1416" width="829" height="1448" frameX="0" frameY="-5" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD RIGHT0005" x="6633" y="1416" width="829" height="1448" frameX="0" frameY="-5" frameWidth="864" frameHeight="1453"/>
+	<SubTexture name="DONALD UP0000" x="7462" y="1416" width="726" height="1531"/>
+	<SubTexture name="DONALD UP0001" x="7462" y="1416" width="726" height="1531"/>
+	<SubTexture name="DONALD UP0002" x="0" y="2947" width="704" height="1530" frameX="-3" frameY="-1" frameWidth="726" frameHeight="1531"/>
+	<SubTexture name="DONALD UP0003" x="0" y="2947" width="704" height="1530" frameX="-3" frameY="-1" frameWidth="726" frameHeight="1531"/>
+	<SubTexture name="DONALD UP0004" x="704" y="2947" width="704" height="1527" frameX="-4" frameY="-4" frameWidth="726" frameHeight="1531"/>
+	<SubTexture name="DONALD UP0005" x="704" y="2947" width="704" height="1527" frameX="-4" frameY="-4" frameWidth="726" frameHeight="1531"/>
+</TextureAtlas>

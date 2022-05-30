@@ -126,7 +126,7 @@ class Note extends FlxSprite
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
 				case 'Jeringe Note':
-					ignoreNote = mustPress;
+					mustPress = true;
 					reloadNote('HURT');
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
