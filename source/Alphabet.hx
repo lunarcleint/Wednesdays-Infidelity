@@ -47,6 +47,9 @@ class Alphabet extends FlxSpriteGroup
 	public var typed:Bool = false;
 
 	public var typingSpeed:Float = 0.05;
+
+	public var instaLerp:Bool = false;
+
 	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1)
 	{
 		super(x, y);
@@ -347,15 +350,21 @@ class Alphabet extends FlxSpriteGroup
 	{
 		if (isMenuItem)
 		{
-			var scaledY = FlxMath.remapToRange(targetY, 0, 1, 0, 1.3);
-
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 9.6, 0, 1);
-			y = FlxMath.lerp(y, (scaledY * yMult) + (FlxG.height * 0.48) + yAdd, lerpVal);
-			if(forceX != Math.NEGATIVE_INFINITY) {
-				x = forceX;
+			if (instaLerp) {
+				y = (FlxMath.remapToRange(targetY, 0, 1, 0, 1.3) * yMult) + (FlxG.height * 0.48) + yAdd;
+				x = (targetY * 20) + 90 + xAdd;
 			} else {
-				x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
+				var scaledY = FlxMath.remapToRange(targetY, 0, 1, 0, 1.3);
+
+				var lerpVal:Float = CoolUtil.boundTo(elapsed * 9.6, 0, 1);
+				y = FlxMath.lerp(y, (scaledY * yMult) + (FlxG.height * 0.48) + yAdd, lerpVal);
+				if(forceX != Math.NEGATIVE_INFINITY) {
+					x = forceX;
+				} else {
+					x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
+				}
 			}
+		
 		}
 
 		super.update(elapsed);
