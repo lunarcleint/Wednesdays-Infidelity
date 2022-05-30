@@ -74,7 +74,6 @@ class WarningState extends MusicBeatState
 		}
 		#end
 
-		FlxG.game.focusLostFramerate = 60;
 		FlxG.sound.muteKeys = TitleState.muteKeys;
 		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
 		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
@@ -212,9 +211,9 @@ class WarningState extends MusicBeatState
 				//optionText.yAdd = 100;
 				optionText.targetY = i;
 				optionText.screenCenter(Y);
-				optionText.y += 10;
+				optionText.y += 1;
 				if (i >= 2) {
-					optionText.y += 130;
+					optionText.y += 140;
 					optionText.screenCenter(X);
 				}
 				grpOptions.add(optionText);
