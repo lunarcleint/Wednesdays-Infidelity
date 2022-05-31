@@ -499,7 +499,7 @@ class FreeplayState extends MusicBeatState
 
 							FlxFlicker.flicker(icon, 1.6, 0.06, false);
 
-							selectSong(false);
+							selectSong(false, true);
 
 							Lib.application.window.title = "66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
 
@@ -541,7 +541,7 @@ class FreeplayState extends MusicBeatState
 		vocals = null;
 	}
 
-	public function selectSong(?playstate:Bool = true)
+	public function selectSong(?playstate:Bool = true, ?story:Bool = false)
 	{
 		var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
@@ -549,7 +549,14 @@ class FreeplayState extends MusicBeatState
 		trace(poop);
 
 		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-		PlayState.isStoryMode = false;
+		if (story)
+		{
+			PlayState.isStoryMode = true;
+		}
+		else
+		{
+			PlayState.isStoryMode = false;
+		}
 		PlayState.storyDifficulty = curDifficulty;
 
 		trace('CURRENT WEEK: ' + WeekData.getWeekFileName());

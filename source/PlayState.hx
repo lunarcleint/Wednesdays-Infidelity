@@ -1004,6 +1004,24 @@ class PlayState extends MusicBeatState
 							}
 						});
 					}, FlxG.save.data.beatmainweek);
+				case 'hellhole':
+					startVideo("HellholeIntro", function () {
+						grain.visible = true;
+						grain.animation.play('idle');
+
+						var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+						black.cameras = [camOther];
+						add(black);
+
+						FlxTween.tween(black, {alpha: 0}, 0.6, {
+							onComplete: function (twn:FlxTween) {
+								remove(black);
+								black.destroy();
+
+								startAndEnd();
+							}
+						});
+					}, FlxG.save.data.beathell);
 				case 'wistfulness':
 					startVideo('StoryStart', function()
 					{
