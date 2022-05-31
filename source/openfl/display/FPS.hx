@@ -1,7 +1,9 @@
 package openfl.display;
 
+import flixel.math.FlxMath;
 import haxe.Timer;
 import openfl.events.Event;
+import openfl.system.System;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 #if gl_stats
@@ -11,8 +13,6 @@ import openfl.display._internal.stats.DrawCallContext;
 #if flash
 import openfl.Lib;
 #end
-import openfl.system.System;
-import flixel.math.FlxMath;
 
 /**
 	The FPS class provides an easy-to-use monitor to display
@@ -28,6 +28,7 @@ class FPS extends TextField
 		The current frame rate, expressed using frames-per-second
 	**/
 	public var currentFPS(default, null):Int;
+
 	private var memPeak:Float = 0;
 
 	@:noCompletion private var cacheCount:Int;
@@ -91,11 +92,12 @@ class FPS extends TextField
 		cacheCount = currentCount;
 
 		var mem:Float = Math.round(Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1)));
-		if (mem > memPeak) memPeak = mem;
+		if (mem > memPeak)
+			memPeak = mem;
 
 		if (visible)
-		{	
-			text = "FPS:" + currentFPS + "\nMEM: " + mem + " MB\nMEM peak: " + memPeak + " MB";	
+		{
+			text = "FPS:" + currentFPS + "\nMEM: " + mem + " MB\nMEM peak: " + memPeak + " MB";
 		}
 	}
 }

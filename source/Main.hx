@@ -1,5 +1,7 @@
 package;
 
+import haxe.CallStack;
+import openfl.events.UncaughtErrorEvent;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -51,6 +53,18 @@ class Main extends Sprite
 		}
 
 		setupGame();
+
+		addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, function (error:Dynamic) {
+			@:using(haxe.CallStack)
+
+			var callStack:Array<Dynamic> = CallStack.callStack();
+
+			for (call in callStack) {
+				trace(call);
+			}
+
+			trace(error.message);
+		});
 	}
 
 	private function setupGame():Void

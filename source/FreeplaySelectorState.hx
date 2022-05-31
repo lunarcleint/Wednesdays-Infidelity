@@ -1,28 +1,28 @@
 package;
 
-import flixel.util.FlxTimer;
-#if desktop
-import Discord.DiscordClient;
-#end
+import editors.MasterEditorMenu;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.FlxCamera;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.text.FlxText;
 import flixel.math.FlxMath;
+import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import lime.app.Application;
-import Achievements;
-import editors.MasterEditorMenu;
 import openfl.Lib;
 
 using StringTools;
+
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class FreeplaySelectorState extends MusicBeatState
 {
@@ -58,7 +58,7 @@ class FreeplaySelectorState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('friplay_copia'));
 		bg.scrollFactor.set(0, 0);
-		//bg.setGraphicSize(Std.int(bg.width * 1.175));
+		// bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -75,19 +75,19 @@ class FreeplaySelectorState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var mickey:FlxSprite = new FlxSprite(250,-50).loadGraphic(Paths.image('menubackgrounds/menu_suicide'));
+		var mickey:FlxSprite = new FlxSprite(250, -50).loadGraphic(Paths.image('menubackgrounds/menu_suicide'));
 		mickey.ID = 0;
 		menuItems.add(mickey);
 
-		var julian:FlxSprite = new FlxSprite(mickey.x,mickey.y +230).loadGraphic(Paths.image('menubackgrounds/menu_julian'));
+		var julian:FlxSprite = new FlxSprite(mickey.x, mickey.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_julian'));
 		julian.ID = 1;
 		menuItems.add(julian);
 
-		var chedder:FlxSprite = new FlxSprite(mickey.x, julian.y +230).loadGraphic(Paths.image('menubackgrounds/menu_cheddar'));
+		var chedder:FlxSprite = new FlxSprite(mickey.x, julian.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_cheddar'));
 		chedder.ID = 2;
 		menuItems.add(chedder);
 
-		var sus:FlxSprite = new FlxSprite(mickey.x, chedder.y +230).loadGraphic(Paths.image('menubackgrounds/menu_sus'));
+		var sus:FlxSprite = new FlxSprite(mickey.x, chedder.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_sus'));
 		sus.ID = 3;
 		menuItems.add(sus);
 
@@ -108,13 +108,13 @@ class FreeplaySelectorState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music != null) {
+		if (FlxG.sound.music != null)
+		{
 			if (FlxG.sound.music.volume < 0.8)
 			{
 				FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 			}
 		}
-
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 8, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
@@ -158,24 +158,27 @@ class FreeplaySelectorState extends MusicBeatState
 					else
 					{
 						FlxTween.tween(FlxG.camera, {zoom: 2.1}, 2, {ease: FlxEase.expoInOut});
-							if (ClientPrefs.shake)
-								FlxG.camera.shake(0.008, 0.08);
+						if (ClientPrefs.shake)
+							FlxG.camera.shake(0.008, 0.08);
 
-							if (ClientPrefs.flashing) {
-								FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-								{
-									MusicBeatState.switchState(new FreeplayState());
-								});
-							} else {
-								new FlxTimer().start(1,function(tmr:FlxTimer) {
-									MusicBeatState.switchState(new FreeplayState());
-								});
-							}
-
+						if (ClientPrefs.flashing)
+						{
+							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							{
+								MusicBeatState.switchState(new FreeplayState());
+							});
 						}
-					});
-				}
+						else
+						{
+							new FlxTimer().start(1, function(tmr:FlxTimer)
+							{
+								MusicBeatState.switchState(new FreeplayState());
+							});
+						}
+					}
+				});
 			}
+		}
 	}
 
 	function changeItem(huh:Int = 0)
@@ -198,10 +201,11 @@ class FreeplaySelectorState extends MusicBeatState
 			{
 				spr.shader = null;
 				spr.setGraphicSize(Std.int(spr.width * 0.57));
-				if (ClientPrefs.flashing) {
+				if (ClientPrefs.flashing)
+				{
 					FlxG.camera.flash(FlxColor.BLACK, 0.2, null, true);
 				}
-				//FlxG.camera.flash(FlxColor.BLACK, 0.2);
+				// FlxG.camera.flash(FlxColor.BLACK, 0.2);
 				if (spr.ID == 3)
 				{
 					camFollow.setPosition(700, spr.getGraphicMidpoint().y + 200);

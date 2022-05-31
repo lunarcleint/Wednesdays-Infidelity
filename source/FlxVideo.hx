@@ -1,32 +1,35 @@
 #if web
-import openfl.net.NetConnection;
-import openfl.net.NetStream;
 import openfl.events.NetStatusEvent;
 import openfl.media.Video;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
 #else
 import openfl.events.Event;
 import vlc.VlcBitmap;
 #end
+import PlayerSettings;
 import flixel.FlxBasic;
 import flixel.FlxG;
 import lime.app.Application;
-import PlayerSettings;
 
-class FlxVideo extends FlxBasic {
+class FlxVideo extends FlxBasic
+{
 	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
-	
+
 	#if desktop
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
 	public var skipable:Bool = false;
 
-	public function new(name:String, ?skip:Bool) {
-		#if PRIVATE_BUILD 
+	public function new(name:String, ?skip:Bool)
+	{
+		#if PRIVATE_BUILD
 		skipable = true;
-		#else 
-		if (skip != null) skipable = skip;
+		#else
+		if (skip != null)
+			skipable = skip;
 		#end
 
 		super();
@@ -40,22 +43,26 @@ class FlxVideo extends FlxBasic {
 		netConnect.connect(null);
 		var netStream = new NetStream(netConnect);
 		netStream.client = {
-			onMetaData: function() {
+			onMetaData: function()
+			{
 				player.attachNetStream(netStream);
 				player.width = FlxG.width;
 				player.height = FlxG.height;
 			}
 		};
-		netConnect.addEventListener(NetStatusEvent.NET_STATUS, function(event:NetStatusEvent) {
-			if(event.info.code == "NetStream.Play.Complete") {
+		netConnect.addEventListener(NetStatusEvent.NET_STATUS, function(event:NetStatusEvent)
+		{
+			if (event.info.code == "NetStream.Play.Complete")
+			{
 				netStream.dispose();
-				if(FlxG.game.contains(player)) FlxG.game.removeChild(player);
+				if (FlxG.game.contains(player))
+					FlxG.game.removeChild(player);
 
-				if(finishCallback != null) finishCallback();
+				if (finishCallback != null)
+					finishCallback();
 			}
 		});
 		netStream.play(name);
-
 		#elseif desktop
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
@@ -97,13 +104,16 @@ class FlxVideo extends FlxBasic {
 	{
 		// shitty volume fix
 		vlcBitmap.volume = 0;
-		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
+		if (!FlxG.sound.muted && FlxG.sound.volume > 0.01)
+		{ // Kind of fixes the volume being too low when you decrease it
 			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
 		}
 	}
 
-	function newUpdate(e:Event) {
-		if (PlayerSettings.player1.controls.ACCEPT && skipable) {
+	function newUpdate(e:Event)
+	{
+		if (PlayerSettings.player1.controls.ACCEPT && skipable)
+		{
 			onVLCComplete();
 
 			destroy();
@@ -131,14 +141,14 @@ class FlxVideo extends FlxBasic {
 		}
 	}
 
-	
 	function onVLCError()
+	{
+		trace("An error has occured while trying to load the video.\nPlease, check if the file you're loading exists.");
+		if (finishCallback != null)
 		{
-			trace("An error has occured while trying to load the video.\nPlease, check if the file you're loading exists.");
-			if (finishCallback != null) {
-				finishCallback();
-			}
+			finishCallback();
 		}
+	}
 	#end
 	#end
 }

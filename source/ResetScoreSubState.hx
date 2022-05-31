@@ -1,11 +1,11 @@
-import openfl.sensors.Accelerometer;
-import flixel.tweens.FlxTween;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import openfl.Lib;
+import openfl.sensors.Accelerometer;
 
 using StringTools;
 
@@ -31,9 +31,8 @@ class ResetScoreSubState extends MusicBeatSubstate
 		if (finished != null)
 			finishedCallback = finished;
 
-		if (yes != null) 
+		if (yes != null)
 			accepted = yes;
-		
 
 		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
@@ -66,27 +65,35 @@ class ResetScoreSubState extends MusicBeatSubstate
 	override function update(elapsed:Float)
 	{
 		bg.alpha += elapsed * 1.5;
-		if(bg.alpha > 0.6) bg.alpha = 0.6;
+		if (bg.alpha > 0.6)
+			bg.alpha = 0.6;
 
-		for (i in 0...alphabetArray.length) {
+		for (i in 0...alphabetArray.length)
+		{
 			var spr = alphabetArray[i];
 			spr.alpha += elapsed * 2.5;
 		}
 
-		if (!selectedsomething) {
-			if(controls.UI_LEFT_P || controls.UI_RIGHT_P) {
+		if (!selectedsomething)
+		{
+			if (controls.UI_LEFT_P || controls.UI_RIGHT_P)
+			{
 				FlxG.sound.play(Paths.sound('scrollMenu'), 1);
 				onYes = !onYes;
 				updateOptions();
 			}
-			if(controls.BACK) {
+			if (controls.BACK)
+			{
 				selectedsomething = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 				fadeOut();
-			} else if(controls.ACCEPT) {
+			}
+			else if (controls.ACCEPT)
+			{
 				selectedsomething = true;
-				if(onYes) {
-					// Wow thats alot of data 
+				if (onYes)
+				{
+					// Wow thats alot of data
 
 					FlxG.save.data.gotgoodending = null;
 					FlxG.save.data.gotbadending = null;
@@ -102,42 +109,52 @@ class ResetScoreSubState extends MusicBeatSubstate
 					FlxG.save.data.songRating = null;
 
 					FlxG.save.flush();
-					
+
 					fadeOut(accepted);
-					
-				}else {
+				}
+				else
+				{
 					FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 					fadeOut();
 				}
-
 			}
 		}
-		
+
 		super.update(elapsed);
 	}
 
-	function fadeOut(?callback:Void->Void) {
-
-		if (callback == null) {
-			callback = function () {
-				if (finishedCallback != null) {
+	function fadeOut(?callback:Void->Void)
+	{
+		if (callback == null)
+		{
+			callback = function()
+			{
+				if (finishedCallback != null)
+				{
 					finishedCallback();
 				}
 			};
 		}
 
 		var objs:Array<Dynamic> = [text, text2, yesText, noText, bg];
-		for (obj in objs) {
-			FlxTween.tween(obj, {alpha: 0}, 0.5, {onComplete: function (twn:FlxTween) {}});
+		for (obj in objs)
+		{
+			FlxTween.tween(obj, {alpha: 0}, 0.5, {
+				onComplete: function(twn:FlxTween)
+				{
+				}
+			});
 		}
-		
-		(new FlxTimer()).start(0.5, function (tmr:FlxTimer) {
+
+		(new FlxTimer()).start(0.5, function(tmr:FlxTimer)
+		{
 			close();
 			callback();
 		});
 	}
 
-	function updateOptions() {
+	function updateOptions()
+	{
 		var scales:Array<Float> = [0.75, 1];
 		var alphas:Array<Float> = [0.6, 1.25];
 		var confirmInt:Int = onYes ? 1 : 0;
