@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				150,
-				19
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				80,
+				20
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Suicide Down"
+			"fps": 24,
+			"name": "Suicide Down",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Suicide Idle"
-		},
-		{
-			"offsets": [
-				137,
-				229
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "Suicide Left"
-		},
-		{
-			"offsets": [
-				28,
-				206
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Suicide Rigth"
-		},
-		{
-			"offsets": [
-				-10,
-				287
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "Suicide Up"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				29,
-				147
-			],
-			"anim": "dodge",
-			"fps": 24,
-			"name": "Hit Mouse",
+			"name": "Suicide Idle",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				147,
+				149
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Suicide Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				143
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Suicide Rigth",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				182
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Suicide Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				42,
+				107
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "Hit Mouse"
 		}
 	],
 	"no_antialiasing": false,
