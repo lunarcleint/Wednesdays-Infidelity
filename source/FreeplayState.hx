@@ -1,8 +1,5 @@
 package;
 
-#if desktop
-import Discord.DiscordClient;
-#end
 import WeekData;
 import editors.ChartingState;
 import flash.text.TextField;
@@ -20,12 +17,16 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import lime.tools.LaunchStoryboard;
 import lime.utils.Assets;
 import openfl.Lib;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
+#if desktop
+import Discord.DiscordClient;
+#end
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
@@ -499,9 +500,7 @@ class FreeplayState extends MusicBeatState
 
 							FlxFlicker.flicker(icon, 1.6, 0.06, false);
 
-							selectSong(false, true);
-
-							Lib.application.window.title = "66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
+							// Lib.application.window.title = "66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
 
 							FlxG.sound.music.volume = 0;
 							stopmusic = true;
@@ -517,7 +516,7 @@ class FreeplayState extends MusicBeatState
 
 							new FlxTimer().start(1.4, function(tmr:FlxTimer)
 							{
-								LoadingState.loadAndSwitchState(new PlayState());
+								selectSong(true, true);
 							});
 
 							destroyFreeplayVocals();
@@ -546,32 +545,13 @@ class FreeplayState extends MusicBeatState
 		var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
-		trace(poop);
-
 		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-		if (story)
-		{
-			PlayState.isStoryMode = true;
-		}
-		else
-		{
-			PlayState.isStoryMode = false;
-		}
+		PlayState.isStoryMode = false;
 		PlayState.storyDifficulty = curDifficulty;
 
-		trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
 		if (colorTween != null)
 		{
 			colorTween.cancel();
-		}
-
-		if (FlxG.keys.pressed.SHIFT)
-		{
-			LoadingState.loadAndSwitchState(new ChartingState());
-		}
-		else if (playstate)
-		{
-			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
 		Lib.application.window.title = "Wednesday's Infidelity";
@@ -579,6 +559,21 @@ class FreeplayState extends MusicBeatState
 		FlxG.sound.music.volume = 0;
 
 		destroyFreeplayVocals();
+
+		if (playstate)
+		{
+			if (story) // songLowercase
+			{
+				LoadingState.loadAndSwitchState(new CutsceneState(songLowercase, false, function()
+				{
+					LoadingState.loadAndSwitchState(new PlayState());
+				}), true);
+			}
+			else
+			{
+				LoadingState.loadAndSwitchState(new PlayState());
+			}
+		}
 	}
 
 	function changeDiff(change:Int = 0)

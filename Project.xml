@@ -43,9 +43,7 @@
 
 	<classpath name="source" />
 	
-	<!-- PSYCH ENGINE CUSTOMIZATION -->
-	<define name="MODS_ALLOWED" if="desktop" />
-	<define name="LUA_ALLOWED" if="desktop" />
+	<!-- W.I P2 -->
 	<define name="PRIVATE_BUILD"/> <!-- COMMENT THIS IN FINAL BUILD--> 
 	<!--<define name="ACHIEVEMENTS_ALLOWED" /> ARE WE GONNA ADD ACHEIVEMENTS? -->
 	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits"/>
@@ -111,7 +109,7 @@
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
+	<haxelib name="hxp" />
 	<haxelib name="faxe" if='switch'/>
 	<!--<haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="desktop"/>

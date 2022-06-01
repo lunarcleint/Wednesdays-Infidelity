@@ -1,13 +1,11 @@
 package;
 
-#if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 import haxe.Json;
 import haxe.format.JsonParser;
 import lime.utils.Assets;
 import openfl.utils.Assets as OpenFlAssets;
+import sys.FileSystem;
+import sys.io.File;
 import sys.io.File;
 
 using StringTools;
@@ -127,7 +125,6 @@ class WeekData
 			}
 		}
 
-		#if MODS_ALLOWED
 		for (i in 0...directories.length)
 		{
 			var directory:String = directories[i] + 'weeks/';
@@ -153,7 +150,6 @@ class WeekData
 				}
 			}
 		}
-		#end
 	}
 
 	private static function addWeek(weekToCheck:String, path:String, directory:String, i:Int, originalLength:Int)
@@ -176,17 +172,11 @@ class WeekData
 	private static function getWeekFile(path:String):WeekFile
 	{
 		var rawJson:String = null;
-		#if MODS_ALLOWED
-		if (FileSystem.exists(path))
-		{
-			rawJson = File.getContent(path);
-		}
-		#else
+
 		if (OpenFlAssets.exists(path))
 		{
 			rawJson = Assets.getText(path);
 		}
-		#end
 
 		if (rawJson != null && rawJson.length > 0)
 		{
@@ -220,22 +210,5 @@ class WeekData
 	public static function loadTheFirstEnabledMod()
 	{
 		Paths.currentModDirectory = '';
-
-		#if MODS_ALLOWED
-		if (FileSystem.exists("modsList.txt"))
-		{
-			var list:Array<String> = CoolUtil.listFromString(File.getContent("modsList.txt"));
-			var foundTheTop = false;
-			for (i in list)
-			{
-				var dat = i.split("|");
-				if (dat[1] == "1" && !foundTheTop)
-				{
-					foundTheTop = true;
-					Paths.currentModDirectory = dat[0];
-				}
-			}
-		}
-		#end
 	}
 }

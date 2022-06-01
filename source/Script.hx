@@ -1,13 +1,14 @@
-import haxe.macro.Expr.Catch;
+import flixel.FlxBasic;
 import hscript.Interp;
 import openfl.Lib;
 
-class Script
+class Script extends FlxBasic
 {
 	public var hscript:Interp;
 
-	public function new()
+	public override function new()
 	{
+		super();
 		hscript = new Interp();
 	}
 
@@ -73,5 +74,11 @@ class Script
 			}
 		}
 		return null;
+	}
+
+	public override function destroy()
+	{
+		super.destroy();
+		hscript = null;
 	}
 }
