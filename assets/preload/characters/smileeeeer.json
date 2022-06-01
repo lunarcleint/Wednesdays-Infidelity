@@ -1,58 +1,74 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-78,
 				56
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "smiler mouse down"
+			"fps": 24,
+			"name": "smiler mouse down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-15,
 				219
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "smiler mouse left"
+			"fps": 24,
+			"name": "smiler mouse left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-58,
 				151
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "smiler mouse rigth"
+			"fps": 24,
+			"name": "smiler mouse rigth",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-11,
 				222
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "smiler mouse up"
+			"fps": 24,
+			"name": "smiler mouse up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "smiler mouse idle",
+			"indices": []
 		},
 		{
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
+			"indices": [
+				12,
+				13,
+				14,
+				15
+			],
 			"fps": 24,
-			"anim": "idle",
-			"loop": false,
+			"anim": "idle-loop",
+			"loop": true,
 			"name": "smiler mouse idle"
 		}
 	],
