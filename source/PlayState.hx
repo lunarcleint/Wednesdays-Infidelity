@@ -3062,6 +3062,7 @@ class PlayState extends MusicBeatState
 				{
 					camHUD.alpha = val1;
 					camGame.alpha = val1;
+					camOther.alpha = val1;
 				}
 				else
 				{

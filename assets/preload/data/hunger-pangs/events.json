@@ -1,0 +1,129 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "chedder",
+		"player1": "bf-retro",
+		"player2": "cheese",
+		"player3": null,
+		"events": [
+			[
+				25714.2857142857,
+				[
+					[
+						"Fade Cameras",
+						"0",
+						"2"
+					]
+				]
+			],
+			[
+				34285.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				48285.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"0.2",
+						"0.36"
+					]
+				]
+			],
+			[
+				48685.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				49885.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"0.2",
+						"0.36"
+					]
+				]
+			],
+			[
+				50285.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				54685.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"0.2",
+						"0.36"
+					]
+				]
+			],
+			[
+				55085.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				56285.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"0.2",
+						"0.36"
+					]
+				]
+			],
+			[
+				56685.7142857143,
+				[
+					[
+						"Fade Cameras",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				169085.714285714,
+				[
+					[
+						"Fade Cameras",
+						"0",
+						"0"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 140,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Hunger Pangs"
+	}
+}
