@@ -892,9 +892,10 @@ class PlayState extends MusicBeatState
 		grain = new FlxSprite();
 		grain.frames = Paths.getSparrowAtlas('pantalla');
 		grain.animation.addByPrefix('idle', 'pantalla', 24, true);
-		exactSetGraphicSize(grain, FlxG.width + 4 /*idk*/, FlxG.height);
+		exactSetGraphicSize(grain, FlxG.width + 6 /*idk*/, FlxG.height + 6);
 		grain.screenCenter();
-		grain.x += 4;
+		grain.x += 3;
+		grain.y += 3;
 		grain.antialiasing = false;
 		grain.cameras = [camOther];
 		grain.alpha = 0.0001;
