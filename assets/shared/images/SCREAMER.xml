@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="SCREAMER.png">
-	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="SCREAMER instancia 10000" x="0" y="0" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10001" x="1918" y="0" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10002" x="3836" y="0" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10003" x="5754" y="0" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10004" x="0" y="1082" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10005" x="1918" y="1082" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10006" x="3836" y="1082" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10007" x="5754" y="1082" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10008" x="0" y="2164" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10009" x="1918" y="2164" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10010" x="3836" y="2164" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10011" x="5754" y="2164" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10012" x="0" y="3246" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10013" x="1918" y="3246" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10014" x="3836" y="3246" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10015" x="5754" y="3246" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10016" x="0" y="4328" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10017" x="1918" y="4328" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10018" x="3836" y="4328" width="1918" height="1082"/>
-	<SubTexture name="SCREAMER instancia 10019" x="5754" y="4328" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0000" x="10" y="10" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0001" x="10" y="1107" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0002" x="10" y="2204" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0003" x="10" y="3301" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0004" x="10" y="4398" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0005" x="1943" y="10" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0006" x="3876" y="10" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0007" x="5809" y="10" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0008" x="1943" y="1107" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0009" x="3876" y="1107" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0010" x="5809" y="1107" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0011" x="1943" y="2204" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0012" x="1943" y="3301" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0013" x="1943" y="4398" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0014" x="3876" y="2204" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0015" x="5809" y="2204" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0016" x="3876" y="3301" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0017" x="3876" y="4398" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0018" x="5809" y="3301" width="1918" height="1082"/>
+	<SubTexture name="SCREAMER0019" x="5809" y="4398" width="1918" height="1082"/>
 </TextureAtlas>

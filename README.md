@@ -1,15 +1,21 @@
-# Friday Night Funkin' - Wednesday's Infidelity [PART 2]
-You can download the mod [here](https://gamebanana.com/mods/343688).
+## Friday Night Funkin' - Wednesday's Infidelity [PART 2]
 
 ![](https://images.gamebanana.com/img/ss/mods/61bb95f0a70be.jpg)
 
-## Installation:
-Follow a [Friday Night Funkin'](https://github.com/ninjamuffin99/Funkin#build-instructions) source code compilation tutorial.
+Join us to see the sad adventure of Mickey Mouse, being absorbed by drugs after seeing his girlfriend with another man. (cringe af game banna bio)
 
-### IMPORTANT:
-Run `haxelib install hxp` on a Command prompt/PowerShell, or your game will not build!
+### Building instructions:
+Follow the [Friday Night Funkin'](https://github.com/ninjamuffin99/Funkin#build-instructions) source code building guide.
 
-...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
+****IMPORTANT W.I SPECIFIC BUILDING INSTRUCTIONS:****
 
-## Credits:
-To be added...
+Run these commands: 
+```
+    haxelib install hxp
+    haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
+    haxelib install hscript
+```
+These libraries are needed and your source will **NOT** build without them!
+
+### Credits:
+fuck you ill do it when the mods done

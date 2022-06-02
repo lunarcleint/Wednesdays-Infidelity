@@ -20,6 +20,9 @@ typedef EventNote =
 
 class Note extends FlxSprite
 {
+	private var STRUM_X = 42;
+	private var STRUM_X_MIDDLESCROLL = -278;
+
 	public var strumTime:Float = 0;
 
 	public var mustPress:Bool = false;
@@ -163,7 +166,7 @@ class Note extends FlxSprite
 		isSustainNote = sustainNote;
 		this.inEditor = inEditor;
 
-		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50;
+		x += (ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X) + 50;
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
 		this.strumTime = strumTime;

@@ -1,7 +1,6 @@
 package;
 
 import Section.SwagSection;
-import animateatlas.AtlasFrameMaker;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.effects.FlxTrail;
@@ -129,9 +128,6 @@ class Character extends FlxSprite
 
 					case "sparrow":
 						frames = Paths.getSparrowAtlas(json.image);
-
-					case "texture":
-						frames = AtlasFrameMaker.construct(json.image);
 				}
 				imageFile = json.image;
 

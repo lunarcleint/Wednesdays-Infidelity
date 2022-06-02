@@ -44,6 +44,8 @@ import flixel.util.FlxSave;
 import flixel.util.FlxSort;
 import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
+import flxanimate.*;
+import flxanimate.FlxAnimate;
 import haxe.Json;
 import lime.utils.Assets;
 import openfl.Lib;
@@ -77,10 +79,10 @@ typedef StageCamera =
 
 class PlayState extends MusicBeatState
 {
-	public static var STRUM_X = 42;
-	public static var STRUM_X_MIDDLESCROLL = -278;
+	private var STRUM_X = 42;
+	private var STRUM_X_MIDDLESCROLL = -278;
 
-	public static var ratingStuff:Array<Dynamic> = [
+	private var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], // From 0% to 19%
 		['Shit', 0.4], // From 20% to 39%
 		['Bad', 0.5], // From 40% to 49%
@@ -254,7 +256,7 @@ class PlayState extends MusicBeatState
 	private var keysArray:Array<Dynamic>;
 
 	// WENSDAY INF
-	var devil:FlxSprite;
+	var devil:FlxAnimate;
 	var jumps:FlxSprite;
 	var grain:FlxSprite;
 
@@ -308,6 +310,7 @@ class PlayState extends MusicBeatState
 
 	var camBars:FlxCamera;
 
+	// BLAMMED LIGHTS OMG!!11
 	var blackBack:FlxSprite;
 	var blackTween:FlxTween;
 
@@ -701,38 +704,13 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
-		spaceBar = new FlxSprite(0, 0);
-		spaceBar.frames = Paths.getSparrowAtlas('mechanics/warning');
-		spaceBar.antialiasing = ClientPrefs.globalAntialiasing;
-		spaceBar.setGraphicSize(Std.int(spaceBar.width / 2));
-		spaceBar.cameras = [camOther];
-		spaceBar.animation.addByPrefix('alert', 'Advertencia', 24, true);
-		spaceBar.scale.set(1.05, 1.05);
-		spaceBar.updateHitbox();
-		spaceBar.antialiasing = true;
-		spaceBar.screenCenter();
-		spaceBar.visible = false;
-		add(spaceBar);
-
-		devil = new FlxSprite(0, 0);
-		devil.frames = Paths.getSparrowAtlas(PlayState.SONG.stage == "susNightmare" ? "SATAN_AMONGUS" : "satan_jumpscare", 'shared');
-		devil.screenCenter();
+		devil = new FlxAnimate(0, 0,
+			PlayState.SONG.stage == "susNightmare" ? "shared:assets/shared/images/SATAN AMONGUS" : "shared:assets/shared/images/SATAN");
+		devil.anim.addBySymbol("scape", "SATANN", 24, false);
 		devil.antialiasing = true;
 		devil.cameras = [camOther];
-		devil.animation.addByPrefix('scape', 'SATANN', 24, false);
-		devil.visible = false;
+		devil.alpha = 0.0001;
 		add(devil);
-
-		jumps = new FlxSprite(0, 0);
-		jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
-		jumps.setGraphicSize(FlxG.width, FlxG.height);
-		jumps.screenCenter();
-		jumps.cameras = [camOther];
-		jumps.animation.addByPrefix('scape', 'SCREAMER instancia ', 24, false);
-		jumps.alpha = 0.00001;
-		jumps.animation.play('scape');
-		jumps.screenCenter();
-		add(jumps);
 
 		blackBack = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5);
 		blackBack.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
@@ -862,6 +840,21 @@ class PlayState extends MusicBeatState
 
 		startScript();
 
+		if (noteTypeMap.get("Jump Note") && jumps == null)
+		{
+			jumps = new FlxSprite(0, 0);
+			jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
+			exactSetGraphicSize(jumps, FlxG.width + 4, FlxG.height);
+			jumps.x += 4;
+			jumps.screenCenter();
+			jumps.cameras = [camOther];
+			jumps.animation.addByPrefix('scape', 'SCREAMER instancia ', 24, false);
+			jumps.alpha = 0.00001;
+			jumps.animation.play('scape');
+			jumps.screenCenter();
+			add(jumps);
+		}
+
 		noteTypeMap.clear();
 		noteTypeMap = null;
 		eventPushedMap.clear();
@@ -897,14 +890,14 @@ class PlayState extends MusicBeatState
 		moveCameraSection(0);
 
 		grain = new FlxSprite();
-		grain.frames = Paths.getSparrowAtlas('grain');
-		grain.animation.addByPrefix('idle', 'grain', 24, true);
+		grain.frames = Paths.getSparrowAtlas('pantalla');
+		grain.animation.addByPrefix('idle', 'pantalla', 24, true);
+		exactSetGraphicSize(grain, FlxG.width + 4 /*idk*/, FlxG.height);
 		grain.screenCenter();
-		grain.scrollFactor.set();
+		grain.x += 4;
 		grain.antialiasing = false;
 		grain.cameras = [camOther];
-		grain.setGraphicSize(Std.int(grain.width * 0.685));
-		grain.visible = false;
+		grain.alpha = 0.0001;
 		add(grain);
 
 		healthBarBG = new AttachedSprite('healthBar');
@@ -1318,14 +1311,14 @@ class PlayState extends MusicBeatState
 			switch (curStage)
 			{
 				case 'vecindario' | 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland' | 'chedder': // make sure to also add the stage name here too
-					grain.visible = true;
+					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
 					if (curBeat % 1 == 0)
 					{
 						gfSus.dance(true);
 					}
-					grain.visible = true;
+					grain.alpha = 1;
 					grain.animation.play('idle');
 			}
 
@@ -1742,6 +1735,21 @@ class PlayState extends MusicBeatState
 
 				var newCharacter:String = event.value2;
 				addCharacterToList(newCharacter, charType);
+			case 'Do Syringe':
+				if (spaceBar == null)
+				{
+					spaceBar = new FlxSprite(0, 0);
+					spaceBar.frames = Paths.getSparrowAtlas('mechanics/warning');
+					spaceBar.antialiasing = ClientPrefs.globalAntialiasing;
+					spaceBar.cameras = [camOther];
+					spaceBar.animation.addByPrefix('alert', 'Advertencia', 24, true);
+					spaceBar.scale.set(1.05, 1.05);
+					spaceBar.updateHitbox();
+					spaceBar.antialiasing = true;
+					spaceBar.screenCenter();
+					spaceBar.alpha = 0.0001;
+					add(spaceBar);
+				}
 		}
 
 		if (!eventPushedMap.exists(event.event))
@@ -3955,7 +3963,6 @@ class PlayState extends MusicBeatState
 						var singAnimationsPostions:Array<Float> = getSingPos([xx, yy], Std.int(Math.abs(note.noteData)));
 
 						camFollow.set(singAnimationsPostions[0], singAnimationsPostions[1]);
-
 						isCameraOnForcedPos = true;
 					}
 
@@ -3985,18 +3992,20 @@ class PlayState extends MusicBeatState
 
 	function diablo()
 	{
-		devil.animation.play('scape', true);
-		devil.visible = true;
-		devil.screenCenter();
+		devil.anim.play('scape', true);
+		devil.alpha = 1;
 
-		devil.animation.finishCallback = function(pog:String)
+		devil.anim.onComplete = function()
 		{
-			devil.visible = false;
+			devil.alpha = 0.0001;
 		}
 	}
 
 	function jump()
 	{
+		if (jumps == null)
+			return;
+
 		jumps.animation.play('scape');
 		jumps.alpha = 1;
 		jumps.screenCenter();
@@ -4011,12 +4020,12 @@ class PlayState extends MusicBeatState
 
 	function startDodge()
 	{
-		if (doingDodge)
+		if (doingDodge || spaceBar == null)
 			return;
 
 		FlxG.sound.play(Paths.sound('mechanics/Warning', 'shared'), 2);
 		spaceBar.animation.play('alert', true);
-		spaceBar.visible = true;
+		spaceBar.alpha = 1;
 
 		doingDodge = true;
 
@@ -4057,7 +4066,7 @@ class PlayState extends MusicBeatState
 			doingDodge = false;
 			_onCoolDown = false;
 			dodging = false;
-			spaceBar.visible = false;
+			spaceBar.alpha = 0.0001;
 		});
 	}
 
@@ -4102,9 +4111,8 @@ class PlayState extends MusicBeatState
 	{
 		if (chrom != null)
 		{
-			chrom.shader.rOffset.value = [0, -0.006];
-			chrom.shader.gOffset.value = [-0.006, -0.006];
-			chrom.shader.bOffset.value = [0.006, -0.006];
+			chrom.shader.gOffset.value = [-0.003, 0];
+			chrom.shader.bOffset.value = [0.003, 0];
 		}
 
 		var random:Int = FlxG.random.int(0, 2);
@@ -4378,6 +4386,8 @@ class PlayState extends MusicBeatState
 			script.destroy();
 		}
 
+		instance = null;
+
 		super.destroy();
 	}
 
@@ -4645,7 +4655,7 @@ class PlayState extends MusicBeatState
 				grain.animation.play('idle');
 
 			case 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland': // add stage names here to make the grain appear
-				grain.visible = true;
+				grain.alpha = 1;
 				grain.animation.play('idle');
 
 			case 'susNightmare':
@@ -4655,7 +4665,7 @@ class PlayState extends MusicBeatState
 						gfSus.dance(true);
 					}
 
-				grain.visible = true;
+				grain.alpha = 1;
 				grain.animation.play('idle');
 		}
 		lastBeatHit = curBeat;
@@ -4715,7 +4725,7 @@ class PlayState extends MusicBeatState
 		// Rating FC
 		ratingFC = "";
 		if (sicks > 0)
-			ratingFC = "SFC";
+			ratingFC = "MFC";
 		if (goods > 0)
 			ratingFC = "GFC";
 		if (bads > 0 || shits > 0)
@@ -4769,7 +4779,6 @@ class PlayState extends MusicBeatState
 	public function startScript()
 	{
 		var formattedFolder:String = Paths.formatToSongPath(SONG.song);
-		var formattedSong:String = Paths.formatToSongPath(SONG.song);
 
 		var path:String = Paths.hscript(formattedFolder + '/script');
 
@@ -4781,7 +4790,7 @@ class PlayState extends MusicBeatState
 		if (hxdata != "")
 		{
 			trace("Loading Script: " + path);
-			
+
 			script = new Script();
 
 			script.setVariable("onSongStart", function()
@@ -4827,7 +4836,7 @@ class PlayState extends MusicBeatState
 
 	function fadeIn(speed:Float = 1)
 	{
-		grain.visible = true;
+		grain.alpha = 1;
 		grain.animation.play('idle');
 
 		var black:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
@@ -4843,5 +4852,10 @@ class PlayState extends MusicBeatState
 				startAndEnd();
 			}
 		});
+	}
+
+	inline function exactSetGraphicSize(obj:Dynamic, width:Float, height:Float) // ACTULLY WORKS LMAO -lunar
+	{
+		obj.scale.set(Math.abs(((obj.width - width) / obj.width) - 1), Math.abs(((obj.height - height) / obj.height) - 1));
 	}
 }

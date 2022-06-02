@@ -1,6 +1,5 @@
 package;
 
-import animateatlas.AtlasFrameMaker;
 import flash.media.Sound;
 import flixel.FlxG;
 import flixel.FlxSprite;
