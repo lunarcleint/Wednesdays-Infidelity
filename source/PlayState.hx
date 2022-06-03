@@ -386,6 +386,9 @@ class PlayState extends MusicBeatState
 
 	// Shaders
 	public var chrom:ChromaticAberrationEffect;
+
+	public var defaultChrome:Array<Array<Float>> = [];
+
 	public var vcr:VCRDistortionEffect;
 	public var distort:DistortionEffect;
 
@@ -1034,6 +1037,7 @@ class PlayState extends MusicBeatState
 					chrom = new Shaders.ChromaticAberrationEffect();
 
 					addShaderToCamera("camHUD", chrom);
+					addShaderToCamera("camGame", chrom);
 			}
 		}
 
@@ -4112,8 +4116,8 @@ class PlayState extends MusicBeatState
 	{
 		if (chrom != null)
 		{
-			chrom.shader.gOffset.value = [-0.003, 0];
-			chrom.shader.bOffset.value = [0.003, 0];
+			chrom.shader.gOffset.value = [-0.002, 0];
+			chrom.shader.bOffset.value = [0.002, 0];
 		}
 
 		var random:Int = FlxG.random.int(0, 2);
