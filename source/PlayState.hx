@@ -387,7 +387,7 @@ class PlayState extends MusicBeatState
 	// Shaders
 	public var chrom:ChromaticAberrationEffect;
 
-	public var defaultChrome:Array<Array<Float>> = [];
+	public var defaultChrome:Array<Array<Float>> = [[0, 0], [0, 0], [0, 0]]; // r/g/b
 
 	public var vcr:VCRDistortionEffect;
 	public var distort:DistortionEffect;
@@ -2062,10 +2062,10 @@ class PlayState extends MusicBeatState
 		{
 			var objToLerp:Array<Dynamic> = [chrom.shader.rOffset.value, chrom.shader.bOffset.value, chrom.shader.gOffset.value];
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4, 0, 1);
-			for (obj in objToLerp)
+			for (duh in 0...objToLerp.length)
 			{
-				obj[0] = FlxMath.lerp(obj[0], 0, lerpVal);
-				obj[1] = FlxMath.lerp(obj[1], 0, lerpVal);
+				objToLerp[duh][0] = FlxMath.lerp(objToLerp[duh][0], defaultChrome[duh][0], lerpVal);
+				objToLerp[duh][1] = FlxMath.lerp(objToLerp[duh][0], defaultChrome[duh][1], lerpVal);
 			}
 		}
 
@@ -4116,8 +4116,14 @@ class PlayState extends MusicBeatState
 	{
 		if (chrom != null)
 		{
-			chrom.shader.gOffset.value = [-0.002, 0];
-			chrom.shader.bOffset.value = [0.002, 0];
+			if (defaultChrome[1][0] < 0.0005)
+			{
+				defaultChrome[1][0] -= 0.0005;
+				defaultChrome[2][0] += 0.0005;
+			}
+
+			chrom.shader.gOffset.value = [defaultChrome[1][0] + -0.002, 0];
+			chrom.shader.bOffset.value = [defaultChrome[2][0] + 0.002, 0];
 		}
 
 		var random:Int = FlxG.random.int(0, 2);
@@ -4127,8 +4133,6 @@ class PlayState extends MusicBeatState
 		switch (random)
 		{
 			case 0:
-				trace("randomly rotating strums");
-
 				for (tween in noteAngleTweens)
 				{
 					tween.cancel();
@@ -4162,13 +4166,19 @@ class PlayState extends MusicBeatState
 					camTween = null;
 				}
 
-				camTween = FlxTween.tween(FlxG.random.bool() ? camGame : camHUD,
-					{angle: (FlxG.random.bool() ? FlxG.random.float(2, 7) : FlxG.random.float(-2, -7))}, FlxG.random.float(20, 25), {
-						onComplete: function tween(tween:FlxTween)
-						{
-							camTween = null;
-						}
-					});
+				var cam:FlxCamera = FlxG.random.bool() ? camGame : camHUD;
+
+				camTween = FlxTween.tween(cam, {angle: (FlxG.random.bool() ? FlxG.random.float(2, 7) : FlxG.random.float(-2, -7))}, FlxG.random.float(20, 25), {
+					onComplete: function tween(tween:FlxTween)
+					{
+						camTween = FlxTween.tween(cam, {angle: FlxG.random.float(-1, 1)}, FlxG.random.float(10, 15), {
+							onComplete: function tween(tween:FlxTween)
+							{
+								camTween = null;
+							}
+						});
+					}
+				});
 		}
 	}
 
