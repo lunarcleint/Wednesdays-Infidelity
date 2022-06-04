@@ -11,11 +11,11 @@ Follow the [Friday Night Funkin'](https://github.com/ninjamuffin99/Funkin#build-
 
 Run these commands: 
 ```
-    haxelib install hxp
-    haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
-    haxelib install hscript
+haxelib install hxp
+haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
+haxelib install hscript
 ```
-These libraries are needed and your source will **NOT** build without them!
+These libraries are needed and your game will **NOT** build without them!
 
 ### Credits:
 fuck you ill do it when the mods done

@@ -389,7 +389,7 @@ class PlayState extends MusicBeatState
 
 	public var defaultChrome:Array<Array<Float>> = [[0, 0], [0, 0], [0, 0]]; // r/g/b
 
-	public var vcr:VCRDistortionEffect;
+	public var vhs:VHSEffect;
 	public var distort:DistortionEffect;
 
 	public var shaderUpdates:Array<Float->Void> = [];
@@ -1030,9 +1030,9 @@ class PlayState extends MusicBeatState
 			switch (daSong) // shaders
 			{
 				case 'last-day':
-					vcr = new Shaders.VCRDistortionEffect(0.4, true, false, false);
+					vhs = new Shaders.VHSEffect();
 
-					addShaderToCamera('camGame', vcr);
+					addShaderToCamera('camGame', vhs);
 				case 'unknown-suffering':
 					chrom = new Shaders.ChromaticAberrationEffect();
 
@@ -1080,9 +1080,9 @@ class PlayState extends MusicBeatState
 		CustomFadeTransition.nextCamera = camOther;
 
 		if (script != null)
-			{
-				script.executeFunc("onCreate");
-			}
+		{
+			script.executeFunc("onCreate");
+		}
 	}
 
 	function set_songSpeed(value:Float):Float
@@ -4817,8 +4817,8 @@ class PlayState extends MusicBeatState
 			{
 			});
 			script.setVariable("onCreate", function()
-				{
-				});
+			{
+			});
 
 			script.setVariable("onStepHit", function()
 			{
