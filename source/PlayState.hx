@@ -1078,6 +1078,11 @@ class PlayState extends MusicBeatState
 
 		Paths.clearUnusedMemory();
 		CustomFadeTransition.nextCamera = camOther;
+
+		if (script != null)
+			{
+				script.executeFunc("onCreate");
+			}
 	}
 
 	function set_songSpeed(value:Float):Float
@@ -4811,6 +4816,9 @@ class PlayState extends MusicBeatState
 			script.setVariable("onSongStart", function()
 			{
 			});
+			script.setVariable("onCreate", function()
+				{
+				});
 
 			script.setVariable("onStepHit", function()
 			{
