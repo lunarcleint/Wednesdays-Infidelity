@@ -679,7 +679,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'stageMokey' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1001,6 +1001,9 @@ class PlayState extends MusicBeatState
 					case 'dejection':
 						fadeIn(1);
 
+					case 'hellhole':
+						fadeIn(0.6);
+
 					default:
 						startCountdown();
 				}
@@ -1012,8 +1015,6 @@ class PlayState extends MusicBeatState
 				{
 					default:
 						startCountdown();
-					case 'hellhole':
-						fadeIn(0.6);
 				}
 				seenCutscene = true;
 			}
@@ -1320,7 +1321,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland' | 'chedder': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
@@ -3388,6 +3389,7 @@ class PlayState extends MusicBeatState
 		//
 
 		var rating:FlxSprite = new FlxSprite();
+		rating.alpha = scoreTxt.alpha;
 		var score:Int = 350;
 
 		// tryna do MS based judgment due to popular demand
@@ -3483,6 +3485,7 @@ class PlayState extends MusicBeatState
 		comboSpr.visible = (!ClientPrefs.hideHud && showCombo);
 		comboSpr.x += ClientPrefs.comboOffset[0];
 		comboSpr.y -= ClientPrefs.comboOffset[1];
+		comboSpr.alpha = scoreTxt.alpha;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
 		insert(members.indexOf(strumLineNotes), rating);
@@ -3521,6 +3524,7 @@ class PlayState extends MusicBeatState
 			numScore.screenCenter();
 			numScore.x = coolText.x + (43 * daLoop) - 90;
 			numScore.y += 80;
+			numScore.alpha = scoreTxt.alpha;
 
 			numScore.x += ClientPrefs.comboOffset[2];
 			numScore.y -= ClientPrefs.comboOffset[3];
@@ -3547,7 +3551,7 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 				onComplete: function(tween:FlxTween)
 				{
-					numScore.destroy();
+					numScore = null;
 				},
 				startDelay: Conductor.crochet * 0.002
 			});
@@ -4674,7 +4678,7 @@ class PlayState extends MusicBeatState
 			case 'vecindario':
 				grain.animation.play('idle');
 
-			case 'bobux' | 'stageMokey' | 'reefer' | 'inferno' | 'toyland': // add stage names here to make the grain appear
+			case 'bobux' | 'reefer' | 'inferno' | 'toyland': // add stage names here to make the grain appear
 				grain.alpha = 1;
 				grain.animation.play('idle');
 
