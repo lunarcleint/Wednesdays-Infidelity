@@ -37,7 +37,7 @@ class FreeplaySelectorState extends MusicBeatState
 
 	override function create()
 	{
-		Lib.application.window.title = "Wednesday's Infidelity - Freeplay Selector";
+		Lib.application.window.title = "Wednesday's Infidelity - Freeplay Selection";
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);

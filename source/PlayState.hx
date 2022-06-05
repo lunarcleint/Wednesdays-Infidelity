@@ -543,7 +543,7 @@ class PlayState extends MusicBeatState
 			curCamera = stageCameras.get(curStage);
 
 		// Week Misses
-		weekMissesBar = new FlxSprite(800, 550).loadGraphic(Paths.image('weekMissesBar', 'shared'));
+		weekMissesBar = new FlxSprite(800, ClientPrefs.downScroll ? 130 : 550).loadGraphic(Paths.image('weekMissesBar', 'shared'));
 		weekMissesBar.antialiasing = ClientPrefs.globalAntialiasing;
 		weekMissesBar.scale.set(0.7, 0.7);
 		weekMissesBar.alpha = 0.8;
