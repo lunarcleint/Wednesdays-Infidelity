@@ -1039,6 +1039,10 @@ class PlayState extends MusicBeatState
 
 					addShaderToCamera("camHUD", chrom);
 					addShaderToCamera("camGame", chrom);
+				case 'wistfulness':
+					// var shader:Shaders.BlockyGlitchEffect = new Shaders.BlockyGlitchEffect();
+
+					// addShaderToCamera("camGame", shader);
 			}
 		}
 
@@ -4153,8 +4157,6 @@ class PlayState extends MusicBeatState
 					noteAngleTweens.push(FlxTween.tween(note, {angle: note.angle + FlxG.random.float(-40, 40)}, FlxG.random.float(15, 20)));
 				});
 			case 1:
-				trace("randomly moving notes");
-
 				for (tween in noteXYTweens)
 				{
 					tween.cancel();
@@ -4167,8 +4169,6 @@ class PlayState extends MusicBeatState
 						FlxG.random.float(15, 20)));
 				});
 			case 2:
-				trace("cam effect rotation");
-
 				if (camTween != null)
 				{
 					camTween.cancel();
@@ -4826,6 +4826,11 @@ class PlayState extends MusicBeatState
 
 			script.setVariable("onStepHit", function()
 			{
+			});
+
+			script.setVariable("import", function(lib:String)
+			{
+				// Ill add the code soom
 			});
 
 			script.setVariable("curStep", curStep);

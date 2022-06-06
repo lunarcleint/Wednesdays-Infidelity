@@ -252,6 +252,20 @@ class MainMenuState extends MusicBeatState
 					FlxTween.tween(FlxG.sound, {volume: 0}, 1);
 				}));
 			}
+
+			#if PRIVATE_BUILD
+			if (FlxG.keys.justPressed.T)
+			{
+				FlxG.save.data.gotgoodending = true;
+				FlxG.save.data.gotbadending = true;
+				FlxG.save.data.beatmainweek = true;
+				FlxG.save.data.beathell = true;
+
+				FlxG.save.flush();
+
+				Sys.exit(0);
+			}
+			#end
 		}
 	}
 
