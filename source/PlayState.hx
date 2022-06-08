@@ -1040,9 +1040,11 @@ class PlayState extends MusicBeatState
 					addShaderToCamera("camHUD", chrom);
 					addShaderToCamera("camGame", chrom);
 				case 'wistfulness':
-					// var shader:Shaders.BlockyGlitchEffect = new Shaders.BlockyGlitchEffect();
+					distort = new Shaders.DistortionEffect(1, 1);
 
-					// addShaderToCamera("camGame", shader);
+					distort.shader.working.value = [false];
+
+					addShaderToCamera('camGame', distort);
 			}
 		}
 
@@ -4572,15 +4574,17 @@ class PlayState extends MusicBeatState
 			switch (curStep)
 			{
 				case 536:
-					distort = new Shaders.DistortionEffect(9);
+					distort.shader.glitchModifier.value = [9];
+					// distort.shader.fullglitch.value = [2];
 
-					addShaderToCamera('camGame', distort);
+					distort.shader.working.value = [true];
 
 				case 544:
-					distort.setGlitchModifier(1);
+					distort.shader.glitchModifier.value = [1];
+					distort.shader.fullglitch.value = [1];
 
 				case 670:
-					camGame.setFilters([]);
+					camGame.setFilters([]); // Remove shader
 
 					camGameShaders = [];
 
