@@ -3,14 +3,18 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "sus",
-	"weekBefore": "Week Julian",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "Week Julian",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
 	"songs": [
 		[
 			"Needle Mouse",
@@ -31,11 +35,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"dad",
-		"dad",
-		"dad"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Week SUS"
+	"hideStoryMode": true,
+	"weekName": "Week SUS",
+	"hiddenUntilUnlocked": false
 }
