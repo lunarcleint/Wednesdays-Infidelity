@@ -87,7 +87,7 @@ class StoryMenuState extends MusicBeatState
 		stSprite = new FlxSprite(0, -(FlxG.height / 2) + 66);
 		stSprite.frames = Paths.getSparrowAtlas('pantalla', 'shared');
 		stSprite.animation.addByPrefix('idle', 'pantalla', 24, true);
-		CoolUtil.exactSetGraphicSize(stSprite, FlxG.width + 6 /*idk*/, 386 + 6);
+		CoolUtil.exactSetGraphicSize(stSprite, FlxG.width + 6 /*idk*/, 386 + 6.5);
 		stSprite.animation.play('idle');
 		stSprite.screenCenter(X);
 
