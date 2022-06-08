@@ -7,220 +7,6 @@
 		"player3": null,
 		"events": [
 			[
-				9600,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				10050,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				10800,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				11250,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				11700,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				11850,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				12000,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				12450,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				13200,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				13650,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				14100,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				14100,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				14250,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				11700,
-=======
-				14400,
->>>>>>> Stashed changes
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				11850,
-=======
-				14850,
->>>>>>> Stashed changes
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				14100,
-=======
-				15600,
->>>>>>> Stashed changes
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				14250,
-=======
-				16050,
->>>>>>> Stashed changes
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				16500,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				16650,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				28794.375,
-				[
-					[
-						"Change Character",
-						"dad",
-						"suicide"
-=======
 				16800,
 				[
 					[
@@ -231,41 +17,12 @@
 				]
 			],
 			[
-				16806.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
->>>>>>> Stashed changes
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				28796.25,
-				[
-					[
-						"Flash Black",
-						"",
-						""
-=======
 				17100,
 				[
 					[
 						"Play Animation",
 						"risaSingle",
 						"dad"
-					]
-				]
-			],
-			[
-				17250,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
 					]
 				]
 			],
@@ -296,18 +53,10 @@
 						"Play Animation",
 						"risaSingle",
 						"dad"
->>>>>>> Stashed changes
 					]
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				28800,
-				[
-					[
-						"Scroll Speed Change",
-						"3",
-=======
 				18300,
 				[
 					[
@@ -338,38 +87,27 @@
 					[
 						"Flash Black",
 						"",
->>>>>>> Stashed changes
 						""
 					]
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				31200,
-				[
-					[
-						"Do Syringe",
-=======
 				38400,
 				[
+					[
+						"Flash Black",
+						"",
+						""
+					],
 					[
 						"Change Character",
 						"dad",
 						"suicide"
-					],
-					[
-						"Flash Black",
->>>>>>> Stashed changes
-						"",
-						""
 					]
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				39450,
-=======
-				39750,
+				40200,
 				[
 					[
 						"Do Syringe",
@@ -379,8 +117,7 @@
 				]
 			],
 			[
-				42600,
->>>>>>> Stashed changes
+				49800,
 				[
 					[
 						"Do Syringe",
@@ -390,11 +127,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				41850,
-=======
-				50100,
->>>>>>> Stashed changes
+				52350,
 				[
 					[
 						"Do Syringe",
@@ -404,25 +137,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				48000,
-=======
-				52650,
->>>>>>> Stashed changes
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				50400,
-=======
 				65100,
->>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -432,11 +147,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				52800,
-=======
-				85500,
->>>>>>> Stashed changes
+				83700,
 				[
 					[
 						"Do Syringe",
@@ -446,11 +157,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				58200,
-=======
-				91350,
->>>>>>> Stashed changes
+				91200,
 				[
 					[
 						"Do Syringe",
@@ -460,83 +167,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				65025,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				84450,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				86925,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				89250,
-=======
-				101100,
->>>>>>> Stashed changes
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				94200,
-=======
-				110550,
->>>>>>> Stashed changes
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				96600,
-=======
-				113550,
->>>>>>> Stashed changes
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				99000,
-=======
-				115650,
->>>>>>> Stashed changes
+				95400,
 				[
 					[
 						"Do Syringe",
@@ -566,8 +197,7 @@
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				115875,
+				144900,
 				[
 					[
 						"Do Syringe",
@@ -577,97 +207,17 @@
 				]
 			],
 			[
-				120000,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				133200,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				138000,
-=======
-				130350,
->>>>>>> Stashed changes
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				140400,
-=======
-				144450,
->>>>>>> Stashed changes
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-<<<<<<< Updated upstream
-				142800,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				147600,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-					]
-				]
-			],
-			[
-				152400,
-				[
-					[
-						"Do Syringe",
-						"",
-						""
-=======
 				170400,
 				[
 					[
 						"Fade Cameras",
 						"0",
-						"3.6"
->>>>>>> Stashed changes
+						"3"
 					]
 				]
 			],
 			[
-<<<<<<< Updated upstream
-				159600,
-=======
-				171600,
->>>>>>> Stashed changes
+				171150,
 				[
 					[
 						"Do Syringe",
