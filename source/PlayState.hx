@@ -3819,8 +3819,8 @@ class PlayState extends MusicBeatState
 				if (char.animOffsets.exists('at') && char.curCharacter.startsWith('jank'))
 				{
 					doEffect();
-					char.specialAnim = true;
 					char.playAnim('at', true);
+					char.specialAnim = true;
 				}
 			}
 
@@ -4063,8 +4063,8 @@ class PlayState extends MusicBeatState
 			if (!dodging && !cpuControlled)
 			{
 				boyfriend.playAnim("at");
-				doEffect();
 				boyfriend.specialAnim = true;
+				doEffect();
 
 				// FlxG.sound.play(Paths.sound('mechanics/damage', 'shared'), 2);
 			}
@@ -4250,8 +4250,8 @@ class PlayState extends MusicBeatState
 			if (note.noteType == 'Speed Note')
 			{
 				doEffect();
-				boyfriend.specialAnim = true;
 				boyfriend.playAnim('at', true);
+				boyfriend.specialAnim = true;
 			}
 
 			if (!note.isSustainNote)
@@ -4284,31 +4284,34 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					boyfriend.playAnim(animToPlay + daAlt, true);
-
-					if (bfsection && followChars)
+					if (!boyfriend.specialAnim)
 					{
-						var xx:Float = 0.0;
-						var yy:Float = 0.0;
+						boyfriend.playAnim(animToPlay + daAlt, true);
 
-						if (curCamera != null && curCamera.bfPos != null)
+						if (bfsection && followChars)
 						{
-							xx = curCamera.bfPos[0];
-							yy = curCamera.bfPos[1];
-						}
-						else
-						{
-							xx = (boyfriend.getMidpoint().x - 100) - boyfriend.cameraPosition[0];
-							yy = (boyfriend.getMidpoint().y - 100) + boyfriend.cameraPosition[1];
+							var xx:Float = 0.0;
+							var yy:Float = 0.0;
+
+							if (curCamera != null && curCamera.bfPos != null)
+							{
+								xx = curCamera.bfPos[0];
+								yy = curCamera.bfPos[1];
+							}
+							else
+							{
+								xx = (boyfriend.getMidpoint().x - 100) - boyfriend.cameraPosition[0];
+								yy = (boyfriend.getMidpoint().y - 100) + boyfriend.cameraPosition[1];
+							}
+
+							var singAnimationsPostions:Array<Float> = getSingPos([xx, yy], Std.int(Math.abs(note.noteData)));
+
+							camFollow.set(singAnimationsPostions[0], singAnimationsPostions[1]);
+							isCameraOnForcedPos = true;
 						}
 
-						var singAnimationsPostions:Array<Float> = getSingPos([xx, yy], Std.int(Math.abs(note.noteData)));
-
-						camFollow.set(singAnimationsPostions[0], singAnimationsPostions[1]);
-						isCameraOnForcedPos = true;
+						boyfriend.holdTimer = 0;
 					}
-
-					boyfriend.holdTimer = 0;
 				}
 
 				if (note.noteType == 'Hey!')
