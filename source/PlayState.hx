@@ -847,7 +847,7 @@ class PlayState extends MusicBeatState
 		{
 			jumps = new FlxSprite(0, 0);
 			jumps.frames = Paths.getSparrowAtlas('SCREAMER', 'shared');
-			exactSetGraphicSize(jumps, FlxG.width + 4, FlxG.height);
+			CoolUtil.exactSetGraphicSize(jumps, FlxG.width + 4, FlxG.height);
 			jumps.x += 4;
 			jumps.screenCenter();
 			jumps.cameras = [camOther];
@@ -895,7 +895,7 @@ class PlayState extends MusicBeatState
 		grain = new FlxSprite();
 		grain.frames = Paths.getSparrowAtlas('pantalla');
 		grain.animation.addByPrefix('idle', 'pantalla', 24, true);
-		exactSetGraphicSize(grain, FlxG.width + 6 /*idk*/, FlxG.height + 6);
+		CoolUtil.exactSetGraphicSize(grain, FlxG.width + 6 /*idk*/, FlxG.height + 6);
 		grain.screenCenter();
 		grain.x += 3;
 		grain.y += 3;
@@ -4891,10 +4891,5 @@ class PlayState extends MusicBeatState
 				startAndEnd();
 			}
 		});
-	}
-
-	inline function exactSetGraphicSize(obj:Dynamic, width:Float, height:Float) // ACTULLY WORKS LMAO -lunar
-	{
-		obj.scale.set(Math.abs(((obj.width - width) / obj.width) - 1), Math.abs(((obj.height - height) / obj.height) - 1));
 	}
 }

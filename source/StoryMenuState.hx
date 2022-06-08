@@ -34,6 +34,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
+	var stSprite:FlxSprite;
 
 	private static var curWeek:Int = 0;
 
@@ -78,9 +79,17 @@ class StoryMenuState extends MusicBeatState
 		rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
-		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
+		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFF333333);
+
 		bgSprite = new FlxSprite(0, 56);
 		bgSprite.antialiasing = ClientPrefs.globalAntialiasing;
+
+		stSprite = new FlxSprite(0, -(FlxG.height / 2) + 66);
+		stSprite.frames = Paths.getSparrowAtlas('pantalla', 'shared');
+		stSprite.animation.addByPrefix('idle', 'pantalla', 24, true);
+		CoolUtil.exactSetGraphicSize(stSprite, FlxG.width + 6 /*idk*/, 386 + 6);
+		stSprite.animation.play('idle');
+		stSprite.screenCenter(X);
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -173,6 +182,7 @@ class StoryMenuState extends MusicBeatState
 		add(bgYellow);
 		add(bgSprite);
 		add(grpWeekCharacters);
+		add(stSprite);
 
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.globalAntialiasing;
@@ -383,14 +393,18 @@ class StoryMenuState extends MusicBeatState
 
 		var leWeek:WeekData = loadedWeeks[curWeek];
 		WeekData.setDirectoryFromWeek(leWeek);
+		var unlocked:Bool = !weekIsLocked(leWeek.fileName);
 
 		var leName:String = leWeek.storyName;
 		txtWeekTitle.text = leName.toUpperCase();
+		if (!unlocked)
+		{
+			txtWeekTitle.text = "???";
+		}
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
 
 		var bullShit:Int = 0;
 
-		var unlocked:Bool = !weekIsLocked(leWeek.fileName);
 		for (item in grpWeekText.members)
 		{
 			item.targetY = bullShit - curWeek;
@@ -403,7 +417,7 @@ class StoryMenuState extends MusicBeatState
 
 		bgSprite.visible = true;
 		var assetName:String = leWeek.weekBackground;
-		if (assetName == null || assetName.length < 1)
+		if (assetName == null || assetName.length < 1 || !unlocked)
 		{
 			bgSprite.visible = false;
 		}
@@ -486,6 +500,8 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		var leWeek:WeekData = loadedWeeks[curWeek];
+		var unlocked:Bool = !weekIsLocked(leWeek.fileName);
+
 		var stringThing:Array<String> = [];
 		for (i in 0...leWeek.songs.length)
 		{
@@ -495,7 +511,11 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = '';
 		for (i in 0...stringThing.length)
 		{
-			txtTracklist.text += stringThing[i] + '\n';
+			var songText = stringThing[i];
+			if (!unlocked)
+				songText = "???";
+
+			txtTracklist.text += songText + '\n';
 		}
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
