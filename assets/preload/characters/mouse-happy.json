@@ -1,70 +1,93 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Smiler mouse Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Smiler mouse Idle"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				16,
 				63
 			],
-			"anim": "risa",
+			"loop": true,
 			"fps": 24,
-			"name": "laugh",
-			"indices": []
+			"anim": "risa",
+			"indices": [],
+			"name": "laugh"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-20,
 				13
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Smiler Mouse Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Smiler Mouse Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				23,
 				46
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Smiler Mouse Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Smiler Mouse Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				11,
 				2
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Smiler Mouse Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Smiler Mouse Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-33,
 				-125
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Smiler Mouse Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Smiler Mouse Down"
+		},
+		{
+			"offsets": [
+				16,
+				63
+			],
+			"indices": [
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				34,
+				34,
+				34,
+				34
+			],
+			"fps": 24,
+			"anim": "risaSingle",
+			"loop": false,
+			"name": "laugh"
 		}
 	],
 	"no_antialiasing": false,

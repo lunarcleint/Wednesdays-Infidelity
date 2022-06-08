@@ -3,15 +3,45 @@
 		"speed": 3.4,
 		"stage": "bobux",
 		"player1": "bf-retro",
-		"player2": "smileeeeer",
+		"player2": "mouse-happy",
 		"player3": null,
 		"events": [
 			[
-				225,
+				9600,
 				[
 					[
-						"Scroll Speed Change",
-						"2.6",
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				10050,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				10800,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				11250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
 						""
 					]
 				]
@@ -21,8 +51,8 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
 					]
 				]
 			],
@@ -31,8 +61,48 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
+					]
+				]
+			],
+			[
+				12000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				12450,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				13200,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				13650,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -41,8 +111,18 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
+					]
+				]
+			],
+			[
+				14100,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -51,8 +131,64 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
+				11700,
+=======
+				14400,
+>>>>>>> Stashed changes
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
+				11850,
+=======
+				14850,
+>>>>>>> Stashed changes
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
+				14100,
+=======
+				15600,
+>>>>>>> Stashed changes
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
+				14250,
+=======
+				16050,
+>>>>>>> Stashed changes
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -61,8 +197,8 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
 					]
 				]
 			],
@@ -71,53 +207,169 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.02",
-						"0.3"
+						"",
+						""
 					]
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				28794.375,
 				[
 					[
 						"Change Character",
 						"dad",
 						"suicide"
+=======
+				16800,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
 					]
 				]
 			],
 			[
+				16806.25,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+>>>>>>> Stashed changes
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
 				28796.25,
 				[
 					[
 						"Flash Black",
 						"",
 						""
+=======
+				17100,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
 					]
 				]
 			],
 			[
+				17250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				17400,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
+					]
+				]
+			],
+			[
+				17700,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
+>>>>>>> Stashed changes
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
 				28800,
 				[
 					[
 						"Scroll Speed Change",
 						"3",
+=======
+				18300,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
+					]
+				]
+			],
+			[
+				18600,
+				[
+					[
+						"Play Animation",
+						"risaSingle",
+						"dad"
+					]
+				]
+			],
+			[
+				19200,
+				[
+					[
+						"Change Character",
+						"dad",
+						"smileeeeer"
+					],
+					[
+						"Flash Black",
+						"",
+>>>>>>> Stashed changes
 						""
 					]
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				31200,
 				[
 					[
 						"Do Syringe",
+=======
+				38400,
+				[
+					[
+						"Change Character",
+						"dad",
+						"suicide"
+					],
+					[
+						"Flash Black",
+>>>>>>> Stashed changes
 						"",
 						""
 					]
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				39450,
+=======
+				39750,
 				[
 					[
 						"Do Syringe",
@@ -127,7 +379,22 @@
 				]
 			],
 			[
+				42600,
+>>>>>>> Stashed changes
+				[
+					[
+						"Do Syringe",
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
 				41850,
+=======
+				50100,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -137,7 +404,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				48000,
+=======
+				52650,
+>>>>>>> Stashed changes
 				[
 					[
 						"Flash White",
@@ -147,7 +418,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				50400,
+=======
+				65100,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -157,7 +432,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				52800,
+=======
+				85500,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -167,16 +446,21 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				58200,
+=======
+				91350,
+>>>>>>> Stashed changes
 				[
 					[
-						"Flash White",
+						"Do Syringe",
 						"",
 						""
 					]
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				65025,
 				[
 					[
@@ -208,6 +492,9 @@
 			],
 			[
 				89250,
+=======
+				101100,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -217,7 +504,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				94200,
+=======
+				110550,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -227,7 +518,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				96600,
+=======
+				113550,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -237,7 +532,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				99000,
+=======
+				115650,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -247,16 +546,27 @@
 				]
 			],
 			[
-				111000,
+				120600,
 				[
 					[
-						"Flash White",
+						"camHud & camera Off",
 						"",
 						""
 					]
 				]
 			],
 			[
+				121200,
+				[
+					[
+						"camHud & camera On",
+						"",
+						""
+					]
+				]
+			],
+			[
+<<<<<<< Updated upstream
 				115875,
 				[
 					[
@@ -288,6 +598,9 @@
 			],
 			[
 				138000,
+=======
+				130350,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -297,7 +610,11 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				140400,
+=======
+				144450,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
@@ -307,6 +624,7 @@
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				142800,
 				[
 					[
@@ -333,11 +651,23 @@
 						"Do Syringe",
 						"",
 						""
+=======
+				170400,
+				[
+					[
+						"Fade Cameras",
+						"0",
+						"3.6"
+>>>>>>> Stashed changes
 					]
 				]
 			],
 			[
+<<<<<<< Updated upstream
 				159600,
+=======
+				171600,
+>>>>>>> Stashed changes
 				[
 					[
 						"Do Syringe",
