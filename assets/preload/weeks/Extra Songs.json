@@ -3,18 +3,14 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"dad",
-		"dad",
-		"dad"
-	],
+	"hideStoryMode": true,
 	"songs": [
 		[
 			"Battered",
@@ -87,9 +83,31 @@
 				46,
 				40
 			]
+		],
+		[
+			"Phantasm",
+			"dad",
+			[
+				43,
+				46,
+				40
+			]
+		],
+		[
+			"Untold Loneliness",
+			"dad",
+			[
+				43,
+				46,
+				40
+			]
 		]
 	],
-	"hideStoryMode": true,
-	"weekName": "Extra Songs",
-	"hiddenUntilUnlocked": false
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Extra Songs"
 }

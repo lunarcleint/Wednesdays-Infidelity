@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "OSWALD IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				58,
+				49
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Oswald Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Oswald Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-166,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Oswald Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-209,
+				-74
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "OSWALD RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				85
+			],
+			"anim": "dial",
+			"fps": 24,
+			"name": "OSWALD DIALOGUE INTRO",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/OSWALD PHASE 1",
+	"position": [
+		-300,
+		110
+	],
+	"healthicon": "bf-suicide",
+	"flip_x": false,
+	"healthbar_colors": [
+		125,
+		128,
+		142
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
