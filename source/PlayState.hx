@@ -4835,9 +4835,12 @@ class PlayState extends MusicBeatState
 			{
 			});
 
-			script.setVariable("import", function(lib:String)
+			script.setVariable("import", function(lib:String) // Does this even work?
 			{
-				// Ill add the code soom
+				if (lib != null && Type.resolveClass(lib) != null)
+				{
+					script.setVariable(lib, Type.resolveClass(lib));
+				}
 			});
 
 			script.setVariable("curStep", curStep);
