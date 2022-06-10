@@ -1,0 +1,189 @@
+{
+	"song": {
+		"speed": 3.3,
+		"stage": "bobux",
+		"player1": "bf-dsides",
+		"player2": "oswald",
+		"player3": null,
+		"events": [
+			[
+				4500,
+				[
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.5"
+					]
+				]
+			],
+			[
+				4650,
+				[
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.5"
+					]
+				]
+			],
+			[
+				6900,
+				[
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.5"
+					]
+				]
+			],
+			[
+				7050,
+				[
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.5"
+					]
+				]
+			],
+			[
+				8770,
+				[
+					[
+						"Play Animation",
+						"intro",
+						"Dad"
+					]
+				]
+			],
+			[
+				9300,
+				[
+					[
+						"Add Camera Zoom",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				9450,
+				[
+					[
+						"Add Camera Zoom",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				11700,
+				[
+					[
+						"Add Camera Zoom",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				11850,
+				[
+					[
+						"Add Camera Zoom",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				32400,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				52200,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				90600,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				109800,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				129000,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				148200,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				167400,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				186600,
+				[
+					[
+						"camHud & camera Off",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 200,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Untold Loneliness"
+	}
+}

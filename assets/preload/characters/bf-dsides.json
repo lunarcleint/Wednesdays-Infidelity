@@ -2,6 +2,17 @@
 	"animations": [
 		{
 			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance"
+		},
+		{
+			"offsets": [
 				20,
 				-2
 			],
@@ -46,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				19,
-				190
+				7,
+				189
 			],
 			"loop": false,
 			"fps": 24,
@@ -57,8 +68,8 @@
 		},
 		{
 			"offsets": [
-				-51,
-				124
+				19,
+				190
 			],
 			"loop": false,
 			"fps": 24,
@@ -68,8 +79,8 @@
 		},
 		{
 			"offsets": [
-				-94,
-				178
+				-102,
+				180
 			],
 			"loop": false,
 			"fps": 24,
@@ -79,8 +90,8 @@
 		},
 		{
 			"offsets": [
-				-88,
-				141
+				-51,
+				124
 			],
 			"loop": false,
 			"fps": 24,
@@ -90,8 +101,8 @@
 		},
 		{
 			"offsets": [
-				1,
-				15
+				-3,
+				5
 			],
 			"loop": false,
 			"fps": 24,
@@ -101,8 +112,30 @@
 		},
 		{
 			"offsets": [
-				47,
-				-45
+				-94,
+				178
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "BF hit"
+		},
+		{
+			"offsets": [
+				-88,
+				141
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "BF idle shaking"
+		},
+		{
+			"offsets": [
+				37,
+				-35
 			],
 			"loop": false,
 			"fps": 24,
@@ -112,8 +145,8 @@
 		},
 		{
 			"offsets": [
-				-56,
-				-43
+				1,
+				15
 			],
 			"loop": true,
 			"fps": 24,
@@ -123,8 +156,8 @@
 		},
 		{
 			"offsets": [
-				-48,
-				-51
+				47,
+				-45
 			],
 			"loop": false,
 			"fps": 24,
@@ -133,21 +166,43 @@
 			"name": "BF Dead confirm"
 		},
 		{
+			"offsets": [
+				-56,
+				-43
+			],
 			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "boyfriend dodge"
+		},
+		{
+			"offsets": [
+				-48,
+				-51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "boyfriend attack"
+		},
+		{
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "BF idle dance",
-			"indices": []
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "bf pre attack"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/BF_D_SIDES",
 	"position": [
-		0,
+		60,
 		350
 	],
 	"healthicon": "bf-suicide",

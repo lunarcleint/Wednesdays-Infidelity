@@ -4844,6 +4844,8 @@ class PlayState extends MusicBeatState
 			});
 
 			script.setVariable("curStep", curStep);
+
+			// PRESET CLASSES
 			script.setVariable("PlayState", instance);
 			script.setVariable("FlxTween", FlxTween);
 			script.setVariable("FlxEase", FlxEase);
@@ -4853,7 +4855,8 @@ class PlayState extends MusicBeatState
 			script.setVariable("ClientPrefs", ClientPrefs);
 			script.setVariable("FlxTimer", FlxTimer);
 			script.setVariable("Main", Main);
-			script.setVariable("black", FlxColor.BLACK);
+
+			script.setVariable("black", FlxColor.BLACK); // dont ask
 
 			script.runScript(hxdata);
 		}
