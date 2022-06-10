@@ -36,8 +36,6 @@
 	<set name="BUILD_DIR" value="export/32bit" if="32bits" />
 
 	<classpath name="source" />
-
-	<classpath name="source" />
 	
 	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits"/>
 
