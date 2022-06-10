@@ -252,8 +252,6 @@ class FreeplayState extends MusicBeatState
 					letter.x *= textScale;
 					letter.offset.x *= textScale;
 				}
-				// songText.updateHitbox();
-				// trace(songs[i].songName + ' new scale: ' + textScale);
 			}
 
 			Paths.currentModDirectory = songs[i].folder;
