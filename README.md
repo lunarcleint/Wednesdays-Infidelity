@@ -1,8 +1,10 @@
 ## Friday Night Funkin' - Wednesday's Infidelity [PART 2]
 
-![](https://images.gamebanana.com/img/ss/mods/61bb95f0a70be.jpg)
+The GitHub repository for Wednesday's Infidelity Part 2.
 
-Join us to see the sad adventure of Mickey Mouse, being absorbed by drugs after seeing his girlfriend with another man. (cringe af game banna bio)
+![](art/wilogo.png)
+
+For info on usage rights, please read the [license](https://github.com/lunarcleint/Wednesdays-Infidelity-PART-2/blob/master/LICENSE)!
 
 ### Building instructions:
 Follow the [Friday Night Funkin'](https://github.com/ninjamuffin99/Funkin#build-instructions) source code building guide.
@@ -18,4 +20,3 @@ haxelib install hscript
 These libraries are needed and your game will **NOT** build without them!
 
 ### Credits:
-fuck you ill do it when the mods done
