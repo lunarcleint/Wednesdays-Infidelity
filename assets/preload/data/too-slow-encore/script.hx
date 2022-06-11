@@ -1,5 +1,36 @@
 var curSection = 0;
 var stepDev = 0;
+var defaultNotePos = [];
+var noteMoveSettings = [0, 0]; // x, y
+
+function onUpdate()
+{
+	if (noteMoveSettings != [0, 0])
+	{
+		var currentBeat = (Conductor.songPosition / 1000) * (bpm / 60);
+
+		for (note in PlayState.strumLineNotes.members)
+		{
+			var i = PlayState.strumLineNotes.members.indexOf(note);
+
+			note.x = defaultNotePos[i][0] + noteMoveSettings[0] * Math.sin((currentBeat + i * 0.25) * Math.PI);
+			note.y = defaultNotePos[i][1] + noteMoveSettings[1] * Math.cos((currentBeat + i * 0.25) * Math.PI);
+		}
+	}
+}
+
+function onStartCountdown()
+{
+	for (i in [0, 1, 2, 3, 4, 5, 6, 7])
+	{
+		defaultNotePos[i] = [
+			PlayState.strumLineNotes.members[i].x,
+			PlayState.isStoryMode ? PlayState.strumLineNotes.members[i].y + 10 : PlayState.strumLineNotes.members[i].y
+		];
+	}
+
+	// noteMoveSettings = [60, 60];
+}
 
 function onStepHit()
 {
@@ -54,6 +85,10 @@ function onStepHit()
 		case 1:
 			PlayState.curCamera.dadPos[1] = 550;
 			PlayState.curCamera.dadZoom = 1.0;
+		case 416:
+			noteMoveSettings = [0, 5];
+		case 800:
+			noteMoveSettings = [0, -5];
 		case 928:
 			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
 			PlayState.addCinematicBars(1, 12);
@@ -70,6 +105,8 @@ function onStepHit()
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.2);
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 50);
 		case 1043:
+			noteMoveSettings = [5, 0];
+
 			PlayState.removeCinematicBars(1);
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1);
 			FlxTween.tween(FlxG.camera, {zoom: 1}, 1);
@@ -106,6 +143,8 @@ function onStepHit()
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 60);
 
 		case 1504:
+			noteMoveSettings = [-6, 0];
+
 			var objs = [
 				PlayState.healthBar,
 				PlayState.healthBarBG,
@@ -128,6 +167,7 @@ function onStepHit()
 			PlayState.removeCinematicBars(0.2);
 
 		case 2016:
+			noteMoveSettings = [0, 0];
 			var objs = [
 				PlayState.healthBar,
 				PlayState.healthBarBG,

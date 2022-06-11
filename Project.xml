@@ -90,6 +90,8 @@
 
 	<error value="Targets besides desktop are not supported" unless="desktop" />
 
+	<haxedef name="no-deprecation-warnings" />
+
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->

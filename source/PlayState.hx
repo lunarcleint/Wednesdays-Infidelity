@@ -47,11 +47,13 @@ import flixel.util.FlxTimer;
 import flxanimate.*;
 import flxanimate.FlxAnimate;
 import haxe.Json;
+import lime.tools.Asset;
 import lime.utils.Assets;
 import openfl.Lib;
 import openfl.display.BlendMode;
 import openfl.display.Shader;
 import openfl.display.StageQuality;
+import openfl.events.Event;
 import openfl.events.KeyboardEvent;
 import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
@@ -1273,6 +1275,11 @@ class PlayState extends MusicBeatState
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
+		if (script != null)
+		{
+			script.executeFunc("onStartCountdown");
+		}
+
 		startedCountdown = true;
 		Conductor.songPosition = 0;
 		Conductor.songPosition -= Conductor.crochet * 5;
@@ -1406,6 +1413,7 @@ class PlayState extends MusicBeatState
 						}
 					});
 					FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+
 				case 4:
 			}
 
@@ -2535,6 +2543,11 @@ class PlayState extends MusicBeatState
 		for (i in shaderUpdates)
 		{
 			i(elapsed);
+		}
+
+		if (script != null)
+		{
+			script.executeFunc("onUpdate");
 		}
 	}
 
@@ -4827,7 +4840,12 @@ class PlayState extends MusicBeatState
 			script.setVariable("onSongStart", function()
 			{
 			});
+
 			script.setVariable("onCreate", function()
+			{
+			});
+
+			script.setVariable("onStartCountdown", function()
 			{
 			});
 
@@ -4835,15 +4853,24 @@ class PlayState extends MusicBeatState
 			{
 			});
 
-			script.setVariable("import", function(lib:String) // Does this even work?
+			script.setVariable("onUpdate", function()
+			{
+			});
+
+			script.setVariable("import", function(lib:String, ?as:Null<String>) // Does this even work?
 			{
 				if (lib != null && Type.resolveClass(lib) != null)
 				{
-					script.setVariable(lib, Type.resolveClass(lib));
+					trace(as != null ? as : lib);
+
+					trace(Type.resolveClass(lib));
+
+					script.setVariable(as != null ? as : lib, Type.resolveClass(lib));
 				}
 			});
 
 			script.setVariable("curStep", curStep);
+			script.setVariable("bpm", SONG.bpm);
 
 			// PRESET CLASSES
 			script.setVariable("PlayState", instance);
@@ -4855,6 +4882,9 @@ class PlayState extends MusicBeatState
 			script.setVariable("ClientPrefs", ClientPrefs);
 			script.setVariable("FlxTimer", FlxTimer);
 			script.setVariable("Main", Main);
+			script.setVariable("Event", Event);
+			script.setVariable("Conductor", Conductor);
+			script.setVariable("Std", Std);
 
 			script.setVariable("black", FlxColor.BLACK); // dont ask
 
