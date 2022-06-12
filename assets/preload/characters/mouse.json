@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				20,
 				30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Mouse idle"
-		},
-		{
-			"offsets": [
-				-7,
-				-175
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Mouse Down"
-		},
-		{
-			"offsets": [
-				88,
-				44
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "Mouse Left"
-		},
-		{
-			"offsets": [
-				19,
-				48
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Mouse Rigth"
-		},
-		{
-			"offsets": [
-				2,
-				73
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "Mouse Up"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				71,
-				48
-			],
-			"anim": "hey",
-			"fps": 36,
-			"name": "sad",
+			"name": "Mouse idle",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				-163
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Mouse Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				57
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Mouse Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				34
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Mouse Rigth",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				46,
+				3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Mouse Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				86,
+				71
+			],
+			"loop": false,
+			"fps": 36,
+			"anim": "hey",
+			"indices": [],
+			"name": "sad"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Mouse",
 	"position": [
 		-150,
-		30
+		50
 	],
 	"healthicon": "face",
 	"flip_x": false,
