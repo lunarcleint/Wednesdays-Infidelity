@@ -4861,10 +4861,6 @@ class PlayState extends MusicBeatState
 			{
 				if (lib != null && Type.resolveClass(lib) != null)
 				{
-					trace(as != null ? as : lib);
-
-					trace(Type.resolveClass(lib));
-
 					script.setVariable(as != null ? as : lib, Type.resolveClass(lib));
 				}
 			});
