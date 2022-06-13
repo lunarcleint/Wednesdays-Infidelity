@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				-78,
-				56
+				50,
+				-40
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				-15,
-				219
+				113,
+				160
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				-58,
-				151
+				50,
+				68
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				-11,
-				222
+				89,
+				125
 			],
 			"loop": false,
 			"fps": 24,
@@ -54,29 +54,13 @@
 			"anim": "idle",
 			"indices": [],
 			"name": "smiler mouse idle"
-		},
-		{
-			"loop": true,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle-loop",
-			"fps": 24,
-			"name": "smiler mouse idle",
-			"indices": [
-				12,
-				13,
-				14,
-				15
-			]
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Smiler_Mouse",
 	"position": [
-		-315,
-		125
+		-165,
+		95
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -89,6 +73,6 @@
 		-120,
 		30
 	],
-	"sing_duration": 4,
+	"sing_duration": 5,
 	"scale": 1
 }

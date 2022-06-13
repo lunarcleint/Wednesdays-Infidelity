@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				20,
 				30
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Mouse idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				15,
-				-163
+				-143
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mouse Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				34,
 				57
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Mouse Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				34
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mouse Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				46,
 				3
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mouse Up"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				86,
-				71
+				67
 			],
-			"loop": false,
-			"fps": 36,
 			"anim": "hey",
-			"indices": [],
-			"name": "sad"
+			"fps": 36,
+			"name": "sad",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

@@ -262,6 +262,8 @@ class PlayState extends MusicBeatState
 	var jumps:FlxSprite;
 	var grain:FlxSprite;
 
+	var cutsceneText:FlxText;
+
 	var chedderguybg:BGSprite;
 
 	// GF Amongus / Sus
@@ -932,6 +934,11 @@ class PlayState extends MusicBeatState
 		iconP1.alpha = ClientPrefs.healthBarAlpha;
 		add(iconP1);
 
+		cutsceneText = new FlxText(0, 0, 400, "", 32);
+		cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		cutsceneText.visible = false;
+		add(cutsceneText);
+
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.visible = !ClientPrefs.hideHud;
@@ -978,6 +985,7 @@ class PlayState extends MusicBeatState
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
+		cutsceneText.cameras = [camOther];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;

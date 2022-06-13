@@ -117,12 +117,57 @@
 				]
 			],
 			[
+				71400,
+				[
+					[
+						"Change Character",
+						"dad",
+						"oswald-end"
+					],
+					[
+						"Play Animation",
+						"intro",
+						"dad"
+					]
+				]
+			],
+			[
+				88050,
+				[
+					[
+						"Change Character",
+						"dad",
+						"oswald-gun"
+					],
+					[
+						"Play Animation",
+						"intro",
+						"dad"
+					]
+				]
+			],
+			[
+				89400,
+				[
+					[
+						"Screen Shake",
+						"0.15,0.05",
+						"0,0"
+					]
+				]
+			],
+			[
 				90600,
 				[
 					[
 						"Flash White",
 						"",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"oswald-suicide"
 					]
 				]
 			],

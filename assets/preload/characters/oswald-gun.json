@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "intro",
+			"indices": [],
+			"name": "OSWALD"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/OSWALD_GUN",
+	"position": [
+		-480,
+		90
+	],
+	"healthicon": "bf-suicide",
+	"flip_x": false,
+	"healthbar_colors": [
+		125,
+		128,
+		142
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

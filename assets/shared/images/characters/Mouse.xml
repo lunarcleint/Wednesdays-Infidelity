@@ -2,24 +2,24 @@
 <TextureAtlas imagePath="Mouse.png">
 	<!-- Created with Adobe Animate version 21.0.7.42652 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Mouse Down0000" x="0" y="0" width="563" height="589" frameX="0" frameY="-4" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0001" x="563" y="0" width="580" height="589" frameX="0" frameY="-4" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0002" x="1143" y="0" width="589" height="588" frameX="-7" frameY="-5" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0003" x="1732" y="0" width="598" height="588" frameX="-7" frameY="-5" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0004" x="2330" y="0" width="607" height="592" frameX="-6" frameY="-1" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0005" x="2937" y="0" width="622" height="592" frameX="-6" frameY="-1" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0006" x="3559" y="0" width="622" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0007" x="4181" y="0" width="623" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0008" x="4804" y="0" width="623" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0009" x="5427" y="0" width="624" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0010" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0011" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0012" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0013" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0014" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0015" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0016" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
-	<SubTexture name="Mouse Down0017" x="6051" y="0" width="633" height="593" frameX="-6" frameY="0" frameWidth="639" frameHeight="593"/>
+	<SubTexture name="Mouse Down0000" x="0" y="0" width="563" height="599" frameX="0" frameY="-11" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0001" x="563" y="0" width="580" height="599" frameX="0" frameY="-11" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0002" x="1143" y="0" width="589" height="598" frameX="-7" frameY="-12" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0003" x="1732" y="0" width="598" height="598" frameX="-7" frameY="-12" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0004" x="2330" y="0" width="607" height="608" frameX="-6" frameY="-2" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0005" x="2937" y="0" width="622" height="608" frameX="-6" frameY="-2" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0006" x="3559" y="0" width="622" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0007" x="4181" y="0" width="623" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0008" x="4804" y="0" width="623" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0009" x="5427" y="0" width="624" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0010" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0011" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0012" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0013" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0014" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0015" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0016" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
+	<SubTexture name="Mouse Down0017" x="6051" y="0" width="633" height="610" frameX="-6" frameY="0" frameWidth="639" frameHeight="610"/>
 	<SubTexture name="Mouse Left0000" x="6684" y="0" width="588" height="807" frameX="-2" frameY="-7" frameWidth="590" frameHeight="814"/>
 	<SubTexture name="Mouse Left0001" x="7272" y="0" width="588" height="807" frameX="-2" frameY="-7" frameWidth="590" frameHeight="814"/>
 	<SubTexture name="Mouse Left0002" x="0" y="807" width="583" height="810" frameX="0" frameY="-4" frameWidth="590" frameHeight="814"/>

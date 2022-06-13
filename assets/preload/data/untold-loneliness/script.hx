@@ -90,9 +90,16 @@ function onStepHit()
 
 	switch (curStep)
 	{
+		case 1:
+			PlayState.cutsceneText.visible = true;
+			PlayState.cutsceneText.size = 40;
+			PlayState.cutsceneText.fieldWidth = 1000;
+			PlayState.cutsceneText.x = 170;
+			PlayState.cutsceneText.y = 670;
 		case 112:
-			PlayState.addCinematicBars(1., 12);
+			PlayState.addCinematicBars(0.5, 12);
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 3.62);
+			PlayState.cutsceneText.text = "Alright, Alright lets get this over with.";
 
 			PlayState.followChars = false;
 			PlayState.isCameraOnForcedPos = true;
@@ -100,25 +107,28 @@ function onStepHit()
 
 			PlayState.camHUD.alpha = 1;
 		case 160:
+			PlayState.cutsceneText.text = "";
 			PlayState.followChars = true;
-			PlayState.removeCinematicBars(1.);
+			PlayState.removeCinematicBars(0.5);
 		case 696:
 			PlayState.curCamera.bfZoom = 1.2;
 
 			PlayState.curCamera.dadZoom = 1.2;
 
-			PlayState.addCinematicBars(1.);
+			PlayState.addCinematicBars(1);
 		case 952:
 			PlayState.followChars = false;
 			PlayState.isCameraOnForcedPos = true;
 			PlayState.camZooming = false;
 
-			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
+			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 0.3);
 
 			FlxTween.tween(FlxG.camera, {zoom: 1.1}, 2);
 
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
+			PlayState.cutsceneText.text = "In the end, we all..";
 		case 977:
+			PlayState.cutsceneText.text = "DIE.";
 			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.2, {
 				ease: FlxEase.quadInOut,
 				onComplete: function(twn)
@@ -133,20 +143,56 @@ function onStepHit()
 					});
 				}
 			});
+		case 984:
+			PlayState.cutsceneText.text = "Why should I, even try.";
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
+		case 1017:
+			PlayState.cutsceneText.text = "Gun in hand, my life shall end..";
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
+		case 1044:
+			PlayState.cutsceneText.text = "MY SUFFERING SHALL BE KNOWN, FRIEND!";
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
 		case 1072:
 			PlayState.followChars = true;
 			PlayState.camZooming = true;
 
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1);
+			PlayState.healthBar.alpha = 0;
+			PlayState.healthBarBG.alpha = 0;
+			PlayState.iconP1.alpha = 0;
+			PlayState.iconP2.alpha = 0;
+			PlayState.scoreTxt.alpha = 0;
+			PlayState.timeBarBG.alpha = 0;
+			PlayState.timeBar.alpha = 0;
+			PlayState.timeTxt.alpha = 0;
+		case 1080:
+			PlayState.cutsceneText.text = "";
+		case 1174:
+			PlayState.followChars = false;
+			PlayState.isCameraOnForcedPos = true;
+			PlayState.camZooming = false;
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1201:
-		// scream shit
-
+			PlayState.cutsceneText.text = "RAAAH!";
 		case 1208:
+			PlayState.cutsceneText.text = "";
+
+			PlayState.healthBar.alpha = 1;
+			PlayState.healthBarBG.alpha = 1;
+			PlayState.iconP1.alpha = 1;
+			PlayState.iconP2.alpha = 1; // poop
+			PlayState.scoreTxt.alpha = 1;
+			PlayState.timeBarBG.alpha = 1;
+			PlayState.timeBar.alpha = 1;
+			PlayState.timeTxt.alpha = 1;
+
+			PlayState.followChars = true;
+			PlayState.camZooming = true;
 			PlayState.curCamera.bfZoom = 1;
 
 			PlayState.curCamera.dadZoom = 0.8;
 
-			PlayState.removeCinematicBars(1);
+			PlayState.removeCinematicBars(0.5);
 	}
 }
 
