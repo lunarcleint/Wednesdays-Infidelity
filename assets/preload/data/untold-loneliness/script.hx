@@ -112,13 +112,13 @@ function onStepHit()
 			PlayState.camHUD.alpha = 1;
 		case 137:
 			PlayState.cutsceneText.text = "Let's get this over with.";
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 		case 160:
 			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.5, {
 				onComplete: function(twn)
 				{
 					PlayState.cutsceneText.text = "";
-					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 				}
 			});
 			PlayState.followChars = true;
@@ -144,7 +144,7 @@ function onStepHit()
 
 			PlayState.cutsceneText.text = "In the end, we all..";
 		case 976:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 40, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 40, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "DIE.";
 			PlayState.cutsceneText.size = 36;
 			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.2, {
@@ -162,14 +162,14 @@ function onStepHit()
 				}
 			});
 		case 984:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "Why should I, even try.";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
 		case 1017:
 			PlayState.cutsceneText.text = "Gun in hand, my life shall end..";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1044:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "MY SUFFERING SHALL BE KNOWN, FRIEND!";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y - 10);
 		case 1072:
@@ -177,7 +177,7 @@ function onStepHit()
 				onComplete: function(twn)
 				{
 					PlayState.cutsceneText.text = "";
-					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 				}
 			});
 
@@ -201,11 +201,11 @@ function onStepHit()
 			PlayState.camZooming = false;
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1201:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 46, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 46, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.alpha = 1;
 			PlayState.cutsceneText.text = "RAAAH!";
 		case 1208:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "";
 
 			PlayState.healthBar.alpha = 1;
@@ -224,6 +224,14 @@ function onStepHit()
 			PlayState.curCamera.dadZoom = 0.8;
 
 			PlayState.removeCinematicBars(0.5);
+		case 1712:
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 70, PlayState.dad.getGraphicMidpoint().y);
+			PlayState.followChars = false;
+			PlayState.isCameraOnForcedPos = true;
+			PlayState.camZooming = false;
+		case 1728:
+			PlayState.followChars = true;
+			PlayState.camZooming = true;
 	}
 }
 
