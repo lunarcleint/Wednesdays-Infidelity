@@ -48,7 +48,7 @@ function onStepHit()
 
 			PlayState.followChars = true;
 
-			FlxG.camera.flash(black, 5);
+			FlxG.camera.flash(fromRGB(0, 0, 0), 5);
 			FlxTween.tween(PlayState.blackFuck, {alpha: 1}, 0.5);
 		case 1050:
 			PlayState.songLength = FlxG.sound.music.length;

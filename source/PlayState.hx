@@ -4873,6 +4873,10 @@ class PlayState extends MusicBeatState
 				}
 			});
 
+			script.setVariable("fromRGB", function(Red:Int, Green:Int, Blue:Int, Alpha:Int = 255) {
+				return FlxColor.fromRGB(Red, Green, Blue, Alpha);
+			});
+
 			script.setVariable("curStep", curStep);
 			script.setVariable("bpm", SONG.bpm);
 
@@ -4889,8 +4893,9 @@ class PlayState extends MusicBeatState
 			script.setVariable("Event", Event);
 			script.setVariable("Conductor", Conductor);
 			script.setVariable("Std", Std);
-
-			script.setVariable("black", FlxColor.BLACK); // dont ask
+			script.setVariable("FlxTextBorderStyle", FlxTextBorderStyle);
+			script.setVariable("Paths", Paths);
+			script.setVariable("CENTER", FlxTextAlign.CENTER);
 
 			script.runScript(hxdata);
 		}

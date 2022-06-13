@@ -91,29 +91,42 @@ function onStepHit()
 	switch (curStep)
 	{
 		case 1:
+			PlayState.cutsceneText.alpha = 0;
 			PlayState.cutsceneText.visible = true;
-			PlayState.cutsceneText.size = 40;
+			PlayState.cutsceneText.size = 32;
 			PlayState.cutsceneText.fieldWidth = 1000;
 			PlayState.cutsceneText.x = 170;
-			PlayState.cutsceneText.y = 670;
+			PlayState.cutsceneText.y = 600;
 		case 112:
 			PlayState.addCinematicBars(0.5, 12);
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 3.62);
-			PlayState.cutsceneText.text = "Alright, Alright lets get this over with.";
+
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.5);
+
+			PlayState.cutsceneText.text = "Alright, Alright";
 
 			PlayState.followChars = false;
 			PlayState.isCameraOnForcedPos = true;
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 70, PlayState.dad.getGraphicMidpoint().y);
 
 			PlayState.camHUD.alpha = 1;
+		case 137:
+			PlayState.cutsceneText.text = "Let's get this over with.";
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, black);
 		case 160:
-			PlayState.cutsceneText.text = "";
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.5, {
+				onComplete: function(twn)
+				{
+					PlayState.cutsceneText.text = "";
+					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+				}
+			});
 			PlayState.followChars = true;
 			PlayState.removeCinematicBars(0.5);
 		case 696:
-			PlayState.curCamera.bfZoom = 1.2;
+			PlayState.curCamera.bfZoom = 1.3;
 
-			PlayState.curCamera.dadZoom = 1.2;
+			PlayState.curCamera.dadZoom = 1.3;
 
 			PlayState.addCinematicBars(1);
 		case 952:
@@ -126,9 +139,14 @@ function onStepHit()
 			FlxTween.tween(FlxG.camera, {zoom: 1.1}, 2);
 
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
+
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.2);
+
 			PlayState.cutsceneText.text = "In the end, we all..";
-		case 977:
+		case 976:
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 40, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, black);
 			PlayState.cutsceneText.text = "DIE.";
+			PlayState.cutsceneText.size = 36;
 			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.2, {
 				ease: FlxEase.quadInOut,
 				onComplete: function(twn)
@@ -144,15 +162,25 @@ function onStepHit()
 				}
 			});
 		case 984:
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
 			PlayState.cutsceneText.text = "Why should I, even try.";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
 		case 1017:
 			PlayState.cutsceneText.text = "Gun in hand, my life shall end..";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1044:
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, black);
 			PlayState.cutsceneText.text = "MY SUFFERING SHALL BE KNOWN, FRIEND!";
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y - 10);
 		case 1072:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.5, {
+				onComplete: function(twn)
+				{
+					PlayState.cutsceneText.text = "";
+					PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
+				}
+			});
+
 			PlayState.followChars = true;
 			PlayState.camZooming = true;
 
@@ -173,8 +201,11 @@ function onStepHit()
 			PlayState.camZooming = false;
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1201:
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 46, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, black);
+			PlayState.cutsceneText.alpha = 1;
 			PlayState.cutsceneText.text = "RAAAH!";
 		case 1208:
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, black);
 			PlayState.cutsceneText.text = "";
 
 			PlayState.healthBar.alpha = 1;
