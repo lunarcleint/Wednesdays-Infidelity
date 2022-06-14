@@ -45,17 +45,6 @@
 			"indices": []
 		},
 		{
-			"loop": true,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Mouse idle",
-			"indices": []
-		},
-		{
 			"loop": false,
 			"offsets": [
 				71,
@@ -65,6 +54,39 @@
 			"fps": 24,
 			"name": "laugh",
 			"indices": []
+		},
+		{
+			"offsets": [
+				71,
+				-6
+			],
+			"indices": [
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				34,
+				34,
+				34
+			],
+			"fps": 24,
+			"anim": "risaSingle",
+			"loop": false,
+			"name": "laugh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Mouse idle"
 		}
 	],
 	"no_antialiasing": false,

@@ -151,13 +151,15 @@ function onStepHit()
 				ease: FlxEase.quadInOut,
 				onComplete: function(twn)
 				{
-					FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.2, {
-						ease: FlxEase.quadInOut,
-						onComplete: function(twn)
-						{
-							FlxTween.tween(FlxG.camera, {zoom: 1.2}, 7);
-						},
-						startDelay: 0.25
+					new FlxTimer().start(0.25, function(tmr)
+					{
+						FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.2, {
+							ease: FlxEase.quadInOut,
+							onComplete: function(twn)
+							{
+								FlxTween.tween(FlxG.camera, {zoom: 1.2}, 7);
+							},
+						});
 					});
 				}
 			});
