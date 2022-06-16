@@ -695,7 +695,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1354,7 +1354,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
@@ -4718,7 +4718,7 @@ class PlayState extends MusicBeatState
 			case 'vecindario':
 				grain.animation.play('idle');
 
-			case 'bobux' | 'reefer' | 'inferno' | 'toyland': // add stage names here to make the grain appear
+			case 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'vecindariocover': // add stage names here to make the grain appear
 				grain.alpha = 1;
 				grain.animation.play('idle');
 
