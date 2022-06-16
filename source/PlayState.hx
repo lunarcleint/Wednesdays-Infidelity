@@ -327,6 +327,14 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.8, // mushitsection == false
 			gfZoom: 0.65 // gfsection == true
 		},
+		"vecindariocover" => {
+			dadPos: [420.95, 513], // xx
+			bfPos: [952.9, 550], // xx2
+			gfPos: [952.9, 200], // xx3
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.8, // mushitsection == false
+			gfZoom: 0.65 // gfsection == true
+		},
 		"chedder" => {
 			dadPos: [410.95, 363], // xx
 			bfPos: [952.9, 550], // xx2
@@ -586,7 +594,11 @@ class PlayState extends MusicBeatState
 				sexi.antialiasing = ClientPrefs.globalAntialiasing;
 				sexi.updateHitbox();
 				add(sexi);
-
+			case 'vecindariocover': // Too Slow Encore Song
+				var bg:BGSprite = new BGSprite('backgrounds/BG_MIKICOVER', -600, -200, 0.9, 0.9);
+				bg.antialiasing = ClientPrefs.globalAntialiasing;
+				bg.updateHitbox();
+				add(bg);
 			case 'chedder': // Week Chedder
 				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
 				add(chedderguybg);
@@ -4873,7 +4885,8 @@ class PlayState extends MusicBeatState
 				}
 			});
 
-			script.setVariable("fromRGB", function(Red:Int, Green:Int, Blue:Int, Alpha:Int = 255) {
+			script.setVariable("fromRGB", function(Red:Int, Green:Int, Blue:Int, Alpha:Int = 255)
+			{
 				return FlxColor.fromRGB(Red, Green, Blue, Alpha);
 			});
 
