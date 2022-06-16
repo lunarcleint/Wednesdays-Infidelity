@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 2.5,
-		"stage": "bobux",
+		"stage": "vecindariocover",
 		"player1": "bf-suicide",
 		"player2": "tiny-mouse",
 		"player3": null,
@@ -472,12 +472,12 @@
 				]
 			],
 			[
-				175998.946088699,
+				176332.279422033,
 				[
 					[
 						"camHud & camera Off",
-						"die",
-						"dad"
+						"",
+						""
 					]
 				]
 			]

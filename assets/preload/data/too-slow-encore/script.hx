@@ -3,6 +3,12 @@ var stepDev = 0;
 var defaultNotePos = [];
 var noteMoveSettings = [0, 0]; // x, y
 
+function onCreate()
+{
+	PlayState.curCamera.dadPos[1] = 550;
+	PlayState.curCamera.dadZoom = 1.0;
+}
+
 function onUpdate()
 {
 	if (noteMoveSettings != [0, 0])
@@ -83,14 +89,18 @@ function onStepHit()
 	switch (curStep)
 	{
 		case 1:
-			PlayState.curCamera.dadPos[1] = 550;
-			PlayState.curCamera.dadZoom = 1.0;
+			PlayState.cutsceneText.alpha = 0;
+			PlayState.cutsceneText.visible = true;
+			PlayState.cutsceneText.size = 32;
+			PlayState.cutsceneText.fieldWidth = 1000;
+			PlayState.cutsceneText.x = 170;
+			PlayState.cutsceneText.y = 600;
 		case 416:
 			noteMoveSettings = [0, 5];
 		case 800:
 			noteMoveSettings = [0, -5];
 		case 928:
-			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
+			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 0.7);
 			PlayState.addCinematicBars(1, 12);
 
 			PlayState.isCameraOnForcedPos = true;
@@ -101,6 +111,23 @@ function onStepHit()
 			PlayState.camZooming = false;
 			FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1);
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 120);
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.3);
+			PlayState.cutsceneText.text = "I'll kill.";
+		case 938:
+			PlayState.cutsceneText.text = "YOU.";
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 40, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
+		case 943:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.4);
+		case 961:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.3);
+			PlayState.cutsceneText.text = "Your children, your neighbors!";
+		case 991:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.4);
+		case 1004:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.3);
+			PlayState.cutsceneText.text = "I'll kill everyone!";
+		case 1022:
+			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.4);
 		case 1012:
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.2);
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 50);
@@ -192,15 +219,17 @@ function onStepHit()
 					}
 				});
 			}
-			PlayState.addCinematicBars(0.6);
+			PlayState.addCinematicBars(0.3);
 			PlayState.vocals.volume = 1;
 			PlayState.camZooming = false;
-			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1);
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x, PlayState.dad.getGraphicMidpoint().y + 70);
+			FlxTween.tween(FlxG.camera, {zoom: 0.7}, 1);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x, PlayState.dad.getGraphicMidpoint().y + 30);
 
 			PlayState.isCameraOnForcedPos = true;
 
 			PlayState.followChars = false;
+		case 2036:
+			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.5, {ease: FlxEase.sineIn});
 	}
 }
 
