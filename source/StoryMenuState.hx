@@ -228,13 +228,13 @@ class StoryMenuState extends MusicBeatState
 			if (upP)
 			{
 				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
+				FlxG.sound.play(Paths.sound('storySelect'));
 			}
 
 			if (downP)
 			{
 				changeWeek(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
+				FlxG.sound.play(Paths.sound('storySelect'));
 			}
 
 			if (controls.UI_RIGHT)
@@ -382,6 +382,8 @@ class StoryMenuState extends MusicBeatState
 	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;
 
+	var menuTween:FlxTween;
+
 	function changeWeek(change:Int = 0):Void
 	{
 		curWeek += change;
@@ -424,6 +426,7 @@ class StoryMenuState extends MusicBeatState
 		else
 		{
 			bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
+			bgSprite.alpha = 0;
 		}
 		PlayState.storyWeek = curWeek;
 
@@ -470,6 +473,11 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = newPos;
 		}
 		updateText();
+		if (menuTween != null)
+		{
+			menuTween.cancel();
+		}
+		menuTween = FlxTween.tween(bgSprite, {alpha: 1}, 0.7);
 
 		Lib.application.window.title = "Wednesday's Infidelity - Story Menu - " + leWeek.weekName;
 	}
