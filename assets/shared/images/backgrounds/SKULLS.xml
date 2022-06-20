@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SKULLS.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SKULLS0000" x="0" y="0" width="2220" height="556" frameX="-12" frameY="-3" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0001" x="0" y="0" width="2220" height="556" frameX="-12" frameY="-3" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0002" x="0" y="556" width="2227" height="551" frameX="-5" frameY="-7" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0003" x="0" y="556" width="2227" height="551" frameX="-5" frameY="-7" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0004" x="0" y="1107" width="2232" height="547" frameX="0" frameY="-6" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0005" x="0" y="1107" width="2232" height="547" frameX="0" frameY="-6" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0006" x="0" y="1654" width="2221" height="552" frameX="-11" frameY="-3" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0007" x="0" y="1654" width="2221" height="552" frameX="-11" frameY="-3" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0008" x="0" y="2206" width="2214" height="556" frameX="-18" frameY="0" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0009" x="0" y="2206" width="2214" height="556" frameX="-18" frameY="0" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0010" x="0" y="2762" width="2213" height="555" frameX="-19" frameY="-1" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0011" x="0" y="2762" width="2213" height="555" frameX="-19" frameY="-1" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0012" x="0" y="3317" width="2214" height="555" frameX="-18" frameY="-1" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0013" x="0" y="3317" width="2214" height="555" frameX="-18" frameY="-1" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0014" x="0" y="3317" width="2214" height="555" frameX="-18" frameY="-1" frameWidth="2232" frameHeight="559"/>
+	<SubTexture name="SKULLS0015" x="0" y="3317" width="2214" height="555" frameX="-18" frameY="-1" frameWidth="2232" frameHeight="559"/>
+</TextureAtlas>

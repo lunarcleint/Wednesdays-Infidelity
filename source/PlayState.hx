@@ -273,6 +273,8 @@ class PlayState extends MusicBeatState
 	var satanAparicion:FlxSprite;
 	var satanJijijija:FlxSprite;
 
+	var basedSkeletons:FlxSprite;
+
 	var infernogroundparts:Map<String, FlxSprite> = ["p1" => null, "p2" => null];
 
 	// Black / Kriman't
@@ -322,6 +324,14 @@ class PlayState extends MusicBeatState
 		"bobux" => {
 			dadPos: [420.95, 513], // xx
 			bfPos: [952.9, 550], // xx2
+			gfPos: [952.9, 200], // xx3
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.8, // mushitsection == false
+			gfZoom: 0.65 // gfsection == true
+		},
+		"hell" => {
+			dadPos: [420.95, 283], // xx
+			bfPos: [952.9, 370], // xx2
 			gfPos: [952.9, 200], // xx3
 			bfZoom: 1, // mushitsection == true
 			dadZoom: 0.8, // mushitsection == false
@@ -678,7 +688,25 @@ class PlayState extends MusicBeatState
 				infernogroundp2.scrollFactor.set(1, 1);
 				add(infernogroundp2);
 				infernogroundparts.set("p2", infernogroundp2);
+			case 'hell': // versiculus iratus
+				var sky:BGSprite = new BGSprite('backgrounds/INFERNO_SKY', -608, -482);
+				sky.antialiasing = ClientPrefs.globalAntialiasing;
+				sky.scrollFactor.set(0.5, 0.5);
+				add(sky);
 
+				basedSkeletons = new FlxSprite(-506, 164);
+				basedSkeletons.frames = Paths.getSparrowAtlas('backgrounds/SKULLS');
+				basedSkeletons.animation.addByPrefix('idle', 'SKULLS', 24, false);
+				basedSkeletons.antialiasing = ClientPrefs.globalAntialiasing;
+				basedSkeletons.scrollFactor.set(0.85, 0.9);
+				add(basedSkeletons);
+
+				FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+
+				var ground:BGSprite = new BGSprite('backgrounds/ROCK_BG', -608, 324);
+				ground.antialiasing = ClientPrefs.globalAntialiasing;
+				add(ground);
 			case 'susNightmare': // Week SUS
 				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
 				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
@@ -695,7 +723,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1354,7 +1382,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
@@ -3953,7 +3981,8 @@ class PlayState extends MusicBeatState
 
 			switch (dad.curCharacter)
 			{
-				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide':
+				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
+					'satan-chad':
 					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
 			}
 
@@ -3962,7 +3991,7 @@ class PlayState extends MusicBeatState
 			switch (dad.curCharacter)
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
-					'mouse-phase2' | 'mouse-smile' | 'mouse-happy':
+					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad':
 					notehealthdmg = 0.025;
 
 					if (health > 0.1)
@@ -4719,8 +4748,6 @@ class PlayState extends MusicBeatState
 				grain.animation.play('idle');
 
 			case 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'vecindariocover': // add stage names here to make the grain appear
-				grain.alpha = 1;
-				grain.animation.play('idle');
 
 			case 'susNightmare':
 				if (gfSus != null)
@@ -4731,6 +4758,11 @@ class PlayState extends MusicBeatState
 
 				grain.alpha = 1;
 				grain.animation.play('idle');
+			case 'hell':
+				grain.alpha = 1;
+				grain.animation.play('idle');
+				if (curBeat % 1 == 0)
+					basedSkeletons.animation.play('idle', true);
 		}
 		lastBeatHit = curBeat;
 	}

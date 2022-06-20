@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "SATAN IDLE"
+		},
+		{
+			"offsets": [
+				280,
+				-110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SATAN LEFT"
+		},
+		{
+			"offsets": [
+				150,
+				-180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SATAN DOWN"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				60
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SATAN UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-170
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SATAN RIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SATAN CHAD",
+	"position": [
+		-210,
+		-270
+	],
+	"healthicon": "satan",
+	"flip_x": false,
+	"healthbar_colors": [
+		151,
+		123,
+		122
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4.8,
+	"scale": 1
+}
