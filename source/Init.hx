@@ -16,6 +16,10 @@ class Init extends FlxState
 	{
 		super.create();
 
+		#if cpp
+		cpp.NativeGc.run(true);
+		#end
+
 		FlxG.sound.muteKeys = TitleState.muteKeys;
 		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
 		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
