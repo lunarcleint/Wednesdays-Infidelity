@@ -1,17 +1,20 @@
 package;
 
-import haxe.CallStack;
-import openfl.events.UncaughtErrorEvent;
-import flixel.graphics.FlxGraphic;
+import data.ClientPrefs;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
+import flixel.graphics.FlxGraphic;
+import haxe.CallStack;
+import input.Controls;
 import openfl.Assets;
 import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
-import openfl.events.Event;
 import openfl.display.StageScaleMode;
+import openfl.events.Event;
+import openfl.events.UncaughtErrorEvent;
+import states.menus.*;
 
 class Main extends Sprite
 {
@@ -22,6 +25,7 @@ class Main extends Sprite
 	var framerate:Int = 60; // How many frames per second the game should run at.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
+
 	public static var fpsVar:FPS;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
@@ -54,12 +58,13 @@ class Main extends Sprite
 
 		setupGame();
 
-		addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, function (error:Dynamic) {
+		addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, function(error:Dynamic)
+		{
 			@:using(haxe.CallStack)
-
 			var callStack:Array<Dynamic> = CallStack.callStack();
 
-			for (call in callStack) {
+			for (call in callStack)
+			{
 				trace(call);
 			}
 
@@ -84,7 +89,7 @@ class Main extends Sprite
 		#if !debug
 		initialState = WarningState;
 		#end
-	
+
 		ClientPrefs.loadDefaultKeys();
 		// fuck you, persistent caching stays ON during sex
 		FlxGraphic.defaultPersist = true;
@@ -96,7 +101,8 @@ class Main extends Sprite
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
-		if(fpsVar != null) {
+		if (fpsVar != null)
+		{
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 		#end
