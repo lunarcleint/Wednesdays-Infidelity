@@ -41,49 +41,6 @@ class WarningState extends MusicBeatState
 	{
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
-		ClientPrefs.loadPrefs();
-
-		Highscore.load();
-
-		if (FlxG.save.data.weekCompleted != null)
-		{
-			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
-		}
-
-		if (FlxG.save.data.beatmainweek == null) // W.I SAVES
-		{
-			FlxG.save.data.beatmainweek = false;
-		}
-		if (FlxG.save.data.gotbadending == null)
-		{
-			FlxG.save.data.gotbadending = false;
-		}
-		if (FlxG.save.data.gotgoodending == null)
-		{
-			FlxG.save.data.gotgoodending = false;
-		}
-		if (FlxG.save.data.beathell == null)
-		{
-			FlxG.save.data.beathell = false;
-		}
-
-		FlxG.mouse.visible = false;
-
-		#if FREEPLAY
-		MusicBeatState.switchState(new FreeplayState());
-		#elseif CHARTING
-		MusicBeatState.switchState(new ChartingState());
-		#else
-		#if desktop
-		DiscordClient.initialize();
-		Application.current.onExit.add(function(exitCode)
-		{
-			DiscordClient.shutdown();
-		});
-		#end
-		#end
-
 		Lib.application.window.title = "Wednesday's Infidelity - WARNING";
 
 		warnImage = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre', 'preload'));
