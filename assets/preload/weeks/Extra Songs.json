@@ -3,14 +3,18 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": true,
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
 	"songs": [
 		[
 			"Battered",
@@ -43,7 +47,7 @@
 			"Hellhole",
 			"hellholemickey",
 			[
-				43,
+				63,
 				46,
 				40
 			]
@@ -101,13 +105,18 @@
 				46,
 				40
 			]
+		],
+		[
+			"Versiculus Iratus",
+			"satan",
+			[
+				63,
+				46,
+				40
+			]
 		]
 	],
-	"weekCharacters": [
-		"dad",
-		"dad",
-		"dad"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Extra Songs"
+	"hideStoryMode": true,
+	"weekName": "Extra Songs",
+	"hiddenUntilUnlocked": false
 }

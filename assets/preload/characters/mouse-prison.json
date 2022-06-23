@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "MIKI SAD IDLE"
+		},
+		{
+			"offsets": [
+				-23,
+				38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "MIKI SAD LEFT"
+		},
+		{
+			"offsets": [
+				-4,
+				-18
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "MIKI SAD DOWN"
+		},
+		{
+			"offsets": [
+				-35,
+				37
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "MIKI SAD UP"
+		},
+		{
+			"offsets": [
+				-39,
+				19
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "MIKI SAD RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MIKI_PRISIONERO",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		95,
+		103,
+		91
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

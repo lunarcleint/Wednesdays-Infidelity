@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MIKI PRISIONERO.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MAD MIKI DOWN0000" x="0" y="0" width="445" height="381" frameX="0" frameY="-1" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0001" x="0" y="0" width="445" height="381" frameX="0" frameY="-1" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0002" x="445" y="0" width="442" height="380" frameX="-3" frameY="-2" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0003" x="445" y="0" width="442" height="380" frameX="-3" frameY="-2" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0004" x="887" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0005" x="887" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0006" x="887" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0007" x="887" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0008" x="1329" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI DOWN0009" x="1329" y="0" width="442" height="382" frameX="-3" frameY="0" frameWidth="445" frameHeight="382"/>
+	<SubTexture name="MAD MIKI IDLE0000" x="1771" y="0" width="437" height="399" frameX="-1" frameY="-8" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0001" x="2208" y="0" width="438" height="398" frameX="0" frameY="-9" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0002" x="2646" y="0" width="435" height="396" frameX="-3" frameY="-11" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0003" x="3081" y="0" width="434" height="397" frameX="-4" frameY="-10" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0004" x="3515" y="0" width="430" height="395" frameX="-8" frameY="-12" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0005" x="0" y="399" width="431" height="394" frameX="-7" frameY="-13" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0006" x="431" y="399" width="432" height="405" frameX="-6" frameY="-2" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0007" x="863" y="399" width="430" height="407" frameX="-8" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0008" x="1293" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0009" x="1293" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0010" x="1722" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0011" x="1722" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0012" x="2151" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0013" x="2151" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0014" x="2580" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI IDLE0015" x="2580" y="399" width="429" height="407" frameX="-9" frameY="0" frameWidth="438" frameHeight="407"/>
+	<SubTexture name="MAD MIKI LEFT0000" x="3009" y="399" width="441" height="419"/>
+	<SubTexture name="MAD MIKI LEFT0001" x="3009" y="399" width="441" height="419"/>
+	<SubTexture name="MAD MIKI LEFT0002" x="3450" y="399" width="435" height="414" frameX="-6" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0003" x="3450" y="399" width="435" height="414" frameX="-6" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0004" x="0" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0005" x="0" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0006" x="0" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0007" x="0" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0008" x="434" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI LEFT0009" x="434" y="818" width="434" height="414" frameX="-7" frameY="-5" frameWidth="441" frameHeight="419"/>
+	<SubTexture name="MAD MIKI RIGHT0000" x="868" y="818" width="408" height="444" frameX="-2" frameY="0" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0001" x="868" y="818" width="408" height="444" frameX="-2" frameY="0" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0002" x="1276" y="818" width="410" height="442" frameX="0" frameY="-2" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0003" x="1276" y="818" width="410" height="442" frameX="0" frameY="-2" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0004" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0005" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0006" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0007" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0008" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI RIGHT0009" x="1686" y="818" width="410" height="441" frameX="0" frameY="-3" frameWidth="410" frameHeight="444"/>
+	<SubTexture name="MAD MIKI UP0000" x="2096" y="818" width="398" height="451" frameX="-2" frameY="0" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0001" x="2096" y="818" width="398" height="451" frameX="-2" frameY="0" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0002" x="2494" y="818" width="400" height="445" frameX="0" frameY="-6" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0003" x="2494" y="818" width="400" height="445" frameX="0" frameY="-6" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0004" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0005" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0006" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0007" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0008" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MAD MIKI UP0009" x="2894" y="818" width="400" height="443" frameX="0" frameY="-8" frameWidth="400" frameHeight="451"/>
+	<SubTexture name="MIKI SAD DOWN0000" x="3294" y="818" width="438" height="390"/>
+	<SubTexture name="MIKI SAD DOWN0001" x="3294" y="818" width="438" height="390"/>
+	<SubTexture name="MIKI SAD DOWN0002" x="0" y="1269" width="436" height="389" frameX="-2" frameY="-1" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0003" x="0" y="1269" width="436" height="389" frameX="-2" frameY="-1" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0004" x="436" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0005" x="436" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0006" x="871" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0007" x="871" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0008" x="871" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD DOWN0009" x="871" y="1269" width="435" height="390" frameX="-3" frameY="0" frameWidth="438" frameHeight="390"/>
+	<SubTexture name="MIKI SAD IDLE0000" x="1306" y="1269" width="437" height="399" frameX="0" frameY="-9" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0001" x="1306" y="1269" width="437" height="399" frameX="0" frameY="-9" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0002" x="1743" y="1269" width="435" height="396" frameX="-2" frameY="-12" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0003" x="1743" y="1269" width="435" height="396" frameX="-2" frameY="-12" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0004" x="2178" y="1269" width="430" height="395" frameX="-7" frameY="-13" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0005" x="2178" y="1269" width="430" height="395" frameX="-7" frameY="-13" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0006" x="2608" y="1269" width="432" height="405" frameX="-5" frameY="-3" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0007" x="2608" y="1269" width="432" height="405" frameX="-5" frameY="-3" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0008" x="3040" y="1269" width="429" height="408" frameX="-8" frameY="0" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0009" x="3040" y="1269" width="429" height="408" frameX="-8" frameY="0" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0010" x="3469" y="1269" width="429" height="408" frameX="-8" frameY="0" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0011" x="3469" y="1269" width="429" height="408" frameX="-8" frameY="0" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0012" x="0" y="1677" width="429" height="407" frameX="-8" frameY="-1" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0013" x="0" y="1677" width="429" height="407" frameX="-8" frameY="-1" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0014" x="429" y="1677" width="429" height="407" frameX="-8" frameY="-1" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD IDLE0015" x="429" y="1677" width="429" height="407" frameX="-8" frameY="-1" frameWidth="437" frameHeight="408"/>
+	<SubTexture name="MIKI SAD LEFT0000" x="858" y="1677" width="418" height="445" frameX="-1" frameY="0" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0001" x="858" y="1677" width="418" height="445" frameX="-1" frameY="0" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0002" x="1276" y="1677" width="419" height="443" frameX="0" frameY="-2" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0003" x="1276" y="1677" width="419" height="443" frameX="0" frameY="-2" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0004" x="1695" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0005" x="1695" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0006" x="1695" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0007" x="1695" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0008" x="2114" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD LEFT0009" x="2114" y="1677" width="419" height="442" frameX="0" frameY="-3" frameWidth="419" frameHeight="445"/>
+	<SubTexture name="MIKI SAD RIGHT0000" x="2533" y="1677" width="402" height="428" frameX="-1" frameY="0" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0001" x="2533" y="1677" width="402" height="428" frameX="-1" frameY="0" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0002" x="2935" y="1677" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0003" x="2935" y="1677" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0004" x="3338" y="1677" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0005" x="3338" y="1677" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0006" x="0" y="2122" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0007" x="0" y="2122" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0008" x="403" y="2122" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD RIGHT0009" x="403" y="2122" width="403" height="427" frameX="0" frameY="-1" frameWidth="403" frameHeight="428"/>
+	<SubTexture name="MIKI SAD UP0000" x="806" y="2122" width="407" height="445"/>
+	<SubTexture name="MIKI SAD UP0001" x="806" y="2122" width="407" height="445"/>
+	<SubTexture name="MIKI SAD UP0002" x="1213" y="2122" width="407" height="442" frameX="0" frameY="-3" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0003" x="1213" y="2122" width="407" height="442" frameX="0" frameY="-3" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0004" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0005" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0006" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0007" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0008" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+	<SubTexture name="MIKI SAD UP0009" x="1620" y="2122" width="407" height="441" frameX="0" frameY="-4" frameWidth="407" frameHeight="445"/>
+</TextureAtlas>
