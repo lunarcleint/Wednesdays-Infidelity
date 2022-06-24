@@ -222,6 +222,7 @@ class Paths
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		returnAsset.persist = true;
 		return returnAsset;
 	}
 
@@ -289,6 +290,7 @@ class Paths
 			if (!currentTrackedAssets.exists(path))
 			{
 				var newGraphic:FlxGraphic = FlxG.bitmap.add(path, false, path);
+				newGraphic.persist = true;
 				currentTrackedAssets.set(path, newGraphic);
 			}
 			localTrackedAssets.push(path);

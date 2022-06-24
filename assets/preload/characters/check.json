@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "unchecked",
+			"fps": 22,
+			"name": "checkbox0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "unchecking",
+			"fps": 22,
+			"name": "checkbox anim reverse",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "checking",
+			"fps": 22,
+			"name": "checkbox anim0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "checked",
+			"fps": 22,
+			"name": "checkbox finish",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "checkboxanim",
+	"position": [
+		-370,
+		-60
+	],
+	"healthicon": "cheese",
+	"flip_x": false,
+	"healthbar_colors": [
+		76,
+		70,
+		63
+	],
+	"camera_position": [
+		50,
+		50
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.8
+}

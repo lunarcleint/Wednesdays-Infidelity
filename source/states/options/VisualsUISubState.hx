@@ -46,15 +46,6 @@ class VisualsUISubState extends BaseOptionsMenu
 			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
 		addOption(option);
 
-		var option:Option = new Option('Flashing Lights', "Uncheck this if you're sensitive to flashing lights!", 'flashing', 'bool', true);
-		addOption(option);
-
-		var option:Option = new Option('Screen Shake', "Uncheck this if you're sensitive to Screen Shaking!", 'shake', 'bool', true);
-		addOption(option);
-
-		var option:Option = new Option('Shaders', "Uncheck this if you don't want Shaders!", 'shaders', 'bool', true);
-		addOption(option);
-
 		var option:Option = new Option('Camera Zooms', "If unchecked, the camera won't zoom in on a beat hit.", 'camZooms', 'bool', true);
 		addOption(option);
 

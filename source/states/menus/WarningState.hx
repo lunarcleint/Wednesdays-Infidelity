@@ -1,15 +1,17 @@
 package states.menus;
 
 import data.ClientPrefs;
-import data.Highscore;
+import flixel.FlxCamera;
 import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.FlxSubState;
-import flixel.addons.editors.tiled.TiledTile;
-import flixel.addons.transition.FlxTransitionableState;
+import flixel.FlxObject;
+import flixel.FlxState;
 import flixel.effects.FlxFlicker;
+import flixel.graphics.FlxGraphic;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.math.FlxMath;
+import flixel.math.FlxPoint;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
@@ -17,18 +19,14 @@ import gameObjects.Alphabet;
 import gameObjects.AttachedText;
 import gameObjects.CheckboxThingie;
 import gameObjects.Option;
-import input.PlayerSettings;
-import lime.app.Application;
 import openfl.Lib;
-import util.Discord.DiscordClient;
+import util.CoolUtil;
 
-class WarningState extends MusicBeatState
+class WarningState extends FlxState
 {
-	public static var leftState:Bool = false;
+	private var canMove:Bool = false;
 
-	var warnText:FlxText;
-	var warnImage:FlxSprite;
-
+	private var warnText:FlxText;
 	private var curOption:Option = null;
 	private var curSelected:Int = 0;
 	private var optionsArray:Array<Option>;
@@ -37,41 +35,82 @@ class WarningState extends MusicBeatState
 	private var checkboxGroup:FlxTypedGroup<CheckboxThingie>;
 	private var grpTexts:FlxTypedGroup<AttachedText>;
 
+	private var camFollow:FlxPoint;
+	private var camFollowPos:FlxObject;
+
+	private var camGame:FlxCamera;
+	private var camHUD:FlxCamera;
+
+	private var optionTitle:Alphabet;
+	private var warnTitle:FlxText;
+	private var infoTexts:Array<FlxText> = [];
+
 	override function create()
 	{
 		super.create();
 
+		if (ClientPrefs.doNotShowWarnings)
+		{
+			FlxG.switchState(new TitleState());
+
+			return;
+		}
+
 		Lib.application.window.title = "Wednesday's Infidelity - WARNING";
 
-		warnImage = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre', 'preload'));
-		warnImage.antialiasing = ClientPrefs.globalAntialiasing;
-		warnImage.updateHitbox();
-		warnImage.screenCenter(X);
-		warnImage.alpha = 0.2;
-		add(warnImage);
+		FlxGraphic.defaultPersist = false;
 
-		var warnTitle = new Alphabet(0, 40, "Warning!", true, false, 0, 1.175);
-		warnTitle.screenCenter(X);
-		for (letter in warnTitle.lettersArray)
-		{
-			letter.antialiasing = true;
-		}
-		add(warnTitle);
+		camGame = new FlxCamera();
 
-		warnText = new FlxText(0, 0, FlxG.width, "This mod contains Flashing Lights, Loud Effects, and Screen Shake.
-			 Press Select Your Options 
-			"
-			+ "\n
-			\n\n
+		camHUD = new FlxCamera();
+		camHUD.bgColor.alpha = 0;
 
-			
-			Press SPACE to continue.", 21);
+		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camHUD);
 
-		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		warnText.screenCenter(XY);
-		warnText.y += 40;
-		warnText.x += 4;
-		add(warnText);
+		camFollow = new FlxPoint((FlxG.width / 2), (FlxG.height / 2));
+		camFollowPos = new FlxObject((FlxG.width / 2), (FlxG.height / 2), 1, 1);
+
+		FlxG.camera.follow(camFollowPos, LOCKON, 1);
+		FlxG.camera.focusOn(camFollow);
+
+		addInfoTexts();
+
+		FlxTween.tween(warnTitle, {y: 140}, 1, {
+			ease: FlxEase.backOut,
+			startDelay: 0,
+			onComplete: function(twn:FlxTween)
+			{
+				FlxTween.color(warnTitle, 1, FlxColor.WHITE, FlxColor.YELLOW, {type: PINGPONG});
+				FlxTween.tween(warnText, {y: 460}, 1, {
+					startDelay: 0.5,
+					ease: FlxEase.backOut,
+					onComplete: function(twn:FlxTween)
+					{
+						FlxTween.tween(warnTitle, {x: (FlxG.width / 3) - 160, y: 100 - 55, size: 120}, 1, {startDelay: 0.1, ease: FlxEase.circInOut});
+
+						FlxTween.tween(warnText, {
+							x: 560,
+							y: 230 - 55,
+							size: 30
+						}, 1, {
+							startDelay: 0.1,
+							ease: FlxEase.circInOut
+						});
+
+						new FlxTimer().start(0.4, function(tmr:FlxTimer)
+						{
+							warnText.fieldWidth = 700;
+
+							new FlxTimer().start(0.3, function(tmr:FlxTimer)
+							{
+								tweenOptions();
+							});
+						});
+					}
+				});
+			}
+		});
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -82,71 +121,141 @@ class WarningState extends MusicBeatState
 		checkboxGroup = new FlxTypedGroup<CheckboxThingie>();
 		add(checkboxGroup);
 
-		var option:Option = new Option('Flashing Lights', "Uncheck this if you're sensitive to flashing lights!", 'flashing', 'bool', true);
+		var option:Option = new Option('Do Not Show Again', "", 'doNotShowWarnings', 'bool', false);
 		addOption(option);
 
-		var option:Option = new Option('Screen Shake', "Uncheck this if you're sensitive to Screen Shaking!", 'shake', 'bool', true);
+		var option:Option = new Option('Flashing Lights', "", 'flashing', 'bool', true);
 		addOption(option);
 
-		var option:Option = new Option('Shaders', "Uncheck this if you don't want Shaders!", 'shaders', 'bool', true);
+		var option:Option = new Option('Screen Shake', "", 'shake', 'bool', true);
+		addOption(option);
+
+		var option:Option = new Option('Shaders', "", 'shaders', 'bool', true);
 		addOption(option);
 
 		genOptions();
-
-		// FlxG.camera.zoom = 0.3;
 	}
 
-	public function addOption(option:Option)
+	function addOption(option:Option)
 	{
 		if (optionsArray == null || optionsArray.length < 1)
 			optionsArray = [];
 		optionsArray.push(option);
 	}
 
+	function addInfoTexts()
+	{
+		warnTitle = new FlxText(0, -340, FlxG.width, "WARNING", 21);
+		warnTitle.setFormat("VCR OSD Mono", 200, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		warnTitle.cameras = [camHUD];
+		add(warnTitle);
+
+		warnText = new FlxText(0, 850, FlxG.width, "This mod contains Flashing Lights, Loud Effects, and Screen Shake.", 21);
+		warnText.setFormat("VCR OSD Mono", 50, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		warnText.applyMarkup("This mod contains $Flashing Lights$, $Loud Effects$, and $Screen Shake$.",
+			[new FlxTextFormatMarkerPair(new FlxTextFormat(FlxColor.RED), "$")]);
+		warnText.cameras = [camHUD];
+		add(warnText);
+
+		var text:FlxText = new FlxText(560 + 700, 400, 700, "", 21);
+		text.setFormat("VCR OSD Mono", 30, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		text.applyMarkup("It is reccomended to check the full $options$ menu.", [new FlxTextFormatMarkerPair(new FlxTextFormat(FlxColor.YELLOW), "$")]);
+		text.cameras = [camHUD];
+		add(text);
+
+		infoTexts.push(text);
+
+		var text:FlxText = new FlxText(560 + 700, 650, 700, "", 21);
+		text.setFormat("VCR OSD Mono", 30, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		text.applyMarkup("Press $SPACE$ to continue.", [new FlxTextFormatMarkerPair(new FlxTextFormat(FlxColor.YELLOW), "$")]);
+		text.cameras = [camHUD];
+		add(text);
+
+		infoTexts.push(text);
+	}
+
+	function tweenInfoTexts()
+	{
+		for (text in infoTexts)
+		{
+			FlxTween.tween(text, {x: text.x - 700}, 1, {startDelay: 0.5 + (0.3 * infoTexts.indexOf(text)), ease: FlxEase.backOut});
+		}
+	}
+
 	function genOptions()
 	{
+		optionTitle = new Alphabet(0, 0, "accessibility", true, false, 0, 0.9);
+		optionTitle.isMenuItem = false;
+		optionTitle.alpha = 0.5;
+		optionTitle.x = 50;
+		optionTitle.y = -100;
+		optionTitle.cameras = [camGame];
+		add(optionTitle);
+
 		for (i in 0...optionsArray.length)
 		{
-			var optionText:Alphabet = new Alphabet(0, 0, optionsArray[i].name, true, false, 0, 0.6);
+			var optionText:Alphabet = new Alphabet(0, 0, optionsArray[i].name, true, false, 0, 0.5);
 			optionText.isMenuItem = false;
-			optionText.x += 225 + (600 * i);
-			/*optionText.forceX = 300;
-				optionText.yMult = 90; */
-			optionText.xAdd = 200;
-			// optionText.yAdd = 100;
-			optionText.targetY = i;
-			optionText.screenCenter(Y);
-			optionText.y += 1;
-			if (i >= 2)
-			{
-				optionText.y += 140;
-				optionText.screenCenter(X);
-			}
+			optionText.cameras = [camGame];
+
+			optionText.y = 250 + (150 * i);
+			optionText.x = 215 + (30 * i);
+
+			optionText.x -= 700;
+
 			grpOptions.add(optionText);
 
-			if (optionsArray[i].type == 'bool')
+			var checkbox:CheckboxThingie = new CheckboxThingie(optionText.x - 105, optionText.y, optionsArray[i].getValue());
+			checkbox.sprTracker = optionText;
+			checkbox.scale.set(0.8, 0.8);
+			checkbox.updateHitbox();
+			checkbox.ID = i;
+			checkbox.cameras = [camGame];
+
+			@:privateAccess
+			checkbox.animationFinished(checkbox.daValue ? 'checking' : 'unchecking');
+
+			checkbox.offsetY = -65;
+			checkbox.offsetX = -5;
+
+			switch (i)
 			{
-				var checkbox:CheckboxThingie = new CheckboxThingie(optionText.x - 105, optionText.y, optionsArray[i].getValue() == true);
-				checkbox.sprTracker = optionText;
-				checkbox.offsetY = -60;
-				checkbox.ID = i;
-				checkboxGroup.add(checkbox);
+				case 0:
+					checkbox.offsetX += 1;
+				case 1:
+					checkbox.offsetX -= 3;
+				case 2 | 3:
+					checkbox.offsetX -= 1;
 			}
-			else
-			{
-				optionText.x -= 80;
-				optionText.xAdd -= 80;
-				var valueText:AttachedText = new AttachedText('' + optionsArray[i].getValue(), optionText.width + 80);
-				valueText.sprTracker = optionText;
-				valueText.copyAlpha = true;
-				valueText.ID = i;
-				grpTexts.add(valueText);
-				optionsArray[i].setChild(valueText);
-			}
+
+			checkboxGroup.add(checkbox);
 		}
 
 		changeSelection();
 		reloadCheckboxes();
+	}
+
+	function tweenOptions()
+	{
+		FlxTween.tween(optionTitle, {y: 90}, 0.9, {
+			ease: FlxEase.circInOut,
+			onComplete: function(twn:FlxTween)
+			{
+				tweenInfoTexts();
+			}
+		});
+
+		for (option in grpOptions)
+		{
+			FlxTween.tween(option, {x: option.x + 700}, 0.7, {
+				ease: FlxEase.backOut,
+				onComplete: function(twn:FlxTween)
+				{
+					canMove = true;
+				},
+				startDelay: 0.35 * grpOptions.members.indexOf(option)
+			});
+		}
 	}
 
 	function changeSelection(change:Int = 0)
@@ -157,34 +266,25 @@ class WarningState extends MusicBeatState
 		if (curSelected >= optionsArray.length)
 			curSelected = 0;
 
-		if (curSelected < 2)
-		{
-			lastTop = curSelected;
-		}
-
-		var bullShit:Int = 0;
-
 		for (item in grpOptions.members)
 		{
-			item.targetY = bullShit - curSelected;
-			bullShit++;
+			item.alpha = 0.5;
 
-			item.alpha = 0.6;
-			if (item.targetY == 0)
-			{
-				item.alpha = 1;
-			}
+			if (grpOptions.members.indexOf(item) == curSelected)
+				item.alpha = 0.9;
 		}
 		for (text in grpTexts)
 		{
-			text.alpha = 0.6;
+			text.alpha = 0.5;
 			if (text.ID == curSelected)
 			{
-				text.alpha = 1;
+				text.alpha = 0.9;
 			}
 		}
 
 		curOption = optionsArray[curSelected];
+
+		camFollow.set((FlxG.width / 2) + (2 * curSelected), (FlxG.height / 2) + (100 * curSelected));
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 	}
@@ -197,88 +297,66 @@ class WarningState extends MusicBeatState
 		}
 	}
 
-	public var lastTop:Int = 0; // make the menu feel good
-
 	override function update(elapsed:Float)
 	{
-		if (!leftState)
+		super.update(elapsed);
+
+		if (camFollow != null && camFollowPos != null)
 		{
-			var usesCheckbox = true;
-			if (curOption.type != 'bool')
-			{
-				usesCheckbox = false;
-			}
+			var lerpVal:Float = CoolUtil.boundTo(elapsed * 10, 0, 1);
+			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+		}
 
-			if (usesCheckbox)
-			{
-				if (FlxG.keys.justPressed.ENTER)
-				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					curOption.setValue((curOption.getValue() == true) ? false : true);
-					curOption.change();
-					reloadCheckboxes();
-				}
-			}
-
-			if (FlxG.keys.justPressed.LEFT)
-			{
-				changeSelection(-1);
-			}
-
-			if (FlxG.keys.justPressed.RIGHT)
-			{
-				changeSelection(1);
-			}
-
+		if (canMove)
+		{
 			if (FlxG.keys.justPressed.UP)
-			{
-				if (curSelected < 2)
-				{
-					curSelected = 2;
-					changeSelection();
-				}
-				else
-				{
-					curSelected = lastTop;
-					changeSelection();
-				}
-			}
+				changeSelection(-1);
 
 			if (FlxG.keys.justPressed.DOWN)
+				changeSelection(1);
+
+			if (FlxG.keys.justPressed.ENTER)
 			{
-				if (curSelected >= 2)
-				{
-					curSelected = lastTop;
-					changeSelection();
-				}
-				else
-				{
-					curSelected = 2;
-					changeSelection();
-				}
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+				curOption.setValue((curOption.getValue() == true) ? false : true);
+				curOption.change();
+				reloadCheckboxes();
 			}
 
 			if (FlxG.keys.justPressed.SPACE)
 			{
-				leftState = true;
-				ClientPrefs.saveSettings();
+				canMove = false;
+
+				FlxTween.tween(camGame, {alpha: 0}, 1);
+				FlxTween.tween(camHUD, {alpha: 0}, 1);
+
 				FlxG.sound.play(Paths.sound('confirmMenu'));
-				FlxTween.tween(warnImage, {alpha: 0}, 1, {
-					onComplete: function(twn:FlxTween)
+
+				FlxFlicker.flicker(infoTexts[1]);
+
+				new FlxTimer().start(1.2, function(tmr:FlxTimer)
+				{
+					for (member in members)
 					{
-						warnImage.visible = false;
+						remove(member);
+						FlxTween.cancelTweensOf(member);
+						member.destroy();
+						member = null;
 					}
-				});
-				FlxTween.tween(FlxG.camera, {alpha: 0}, 1, {
-					onComplete: function(twn:FlxTween)
-					{
-						warnImage.visible = false;
-						Lib.application.window.title = "Wednesday's Infidelity";
-						MusicBeatState.switchState(new TitleState());
-					}
+
+					FlxTween.globalManager.clear();
+
+					FlxG.bitmap.clearCache();
+
+					FlxGraphic.defaultPersist = true;
+
+					Paths.clearStoredMemory(true);
+
+					ClientPrefs.saveSettings();
+
+					FlxG.switchState(new TitleState());
 				});
 			}
 		}
-		super.update(elapsed);
 	}
 }

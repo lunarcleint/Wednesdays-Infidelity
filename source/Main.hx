@@ -92,7 +92,6 @@ class Main extends Sprite
 		initialState = WarningState;
 		#end
 
-		ClientPrefs.loadDefaultKeys();
 		// fuck you, persistent caching stays ON during sex
 		FlxGraphic.defaultPersist = true;
 		// the reason for this is we're going to be handling our own cache smartly
@@ -105,7 +104,7 @@ class Main extends Sprite
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		if (fpsVar != null)
 		{
-			fpsVar.visible = ClientPrefs.showFPS;
+			fpsVar.visible = false;
 		}
 		#end
 

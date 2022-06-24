@@ -8,6 +8,7 @@ import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import flixel.graphics.FlxGraphic;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
@@ -78,6 +79,8 @@ class FreeplayState extends MusicBeatState
 	{
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+
+		FlxGraphic.defaultPersist = false;
 
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -716,6 +719,21 @@ class FreeplayState extends MusicBeatState
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
 		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
 		diffText.x -= diffText.width / 2;
+	}
+
+	public override function destroy()
+	{
+		super.destroy();
+
+		FlxG.bitmap.clearCache();
+
+		FlxGraphic.defaultPersist = true;
+
+		Paths.clearStoredMemory(true);
+
+		#if cpp
+		cpp.NativeGc.run(true);
+		#end
 	}
 }
 

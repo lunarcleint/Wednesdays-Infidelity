@@ -147,10 +147,11 @@ function onStepHit()
 			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 40, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "DIE.";
 			PlayState.cutsceneText.size = 36;
+			PlayState.camZooming = false;
 			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.2, {
-				ease: FlxEase.quadInOut,
 				onComplete: function(twn)
 				{
+					FlxG.camera.zoom = 1.3;
 					new FlxTimer().start(0.25, function(tmr)
 					{
 						FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.2, {

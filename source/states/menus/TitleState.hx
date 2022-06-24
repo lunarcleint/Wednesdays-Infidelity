@@ -12,6 +12,7 @@ import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
+import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
@@ -64,7 +65,15 @@ class TitleState extends MusicBeatState
 	{
 		// DiscordClient.changePresence("In the Menus", null);
 
+		Main.fpsVar.visible = ClientPrefs.showFPS;
+
+		Main.fpsVar.alpha = 0;
+
+		FlxTween.tween(Main.fpsVar, {alpha: 1}, 1);
+
 		Lib.application.window.title = "Wednesday's Infidelity - Title";
+
+		FlxGraphic.defaultPersist = true;
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 

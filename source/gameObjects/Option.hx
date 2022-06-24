@@ -53,6 +53,8 @@ class Option
 	public var description:String = '';
 	public var name:String = 'Unknown';
 
+	public var opposite:Bool = false;
+
 	public function new(name:String, description:String = '', variable:String, type:String = 'bool', defaultValue:Dynamic = 'null variable value',
 			?options:Array<String> = null)
 	{
@@ -117,12 +119,17 @@ class Option
 
 	public function getValue():Dynamic
 	{
-		return Reflect.getProperty(ClientPrefs, variable);
+		var val:Dynamic = Reflect.getProperty(ClientPrefs, variable);
+
+		if (type == 'bool')
+			return opposite ? !val : val;
+		else
+			return val;
 	}
 
 	public function setValue(value:Dynamic)
 	{
-		Reflect.setProperty(ClientPrefs, variable, value);
+		Reflect.setProperty(ClientPrefs, variable, opposite ? !value : value);
 	}
 
 	public function setChild(child:Alphabet)

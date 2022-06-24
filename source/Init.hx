@@ -3,8 +3,10 @@ package;
 import data.*;
 import flixel.FlxG;
 import flixel.FlxState;
+import flixel.graphics.FlxGraphic;
 import input.PlayerSettings;
 import lime.app.Application;
+import openfl.Lib;
 import states.menus.StoryMenuState;
 import states.menus.TitleState;
 import util.Discord.DiscordClient;
@@ -20,7 +22,10 @@ class Init extends FlxState
 	{
 		super.create();
 
+		FlxGraphic.defaultPersist = true;
+
 		#if cpp
+		cpp.NativeGc.enable(true);
 		cpp.NativeGc.run(true);
 		#end
 
@@ -70,6 +75,10 @@ class Init extends FlxState
 			DiscordClient.shutdown();
 		});
 		#end
+
+		Lib.application.window.focus();
+
+		ClientPrefs.loadDefaultKeys();
 
 		FlxG.switchState(Type.createInstance(Main.initialState, []));
 	}
