@@ -3,76 +3,76 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
+				-5,
 				0
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "SATAN IDLE",
+			"name": "MAD MIKI IDLE",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				280,
-				-110
+				-1,
+				13
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "SATAN LEFT",
+			"name": "MAD MIKI LEFT",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				150,
-				-180
+				2,
+				-24
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "SATAN DOWN",
+			"name": "MAD MIKI DOWN",
 			"indices": []
 		},
 		{
-			"offsets": [
-				160,
-				60
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-43,
+				45
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "SATAN UP"
+			"fps": 24,
+			"name": "MAD MIKI UP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-40,
-				-170
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-33,
+				38
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SATAN RIGHT"
+			"fps": 24,
+			"name": "MAD MIKI RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/SATAN CHAD",
+	"image": "characters/MIKI_PRISIONERO",
 	"position": [
-		-270,
-		-270
+		0,
+		350
 	],
-	"healthicon": "satan",
-	"flip_x": false,
+	"healthicon": "mouse",
+	"flip_x": true,
 	"healthbar_colors": [
-		151,
-		123,
-		122
+		70,
+		73,
+		69
 	],
 	"camera_position": [
 		0,
 		0
 	],
-	"sing_duration": 4.8,
+	"sing_duration": 4,
 	"scale": 1
 }

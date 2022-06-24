@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LEAKER 1.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="LEAKER DOWN0000" x="0" y="0" width="388" height="291" frameX="-3" frameY="-40" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0001" x="0" y="0" width="388" height="291" frameX="-3" frameY="-40" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0002" x="388" y="0" width="388" height="287" frameX="-1" frameY="-45" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0003" x="388" y="0" width="388" height="287" frameX="-1" frameY="-45" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0004" x="776" y="0" width="386" height="285" frameX="-1" frameY="-46" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0005" x="1162" y="0" width="386" height="285" frameX="-1" frameY="-46" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0006" x="1162" y="0" width="386" height="285" frameX="-1" frameY="-46" frameWidth="430" frameHeight="336"/>
+	<SubTexture name="LEAKER DOWN0007" x="1548" y="0" width="430" height="336"/>
+	<SubTexture name="LEAKER IDLE0000" x="1978" y="0" width="442" height="356" frameX="0" frameY="-33" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0001" x="2420" y="0" width="442" height="349" frameX="0" frameY="-41" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0002" x="2862" y="0" width="405" height="341" frameX="-29" frameY="-49" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0003" x="2862" y="0" width="405" height="341" frameX="-29" frameY="-49" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0004" x="3267" y="0" width="422" height="376" frameX="-12" frameY="-12" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0005" x="3267" y="0" width="422" height="376" frameX="-12" frameY="-12" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0006" x="0" y="376" width="419" height="387" frameX="-11" frameY="-1" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0007" x="0" y="376" width="419" height="387" frameX="-11" frameY="-1" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0008" x="419" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0009" x="419" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0010" x="839" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0011" x="839" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0012" x="1259" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0013" x="1259" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0014" x="1259" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER IDLE0015" x="1259" y="376" width="420" height="388" frameX="-10" frameY="0" frameWidth="442" frameHeight="390"/>
+	<SubTexture name="LEAKER LEFT0000" x="1679" y="376" width="432" height="397" frameX="0" frameY="-2" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0001" x="1679" y="376" width="432" height="397" frameX="0" frameY="-2" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0002" x="2111" y="376" width="427" height="398" frameX="-3" frameY="-1" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0003" x="2111" y="376" width="427" height="398" frameX="-3" frameY="-1" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0004" x="2538" y="376" width="426" height="400" frameX="0" frameY="0" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0005" x="2964" y="376" width="426" height="400" frameX="0" frameY="0" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0006" x="2964" y="376" width="426" height="400" frameX="0" frameY="0" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0007" x="3390" y="376" width="393" height="375" frameX="-31" frameY="-25" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER LEFT0008" x="0" y="776" width="470" height="367" frameX="-47" frameY="-33" frameWidth="517" frameHeight="400"/>
+	<SubTexture name="LEAKER RIGHT0000" x="470" y="776" width="401" height="346" frameX="-124" frameY="-1" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0001" x="470" y="776" width="401" height="346" frameX="-124" frameY="-1" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0002" x="871" y="776" width="394" height="347" frameX="-140" frameY="-1" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0003" x="871" y="776" width="394" height="347" frameX="-140" frameY="-1" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0004" x="1265" y="776" width="396" height="348" frameX="-141" frameY="0" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0005" x="1661" y="776" width="396" height="348" frameX="-141" frameY="0" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0006" x="1661" y="776" width="396" height="348" frameX="-141" frameY="0" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0007" x="2057" y="776" width="475" height="350" frameX="-56" frameY="-10" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER RIGHT0008" x="2532" y="776" width="499" height="341" frameX="0" frameY="-19" frameWidth="537" frameHeight="360"/>
+	<SubTexture name="LEAKER UP0000" x="3031" y="776" width="369" height="459" frameX="-9" frameY="-19" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0001" x="3031" y="776" width="369" height="459" frameX="-9" frameY="-19" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0002" x="3400" y="776" width="370" height="478" frameX="-1" frameY="-1" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0003" x="3400" y="776" width="370" height="478" frameX="-1" frameY="-1" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0004" x="0" y="1254" width="368" height="480" frameX="0" frameY="0" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0005" x="368" y="1254" width="368" height="480" frameX="0" frameY="0" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0006" x="368" y="1254" width="368" height="480" frameX="0" frameY="0" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0007" x="736" y="1254" width="295" height="465" frameX="0" frameY="-15" frameWidth="378" frameHeight="480"/>
+	<SubTexture name="LEAKER UP0008" x="1031" y="1254" width="264" height="448" frameX="-1" frameY="-32" frameWidth="378" frameHeight="480"/>
+</TextureAtlas>

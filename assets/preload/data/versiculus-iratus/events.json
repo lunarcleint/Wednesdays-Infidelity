@@ -1,0 +1,54 @@
+{
+	"song": {
+		"speed": 2.6,
+		"stage": "hell",
+		"player1": "mouse-prison",
+		"player2": "sad-demon",
+		"player3": null,
+		"events": [
+			[
+				40216.2162162162,
+				[
+					[
+						"Play Animation",
+						"evil",
+						"dad"
+					]
+				]
+			],
+			[
+				41509.4594594595,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				41513.5135135135,
+				[
+					[
+						"Change Character",
+						"dad",
+						"satan-chad"
+					],
+					[
+						"Change Character",
+						"bf",
+						"mouse-prison-phase2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 185,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Versiculus Iratus"
+	}
+}

@@ -177,7 +177,7 @@ class PlayState extends MusicBeatState
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
 
-	public var camZooming:Bool = false;
+	public var camZooming:Bool = true; // why is it false if tutorial isnt a thing anymore
 
 	private var curSong:String = "";
 
