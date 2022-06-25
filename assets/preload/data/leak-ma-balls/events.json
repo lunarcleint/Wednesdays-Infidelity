@@ -1,0 +1,69 @@
+{
+	"song": {
+		"speed": 3.2,
+		"stage": "stageLeakers",
+		"player1": "leaker1",
+		"player2": "mouse-smile",
+		"player3": null,
+		"events": [
+			[
+				20571.4285714286,
+				[
+					[
+						"Flash Black",
+						"",
+						""
+					]
+				]
+			],
+			[
+				34285.7142857143,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				102857.142857143,
+				[
+					[
+						"Flash Black",
+						"",
+						""
+					]
+				]
+			],
+			[
+				116571.428571429,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				157714.285714286,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "leaker2",
+		"bpm": 140,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "leak-ma-balls"
+	}
+}

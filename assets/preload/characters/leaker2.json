@@ -3,67 +3,67 @@
 		{
 			"offsets": [
 				-5,
-				0
+				2
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "LEAKER IDLE"
+			"name": "LEAKER 2 IDLE"
 		},
 		{
 			"offsets": [
-				-10,
-				-50
+				-31,
+				-7
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "LEAKER DOWN"
+			"name": "leaker 2 DOWN0"
 		},
 		{
 			"offsets": [
-				-79,
-				97
+				81,
+				247
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "LEAKER UP"
+			"name": "LEAKER 2 UP"
 		},
 		{
 			"loop": false,
 			"offsets": [
-				39,
-				13
+				299,
+				3
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "LEAKER LEFT",
+			"name": "LEAKER 2 LEFT",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				10,
-				-34
+				-110,
+				-44
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "LEAKER RIGHT",
+			"name": "LEAKER 2 RIGHT",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/mwehehehe/LEAKER_1",
+	"image": "characters/mwehehehe/LEAKER_2",
 	"position": [
-		0,
-		370
+		10,
+		120
 	],
 	"healthicon": "bf",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		49,
 		176,
