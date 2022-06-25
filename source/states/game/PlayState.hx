@@ -284,6 +284,8 @@ class PlayState extends MusicBeatState
 
 	var chedderguybg:BGSprite;
 
+	var stageWhite:FlxSprite;
+
 	// GF Amongus / Sus
 	var gfSus:BGSprite;
 
@@ -406,6 +408,13 @@ class PlayState extends MusicBeatState
 			bfPos: [952.9, 550], // xx2
 			bfZoom: 1, // mushitsection == true
 			dadZoom: 0.8, // mushitsection == false
+		},
+		"stageLeakers" => {
+			dadPos: [420.95, 513], // xx
+			bfPos: [952.9, 550], // xx2
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.8, // mushitsection == false
+			gfZoom: 0.8 // gfsection == true
 		},
 	];
 
@@ -642,7 +651,7 @@ class PlayState extends MusicBeatState
 				add(blackFuck);
 
 			case 'stageMokey': // Song Kriman't
-				var stageWhite:FlxSprite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 				stageWhite.scale.set(5, 5);
 				stageWhite.updateHitbox();
 				add(stageWhite);
@@ -652,6 +661,12 @@ class PlayState extends MusicBeatState
 				blackFuck.alpha = 0;
 				blackFuck.screenCenter(X);
 				add(blackFuck);
+
+			case 'stageLeakers': // Song Leak ma balls
+				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+				stageWhite.scale.set(5, 5);
+				stageWhite.updateHitbox();
+				add(stageWhite);
 
 			case 'bobux': // Week Suicide
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
