@@ -34,7 +34,14 @@ using StringTools;
 
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+	var options:Array<String> = [
+		'Controls',
+		'Adjust Delay and Combo',
+		'Graphics',
+		'Visuals and UI',
+		'Gameplay',
+		'Accessibility'
+	];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 
 	private static var curSelected:Int = 0;
@@ -54,6 +61,8 @@ class OptionsState extends MusicBeatState
 				openSubState(new GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
 				LoadingState.loadAndSwitchState(new NoteOffsetState());
+			case 'Accessibility':
+				openSubState(new AccessibilitySubState());
 		}
 		Lib.application.window.title = "Wednesday's Infidelity - Options - " + options[curSelected];
 	}
