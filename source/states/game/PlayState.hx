@@ -1067,7 +1067,11 @@ class PlayState extends MusicBeatState
 						fadeIn(1);
 
 					case 'dejection':
-						fadeIn(1);
+						blackFuck = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+						blackFuck.cameras = [camOther];
+						add(blackFuck);
+
+						startAndEnd();
 
 					case 'hellhole':
 						fadeIn(0.6);
@@ -1108,6 +1112,12 @@ class PlayState extends MusicBeatState
 					addShaderToCamera("camHUD", chrom);
 					addShaderToCamera("camGame", chrom);
 				case 'wistfulness':
+					distort = new util.Shaders.DistortionEffect(1, 1);
+
+					distort.shader.working.value = [false];
+
+					addShaderToCamera('camGame', distort);
+				case 'dejection':
 					distort = new util.Shaders.DistortionEffect(1, 1);
 
 					distort.shader.working.value = [false];
@@ -2684,6 +2694,9 @@ class PlayState extends MusicBeatState
 
 			persistentUpdate = false;
 			persistentDraw = false;
+
+			clearShaders();
+
 			openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0],
 				boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
 
@@ -4683,9 +4696,7 @@ class PlayState extends MusicBeatState
 		lastStepHit = curStep;
 	}
 
-	var lightningStrikeBeat:Int = 0;
-	var lightningOffset:Int = 8;
-	var lastBeatHit:Int = -1;
+	private var lastBeatHit:Int;
 
 	override function beatHit()
 	{
@@ -4999,5 +5010,16 @@ class PlayState extends MusicBeatState
 				startAndEnd();
 			}
 		});
+	}
+
+	function clearShaders()
+	{
+		camGame.setFilters([]);
+
+		camGameShaders = [];
+
+		camHUD.setFilters([]);
+
+		camHUDShaders = [];
 	}
 }

@@ -43,6 +43,26 @@
 				]
 			],
 			[
+				70285.7142857143,
+				[
+					[
+						"Blammed Lights",
+						"6",
+						""
+					]
+				]
+			],
+			[
+				70285.7142857143,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
 				71142.8571428572,
 				[
 					[
@@ -309,6 +329,16 @@
 						"Screen Shake",
 						"",
 						"0.1, 0.3"
+					]
+				]
+			],
+			[
+				94285.7142857143,
+				[
+					[
+						"Flash White",
+						"",
+						""
 					]
 				]
 			],
@@ -873,6 +903,16 @@
 				]
 			],
 			[
+				130285.714285714,
+				[
+					[
+						"Flash Black",
+						"",
+						""
+					]
+				]
+			],
+			[
 				130607.142857143,
 				[
 					[
@@ -1068,6 +1108,16 @@
 					[
 						"Screen Shake",
 						"0.1, 0.3",
+						""
+					]
+				]
+			],
+			[
+				142285.714285714,
+				[
+					[
+						"Flash White",
+						"",
 						""
 					]
 				]
@@ -1868,9 +1918,9 @@
 						0
 					]
 				],
-				"mustHitSection": false,
 				"changeBPM": true,
-				"bpm": 160
+				"bpm": 160,
+				"mustHitSection": false
 			},
 			{
 				"lengthInSteps": 16,
@@ -5468,6 +5518,56 @@
 				"mustHitSection": true,
 				"changeBPM": false,
 				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
 			},
 			{
 				"sectionNotes": [],
