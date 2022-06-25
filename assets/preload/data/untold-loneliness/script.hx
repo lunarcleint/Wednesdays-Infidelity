@@ -3,6 +3,7 @@ var stepDev = 0;
 
 function onCreate()
 {
+	PlayState.camZooming = false;
 }
 
 function onStepHit()
