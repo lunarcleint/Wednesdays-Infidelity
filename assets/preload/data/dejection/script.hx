@@ -1,6 +1,13 @@
 var curSection = 0;
 var stepDev = 0;
 
+function onCreate()
+{
+	PlayState.blackFuck = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, fromRGB(0, 0, 0));
+	PlayState.blackFuck.cameras = [PlayState.camOther];
+	PlayState.add(PlayState.blackFuck);
+}
+
 function onStepHit()
 {
 	if (curStep % 16 == 0)

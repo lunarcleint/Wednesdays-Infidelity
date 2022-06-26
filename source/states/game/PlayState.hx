@@ -430,6 +430,8 @@ class PlayState extends MusicBeatState
 
 	var bfsection:Bool = false; // IK MUST HIT SECTION EXIST BUT ITS DELAYED
 
+	var singingTurnsOnCamZoom:Bool = true;
+
 	var followChars:Bool = true;
 	var cameraStageZoom:Bool = true;
 
@@ -1075,18 +1077,8 @@ class PlayState extends MusicBeatState
 			{
 				switch (daSong)
 				{
-					case 'unknown-suffering':
-						fadeIn(0.6);
-
 					case 'wistfulness':
 						fadeIn(1);
-
-					case 'dejection':
-						blackFuck = new FlxSprite().makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-						blackFuck.cameras = [camOther];
-						add(blackFuck);
-
-						startAndEnd();
 
 					case 'hellhole':
 						fadeIn(0.6);
@@ -1275,63 +1267,6 @@ class PlayState extends MusicBeatState
 		}
 		char.x += char.positionArray[0];
 		char.y += char.positionArray[1];
-	}
-
-	public function startVideo(name:String, ?finishedCallback:Void->Void, ?skippable:Bool = false):Void
-	{
-		if (finishedCallback == null)
-			finishedCallback = startAndEnd;
-	#if VIDEOS_ALLOWED
-	var foundFile:Bool = false;
-	var fileName:String = '';
-	#if sys
-	if (FileSystem.exists(fileName))
-	{
-		foundFile = true;
-	}
-	#end
-
-	if (!foundFile)
-	{
-		fileName = Paths.video(name);
-		#if sys
-		if (FileSystem.exists(fileName))
-		{
-		#else
-		if (OpenFlAssets.exists(fileName))
-		{
-		#end
-			foundFile = true;
-		}
-		} if (foundFile)
-		{
-			inCutscene = true;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
-
-			var video = new FlxVideo(fileName, skippable);
-
-			video.finishCallback = function()
-			{
-				if (!endingSong)
-				{
-					remove(bg);
-				}
-				video.destroy();
-				video = null;
-				finishedCallback();
-			}
-			return;
-		}
-		else
-		{
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
-			finishedCallback();
-		}
-		#end
-		finishedCallback();
 	}
 
 	function startAndEnd():Void
@@ -3990,7 +3925,7 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-		if (Paths.formatToSongPath(SONG.song) != 'tutorial' && !note.noAnimation)
+		if (Paths.formatToSongPath(SONG.song) != 'tutorial' && !note.noAnimation && singingTurnsOnCamZoom)
 			camZooming = true;
 
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))
@@ -4985,6 +4920,9 @@ class PlayState extends MusicBeatState
 			script.setVariable("FlxTextBorderStyle", FlxTextBorderStyle);
 			script.setVariable("Paths", Paths);
 			script.setVariable("CENTER", FlxTextAlign.CENTER);
+			script.setVariable("FlxTextFormat", FlxTextFormat);
+			script.setVariable("InputFormatter", InputFormatter);
+			script.setVariable("FlxTextFormatMarkerPair", FlxTextFormatMarkerPair);
 
 			script.runScript(hxdata);
 		}

@@ -51,7 +51,6 @@ function onStepHit()
 
 			PlayState.followChars = true;
 		case 546:
-			PlayState.addCinematicBars(1, 7);
 			PlayState.curCamera.dadZoom = 0.8;
 	}
 }
