@@ -349,6 +349,14 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.8, // mushitsection == false
 			gfZoom: 0.65 // gfsection == true
 		},
+		"fence" => {
+			dadPos: [420.95, 513], // xx
+			bfPos: [952.9, 550], // xx2
+			gfPos: [952.9, 200], // xx3
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.8, // mushitsection == false
+			gfZoom: 0.65 // gfsection == true
+		},
 		"hell" => {
 			dadPos: [420.95, 283], // xx
 			bfPos: [952.9, 370], // xx2
@@ -638,6 +646,11 @@ class PlayState extends MusicBeatState
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				bg.updateHitbox();
 				add(bg);
+			case 'fence': // Oswald Song
+				var bg:BGSprite = new BGSprite('backgrounds/BG_OSWALD', -600, -300, 0.95, 0.95);
+				bg.antialiasing = ClientPrefs.globalAntialiasing;
+				bg.updateHitbox();
+				add(bg);
 			case 'chedder': // Week Chedder
 				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
 				add(chedderguybg);
@@ -758,7 +771,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell' | 'fence': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1360,7 +1373,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
