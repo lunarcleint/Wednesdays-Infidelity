@@ -637,22 +637,22 @@ class PlayState extends MusicBeatState
 				add(stageCurtains);
 
 			case 'vecindario': // Week Suicide
-				var sexi:BGSprite = new BGSprite('backgrounds/VecindarioBG', -600, -200, 0.9, 0.9);
+				var sexi:BGSprite = new BGSprite('backgrounds/VecindarioBG', -600, -200);
 				sexi.antialiasing = ClientPrefs.globalAntialiasing;
 				sexi.updateHitbox();
 				add(sexi);
 			case 'vecindariocover': // Too Slow Encore Song
-				var bg:BGSprite = new BGSprite('backgrounds/BG_MIKICOVER', -600, -200, 0.9, 0.9);
+				var bg:BGSprite = new BGSprite('backgrounds/BG_MIKICOVER', -600, -200);
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				bg.updateHitbox();
 				add(bg);
 			case 'fence': // Oswald Song
-				var bg:BGSprite = new BGSprite('backgrounds/BG_OSWALD', -600, -300, 0.95, 0.95);
+				var bg:BGSprite = new BGSprite('backgrounds/BG_OSWALD', -600, -300);
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				bg.updateHitbox();
 				add(bg);
 			case 'chedder': // Week Chedder
-				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280, 1, 1);
+				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280);
 				add(chedderguybg);
 
 			case 'reefer': // Song Reefer Madness
@@ -684,7 +684,7 @@ class PlayState extends MusicBeatState
 				add(stageWhite);
 
 			case 'bobux': // Week Suicide
-				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200, 0.9, 0.9);
+				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200);
 				nosexi.antialiasing = ClientPrefs.globalAntialiasing;
 				nosexi.updateHitbox();
 				add(nosexi);
