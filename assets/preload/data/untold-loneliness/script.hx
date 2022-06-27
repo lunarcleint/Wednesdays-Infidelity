@@ -149,6 +149,7 @@ function onStepHit()
 			PlayState.cutsceneText.text = "DIE.";
 			PlayState.cutsceneText.size = 36;
 			PlayState.camZooming = false;
+			FlxTween.cancelTweensOf(FlxG.camera);
 			FlxTween.tween(FlxG.camera, {zoom: 1.3}, 0.2, {
 				onComplete: function(twn)
 				{
@@ -236,6 +237,8 @@ function onStepHit()
 		case 1728:
 			PlayState.followChars = true;
 			PlayState.camZooming = true;
+		case 2232:
+			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1.5);
 	}
 }
 
