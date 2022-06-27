@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "smile mouse idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "smile mouse idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				13,
 				12
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "smile mouse up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "smile mouse up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-11,
 				34
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "smile mouse rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "smile mouse rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				33,
 				60
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "smile mouse left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "smile mouse left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-27,
 				-139
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "smile mouse down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "smile mouse down"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Mouse_Phase2",
 	"position": [
 		-205,
-		45
+		25
 	],
 	"healthicon": "dad",
 	"flip_x": false,

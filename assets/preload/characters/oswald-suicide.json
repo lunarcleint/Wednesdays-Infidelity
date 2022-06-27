@@ -1,77 +1,77 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "SUICIDE OSWALD IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SUICIDE OSWALD IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				131,
 				83
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "SUICIDE OSWALD LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SUICIDE OSWALD LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-6,
 				40
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "SUICIDE OSWALD DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SUICIDE OSWALD DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-146,
 				170
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "SUICIDE OSWALD UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "SUICIDE OSWALD UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-37,
 				-50
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "SUICIDE OSWALD RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SUICIDE OSWALD RIGHT"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				11,
 				32
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "scream",
-			"loop": false,
-			"name": "SUICIDE OSWALD SCREAM"
+			"fps": 24,
+			"name": "SUICIDE OSWALD SCREAM",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/OSWALD_SUICIDE",
 	"position": [
-		-300,
-		90
+		-270,
+		140
 	],
 	"healthicon": "bf-suicide",
 	"flip_x": false,
