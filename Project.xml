@@ -25,7 +25,7 @@
 		
 		COMMENT IN FINAL BUILD!!!
 	-->
-	<define name="PRIVATE_BUILD"/>  
+	<define name="PRIVATE_BUILD"/> 
 
 	<define name="VIDEOS_ALLOWED" if="windows" unless="32bits"/>
 
@@ -59,8 +59,6 @@
 		<library name="shared"        preload="false" />
 	</section>
 	
-	<assets path="plugins/"             rename=''               if="VIDEOS_ALLOWED windows" />
-	<assets path="dlls/"                rename=''               if="VIDEOS_ALLOWED windows" />
 	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
@@ -79,6 +77,7 @@
 	<haxelib name="hxp" />
 	<haxelib name="flxanimate" />
 	<haxelib name="discord_rpc"/>
+	<haxelib name="hxCodec"/>
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 

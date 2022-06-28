@@ -87,25 +87,22 @@ class WarningState extends FlxState
 					ease: FlxEase.backOut,
 					onComplete: function(twn:FlxTween)
 					{
-						FlxTween.tween(warnTitle, {x: (FlxG.width / 3) - 160, y: 100 - 55, size: 120}, 1, {startDelay: 0.1, ease: FlxEase.circInOut});
+						FlxTween.tween(warnTitle, {x: (FlxG.width / 3) - 160, y: 100 - 55, size: 120}, 1.5, {startDelay: 0.1, ease: FlxEase.circInOut});
 
 						FlxTween.tween(warnText, {
 							x: 560,
 							y: 230 - 55,
-							size: 30
-						}, 1, {
+							size: 30,
+							height: 57,
+							fieldWidth: 700
+						}, 1.5, {
 							startDelay: 0.1,
 							ease: FlxEase.circInOut
 						});
 
-						new FlxTimer().start(0.4, function(tmr:FlxTimer)
+						new FlxTimer().start(0.7, function(tmr:FlxTimer)
 						{
-							warnText.fieldWidth = 700;
-
-							new FlxTimer().start(0.3, function(tmr:FlxTimer)
-							{
-								tweenOptions();
-							});
+							tweenOptions();
 						});
 					}
 				});
