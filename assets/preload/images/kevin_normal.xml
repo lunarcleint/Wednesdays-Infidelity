@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kevin_normal.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="kevin_normal0000" x="0" y="0" width="2241" height="2389" frameX="0" frameY="0" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0001" x="0" y="0" width="2241" height="2389" frameX="0" frameY="0" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0002" x="0" y="0" width="2241" height="2389" frameX="0" frameY="0" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0003" x="2241" y="0" width="2096" height="2234" frameX="-78" frameY="-81" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0004" x="4337" y="0" width="1952" height="2081" frameX="-156" frameY="-161" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0005" x="6289" y="0" width="1808" height="1927" frameX="-233" frameY="-241" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0006" x="0" y="2389" width="1663" height="1773" frameX="-311" frameY="-322" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0007" x="1663" y="2389" width="1518" height="1619" frameX="-389" frameY="-402" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0008" x="3181" y="2389" width="1557" height="1464" frameX="-466" frameY="-483" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0009" x="4738" y="2389" width="1926" height="1765" frameX="-321" frameY="-351" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0010" x="0" y="4162" width="1926" height="1765" frameX="-321" frameY="-351" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0011" x="1926" y="4162" width="1576" height="1415" frameX="-370" frameY="-624" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0012" x="3502" y="4162" width="1786" height="1471" frameX="-202" frameY="-589" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0013" x="5288" y="4162" width="1716" height="1492" frameX="-307" frameY="-477" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0014" x="0" y="5927" width="1579" height="1233" frameX="-363" frameY="-631" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0015" x="1579" y="5927" width="1794" height="1305" frameX="-331" frameY="-631" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0016" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0017" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0018" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0019" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0020" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0021" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0022" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0023" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0024" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0025" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0026" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0027" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0028" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0029" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0030" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0031" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0032" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0033" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0034" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0035" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0036" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0037" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0038" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+	<SubTexture name="kevin_normal0039" x="3373" y="5927" width="1794" height="1235" frameX="-331" frameY="-701" frameWidth="2247" frameHeight="2389"/>
+</TextureAtlas>

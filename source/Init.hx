@@ -80,6 +80,8 @@ class Init extends FlxState
 
 		ClientPrefs.loadDefaultKeys();
 
+		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
+
 		FlxG.switchState(Type.createInstance(Main.initialState, []));
 	}
 }
