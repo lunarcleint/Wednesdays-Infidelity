@@ -16,6 +16,7 @@ Run these commands:
 haxelib install hxp
 haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
 haxelib install hscript
+haxelib install hxCodec
 ```
 These libraries are needed and your game will **NOT** build without them!
 
