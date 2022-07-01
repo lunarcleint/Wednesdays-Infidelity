@@ -9,6 +9,7 @@ import lime.app.Application;
 import openfl.Lib;
 import states.menus.StoryMenuState;
 import states.menus.TitleState;
+import util.CoolUtil;
 import util.Discord.DiscordClient;
 
 class Init extends FlxState
@@ -81,6 +82,7 @@ class Init extends FlxState
 		ClientPrefs.loadDefaultKeys();
 
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
+		CoolUtil.precacheImage('kevin_normal', 'preload'); // this preloads i think??
 
 		FlxG.switchState(Type.createInstance(Main.initialState, []));
 	}

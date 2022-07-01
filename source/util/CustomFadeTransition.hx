@@ -39,15 +39,15 @@ class CustomFadeTransition extends MusicBeatSubstate
 		var width:Int = Std.int(FlxG.width);
 		var height:Int = Std.int(FlxG.height);
 
-		transitionSprite = new FlxSprite(width + -1880, height + -1588);
+		transitionSprite = new FlxSprite(width + -1845, height + -1610);
 		transitionSprite.frames = Paths.getSparrowAtlas('kevin_normal', 'preload');
-		transitionSprite.animation.addByPrefix('transition', 'kevin_normal', 28, false);
+		transitionSprite.animation.addByPrefix('transition', 'kevin_normal', 30, false);
 		transitionSprite.scrollFactor.set(0, 0);
 		add(transitionSprite);
 
 		if (isTransIn)
 		{
-			transitionSprite.animation.play('transition', true, true, 24);
+			transitionSprite.animation.play('transition', true, true, 28);
 			transitionSprite.animation.callback = function(anim, framenumber, frameindex)
 			{
 				if (framenumber == 0)
@@ -59,7 +59,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 			transitionSprite.animation.play('transition', true);
 			transitionSprite.animation.callback = function(anim, framenumber, frameindex)
 			{
-				if (finishCallback != null && framenumber == 24)
+				if (finishCallback != null && framenumber == 28)
 				{
 					finishCallback();
 				}

@@ -134,6 +134,11 @@ class CoolUtil
 		precacheSoundFile(Paths.sound(sound, library));
 	}
 
+	public static function precacheImage(image:String, ?library:String = null):Void
+	{
+		precacheImageFile(Paths.image(image, library));
+	}
+
 	public static function precacheMusic(sound:String, ?library:String = null):Void
 	{
 		precacheSoundFile(Paths.music(sound, library));
@@ -143,6 +148,12 @@ class CoolUtil
 	{
 		if (Assets.exists(file, SOUND) || Assets.exists(file, MUSIC))
 			Assets.getSound(file, true);
+	}
+
+	private static function precacheImageFile(file:Dynamic):Void
+	{
+		if (Assets.exists(file, IMAGE))
+			LimeAssets.getImage(file, true);
 	}
 
 	public static function browserLoad(site:String)

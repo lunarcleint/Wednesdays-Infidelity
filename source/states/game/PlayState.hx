@@ -411,6 +411,12 @@ class PlayState extends MusicBeatState
 			bfZoom: 1, // mushitsection == true
 			dadZoom: 0.8, // mushitsection == false
 		},
+		"jankacStage" => {
+			dadPos: [420.95, 513], // xx
+			bfPos: [952.9, 550], // xx2
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.8, // mushitsection == false
+		},
 		"stageMokey" => {
 			dadPos: [420.95, 513], // xx
 			bfPos: [952.9, 550], // xx2
@@ -664,6 +670,22 @@ class PlayState extends MusicBeatState
 				blackFuck.alpha = 0;
 				blackFuck.screenCenter(X);
 				add(blackFuck);
+			case 'jankacStage':
+				var sky:BGSprite = new BGSprite('backgrounds/jank/sky', -666, -114, 0.5, 0.5);
+				sky.antialiasing = ClientPrefs.globalAntialiasing;
+				add(sky);
+
+				var trees:BGSprite = new BGSprite('backgrounds/jank/trees', -666, -120, 0.85, 0.85);
+				trees.antialiasing = ClientPrefs.globalAntialiasing;
+				add(trees);
+
+				var lol:BGSprite = new BGSprite('backgrounds/jank/ground', -666, 0);
+				lol.antialiasing = ClientPrefs.globalAntialiasing;
+				add(lol);
+
+				trees.scale.set(2, 2);
+				lol.scale.set(2, 2);
+				sky.scale.set(2, 2);
 
 			case 'stageMokey': // Song Kriman't
 				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
@@ -690,7 +712,7 @@ class PlayState extends MusicBeatState
 				add(nosexi);
 
 			case 'inferno': // Week Final
-				var infernosky:BGSprite = new BGSprite('backgrounds/SKY', -920, -800);
+				var infernosky:BGSprite = new BGSprite('backgrounds/hellhole/SKY', -920, -800);
 				infernosky.scale.set(0.9, 0.9);
 				infernosky.antialiasing = ClientPrefs.globalAntialiasing;
 				infernosky.updateHitbox();
@@ -698,7 +720,7 @@ class PlayState extends MusicBeatState
 				add(infernosky);
 
 				satanAparicion = new FlxSprite(-280, -370);
-				satanAparicion.frames = Paths.getSparrowAtlas('backgrounds/SATAN_APARITION');
+				satanAparicion.frames = Paths.getSparrowAtlas('backgrounds/hellhole/SATAN_APARITION');
 				satanAparicion.animation.addByPrefix('aparicion', 'SATAN APARICION', 24, false);
 				satanAparicion.antialiasing = ClientPrefs.globalAntialiasing;
 				satanAparicion.alpha = 0.00001; // preloading purposes
@@ -714,7 +736,7 @@ class PlayState extends MusicBeatState
 					}
 				};
 
-				var infernogroundp1:BGSprite = new BGSprite('backgrounds/infernogroundp1', -920, -110);
+				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -920, -110);
 				infernogroundp1.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp1.updateHitbox();
 				infernogroundp1.scrollFactor.set(1, 1);
@@ -722,7 +744,7 @@ class PlayState extends MusicBeatState
 				infernogroundparts.set("p1", infernogroundp1);
 
 				satanJijijija = new FlxSprite(-250, -325);
-				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/JUJUJUJA');
+				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/hellhole/JUJUJUJA');
 				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
 				satanJijijija.antialiasing = ClientPrefs.globalAntialiasing;
 				// satanJijijija.visible = false;
@@ -730,20 +752,20 @@ class PlayState extends MusicBeatState
 				satanJijijija.updateHitbox();
 				add(satanJijijija);
 
-				var infernogroundp2:BGSprite = new BGSprite('backgrounds/infernogroundp2', -920, -110);
+				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', -920, -110);
 				infernogroundp2.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp2.updateHitbox();
 				infernogroundp2.scrollFactor.set(1, 1);
 				add(infernogroundp2);
 				infernogroundparts.set("p2", infernogroundp2);
 			case 'hell': // versiculus iratus
-				var sky:BGSprite = new BGSprite('backgrounds/INFERNO_SKY', -608, -482);
+				var sky:BGSprite = new BGSprite('backgrounds/iratus/INFERNO_SKY', -608, -482);
 				sky.antialiasing = ClientPrefs.globalAntialiasing;
 				sky.scrollFactor.set(0.5, 0.5);
 				add(sky);
 
 				basedSkeletons = new FlxSprite(-506, 164);
-				basedSkeletons.frames = Paths.getSparrowAtlas('backgrounds/SKULLS');
+				basedSkeletons.frames = Paths.getSparrowAtlas('backgrounds/iratus/SKULLS');
 				basedSkeletons.animation.addByPrefix('idle', 'SKULLS', 24, false);
 				basedSkeletons.antialiasing = ClientPrefs.globalAntialiasing;
 				basedSkeletons.scrollFactor.set(0.85, 0.9);
@@ -752,7 +774,7 @@ class PlayState extends MusicBeatState
 				FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
 				FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
 
-				var ground:BGSprite = new BGSprite('backgrounds/ROCK_BG', -608, 324);
+				var ground:BGSprite = new BGSprite('backgrounds/iratus/ROCK_BG', -608, 324);
 				ground.antialiasing = ClientPrefs.globalAntialiasing;
 				add(ground);
 			case 'susNightmare': // Week SUS
@@ -771,7 +793,7 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell' | 'fence': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1373,7 +1395,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
@@ -4738,9 +4760,6 @@ class PlayState extends MusicBeatState
 		{
 			case 'vecindario':
 				grain.animation.play('idle');
-
-			case 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'vecindariocover': // add stage names here to make the grain appear
-
 			case 'susNightmare':
 				if (gfSus != null)
 					if (curBeat % 1 == 0)
