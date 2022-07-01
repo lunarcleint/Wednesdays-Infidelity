@@ -41,10 +41,12 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		#if ACHIEVEMENTS_ALLOWED 'awards',
+		#if ACHIEVEMENTS_ALLOWED
+		'awards',
 		#end
 		'credits',
-		#if !switch 'discord',
+		#if !switch
+		'discord',
 		#end
 		'options'
 	];
@@ -122,6 +124,11 @@ class MainMenuState extends MusicBeatState
 				var newShader:ColorSwap = new ColorSwap();
 				menuItem.shader = newShader.shader;
 				newShader.brightness = -0.8;
+			}
+
+			if (optionShit[i] == 'credits')
+			{
+				menuItem.y -= 10; // god this has been bothering me
 			}
 		}
 

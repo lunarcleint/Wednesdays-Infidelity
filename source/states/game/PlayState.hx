@@ -412,10 +412,12 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.8, // mushitsection == false
 		},
 		"jankacStage" => {
-			dadPos: [420.95, 513], // xx
-			bfPos: [952.9, 550], // xx2
-			bfZoom: 1, // mushitsection == true
-			dadZoom: 0.8, // mushitsection == false
+			dadPos: [420.95, 303], // xx
+			bfPos: [952.9, 450], // xx2
+			gfPos: [600, -300], // xx3
+			gfZoom: 0.65,
+			bfZoom: 0.9, // mushitsection == true
+			dadZoom: 0.7, // mushitsection == false
 		},
 		"stageMokey" => {
 			dadPos: [420.95, 513], // xx
@@ -671,22 +673,17 @@ class PlayState extends MusicBeatState
 				blackFuck.screenCenter(X);
 				add(blackFuck);
 			case 'jankacStage':
-				var sky:BGSprite = new BGSprite('backgrounds/jank/sky', -666, -114, 0.5, 0.5);
+				var sky:BGSprite = new BGSprite('backgrounds/jank/sky', -636, -564, 0.5, 0.5);
 				sky.antialiasing = ClientPrefs.globalAntialiasing;
 				add(sky);
 
-				var trees:BGSprite = new BGSprite('backgrounds/jank/trees', -666, -120, 0.85, 0.85);
+				var trees:BGSprite = new BGSprite('backgrounds/jank/trees', -636, -742, 0.85, 0.85);
 				trees.antialiasing = ClientPrefs.globalAntialiasing;
 				add(trees);
 
-				var lol:BGSprite = new BGSprite('backgrounds/jank/ground', -666, 0);
+				var lol:BGSprite = new BGSprite('backgrounds/jank/ground', -636, -532);
 				lol.antialiasing = ClientPrefs.globalAntialiasing;
 				add(lol);
-
-				trees.scale.set(2, 2);
-				lol.scale.set(2, 2);
-				sky.scale.set(2, 2);
-
 			case 'stageMokey': // Song Kriman't
 				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 				stageWhite.scale.set(5, 5);
