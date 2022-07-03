@@ -64,6 +64,9 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 				case 'wistfulness':
 					video = "StoryStart";
 					skippable = FlxG.save.data.beatmainweek;
+				case 'last day':
+					video = "Portal";
+					skippable = FlxG.save.data.gotbadending;
 				case 'unknown suffering':
 					video = "TransformUN";
 					skippable = FlxG.save.data.beatmainweek;
