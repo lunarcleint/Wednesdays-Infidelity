@@ -293,7 +293,11 @@ class PlayState extends MusicBeatState
 	var satanAparicion:FlxSprite;
 	var satanJijijija:FlxSprite;
 
+    // iratus
 	var basedSkeletons:FlxSprite;
+	var sky:BGSprite;
+	var ground:BGSprite;
+	var oscuro:BGSprite;
 
 	var infernogroundparts:Map<String, FlxSprite> = ["p1" => null, "p2" => null];
 
@@ -756,8 +760,14 @@ class PlayState extends MusicBeatState
 				add(infernogroundp2);
 				infernogroundparts.set("p2", infernogroundp2);
 			case 'hell': // versiculus iratus
-				var sky:BGSprite = new BGSprite('backgrounds/iratus/INFERNO_SKY', -608, -482);
+				oscuro = new BGSprite('backgrounds/iratus/bgintro', -608, -482);
+				oscuro.antialiasing = ClientPrefs.globalAntialiasing;
+				oscuro.scrollFactor.set(1, 1);
+				add(oscuro);
+
+				sky = new BGSprite('backgrounds/iratus/INFERNO_SKY', -608, -482);
 				sky.antialiasing = ClientPrefs.globalAntialiasing;
+				sky.visible = false;
 				sky.scrollFactor.set(0.5, 0.5);
 				add(sky);
 
@@ -765,14 +775,16 @@ class PlayState extends MusicBeatState
 				basedSkeletons.frames = Paths.getSparrowAtlas('backgrounds/iratus/SKULLS');
 				basedSkeletons.animation.addByPrefix('idle', 'SKULLS', 24, false);
 				basedSkeletons.antialiasing = ClientPrefs.globalAntialiasing;
+				basedSkeletons.visible = false;
 				basedSkeletons.scrollFactor.set(0.85, 0.9);
 				add(basedSkeletons);
 
 				FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
 				FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
 
-				var ground:BGSprite = new BGSprite('backgrounds/iratus/ROCK_BG', -608, 324);
+				ground = new BGSprite('backgrounds/iratus/ROCK_BG', -608, 324);
 				ground.antialiasing = ClientPrefs.globalAntialiasing;
+				ground.visible = false;
 				add(ground);
 			case 'susNightmare': // Week SUS
 				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
