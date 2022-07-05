@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SATAN IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				280,
 				-110
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SATAN LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				150,
 				-180
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SATAN DOWN"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				160,
 				60
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SATAN UP"
+			"fps": 24,
+			"name": "SATAN UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-40,
 				-170
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SATAN RIGHT"
+			"fps": 24,
+			"name": "SATAN RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/SATAN CHAD",
 	"position": [
-		-270,
-		-270
+		-320,
+		-280
 	],
 	"healthicon": "satan",
 	"flip_x": false,
@@ -70,7 +70,7 @@
 		122
 	],
 	"camera_position": [
-		0,
+		70,
 		0
 	],
 	"sing_duration": 4.8,

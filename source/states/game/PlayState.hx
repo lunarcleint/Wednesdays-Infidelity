@@ -280,6 +280,8 @@ class PlayState extends MusicBeatState
 	var jumps:FlxSprite;
 	var grain:FlxSprite;
 
+	var satanlaugh:FlxSprite;
+
 	var cutsceneText:FlxText;
 
 	var chedderguybg:BGSprite;
@@ -293,7 +295,7 @@ class PlayState extends MusicBeatState
 	var satanAparicion:FlxSprite;
 	var satanJijijija:FlxSprite;
 
-    // iratus
+	// iratus
 	var basedSkeletons:FlxSprite;
 	var sky:BGSprite;
 	var ground:BGSprite;
@@ -812,6 +814,26 @@ class PlayState extends MusicBeatState
 				daStatic.animation.addByPrefix('static', 'staticFLASH', 24, true);
 				add(daStatic);
 				daStatic.animation.play('static');
+		}
+
+		if (curStage == "hell")
+		{
+			satanlaugh = new FlxSprite();
+			satanlaugh.frames = Paths.getSparrowAtlas('backgrounds/iratus/SATAN_LAUGH_SCREEN', 'shared');
+			satanlaugh.animation.addByPrefix('scape', 'SATAN LAUGH SCREEN', 24, false);
+			satanlaugh.screenCenter();
+			satanlaugh.cameras = [camHUD];
+			satanlaugh.alpha = 0.00001;
+			satanlaugh.animation.callback = function(name:String, frameNumber:Int, frameIndex:Int)
+			{
+				satanlaugh.screenCenter();
+				satanlaugh.x -= 80;
+			};
+			satanlaugh.animation.finishCallback = function(name:String)
+			{
+				satanlaugh.alpha = 0.00001;
+			};
+			insert(0, satanlaugh);
 		}
 
 		if (isPixelStage)
@@ -4528,7 +4550,7 @@ class PlayState extends MusicBeatState
 			script.executeFunc("onStepHit");
 		}
 
-		if (followChars && cameraStageZoom)
+		if (cameraStageZoom || followChars)
 		{
 			if (!SONG.notes[Std.int(curStep / 16)].mustHitSection)
 			{
