@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "MIKI SAD IDLE"
+			"fps": 24,
+			"name": "MIKI SAD IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-23,
 				38
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "MIKI SAD LEFT"
+			"fps": 24,
+			"name": "MIKI SAD LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-4,
 				-18
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "MIKI SAD DOWN"
+			"fps": 24,
+			"name": "MIKI SAD DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-35,
 				37
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "MIKI SAD UP"
+			"fps": 24,
+			"name": "MIKI SAD UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-39,
 				19
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "MIKI SAD RIGHT"
+			"fps": 24,
+			"name": "MIKI SAD RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

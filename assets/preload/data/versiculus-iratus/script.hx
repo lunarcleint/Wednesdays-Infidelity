@@ -263,6 +263,8 @@ function onStepHit()
 			}
 
 			PlayState.curCamera.bfZoom = 1.4;
+
+			PlayState.curCamera.bfPos[1] -= 70;
 		case 1664:
 			PlayState.curCamera.dadZoom = 0.9;
 

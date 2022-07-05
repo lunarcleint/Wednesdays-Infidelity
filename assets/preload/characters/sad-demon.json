@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SAD DEMON IDLE"
+			"fps": 24,
+			"name": "SAD DEMON IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				-3
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SAD DEMON LEFT"
+			"fps": 24,
+			"name": "SAD DEMON LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				5,
 				12
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SAD DEMON DOWN"
+			"fps": 24,
+			"name": "SAD DEMON DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				10,
 				20
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SAD DEMON UP"
+			"fps": 24,
+			"name": "SAD DEMON UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				42
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SAD DEMON RIGHT"
+			"fps": 24,
+			"name": "SAD DEMON RIGHT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle-loop",
+			"fps": 24,
+			"name": "SAD DEMON IDLE",
 			"indices": [
 				13,
 				14,
 				15
-			],
-			"name": "SAD DEMON IDLE"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				350,
 				265
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "evil",
-			"loop": false,
-			"name": "SAD DEMON JU"
+			"fps": 24,
+			"name": "SAD DEMON JU",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/SAD_DEMON",
 	"position": [
-		-100,
-		260
+		-90,
+		270
 	],
 	"healthicon": "face",
 	"flip_x": false,
