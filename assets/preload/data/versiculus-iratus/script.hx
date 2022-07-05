@@ -49,7 +49,7 @@ function onStepHit()
 		}
 		if (section == 3)
 		{
-			if (stepDev < 15)
+			if (stepDev < 13)
 			{
 				if (curStep % 2 == 0)
 					addCamZoom(0.15, 0.05);

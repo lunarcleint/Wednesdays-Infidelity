@@ -1,73 +1,73 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				1,
-				-2
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-5,
+				0
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "FINAL MIKI IDLE"
+			"fps": 24,
+			"name": "MAD MIKI IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				130,
+				-1,
+				13
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MAD MIKI LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
 				-24
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "FINAL MIKI LEFT"
-		},
-		{
-			"offsets": [
-				0,
-				-88
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "FINAL MIKI DOWN"
+			"fps": 24,
+			"name": "MAD MIKI DOWN",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				96
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-43,
+				45
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "FINAL MIKI UP"
+			"fps": 24,
+			"name": "MAD MIKI UP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				-10
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-33,
+				38
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "FINAL MIKI RIGHT"
+			"fps": 24,
+			"name": "MAD MIKI RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/FINAL_SUICIDE_MOUSE",
+	"image": "characters/MIKI_PRISIONERO",
 	"position": [
 		0,
-		170
+		350
 	],
-	"healthicon": "face",
+	"healthicon": "mouse",
 	"flip_x": true,
 	"healthbar_colors": [
-		95,
-		103,
-		91
+		70,
+		73,
+		69
 	],
 	"camera_position": [
 		0,

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "FINAL MIKI IDLE"
+		},
+		{
+			"offsets": [
+				130,
+				-24
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "FINAL MIKI LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				-88
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "FINAL MIKI DOWN"
+		},
+		{
+			"offsets": [
+				0,
+				96
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "FINAL MIKI UP"
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "FINAL MIKI RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/FINAL_SUICIDE_MOUSE",
+	"position": [
+		0,
+		170
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		95,
+		103,
+		91
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
