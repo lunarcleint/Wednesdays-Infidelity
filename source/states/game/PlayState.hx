@@ -306,6 +306,16 @@ class PlayState extends MusicBeatState
 	// Black / Kriman't
 	var blackFuck:FlxSprite;
 
+	// Leak ma balls
+	var bar:BGSprite;
+	var mesaone:BGSprite;
+	var mesatwo:BGSprite;
+	var mesatres:BGSprite;
+	var mesacuatro:BGSprite;
+	var diablito:FlxSprite;
+	var devs:FlxSprite;
+	var osbaldo:FlxSprite;
+
 	// Week Misses / Endings
 	public static var weekMisses:Int = 0;
 
@@ -432,11 +442,12 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.8, // mushitsection == false
 		},
 		"stageLeakers" => {
-			dadPos: [420.95, 513], // xx
-			bfPos: [952.9, 550], // xx2
-			bfZoom: 1, // mushitsection == true
-			dadZoom: 0.8, // mushitsection == false
-			gfZoom: 0.8 // gfsection == true
+			dadPos: [420.95, 420], // xx
+			bfPos: [952.9, 410], // xx2
+			gfPos: [1150.9, 420], // xx3
+			bfZoom: 0.75, // mushitsection == true
+			dadZoom: 0.73, // mushitsection == false
+			gfZoom: 0.65 // gfsection == true
 		},
 	];
 
@@ -703,10 +714,57 @@ class PlayState extends MusicBeatState
 				add(blackFuck);
 
 			case 'stageLeakers': // Song Leak ma balls
-				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
-				stageWhite.scale.set(5, 5);
-				stageWhite.updateHitbox();
-				add(stageWhite);
+				bar = new BGSprite('backgrounds/leakers/bg', -1500, -230);
+				bar.scrollFactor.set(1.05, 1.05);
+				bar.antialiasing = ClientPrefs.globalAntialiasing;
+
+				mesaone = new BGSprite('backgrounds/leakers/mesa1', -240, 160);
+				mesaone.scrollFactor.set(1.05, 1.05);
+				mesaone.antialiasing = ClientPrefs.globalAntialiasing;
+
+				mesatwo = new BGSprite('backgrounds/leakers/mesa2', -550, 390);
+				mesatwo.scrollFactor.set(1.01, 1.01);
+				mesatwo.antialiasing = ClientPrefs.globalAntialiasing;
+
+				mesatres = new BGSprite('backgrounds/leakers/mesa3', -1400, 500);
+				mesatres.scrollFactor.set(1.1, 0.9);
+				mesatres.antialiasing = ClientPrefs.globalAntialiasing;
+
+				mesacuatro = new BGSprite('backgrounds/leakers/mesa4', 1600, 500);
+				mesacuatro.scrollFactor.set(1.1, 0.9);
+				mesacuatro.antialiasing = ClientPrefs.globalAntialiasing;
+
+				osbaldo = new FlxSprite(1300, 150);
+				osbaldo.frames = Paths.getSparrowAtlas('backgrounds/leakers/OSWALD');
+				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, true);
+				osbaldo.scrollFactor.set(1.05, 1.05);
+				osbaldo.animation.play('idle');
+				osbaldo.antialiasing = ClientPrefs.globalAntialiasing;
+				osbaldo.scale.set(0.76, 0.76);
+
+				devs = new FlxSprite(200, 100);
+				devs.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEVS_LEAKED');
+				devs.animation.addByPrefix('idle', 'DEVS', 24, true);
+				devs.scrollFactor.set(1.05, 1.05);
+				devs.antialiasing = ClientPrefs.globalAntialiasing;
+				devs.animation.play('idle');
+
+				diablito = new FlxSprite(380, 450);
+				diablito.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEMONS_DANCE');
+				diablito.animation.addByPrefix('idle', 'DEMONS IDLE', 24, true);
+				diablito.animation.addByPrefix('trompeta', 'DEMONS TROMPETA', 24, false);
+				diablito.antialiasing = ClientPrefs.globalAntialiasing;
+				diablito.scrollFactor.set(1.05, 1.05);
+				diablito.animation.play('idle');
+
+				add(bar);
+				add(mesaone);
+				add(mesatwo);
+				add(mesatres);
+				add(devs);
+				add(osbaldo);
+				//add(mesacuatro);
+				add(diablito);
 
 			case 'bobux': // Week Suicide
 				var nosexi:BGSprite = new BGSprite('backgrounds/Destruido', -600, -200);
@@ -851,6 +909,12 @@ class PlayState extends MusicBeatState
 
 		add(dadGroup);
 		add(boyfriendGroup);
+
+		switch(curStage)
+		{
+			case 'stageLeakers':
+				add(mesacuatro);
+		}
 
 		devil = new FlxAnimate(0, 0,
 			PlayState.SONG.stage == "susNightmare" ? "shared:assets/shared/images/SATAN AMONGUS" : "shared:assets/shared/images/SATAN");
@@ -3135,6 +3199,12 @@ class PlayState extends MusicBeatState
 				if (!ClientPrefs.flashing)
 					return;
 				camOther.flash(FlxColor.fromString('0xFFFFFFFF'), 1, null, true);
+
+			case 'Trompeta Diablo Leakers':
+				diablito.animation.play('trompeta');
+
+			case 'Idle Diablo Leakers':
+				diablito.animation.play('idle');
 
 			case 'Flash Black':
 				if (!ClientPrefs.flashing)

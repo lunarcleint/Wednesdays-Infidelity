@@ -3,14 +3,74 @@
 		"speed": 3.2,
 		"stage": "stageLeakers",
 		"player1": "leaker1",
-		"player2": "mouse-smile",
+		"player2": "leakermouse",
 		"player3": null,
 		"events": [
+			[
+				0,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				6857.14285714286,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				13714.2857142857,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				20568.75,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
 			[
 				20571.4285714286,
 				[
 					[
-						"Flash Black",
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				27428.5714285714,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				33428.5714285714,
+				[
+					[
+						"Idle Diablo Leakers",
 						"",
 						""
 					]
@@ -21,6 +81,86 @@
 				[
 					[
 						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				48000,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				54857.1428571429,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				61714.2857142858,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				68571.4285714286,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				74571.4285714286,
+				[
+					[
+						"Idle Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				89142.8571428571,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				96000,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				102851.785714286,
+				[
+					[
+						"Idle Diablo Leakers",
 						"",
 						""
 					]
@@ -47,10 +187,70 @@
 				]
 			],
 			[
+				130285.714285714,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				137142.857142857,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				142285.714285714,
+				[
+					[
+						"Idle Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
 				157714.285714286,
 				[
 					[
 						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				198857.142857143,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				205714.285714285,
+				[
+					[
+						"Trompeta Diablo Leakers",
+						"",
+						""
+					]
+				]
+			],
+			[
+				212571.428571428,
+				[
+					[
+						"Idle Diablo Leakers",
 						"",
 						""
 					]

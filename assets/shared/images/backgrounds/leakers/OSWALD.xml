@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="OSWALD.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mesa OSWALD0000" x="0" y="0" width="575" height="611" frameX="0" frameY="-4" frameWidth="575" frameHeight="615"/>
+	<SubTexture name="mesa OSWALD0001" x="575" y="0" width="575" height="611" frameX="0" frameY="-4" frameWidth="575" frameHeight="615"/>
+	<SubTexture name="mesa OSWALD0002" x="1150" y="0" width="575" height="614" frameX="0" frameY="-1" frameWidth="575" frameHeight="615"/>
+	<SubTexture name="mesa OSWALD0003" x="1725" y="0" width="575" height="614" frameX="0" frameY="-1" frameWidth="575" frameHeight="615"/>
+	<SubTexture name="mesa OSWALD0004" x="2300" y="0" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0005" x="2875" y="0" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0006" x="3450" y="0" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0007" x="0" y="615" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0008" x="575" y="615" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0009" x="1150" y="615" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0010" x="1725" y="615" width="575" height="615"/>
+	<SubTexture name="mesa OSWALD0011" x="2300" y="615" width="575" height="615"/>
+</TextureAtlas>

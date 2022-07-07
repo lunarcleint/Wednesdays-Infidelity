@@ -152,6 +152,8 @@ class ChartingState extends MusicBeatState
 			"value 1: alpha \nvalue 2: duration \n if duration is 0 then it will be instant."
 		],
 		['camGame Off', "."],
+		['Trompeta Diablo Leakers', "."],
+		['Idle Diablo Leakers', "."],
 	];
 
 	var _file:FileReference;

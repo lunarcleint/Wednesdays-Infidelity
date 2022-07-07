@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				2,
+				-120
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MIKI IDLE"
+		},
+		{
+			"offsets": [
+				-58,
+				-161
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MIKI RIGHT"
+		},
+		{
+			"offsets": [
+				-58,
+				-190
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MIKI DOWN"
+		},
+		{
+			"offsets": [
+				-28,
+				-110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "MIKI UP"
+		},
+		{
+			"offsets": [
+				79,
+				-127
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MIKI LEFT "
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MIKI_LEAKED",
+	"position": [
+		-70,
+		0
+	],
+	"healthicon": "sadmouse",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		175,
+		175
+	],
+	"camera_position": [
+		-10,
+		-480
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
