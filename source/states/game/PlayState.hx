@@ -738,7 +738,6 @@ class PlayState extends MusicBeatState
 				osbaldo.frames = Paths.getSparrowAtlas('backgrounds/leakers/OSWALD');
 				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, true);
 				osbaldo.scrollFactor.set(1.05, 1.05);
-				osbaldo.animation.play('idle');
 				osbaldo.antialiasing = ClientPrefs.globalAntialiasing;
 				osbaldo.scale.set(0.76, 0.76);
 
@@ -747,7 +746,6 @@ class PlayState extends MusicBeatState
 				devs.animation.addByPrefix('idle', 'DEVS', 24, true);
 				devs.scrollFactor.set(1.05, 1.05);
 				devs.antialiasing = ClientPrefs.globalAntialiasing;
-				devs.animation.play('idle');
 
 				diablito = new FlxSprite(380, 450);
 				diablito.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEMONS_DANCE');
@@ -755,7 +753,6 @@ class PlayState extends MusicBeatState
 				diablito.animation.addByPrefix('trompeta', 'DEMONS TROMPETA', 24, false);
 				diablito.antialiasing = ClientPrefs.globalAntialiasing;
 				diablito.scrollFactor.set(1.05, 1.05);
-				diablito.animation.play('idle');
 
 				add(bar);
 				add(mesaone);
@@ -1493,6 +1490,12 @@ class PlayState extends MusicBeatState
 				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
+				case 'stageLeakers':
+					if (curBeat % 2 == 0) {
+						devs.animation.play('idle');
+						osbaldo.animation.play('idle');
+						diablito.animation.play('idle');
+					}
 				case 'susNightmare':
 					if (curBeat % 1 == 0)
 					{
@@ -4870,6 +4873,13 @@ class PlayState extends MusicBeatState
 
 				grain.alpha = 1;
 				grain.animation.play('idle');
+			case 'stageLeakers':
+				if (curBeat % 2 == 0)
+				{
+					devs.animation.play('idle');
+					osbaldo.animation.play('idle');
+					diablito.animation.play('idle');
+				}
 			case 'hell':
 				grain.alpha = 1;
 				grain.animation.play('idle');
