@@ -170,7 +170,7 @@ function onStepHit()
 			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "Why should I, even try.";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
-		case 1017:
+		case 1016:
 			PlayState.cutsceneText.text = "Gun in hand, my life shall end..";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1044:
