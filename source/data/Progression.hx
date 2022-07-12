@@ -9,6 +9,8 @@ class Progression
 	public static var goodEnding:Bool = false;
 	public static var beatHell:Bool = false;
 
+	public static var weekProgress:Map<String, {song:String, weekMisees:Int}> = [];
+
 	public static function load()
 	{
 		if (FlxG.save.data.beatmainweek != null) // W.I SAVES
@@ -27,8 +29,10 @@ class Progression
 		{
 			beatHell = FlxG.save.data.beathell;
 		}
-
-		trace("loading: \n" + 'beatHell: $beatHell \nbeatMainWeek: $beatMainWeek \ngoodEnding: $goodEnding\nbadEnding $badEnding');
+		if (FlxG.save.data.weekProgress != null)
+		{
+			weekProgress = FlxG.save.data.weekProgress;
+		}
 	}
 
 	public static function save()
@@ -37,6 +41,7 @@ class Progression
 		FlxG.save.data.gotbadending = badEnding;
 		FlxG.save.data.gotgoodending = goodEnding;
 		FlxG.save.data.beathell = beatHell;
+		FlxG.save.data.weekProgress = weekProgress;
 
 		FlxG.save.flush();
 
@@ -49,6 +54,7 @@ class Progression
 		badEnding = false;
 		goodEnding = false;
 		beatHell = false;
+		weekProgress = [];
 
 		save();
 	}

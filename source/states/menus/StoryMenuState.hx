@@ -209,16 +209,8 @@ class StoryMenuState extends MusicBeatState
 		add(txtWeekTitle);
 
 		changeWeek();
-		changeDifficulty();
 
 		super.create();
-	}
-
-	override function closeSubState()
-	{
-		persistentUpdate = true;
-		changeWeek();
-		super.closeSubState();
 	}
 
 	override function update(elapsed:Float)
@@ -258,13 +250,6 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 
-			if (controls.UI_RIGHT_P)
-				changeDifficulty(1);
-			else if (controls.UI_LEFT_P)
-				changeDifficulty(-1);
-			else if (upP || downP)
-				changeDifficulty();
-
 			if (controls.ACCEPT)
 			{
 				selectWeek();
@@ -294,22 +279,10 @@ class StoryMenuState extends MusicBeatState
 
 	function selectWeek()
 	{
+		selectedWeek = true;
+
 		if (!weekIsLocked(loadedWeeks[curWeek].fileName))
 		{
-			if (stopspamming == false)
-			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
-
-				if (ClientPrefs.flashing)
-					grpWeekText.members[curWeek].startFlashing();
-
-				var bf:MenuCharacter = grpWeekCharacters.members[1];
-				if (bf.character != '' && bf.hasConfirmAnimation)
-					grpWeekCharacters.members[1].animation.play('confirm');
-				stopspamming = true;
-			}
-
-			// We can't use Dynamic Array .copy() because that crashes HTML5, here's a workaround.
 			var songArray:Array<String> = [];
 			var leWeek:Array<Dynamic> = loadedWeeks[curWeek].songs;
 			for (i in 0...leWeek.length)
@@ -317,32 +290,34 @@ class StoryMenuState extends MusicBeatState
 				songArray.push(leWeek[i][0]);
 			}
 
-			// Nevermind that's stupid lmao
-			PlayState.storyPlaylist = songArray;
-			PlayState.isStoryMode = true;
-			selectedWeek = true;
-
-			var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-			if (diffic == null)
-				diffic = '';
-
-			PlayState.storyDifficulty = curDifficulty;
-
-			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-			PlayState.campaignScore = 0;
-			PlayState.campaignMisses = 0;
-			PlayState.weekMisses = 0; // if we forgot to add this it could have broken the mod LMAO woops
-
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			if (Progression.weekProgress.exists(WeekData.weeksList[curWeek]))
 			{
-				LoadingState.loadAndSwitchState(new CutsceneState(PlayState.storyPlaylist[0].toLowerCase(), false, function()
+				openSubState(new states.substates.StoryProgress(function()
 				{
-					LoadingState.loadAndSwitchState(new PlayState(), true);
-				}), true);
+					PlayState.weekMisses = 0;
+					playGame(songArray);
+				}, function()
+				{
+					var resumeInfo = Progression.weekProgress.get(WeekData.weeksList[curWeek]);
 
-				Lib.application.window.title = "Wednesday's Infidelity";
-				FreeplayState.destroyFreeplayVocals();
-			});
+					if (!songArray.contains(resumeInfo.song))
+						songArray[songArray.length] = resumeInfo.song;
+
+					songArray = songArray.slice(songArray.indexOf(resumeInfo.song));
+					PlayState.weekMisses = resumeInfo.weekMisees;
+
+					playGame(songArray);
+				}, function()
+				{
+					selectedWeek = false;
+				}));
+
+			}
+			else
+			{
+				PlayState.weekMisses = 0;
+				playGame(songArray);
+			}
 		}
 		else
 		{
@@ -352,42 +327,29 @@ class StoryMenuState extends MusicBeatState
 
 	var tweenDifficulty:FlxTween;
 
-	function changeDifficulty(change:Int = 0):Void
+	function playGame(songs:Array<String>)
 	{
-		/*
-					curDifficulty += change;
+		PlayState.storyPlaylist = songs;
+		PlayState.isStoryMode = true;
+		selectedWeek = true;
 
-			if (curDifficulty < 0)
-				curDifficulty = CoolUtil.difficulties.length-1;
-			if (curDifficulty >= CoolUtil.difficulties.length)
-				curDifficulty = 0;
+		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
+		if (diffic == null)
+			diffic = '';
 
-			WeekData.setDirectoryFromWeek(loadedWeeks[curWeek]);
+		PlayState.storyDifficulty = curDifficulty;
 
-			var diff:String = CoolUtil.difficulties[curDifficulty];
-			var newImage:FlxGraphic = Paths.image('menudifficulties/' + Paths.formatToSongPath(diff));
-			//trace(Paths.currentModDirectory + ', menudifficulties/' + Paths.formatToSongPath(diff));
+		PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+		PlayState.campaignScore = 0;
+		PlayState.campaignMisses = 0;
 
-			if(sprDifficulty.graphic != newImage)
-			{
-				sprDifficulty.loadGraphic(newImage);
-				sprDifficulty.x = leftArrow.x + 60;
-				sprDifficulty.x += (308 - sprDifficulty.width) / 3;
-				sprDifficulty.alpha = 0;
-				sprDifficulty.y = leftArrow.y - 15;
+		LoadingState.loadAndSwitchState(new CutsceneState(PlayState.storyPlaylist[0].toLowerCase(), false, function()
+		{
+			LoadingState.loadAndSwitchState(new PlayState(), true);
+		}), true);
 
-				if(tweenDifficulty != null) tweenDifficulty.cancel();
-				tweenDifficulty = FlxTween.tween(sprDifficulty, {y: leftArrow.y + 15, alpha: 1}, 0.07, {onComplete: function(twn:FlxTween)
-				{
-					tweenDifficulty = null;
-				}});
-			}
-			lastDifficultyName = diff;
-
-			#if !switch
-			intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
-			#end
-		 */
+		Lib.application.window.title = "Wednesday's Infidelity";
+		FreeplayState.destroyFreeplayVocals();
 	}
 
 	var lerpScore:Int = 0;

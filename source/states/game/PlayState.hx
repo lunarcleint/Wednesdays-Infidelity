@@ -1220,6 +1220,11 @@ class PlayState extends MusicBeatState
 
 		RecalculateRating();
 
+		trace(WeekData.getCurrentWeek().songs[0][0]);
+
+		if (isStoryMode && WeekData.getCurrentWeek().songs[0][0] != curSong) // Makes sure it isnt the first song
+			setWeekProgress(curSong);
+
 		if (ClientPrefs.shaders)
 		{
 			switch (daSong) // shaders
@@ -2335,12 +2340,12 @@ class PlayState extends MusicBeatState
 
 		if (ratingName == '?')
 		{
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + ratingName;
 		}
 		else
 		{
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | '
-				+ ratingName + ' [' + ratingFC + ']'; // peeps wanted no integer rating
+			scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%'
+				+ ' [' + ratingFC + ']'; // peeps wanted no integer rating
 		}
 
 		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && Paths.formatToSongPath(SONG.song) != 'hellhole')
@@ -3467,6 +3472,12 @@ class PlayState extends MusicBeatState
 						FlxG.sound.music.loopTime = 15920;
 						FlxG.sound.music.time = 15920;
 					}));
+
+					if (Progression.weekProgress.exists(WeekData.getWeekFileName()))
+					{
+						Progression.weekProgress.remove(WeekData.getWeekFileName());
+						Progression.save();
+					}
 
 					if (WeekData.getWeekFileName() == 'Week Suicide')
 					{
@@ -5089,5 +5100,12 @@ class PlayState extends MusicBeatState
 		camHUD.setFilters([]);
 
 		camHUDShaders = [];
+	}
+
+	function setWeekProgress(song:String)
+	{
+		Progression.weekProgress.set(WeekData.getWeekFileName(), {song: song, weekMisees: weekMisses});
+
+		Progression.save();
 	}
 }

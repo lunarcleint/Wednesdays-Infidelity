@@ -31,6 +31,9 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 
 	override public function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		if (songName != null)
 		{
 			chooseVideo();
