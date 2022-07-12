@@ -1220,8 +1220,6 @@ class PlayState extends MusicBeatState
 
 		RecalculateRating();
 
-		trace(WeekData.getCurrentWeek().songs[0][0]);
-
 		if (isStoryMode && WeekData.getCurrentWeek().songs[0][0] != curSong) // Makes sure it isnt the first song
 			setWeekProgress(curSong);
 

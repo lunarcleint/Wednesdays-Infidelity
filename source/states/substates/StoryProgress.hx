@@ -67,7 +67,7 @@ class StoryProgress extends MusicBeatSubstate
 		yesText.x -= 300;
 		add(yesText);
 
-		noText = new Alphabet(0, text.y + 150, 'No', true);
+		noText = new Alphabet(0, text.y + 150, FlxG.random.bool(1) ? "Fuck You" : "No", true);
 		noText.screenCenter(X);
 		noText.x += 200;
 		add(noText);
