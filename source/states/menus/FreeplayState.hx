@@ -71,6 +71,9 @@ class FreeplayState extends MusicBeatState
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.SIX, FlxKey.SIX, FlxKey.SIX];
 	var lastKeysPressed:Array<FlxKey> = [];
 
+	var dsidesSongs:Array<String> = ["Untold Loneliness"];
+	var encoreSongs:Array<String> = ["Too Slow"];
+
 	var selectedSomethin:Bool = false;
 
 	var text:FlxText;
@@ -162,6 +165,7 @@ class FreeplayState extends MusicBeatState
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
+		diffText.color = FlxColor.GRAY;
 		add(diffText);
 
 		add(scoreText);
@@ -539,6 +543,8 @@ class FreeplayState extends MusicBeatState
 
 	public function selectSong(?playstate:Bool = true, ?story:Bool = false)
 	{
+		FlxTween.globalManager.cancelTweensOf(diffText);
+
 		var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 
@@ -590,8 +596,15 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		PlayState.storyDifficulty = curDifficulty;
-		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
-		diffText.color = FlxColor.GRAY;
+
+		var diff:String = CoolUtil.difficultyString();
+
+		if (encoreSongs.contains(songs[curSelected].songName))
+			diff = "ENCORE";
+		else if (dsidesSongs.contains(songs[curSelected].songName))
+			diff = "DSIDE";
+
+		diffText.text = '< ' + diff + ' >';
 		positionHighscore();
 	}
 
@@ -623,7 +636,24 @@ class FreeplayState extends MusicBeatState
 			});
 		}
 
-		// selector.y = (70 * curSelected) + 30;
+		if (encoreSongs.contains(songs[curSelected].songName))
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.YELLOW);
+		}
+		else if (dsidesSongs.contains(songs[curSelected].songName))
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.PURPLE);
+		}
+		else if (diffText.color != FlxColor.GRAY)
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.GRAY);
+		}
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
@@ -699,7 +729,7 @@ class FreeplayState extends MusicBeatState
 			curDifficulty = newPos;
 		}
 
-		Lib.application.window.title = "Wednesday's Infidelity - " + songs[curSelected].songName + " [" + CoolUtil.difficulties[curDifficulty] + "]";
+		Lib.application.window.title = "Wednesday's Infidelity - " + songs[curSelected].songName;
 	}
 
 	private function positionHighscore()

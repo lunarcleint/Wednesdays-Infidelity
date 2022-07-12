@@ -1742,7 +1742,7 @@ class PlayState extends MusicBeatState
 
 		curSong = songData.song;
 
-		Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
+		Lib.application.window.title = "Wednesday's Infidelity - " + curSong;
 
 		if (SONG.needsVoices)
 			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
@@ -2011,7 +2011,7 @@ class PlayState extends MusicBeatState
 		if (paused)
 		{
 			if (health > 0)
-				Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "] - PAUSED";
+				Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " - PAUSED";
 
 			if (FlxG.sound.music != null)
 			{
@@ -2059,7 +2059,7 @@ class PlayState extends MusicBeatState
 		if (paused)
 		{
 			if (health > 0)
-				Lib.application.window.title = "Wednesday's Infidelity - " + curSong + " [" + storyDifficultyText + "]";
+				Lib.application.window.title = "Wednesday's Infidelity - " + curSong;
 
 			if (FlxG.sound.music != null && !startingSong)
 			{

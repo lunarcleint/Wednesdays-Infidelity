@@ -26,6 +26,8 @@ class WarningState extends MusicBeatState
 {
 	private var canMove:Bool = false;
 
+	private var canPressSpace:Bool = false;
+
 	private var warnText:FlxText;
 	private var curOption:Option = null;
 	private var curSelected:Int = 0;
@@ -177,6 +179,11 @@ class WarningState extends MusicBeatState
 		{
 			FlxTween.tween(text, {x: text.x - 700}, 1, {startDelay: 0.5 + (0.3 * infoTexts.indexOf(text)), ease: FlxEase.backOut});
 		}
+
+		new FlxTimer().start(1 + (0.5 + (0.3 * (infoTexts.length - 1))), function(tmr:FlxTimer)
+		{
+			canPressSpace = true;
+		});
 	}
 
 	function genOptions()
@@ -320,7 +327,7 @@ class WarningState extends MusicBeatState
 				reloadCheckboxes();
 			}
 
-			if (FlxG.keys.justPressed.SPACE)
+			if (FlxG.keys.justPressed.SPACE && canPressSpace)
 			{
 				canMove = false;
 

@@ -8,6 +8,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
@@ -55,11 +56,14 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
+	var resetText:FlxText;
 
 	override function create()
 	{
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+
+		FlxGraphic.defaultPersist = false;
 
 		Lib.application.window.title = "Wednesday's Infidelity - Main Menu";
 		#if desktop
@@ -139,12 +143,15 @@ class MainMenuState extends MusicBeatState
 		if (ClientPrefs.shake)
 			FlxG.camera.shake(0.001, 99999999999);
 
-		var resetText:FlxText = new FlxText(0, FlxG.height - 24, 0, "PRESS DELETE TO RESET PROGRESS", 12);
+		resetText = new FlxText(0, FlxG.height - 24, 0, "PRESS DELETE TO RESET PROGRESS", 12);
 		resetText.scrollFactor.set();
 		resetText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		resetText.x = (FlxG.width - resetText.width) - 12;
 		resetText.visible = Progression.beatMainWeek;
 		add(resetText);
+
+		if (Progression.beatMainWeek)
+			FlxTween.color(resetText, 1, FlxColor.WHITE, FlxColor.YELLOW, {type: PINGPONG});
 
 		changeItem();
 
@@ -277,6 +284,8 @@ class MainMenuState extends MusicBeatState
 		Lib.application.window.title = "Wednesday's Infidelity";
 		var daChoice:String = optionShit[curSelected];
 
+		FlxTween.globalManager.cancelTweensOf(resetText);
+
 		switch (daChoice)
 		{
 			case 'story_mode':
@@ -319,5 +328,20 @@ class MainMenuState extends MusicBeatState
 				FlxG.log.add(spr.frameWidth);
 			}
 		});
+	}
+
+	public override function destroy()
+	{
+		super.destroy();
+
+		FlxG.bitmap.clearCache();
+
+		FlxGraphic.defaultPersist = true;
+
+		Paths.clearStoredMemory(true);
+
+		#if cpp
+		cpp.NativeGc.run(true);
+		#end
 	}
 }
