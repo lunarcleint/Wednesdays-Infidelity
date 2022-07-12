@@ -4,7 +4,8 @@ function onStepHit()
 	{
 		case 1:
 			PlayState.addCinematicBars(1.2);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,
@@ -33,7 +34,8 @@ function onStepHit()
 			}
 		case 320:
 			PlayState.removeCinematicBars(0.000001);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,
@@ -62,8 +64,8 @@ function onStepHit()
 			}
 		case 960:
 			PlayState.addCinematicBars(0.5);
-			FlxTween.tween(PlayState.stageWhite,{alpha: 0.1},0.4);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,
@@ -92,8 +94,8 @@ function onStepHit()
 			}
 		case 1088:
 			PlayState.removeCinematicBars(0.000001);
-			FlxTween.tween(PlayState.stageWhite,{alpha: 1},0.4);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,
@@ -122,7 +124,8 @@ function onStepHit()
 			}
 		case 1408:
 			PlayState.addCinematicBars(0.2);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,
@@ -147,7 +150,8 @@ function onStepHit()
 			}
 		case 1472:
 			PlayState.removeCinematicBars(0.000001);
-			var objs = [ // me lo robe de lunar
+			var objs = [
+				// me lo robe de lunar
 				PlayState.healthBar,
 				PlayState.healthBarBG,
 				PlayState.iconP1,

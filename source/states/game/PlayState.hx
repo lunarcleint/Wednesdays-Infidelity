@@ -300,6 +300,9 @@ class PlayState extends MusicBeatState
 	var devs:FlxSprite;
 	var osbaldo:FlxSprite;
 
+	var danceLeft:Bool = false; // weird ik but ig it works
+	var trumpetsPlaying:Bool = false;
+
 	// Week Misses / Endings
 	public static var weekMisses:Int = 0;
 
@@ -720,20 +723,21 @@ class PlayState extends MusicBeatState
 
 				osbaldo = new FlxSprite(1300, 150);
 				osbaldo.frames = Paths.getSparrowAtlas('backgrounds/leakers/OSWALD');
-				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, true);
+				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, false);
 				osbaldo.scrollFactor.set(1.05, 1.05);
 				osbaldo.antialiasing = ClientPrefs.globalAntialiasing;
 				osbaldo.scale.set(0.76, 0.76);
 
 				devs = new FlxSprite(200, 100);
 				devs.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEVS_LEAKED');
-				devs.animation.addByPrefix('idle', 'DEVS', 24, true);
+				devs.animation.addByPrefix('idle', 'DEVS', 24, false);
 				devs.scrollFactor.set(1.05, 1.05);
 				devs.antialiasing = ClientPrefs.globalAntialiasing;
 
 				diablito = new FlxSprite(380, 450);
 				diablito.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEMONS_DANCE');
-				diablito.animation.addByPrefix('idle', 'DEMONS IDLE', 24, true);
+				diablito.animation.addByIndices('danceLeft', 'DEMONS IDLE', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], '', 24, false);
+				diablito.animation.addByIndices('danceRight', 'DEMONS IDLE', [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], '', 24, false);
 				diablito.animation.addByPrefix('trompeta', 'DEMONS TROMPETA', 24, false);
 				diablito.antialiasing = ClientPrefs.globalAntialiasing;
 				diablito.scrollFactor.set(1.05, 1.05);
@@ -1477,9 +1481,18 @@ class PlayState extends MusicBeatState
 				case 'stageLeakers':
 					if (curBeat % 2 == 0)
 					{
-						devs.animation.play('idle');
-						osbaldo.animation.play('idle');
-						diablito.animation.play('idle');
+						osbaldo.animation.play('idle', true);
+						devs.animation.play('idle', true);
+					}
+					if (!danceLeft && !trumpetsPlaying)
+					{
+						diablito.animation.play('danceLeft', true);
+						danceLeft = !danceLeft;
+					}
+					else if (!trumpetsPlaying)
+					{
+						diablito.animation.play('danceRight', true);
+						danceLeft = !danceLeft;
 					}
 				case 'susNightmare':
 					if (curBeat % 1 == 0)
@@ -3184,10 +3197,20 @@ class PlayState extends MusicBeatState
 				camOther.flash(FlxColor.fromString('0xFFFFFFFF'), 1, null, true);
 
 			case 'Trompeta Diablo Leakers':
-				diablito.animation.play('trompeta');
+				if (!trumpetsPlaying)
+				{
+					trumpetsPlaying = true;
+				}
+				diablito.animation.play('trompeta', true);
+				diablito.animation.finishCallback = function(name)
+				{
+					if (name == 'trompeta' && trumpetsPlaying)
+						trumpetsPlaying = false;
+				}
 
 			case 'Idle Diablo Leakers':
-				diablito.animation.play('idle');
+				trumpetsPlaying = false;
+				diablito.animation.stop();
 
 			case 'Flash Black':
 				if (!ClientPrefs.flashing)
@@ -4853,9 +4876,18 @@ class PlayState extends MusicBeatState
 			case 'stageLeakers':
 				if (curBeat % 2 == 0)
 				{
-					devs.animation.play('idle');
-					osbaldo.animation.play('idle');
-					diablito.animation.play('idle');
+					osbaldo.animation.play('idle', true);
+					devs.animation.play('idle', true);
+				}
+				if (!danceLeft && !trumpetsPlaying)
+				{
+					diablito.animation.play('danceLeft', true);
+					danceLeft = !danceLeft;
+				}
+				else if (!trumpetsPlaying)
+				{
+					diablito.animation.play('danceRight', true);
+					danceLeft = !danceLeft;
 				}
 			case 'hell':
 				grain.alpha = 1;
