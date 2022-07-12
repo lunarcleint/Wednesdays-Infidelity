@@ -22,7 +22,7 @@ import gameObjects.Option;
 import openfl.Lib;
 import util.CoolUtil;
 
-class WarningState extends FlxState
+class WarningState extends MusicBeatState
 {
 	private var canMove:Bool = false;
 
@@ -51,7 +51,7 @@ class WarningState extends FlxState
 
 		if (ClientPrefs.doNotShowWarnings)
 		{
-			FlxG.switchState(new TitleState());
+			MusicBeatState.switchState(new TitleState());
 
 			return;
 		}
@@ -351,7 +351,7 @@ class WarningState extends FlxState
 
 					ClientPrefs.saveSettings();
 
-					FlxG.switchState(new TitleState());
+					MusicBeatState.switchState(new TitleState());
 				});
 			}
 		}

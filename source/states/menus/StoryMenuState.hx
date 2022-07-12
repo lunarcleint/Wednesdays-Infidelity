@@ -1,10 +1,8 @@
 package states.menus;
 
-#if desktop
-import util.Discord.DiscordClient;
-#end
 import data.ClientPrefs;
 import data.Highscore;
+import data.Progression;
 import data.Song;
 import data.WeekData;
 import flixel.FlxG;
@@ -30,6 +28,10 @@ import states.menus.FreeplayState;
 import util.CoolUtil;
 
 using StringTools;
+
+#if desktop
+import util.Discord.DiscordClient;
+#end
 
 class StoryMenuState extends MusicBeatState
 {
@@ -494,7 +496,7 @@ class StoryMenuState extends MusicBeatState
 	function weekIsLocked(name:String):Bool
 	{
 		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
-		if (leWeek.fileName != 'Week Suicide' && !FlxG.save.data.beatmainweek)
+		if (leWeek.fileName != 'Week Suicide' && !Progression.beatMainWeek)
 		{
 			return (true
 				&& leWeek.weekBefore.length > 0

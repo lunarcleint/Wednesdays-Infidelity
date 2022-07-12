@@ -117,32 +117,23 @@ class FreeplayState extends MusicBeatState
 				switch (song[0])
 				{
 					case 'Sunsets':
-						if (FlxG.save.data.gotgoodending == false)
-						{
+						if (!Progression.goodEnding)
 							continue;
-						}
 						else
-						{
 							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-						}
+
 					case 'Last Day':
-						if (FlxG.save.data.gotbadending == false)
-						{
+						if (!Progression.badEnding)
 							continue;
-						}
 						else
-						{
 							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-						}
+
 					case 'Hellhole':
-						if (FlxG.save.data.beathell == false)
-						{
+						if (!Progression.beatHell)
 							continue;
-						}
 						else
-						{
 							addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-						}
+
 					default:
 						addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
 				}
@@ -438,7 +429,7 @@ class FreeplayState extends MusicBeatState
 				selectSong();
 			}
 
-			if (FlxG.save.data.beatmainweek && FlxG.save.data.gotbadending && !FlxG.save.data.beathell)
+			if (Progression.beatMainWeek && Progression.badEnding && !Progression.beatHell)
 			{
 				var finalKey:FlxKey = FlxG.keys.firstJustPressed();
 

@@ -1,6 +1,5 @@
 package states.game;
 
-import cpp.Random;
 import data.*;
 import data.ClientPrefs;
 import data.Highscore;
@@ -15,15 +14,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.FlxSubState;
-import flixel.addons.display.FlxGridOverlay;
-import flixel.addons.effects.FlxTrail;
-import flixel.addons.effects.FlxTrailArea;
-import flixel.addons.effects.chainable.FlxEffectSprite;
-import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
-import flixel.graphics.FlxGraphic;
-import flixel.graphics.atlas.FlxAtlas;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
@@ -49,22 +40,15 @@ import gameObjects.BGSprite;
 import gameObjects.Boyfriend;
 import gameObjects.Character;
 import gameObjects.HealthIcon;
-import gameObjects.Note.EventNote;
 import gameObjects.Note;
 import gameObjects.NoteSplash;
 import gameObjects.StrumNote;
-import haxe.Json;
-import lime.tools.Asset;
-import lime.utils.Assets;
 import openfl.Lib;
-import openfl.display.BlendMode;
-import openfl.display.Shader;
-import openfl.display.StageQuality;
 import openfl.events.Event;
 import openfl.events.KeyboardEvent;
+import openfl.events.ProgressEvent;
 import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
-import openfl.utils.Assets as OpenFlAssets;
 import song.Conductor;
 import song.Script;
 import states.*;
@@ -760,7 +744,7 @@ class PlayState extends MusicBeatState
 				add(mesatres);
 				add(devs);
 				add(osbaldo);
-				//add(mesacuatro);
+				// add(mesacuatro);
 				add(diablito);
 
 			case 'bobux': // Week Suicide
@@ -907,7 +891,7 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
-		switch(curStage)
+		switch (curStage)
 		{
 			case 'stageLeakers':
 				add(mesacuatro);
@@ -1491,7 +1475,8 @@ class PlayState extends MusicBeatState
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'stageLeakers':
-					if (curBeat % 2 == 0) {
+					if (curBeat % 2 == 0)
+					{
 						devs.animation.play('idle');
 						osbaldo.animation.play('idle');
 						diablito.animation.play('idle');
@@ -3342,22 +3327,6 @@ class PlayState extends MusicBeatState
 
 			weekMissesBar.visible = false;
 			weekMissesTxt.visible = false;
-
-			switch (SONG.song)
-			{
-				case 'Unknown Suffering':
-					{
-						finishCallback = function()
-						{
-							if (weekMisses >= 30)
-								sendToSong('last-day');
-							else
-								sendToSong('sunsets');
-						};
-					}
-				default:
-					{endSong();}
-			}
 		}
 
 		updateTime = false;
@@ -3445,6 +3414,19 @@ class PlayState extends MusicBeatState
 
 				var lastSong:String = storyPlaylist[0];
 
+				if (WeekData.getWeekFileName() == 'Week Suicide')
+				{
+					switch (lastSong.toLowerCase())
+					{
+						case 'unknown-suffering' | 'unknown suffering':
+							storyPlaylist[storyPlaylist.length] = weekMisses >= 30 ? 'last-day' : 'sunsets';
+
+							Progression.beatMainWeek = true;
+
+							Progression.save();
+					}
+				}
+
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
@@ -3465,17 +3447,21 @@ class PlayState extends MusicBeatState
 
 					if (WeekData.getWeekFileName() == 'Week Suicide')
 					{
-						if (Paths.formatToSongPath(SONG.song) == 'sunsets')
-							FlxG.save.data.gotgoodending = true;
-						if (Paths.formatToSongPath(SONG.song) == 'last-day')
-							FlxG.save.data.gotbadending = true;
-						if (!FlxG.save.data.beatmainweek)
-							FlxG.save.data.beatmainweek = true;
-						if (Paths.formatToSongPath(SONG.song) == 'hellhole')
-							FlxG.save.data.beathell = true;
-						FlxG.save.flush();
+						switch (Paths.formatToSongPath(SONG.song))
+						{
+							case 'sunsets':
+								Progression.goodEnding = true;
+
+							case 'last-day':
+								Progression.badEnding = true;
+
+							case 'hellhole':
+								Progression.beatHell = true;
+						}
+
+						Progression.save();
 					}
-					// if ()
+
 					if (!practiceMode && !cpuControlled)
 					{
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
@@ -3494,16 +3480,13 @@ class PlayState extends MusicBeatState
 				{
 					var difficulty:String = CoolUtil.getDifficultyFilePath();
 
-					trace('LOADING NEXT SONG');
-					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
-
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
 
 					prevCamFollow = camFollow;
 					prevCamFollowPos = camFollowPos;
 
-					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+					PlayState.SONG = Song.loadFromJson(storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
 
 					cancelMusicFadeTween();
@@ -3518,7 +3501,6 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				trace('WENT BACK TO FREEPLAY??');
 				cancelMusicFadeTween();
 				if (FlxTransitionableState.skipNextTransIn)
 				{
@@ -4951,43 +4933,6 @@ class PlayState extends MusicBeatState
 
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
-
-	function sendToSong(name:String)
-	{
-		if (name == null)
-			return;
-
-		persistentUpdate = false;
-
-		var songLowercase:String = Paths.formatToSongPath(name);
-		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-
-		prevCamFollow = camFollow;
-		prevCamFollowPos = camFollowPos;
-
-		PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-		PlayState.isStoryMode = true;
-		PlayState.storyDifficulty = curDifficulty;
-
-		Lib.application.window.title = "Wednesday's Infidelity";
-
-		FlxG.sound.music.stop();
-		cancelMusicFadeTween();
-
-		FlxTransitionableState.skipNextTransIn = true;
-		FlxTransitionableState.skipNextTransOut = true;
-
-		LoadingState.loadAndSwitchState(new CutsceneState(PlayState.storyPlaylist[0], true, function()
-		{
-			LoadingState.loadAndSwitchState(new CutsceneState(songLowercase, false, function()
-			{
-				FlxTransitionableState.skipNextTransIn = true;
-				FlxTransitionableState.skipNextTransOut = true;
-
-				LoadingState.loadAndSwitchState(new PlayState());
-			}), true);
-		}), true);
-	}
 
 	public function startScript()
 	{

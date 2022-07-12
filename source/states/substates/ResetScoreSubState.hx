@@ -1,5 +1,6 @@
 package states.substates;
 
+import data.Progression;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
@@ -99,11 +100,6 @@ class ResetScoreSubState extends MusicBeatSubstate
 				{
 					// Wow thats alot of data
 
-					FlxG.save.data.gotgoodending = null;
-					FlxG.save.data.gotbadending = null;
-					FlxG.save.data.beatmainweek = null;
-					FlxG.save.data.beathell = null;
-
 					FlxG.save.data.weekCompleted = null;
 
 					// WIPE OUT ALL HIGH SCORES
@@ -111,6 +107,8 @@ class ResetScoreSubState extends MusicBeatSubstate
 					FlxG.save.data.weekScores = null;
 					FlxG.save.data.songScores = null;
 					FlxG.save.data.songRating = null;
+
+					Progression.reset();
 
 					FlxG.save.flush();
 

@@ -1,5 +1,6 @@
 package states.game;
 
+import data.Progression;
 import flixel.FlxG;
 import gameObjects.FlxVideo;
 
@@ -51,7 +52,7 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 			{
 				case 'last day':
 					video = "BadEnding";
-					skippable = FlxG.save.data.gotbadending;
+					skippable = Progression.badEnding;
 			}
 		}
 		else
@@ -60,16 +61,16 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 			{
 				case 'hellhole':
 					video = "HellholeIntro";
-					skippable = FlxG.save.data.beathell;
+					skippable = Progression.beatHell;
 				case 'wistfulness':
 					video = "StoryStart";
-					skippable = FlxG.save.data.beatmainweek;
+					skippable = Progression.beatMainWeek;
 				case 'last day':
 					video = "Portal";
-					skippable = FlxG.save.data.gotbadending;
+					skippable = Progression.badEnding;
 				case 'unknown suffering':
 					video = "TransformUN";
-					skippable = FlxG.save.data.beatmainweek;
+					skippable = Progression.beatMainWeek;
 			}
 		}
 

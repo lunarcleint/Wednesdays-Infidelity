@@ -7,6 +7,7 @@ import flixel.graphics.FlxGraphic;
 import input.PlayerSettings;
 import lime.app.Application;
 import openfl.Lib;
+import states.MusicBeatState;
 import states.menus.StoryMenuState;
 import states.menus.TitleState;
 import util.CoolUtil;
@@ -50,23 +51,6 @@ class Init extends FlxState
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
 
-		if (FlxG.save.data.beatmainweek == null) // W.I SAVES
-		{
-			FlxG.save.data.beatmainweek = false;
-		}
-		if (FlxG.save.data.gotbadending == null)
-		{
-			FlxG.save.data.gotbadending = false;
-		}
-		if (FlxG.save.data.gotgoodending == null)
-		{
-			FlxG.save.data.gotgoodending = false;
-		}
-		if (FlxG.save.data.beathell == null)
-		{
-			FlxG.save.data.beathell = false;
-		}
-
 		FlxG.mouse.visible = false;
 
 		#if desktop
@@ -81,8 +65,10 @@ class Init extends FlxState
 
 		ClientPrefs.loadDefaultKeys();
 
+		Progression.load();
+
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
-		CoolUtil.precacheImage('kevin_normal', 'preload'); // this preloads i think??
+		CoolUtil.precacheImage('kevin_normal', 'preload');
 
 		FlxG.switchState(Type.createInstance(Main.initialState, []));
 	}

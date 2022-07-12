@@ -1,6 +1,7 @@
 package states.menus;
 
 import data.ClientPrefs;
+import data.Progression;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -57,6 +58,9 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		Lib.application.window.title = "Wednesday's Infidelity - Main Menu";
 		#if desktop
 		// Updating Discord Rich Presence
@@ -119,7 +123,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = true;
 
-			if (optionShit[i] == 'freeplay' && FlxG.save.data.beatmainweek == false)
+			if (optionShit[i] == 'freeplay' && !Progression.beatMainWeek)
 			{
 				var newShader:ColorSwap = new ColorSwap();
 				menuItem.shader = newShader.shader;
@@ -139,7 +143,7 @@ class MainMenuState extends MusicBeatState
 		resetText.scrollFactor.set();
 		resetText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		resetText.x = (FlxG.width - resetText.width) - 12;
-		resetText.visible = FlxG.save.data.beatmainweek;
+		resetText.visible = Progression.beatMainWeek;
 		add(resetText);
 
 		changeItem();
@@ -182,7 +186,7 @@ class MainMenuState extends MusicBeatState
 				{
 					CoolUtil.browserLoad('https://discord.gg/U4SbwdNHpX');
 				}
-				else if (FlxG.save.data.beatmainweek == false && optionShit[curSelected] == 'freeplay')
+				else if (!Progression.beatMainWeek && optionShit[curSelected] == 'freeplay')
 				{
 					FlxG.sound.play(Paths.sound('lockedSound'));
 				}
@@ -234,7 +238,7 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
-			if (#if PRIVATE_BUILD true #else FlxG.save.data.beatmainweek #end && FlxG.keys.justPressed.DELETE)
+			if (#if PRIVATE_BUILD true #else Progression.beatMainWeek #end && FlxG.keys.justPressed.DELETE)
 			{
 				selectedSomethin = true;
 				openSubState(new ResetScoreSubState(function()
@@ -255,12 +259,12 @@ class MainMenuState extends MusicBeatState
 			#if PRIVATE_BUILD
 			if (FlxG.keys.justPressed.T)
 			{
-				FlxG.save.data.gotgoodending = true;
-				FlxG.save.data.gotbadending = true;
-				FlxG.save.data.beatmainweek = true;
-				FlxG.save.data.beathell = true;
+				Progression.badEnding = true;
+				Progression.goodEnding = true;
+				Progression.beatHell = true;
+				Progression.beatMainWeek = true;
 
-				FlxG.save.flush();
+				Progression.save();
 
 				Sys.exit(0);
 			}

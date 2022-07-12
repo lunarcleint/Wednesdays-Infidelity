@@ -72,6 +72,9 @@ class OptionsState extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		#if desktop
 		DiscordClient.changePresence("Options Menu", null);
 		#end
