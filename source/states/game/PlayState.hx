@@ -25,6 +25,7 @@ import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.tweens.misc.NumTween;
 import flixel.ui.FlxBar;
 import flixel.util.FlxCollision;
 import flixel.util.FlxColor;
@@ -458,7 +459,7 @@ class PlayState extends MusicBeatState
 	// Shaders
 	public var chrom:ChromaticAberrationEffect;
 
-	public var defaultChrome:Array<Array<Float>> = [[0, 0], [0, 0], [0, 0]]; // r/g/b
+	public var chromTweens:Array<FlxTween> = [];
 
 	public var vhs:VHSEffect;
 	public var distort:DistortionEffect;
@@ -2230,17 +2231,6 @@ class PlayState extends MusicBeatState
 			{
 				isCameraOnForcedPos = false;
 				moveCameraSection(Std.int(curStep / 16));
-			}
-		}
-
-		if (chrom != null)
-		{
-			var objToLerp:Array<Dynamic> = [chrom.shader.rOffset.value, chrom.shader.bOffset.value, chrom.shader.gOffset.value];
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 2.4, 0, 1);
-			for (duh in 0...objToLerp.length)
-			{
-				objToLerp[duh][0] = FlxMath.lerp(objToLerp[duh][0], defaultChrome[duh][0], lerpVal);
-				objToLerp[duh][1] = FlxMath.lerp(objToLerp[duh][0], defaultChrome[duh][1], lerpVal);
 			}
 		}
 
@@ -4322,14 +4312,52 @@ class PlayState extends MusicBeatState
 	{
 		if (chrom != null)
 		{
-			if (defaultChrome[1][0] < 0.0005)
+			if (Math.abs(chrom.shader.rOffset.value[0]) < 0.005)
 			{
-				defaultChrome[1][0] -= 0.0005;
-				defaultChrome[2][0] += 0.0005;
-			}
+				if (chromTweens[0] != null)
+				{
+					for (tween in chromTweens)
+					{
+						tween.cancel();
+						chromTweens.remove(tween);
+						tween = null;
+					}
+				}
 
-			chrom.shader.gOffset.value = [defaultChrome[1][0] + -0.002, 0];
-			chrom.shader.bOffset.value = [defaultChrome[2][0] + 0.002, 0];
+				var newValues:Array<Float> = [chrom.shader.rOffset.value[0] - 0.001, chrom.shader.bOffset.value[0] + 0.001];
+
+				var tween:NumTween = FlxTween.num(chrom.shader.rOffset.value[0], newValues[0], 0.5, {
+					ease: FlxEase.circInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						chromTweens.remove(twn);
+						twn = null;
+					}
+				});
+
+				tween.onUpdate = function(twn:FlxTween)
+				{
+					chrom.shader.rOffset.value = [tween.value, 0];
+				};
+
+				chromTweens.push(tween);
+
+				var tween2:NumTween = FlxTween.num(chrom.shader.bOffset.value[0], newValues[1], 0.5, {
+					ease: FlxEase.circInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						chromTweens.remove(twn);
+						twn = null;
+					}
+				});
+
+				tween2.onUpdate = function(twn:FlxTween)
+				{
+					chrom.shader.bOffset.value = [tween2.value, 0];
+				};
+
+				chromTweens.push(tween2);
+			}
 		}
 
 		var random:Int = FlxG.random.int(0, 2);
