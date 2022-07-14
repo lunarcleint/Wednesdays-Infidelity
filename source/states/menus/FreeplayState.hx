@@ -147,6 +147,8 @@ class FreeplayState extends MusicBeatState
 				destroyFreeplayVocals();
 			}
 		];
+		combos = Lambda.count(keyCombos);
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
