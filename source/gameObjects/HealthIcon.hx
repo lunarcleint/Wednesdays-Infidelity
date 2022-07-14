@@ -1,8 +1,8 @@
 package gameObjects;
 
 import data.ClientPrefs;
+import flixel.FlxG;
 import flixel.FlxSprite;
-import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
@@ -55,7 +55,7 @@ class HealthIcon extends FlxSprite
 			loadGraphic(file); // Load stupidly first for getting the file size
 			loadGraphic(file, true, Math.floor(width / 2), Math.floor(height)); // Then load it fr
 			iconOffsets[0] = (width - 150) / 2;
-			iconOffsets[1] = (width - 150) / 2;
+			iconOffsets[1] = (width - 150) / 2; // NOTE FOR MY DUMBASS + IS HIGHER -lunar
 			switch (char)
 			{
 				case "gf":
@@ -67,6 +67,10 @@ class HealthIcon extends FlxSprite
 					iconOffsets[1] += 20;
 				case "crazy-mokey" | "mokey":
 					iconOffsets[1] += 10;
+				case "Oswald":
+					iconOffsets[1] += 12.5;
+				case "rabiesOswald":
+					iconOffsets[1] += 15;
 			}
 			updateHitbox();
 

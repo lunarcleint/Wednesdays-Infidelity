@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "intro",
-			"indices": [],
-			"name": "OSWALD"
+			"fps": 24,
+			"name": "OSWALD",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -18,7 +18,7 @@
 		-480,
 		90
 	],
-	"healthicon": "bf-suicide",
+	"healthicon": "Oswald",
 	"flip_x": false,
 	"healthbar_colors": [
 		125,

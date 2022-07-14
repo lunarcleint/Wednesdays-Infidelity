@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "OSWALD IDLE"
+			"fps": 24,
+			"name": "OSWALD IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				58,
 				49
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Oswald Left"
+			"fps": 24,
+			"name": "Oswald Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-110,
 				9
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Oswald Down"
+			"fps": 24,
+			"name": "Oswald Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-166,
 				30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Oswald Up"
+			"fps": 24,
+			"name": "Oswald Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-209,
 				-74
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "OSWALD RIGHT"
+			"fps": 24,
+			"name": "OSWALD RIGHT",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				30,
 				84
 			],
-			"anim": "intro",
+			"loop": false,
 			"fps": 24,
-			"name": "OSWALD DIALOGUE INTRO",
-			"indices": []
+			"anim": "intro",
+			"indices": [],
+			"name": "OSWALD DIALOGUE INTRO"
 		}
 	],
 	"no_antialiasing": false,
@@ -73,7 +73,7 @@
 		-300,
 		90
 	],
-	"healthicon": "bf-suicide",
+	"healthicon": "Oswald",
 	"flip_x": false,
 	"healthbar_colors": [
 		125,
