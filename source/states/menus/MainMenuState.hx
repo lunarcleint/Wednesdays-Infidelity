@@ -331,7 +331,10 @@ class MainMenuState extends MusicBeatState
 			#if PRIVATE_BUILD
 			if (FlxG.keys.justPressed.T) // 100% THE GAME
 			{
-				Progression.beatHell = false;
+				Progression.badEnding = true;
+				Progression.goodEnding = true;
+				Progression.beatHell = true;
+				Progression.beatMainWeek = true;
 
 				Progression.save();
 

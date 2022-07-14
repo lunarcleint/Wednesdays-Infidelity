@@ -22,7 +22,7 @@ class FlxVideo extends FlxBasic
 	#end
 	public var skipable:Bool = false;
 
-	public function new(name:String, ?skip:Bool)
+	public function new(name:String, ?skip:Bool, ?focus:Bool = true)
 	{
 		#if PRIVATE_BUILD
 		skipable = true;
@@ -63,7 +63,7 @@ class FlxVideo extends FlxBasic
 		});
 		netStream.play(name);
 		#elseif desktop
-		var video:MP4Handler = new MP4Handler();
+		var video:MP4Handler = new MP4Handler(focus);
 		video.playVideo(name);
 		video.finishCallback = onVLCComplete;
 		video.onError = onVLCError;

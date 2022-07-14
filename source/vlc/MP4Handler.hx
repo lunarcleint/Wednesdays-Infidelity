@@ -14,10 +14,11 @@ class MP4Handler extends VlcBitmap
 	public var finishCallback:Void->Void;
 
 	public var skipable:Bool = false;
+	public var focus:Bool = true;
 
 	var pauseMusic:Bool;
 
-	public function new(width:Float = 320, height:Float = 240, autoScale:Bool = true)
+	public function new(daFocus:Null<Bool> = true, width:Float = 320, height:Float = 240, autoScale:Bool = true)
 	{
 		super(width, height, autoScale);
 
@@ -29,13 +30,18 @@ class MP4Handler extends VlcBitmap
 
 		FlxG.stage.addEventListener(Event.ENTER_FRAME, update);
 
+		if (daFocus != null)
+			focus = daFocus;
+
 		FlxG.signals.focusGained.add(function()
 		{
-			resume();
+			if (focus)
+				resume();
 		});
 		FlxG.signals.focusLost.add(function()
 		{
-			pause();
+			if (focus)
+				pause();
 		});
 	}
 

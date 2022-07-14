@@ -48,6 +48,7 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 	{
 		var video:String = null;
 		var skippable:Null<Bool> = null;
+		var focus:Null<Bool> = true;
 
 		if (endingCutscene)
 		{
@@ -77,15 +78,17 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 				case 'dook':
 					video = "LIL DROPTOP - DOOK";
 					skippable = false;
+					focus = false;
 				case 'penk':
 					video = "PENKARU GRIDDY";
 					skippable = false;
+					focus = false;
 			}
 		}
 
-		if (video != null && skippable != null)
+		if (video != null && skippable != null && focus != null)
 		{
-			playVideo(video, skippable);
+			playVideo(video, skippable, focus);
 		}
 		else
 		{
@@ -93,7 +96,7 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 		}
 	}
 
-	public function playVideo(videoName:String, ?skippable:Bool = false)
+	public function playVideo(videoName:String, ?skippable:Bool = false, ?focus:Bool = true)
 	{
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
@@ -106,7 +109,7 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 
 		if (foundFile)
 		{
-			var video = new FlxVideo(fileName, skippable);
+			var video = new FlxVideo(fileName, skippable, focus);
 
 			video.finishCallback = function()
 			{
