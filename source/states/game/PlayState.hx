@@ -415,6 +415,14 @@ class PlayState extends MusicBeatState
 			bfZoom: 1, // mushitsection == true
 			dadZoom: 0.8, // mushitsection == false
 		},
+		"clubhouse" => {
+			dadPos: [420.95, 413], // xx
+			bfPos: [952.9, 550], // xx2
+			gfPos: [600, -300], // xx3
+			gfZoom: 0.65,
+			bfZoom: 1, // mushitsection == true
+			dadZoom: 0.7, // mushitsection == false
+		},
 		"jankacStage" => {
 			dadPos: [420.95, 303], // xx
 			bfPos: [952.9, 450], // xx2
@@ -667,6 +675,10 @@ class PlayState extends MusicBeatState
 			case 'chedder': // Week Chedder
 				chedderguybg = new BGSprite('backgrounds/BG_CHEDDER', -658, -280);
 				add(chedderguybg);
+
+			case 'clubhouse':
+				var bg:BGSprite = new BGSprite('backgrounds/clubhouse', -920, -472);
+				add(bg);
 
 			case 'reefer': // Song Reefer Madness
 				var stupig:FlxSprite = new FlxSprite(-650, -100).loadGraphic(Paths.image('backgrounds/Snoop-Dog-Approved-BG'), 'shared');

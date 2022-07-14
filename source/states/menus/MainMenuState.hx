@@ -1,7 +1,9 @@
 package states.menus;
 
 import data.ClientPrefs;
+import data.Highscore;
 import data.Progression;
+import data.Song;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -23,6 +25,7 @@ import lime.app.Application;
 import openfl.Lib;
 import states.editors.MasterEditorMenu;
 import states.game.CutsceneState;
+import states.game.PlayState;
 import states.menus.CreditsState;
 import states.menus.FreeplaySelectorState.ColorSwap;
 import states.options.OptionsState;
@@ -121,6 +124,19 @@ class MainMenuState extends MusicBeatState
 				{
 					Sys.exit(0);
 				}));
+			},
+			[FlxKey.M, FlxKey.E, FlxKey.E, FlxKey.S, FlxKey.K, FlxKey.A] => function()
+			{
+				var songLowercase:String = Paths.formatToSongPath("Clubhouse");
+				// var poop:String = Highscore.formatSong(songLowercase, 2);
+
+				PlayState.SONG = Song.loadFromJson('clubhouse-hard', songLowercase);
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = 2;
+
+				FlxG.sound.music.volume = 0;
+
+				LoadingState.loadAndSwitchState(new PlayState());
 			}
 		];
 		combos = Lambda.count(keyCombos);
