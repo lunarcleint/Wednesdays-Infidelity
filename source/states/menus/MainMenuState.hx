@@ -11,15 +11,18 @@ import flixel.effects.FlxFlicker;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxSignal.IFlxSignal;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import openfl.Lib;
 import states.editors.MasterEditorMenu;
+import states.game.CutsceneState;
 import states.menus.CreditsState;
 import states.menus.FreeplaySelectorState.ColorSwap;
 import states.options.OptionsState;
@@ -58,8 +61,70 @@ class MainMenuState extends MusicBeatState
 	var camFollowPos:FlxObject;
 	var resetText:FlxText;
 
+	var keyCombos:Map<Array<FlxKey>, Void->Void> = [];
+	var combos:Null<Int>;
+	var keysPressed:Map<Array<FlxKey>, Array<FlxKey>> = [];
+
 	override function create()
 	{
+		keyCombos = [
+			[FlxKey.D, FlxKey.O, FlxKey.O, FlxKey.K] => function()
+			{
+				trace("ALL THIS MONEY ON ME, MAKE ME WANNA POOP");
+
+				selectedSomethin = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+
+				FlxG.sound.muteKeys = [];
+				FlxG.sound.volumeDownKeys = [];
+				FlxG.sound.volumeUpKeys = [];
+
+				for (sound in FlxG.sound.list)
+					sound.stop();
+
+				FlxG.sound.music.stop();
+
+				Main.fpsVar.visible = false;
+
+				FlxG.sound.volume = 1;
+
+				MusicBeatState.switchState(new CutsceneState("dook", false, function()
+				{
+					Sys.exit(0);
+				}));
+			},
+			[FlxKey.P, FlxKey.E, FlxKey.N, FlxKey.K] => function()
+			{
+				trace("GRIDDY");
+
+				selectedSomethin = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+
+				FlxG.sound.muteKeys = [];
+				FlxG.sound.volumeDownKeys = [];
+				FlxG.sound.volumeUpKeys = [];
+
+				for (sound in FlxG.sound.list)
+					sound.stop();
+
+				FlxG.sound.music.stop();
+
+				Main.fpsVar.visible = false;
+
+				FlxG.sound.volume = 1;
+
+				MusicBeatState.switchState(new CutsceneState("penk", false, function()
+				{
+					Sys.exit(0);
+				}));
+			}
+		];
+		combos = Lambda.count(keyCombos);
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
@@ -264,18 +329,17 @@ class MainMenuState extends MusicBeatState
 			}
 
 			#if PRIVATE_BUILD
-			if (FlxG.keys.justPressed.T)
+			if (FlxG.keys.justPressed.T) // 100% THE GAME
 			{
-				Progression.badEnding = true;
-				Progression.goodEnding = true;
-				Progression.beatHell = true;
-				Progression.beatMainWeek = true;
+				Progression.beatHell = false;
 
 				Progression.save();
 
 				Sys.exit(0);
 			}
 			#end
+
+			checkCombos();
 		}
 	}
 
@@ -343,5 +407,47 @@ class MainMenuState extends MusicBeatState
 		#if cpp
 		cpp.NativeGc.run(true);
 		#end
+	}
+
+	public function checkCombos()
+	{
+		if (combos <= 0)
+			return;
+
+		var lastPressed:FlxKey = FlxG.keys.firstJustPressed();
+
+		for (keys in keyCombos.keys())
+		{
+			if (!keys.contains(lastPressed))
+				continue;
+
+			if (keysPressed[keys] == null)
+				keysPressed[keys] = [];
+
+			keysPressed[keys].push(lastPressed);
+
+			if (keysPressed[keys].length == keys.length)
+			{
+				var same:Bool = true;
+
+				for (i in 0...keysPressed[keys].length) // check if keys are the same
+				{
+					if (keysPressed[keys][i] != keys[i])
+					{
+						same = false;
+						break;
+					}
+				}
+
+				if (same)
+				{
+					if (keyCombos[keys] != null)
+						keyCombos[keys]();
+				}
+
+				keysPressed[keys] = [];
+				// Clears keys Pressed
+			}
+		}
 	}
 }
