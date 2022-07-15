@@ -68,7 +68,18 @@ class FreeplayState extends MusicBeatState
 
 	var daStatic:FlxSprite;
 
-	var keyCombos:Map<Array<FlxKey>, Void->Void> = [];
+	@:isVar
+	var keyCombos(default, set):Map<Array<FlxKey>, Void->Void> = [];
+
+	function set_keyCombos(newCombos:Map<Array<FlxKey>, Void->Void>):Map<Array<FlxKey>, Void->Void>
+	{
+		keyCombos = newCombos;
+
+		combos = Lambda.count(keyCombos);
+
+		return newCombos;
+	}
+
 	var combos:Null<Int>;
 	var keysPressed:Map<Array<FlxKey>, Array<FlxKey>> = [];
 
@@ -147,7 +158,6 @@ class FreeplayState extends MusicBeatState
 				destroyFreeplayVocals();
 			}
 		];
-		combos = Lambda.count(keyCombos);
 
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();

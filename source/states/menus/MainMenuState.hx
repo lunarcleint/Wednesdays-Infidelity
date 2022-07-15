@@ -22,6 +22,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSignal.IFlxSignal;
 import flixel.util.FlxTimer;
 import lime.app.Application;
+import lime.graphics.Image;
 import openfl.Lib;
 import states.editors.MasterEditorMenu;
 import states.game.CutsceneState;
@@ -64,7 +65,18 @@ class MainMenuState extends MusicBeatState
 	var camFollowPos:FlxObject;
 	var resetText:FlxText;
 
-	var keyCombos:Map<Array<FlxKey>, Void->Void> = [];
+	@:isVar
+	var keyCombos(default, set):Map<Array<FlxKey>, Void->Void> = [];
+
+	function set_keyCombos(newCombos:Map<Array<FlxKey>, Void->Void>):Map<Array<FlxKey>, Void->Void>
+	{
+		keyCombos = newCombos;
+
+		combos = Lambda.count(keyCombos);
+
+		return newCombos;
+	}
+
 	var combos:Null<Int>;
 	var keysPressed:Map<Array<FlxKey>, Array<FlxKey>> = [];
 
@@ -73,25 +85,15 @@ class MainMenuState extends MusicBeatState
 		keyCombos = [
 			[FlxKey.D, FlxKey.O, FlxKey.O, FlxKey.K] => function()
 			{
-				trace("ALL THIS MONEY ON ME, MAKE ME WANNA POOP");
-
 				selectedSomethin = true;
 
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
 
-				FlxG.sound.muteKeys = [];
-				FlxG.sound.volumeDownKeys = [];
-				FlxG.sound.volumeUpKeys = [];
+				stopSound();
 
-				for (sound in FlxG.sound.list)
-					sound.stop();
-
-				FlxG.sound.music.stop();
-
-				Main.fpsVar.visible = false;
-
-				FlxG.sound.volume = 1;
+				Lib.application.window.title = "All this money on me make me wanna poop, Pull up to yo' crib in that Bentley coupe, Hit the studio just to take a dookRun up to the streets with that fruit loop, Pull up to yo' block to yo' fuckin' trap".toUpperCase();
+				Lib.application.window.setIcon(Image.fromBitmapData(Paths.image("funni/MONEY").bitmap));
 
 				MusicBeatState.switchState(new CutsceneState("dook", false, function()
 				{
@@ -100,25 +102,15 @@ class MainMenuState extends MusicBeatState
 			},
 			[FlxKey.P, FlxKey.E, FlxKey.N, FlxKey.K] => function()
 			{
-				trace("GRIDDY");
-
 				selectedSomethin = true;
 
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
 
-				FlxG.sound.muteKeys = [];
-				FlxG.sound.volumeDownKeys = [];
-				FlxG.sound.volumeUpKeys = [];
+				stopSound();
 
-				for (sound in FlxG.sound.list)
-					sound.stop();
-
-				FlxG.sound.music.stop();
-
-				Main.fpsVar.visible = false;
-
-				FlxG.sound.volume = 1;
+				Lib.application.window.title = [for (_ in 0...100) "GRIDDY"].join(" ");
+				Lib.application.window.setIcon(Image.fromBitmapData(Paths.image("funni/penkfunnyicon").bitmap));
 
 				MusicBeatState.switchState(new CutsceneState("penk", false, function()
 				{
@@ -127,19 +119,23 @@ class MainMenuState extends MusicBeatState
 			},
 			[FlxKey.M, FlxKey.E, FlxKey.E, FlxKey.S, FlxKey.K, FlxKey.A] => function()
 			{
+				selectedSomethin = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+
 				var songLowercase:String = Paths.formatToSongPath("Clubhouse");
 				// var poop:String = Highscore.formatSong(songLowercase, 2);
 
 				PlayState.SONG = Song.loadFromJson('clubhouse-hard', songLowercase);
 				PlayState.isStoryMode = false;
 				PlayState.storyDifficulty = 2;
+				PlayState.weekMisses = 0;
 
 				FlxG.sound.music.volume = 0;
 
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
 		];
-		combos = Lambda.count(keyCombos);
 
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
@@ -468,5 +464,23 @@ class MainMenuState extends MusicBeatState
 				// Clears keys Pressed
 			}
 		}
+	}
+
+	function stopSound()
+	{
+		FlxG.sound.muteKeys = [];
+		FlxG.sound.volumeDownKeys = [];
+		FlxG.sound.volumeUpKeys = [];
+
+		for (sound in FlxG.sound.list)
+			sound.stop();
+
+		FlxG.sound.music.stop();
+
+		Main.fpsVar.visible = false;
+
+		FlxG.sound.volume = 1;
+
+		Lib.application.window.title = "Wednesday's Infidelity";
 	}
 }
