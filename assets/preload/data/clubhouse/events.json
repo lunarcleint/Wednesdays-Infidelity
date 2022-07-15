@@ -1,0 +1,84 @@
+{
+	"song": {
+		"speed": 2.4,
+		"stage": "clubhouse",
+		"player1": "bf-suicide",
+		"player2": "clubehouse",
+		"player3": null,
+		"events": [
+			[
+				12413.7931034483,
+				[
+					[
+						"Add Camera Zoom",
+						"0.5",
+						"0.5"
+					]
+				]
+			],
+			[
+				26068.9655172414,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				26172.4137931035,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				26275.8620689655,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				26379.3103448276,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				119172.413793103,
+				[
+					[
+						"camGame Off",
+						"",
+						""
+					],
+					[
+						"Fade Cameras",
+						"0",
+						"3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 145,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Clubhouse"
+	}
+}
