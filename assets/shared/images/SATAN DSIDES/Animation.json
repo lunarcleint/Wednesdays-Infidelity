@@ -1,6 +1,6 @@
 {
     "ANIMATION": {
-        "name": "SATAN(1)",
+        "name": "SATAN DSIDES",
         "SYMBOL_name": "SATANN",
         "TIMELINE": {
             "LAYERS": [
@@ -184,6 +184,51 @@
                         },
                         {
                             "index": 35,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 36,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 37,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 38,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 39,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 40,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 41,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 42,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 43,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 44,
                             "duration": 1,
                             "elements": []
                         }
@@ -1571,6 +1616,46 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "index": 31,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 32,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 33,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 34,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 35,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 36,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 37,
+                            "duration": 1,
+                            "elements": []
+                        },
+                        {
+                            "index": 38,
+                            "duration": 1,
+                            "elements": []
                         }
                     ]
                 },
@@ -3249,6 +3334,492 @@
                                         "firstFrame": 0,
                                         "loop": "loop",
                                         "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 33,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 1,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 34,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 2,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 35,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 3,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 36,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 0,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 37,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 1,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 38,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 2,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 39,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 3,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 40,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 3,
+                                        "loop": "loop",
+                                        "transformationPoint": {
+                                            "x": 599.95,
+                                            "y": 360
+                                        },
+                                        "Matrix3D": {
+                                            "m00": 1.04999,
+                                            "m01": 0,
+                                            "m02": 0,
+                                            "m03": 0,
+                                            "m10": 0,
+                                            "m11": 1.04999,
+                                            "m12": 0,
+                                            "m13": 0,
+                                            "m20": 0,
+                                            "m21": 0,
+                                            "m22": 1,
+                                            "m23": 0,
+                                            "m30": -15.9,
+                                            "m31": -8.05,
+                                            "m32": 0,
+                                            "m33": 1
+                                        },
+                                        "DecomposedMatrix": {
+                                            "Position": {
+                                                "x": -15.9,
+                                                "y": -8.05,
+                                                "z": 0
+                                            },
+                                            "Rotation": {
+                                                "x": 0,
+                                                "y": -0,
+                                                "z": 0
+                                            },
+                                            "Scaling": {
+                                                "x": 1.04999,
+                                                "y": 1.04999,
+                                                "z": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "index": 41,
+                            "duration": 1,
+                            "elements": [
+                                {
+                                    "SYMBOL_Instance": {
+                                        "SYMBOL_name": "Satan",
+                                        "Instance_Name": "InstName",
+                                        "symbolType": "graphic",
+                                        "firstFrame": 0,
+                                        "loop": "loop",
+                                        "transformationPoint": {
                                             "x": 600,
                                             "y": 360
                                         },
@@ -3303,7 +3874,7 @@
                             ]
                         },
                         {
-                            "index": 33,
+                            "index": 42,
                             "duration": 1,
                             "elements": [
                                 {
@@ -3368,7 +3939,7 @@
                             ]
                         },
                         {
-                            "index": 34,
+                            "index": 43,
                             "duration": 1,
                             "elements": [
                                 {
@@ -3433,7 +4004,7 @@
                             ]
                         },
                         {
-                            "index": 35,
+                            "index": 44,
                             "duration": 1,
                             "elements": [
                                 {
@@ -3876,8 +4447,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -3942,8 +4513,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4012,8 +4583,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4058,7 +4629,7 @@
                                                 },
                                                 "filters": {
                                                     "BlurFilter": {
-                                                        "blurX": 16,
+                                                        "blurX": 25,
                                                         "blurY": 4,
                                                         "quality": 1
                                                     }
@@ -4078,8 +4649,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4153,8 +4724,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4212,8 +4783,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4271,8 +4842,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",
@@ -4330,8 +4901,8 @@
                                                 "bitmap": {
                                                     "name": "0005",
                                                     "Position": {
-                                                        "x": -12,
-                                                        "y": -93
+                                                        "x": -1,
+                                                        "y": -51
                                                     }
                                                 },
                                                 "symbolType": "movieclip",

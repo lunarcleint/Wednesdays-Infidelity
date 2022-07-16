@@ -914,8 +914,16 @@ class PlayState extends MusicBeatState
 				add(mesacuatro);
 		}
 
-		devil = new FlxAnimate(0, 0,
-			PlayState.SONG.stage == "susNightmare" ? "shared:assets/shared/images/SATAN AMONGUS" : "shared:assets/shared/images/SATAN");
+		devil = new FlxAnimate(0, 0, switch (PlayState.SONG.stage)
+		{
+			case "susNightmare":
+				"shared:assets/shared/images/SATAN AMONGUS";
+			case "fence":
+				"shared:assets/shared/images/SATAN DSIDES";
+			default:
+				"shared:assets/shared/images/SATAN";
+		});
+
 		devil.anim.addBySymbol("scape", "SATANN", 24, false);
 		devil.antialiasing = true;
 		devil.cameras = [camOther];

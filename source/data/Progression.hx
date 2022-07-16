@@ -44,8 +44,6 @@ class Progression
 		FlxG.save.data.weekProgress = weekProgress;
 
 		FlxG.save.flush();
-
-		trace("saved");
 	}
 
 	public static function reset()
