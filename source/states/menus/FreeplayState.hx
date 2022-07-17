@@ -43,7 +43,7 @@ class FreeplayState extends MusicBeatState
 
 	var selector:FlxText;
 
-	private static var curSelected:Int = 0;
+	var curSelected:Int = 0;
 
 	var curDifficulty:Int = -1;
 
@@ -89,6 +89,16 @@ class FreeplayState extends MusicBeatState
 	var selectedSomethin:Bool = false;
 
 	var text:FlxText;
+
+	var weeks:Null<Array<String>>;
+
+	public override function new(?newWeeks:Null<Array<String>>)
+	{
+		super();
+
+		if (newWeeks != null)
+			weeks = newWeeks;
+	}
 
 	override function create()
 	{
@@ -173,12 +183,15 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		for (i in 0...WeekData.weeksList.length)
+		if (weeks == null)
+			weeks = WeekData.weeksList;
+
+		for (i in 0...weeks.length)
 		{
-			if (weekIsLocked(WeekData.weeksList[i]))
+			if (weekIsLocked(weeks[i]))
 				continue;
 
-			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
+			var leWeek:WeekData = WeekData.weeksLoaded.get(weeks[i]);
 			var leSongs:Array<String> = [];
 			var leChars:Array<String> = [];
 
@@ -734,6 +747,19 @@ class FreeplayState extends MusicBeatState
 
 	public override function destroy()
 	{
+		if (instPlaying != -1)
+		{
+			FlxG.sound.music.stop();
+			destroyFreeplayVocals();
+
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			FlxG.sound.music.loopTime = 15920;
+
+			FlxG.sound.music.pause();
+			FlxG.sound.music.time = 16 * 1000;
+			FlxG.sound.music.resume();
+		}
+
 		super.destroy();
 
 		FlxG.bitmap.clearCache();

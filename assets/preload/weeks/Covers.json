@@ -16,9 +16,10 @@
 		"dad"
 	],
 	"songs": [
+
 		[
-			"Vesania",
-			"mouse",
+			"Phantasm",
+			"dad",
 			[
 				43,
 				46,
@@ -26,17 +27,26 @@
 			]
 		],
 		[
-			"Kriman't",
-			"mokey",
+			"Too Slow",
+			"face",
 			[
-				124,
-				124,
-				124
+				43,
+				46,
+				40
 			]
 		],
 		[
-			"Untold Loneliness",
-			"Oswald",
+			"Battered",
+			"battered",
+			[
+				43,
+				46,
+				40
+			]
+		],
+		[
+			"Accelerant",
+			"battered",
 			[
 				43,
 				46,

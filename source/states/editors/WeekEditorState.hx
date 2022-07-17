@@ -505,6 +505,10 @@ class WeekEditorState extends MusicBeatState
 			{
 				MusicBeatState.switchState(new MasterEditorMenu());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = 16 * 1000;
+				FlxG.sound.music.resume();
 			}
 		}
 
@@ -904,6 +908,10 @@ class WeekEditorFreeplayState extends MusicBeatState
 			{
 				MusicBeatState.switchState(new MasterEditorMenu());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = 16 * 1000;
+				FlxG.sound.music.resume();
 			}
 
 			if (controls.UI_UP_P)

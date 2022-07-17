@@ -111,6 +111,10 @@ class GameOverSubstate extends MusicBeatSubstate
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			FlxG.sound.music.time = 15920;
 			FlxG.sound.music.loopTime = 15920;
+
+			FlxG.sound.music.pause();
+			FlxG.sound.music.time = 16 * 1000;
+			FlxG.sound.music.resume();
 		}
 
 		if (boyfriend.animation.curAnim.name == 'firstDeath')

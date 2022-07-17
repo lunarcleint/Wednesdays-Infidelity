@@ -3479,6 +3479,10 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 						FlxG.sound.music.loopTime = 15920;
 						FlxG.sound.music.time = 15920;
+
+						FlxG.sound.music.pause();
+						FlxG.sound.music.time = 16 * 1000;
+						FlxG.sound.music.resume();
 					}));
 
 					if (Progression.weekProgress.exists(WeekData.getWeekFileName()))
@@ -3548,10 +3552,14 @@ class PlayState extends MusicBeatState
 				{
 					CustomFadeTransition.nextCamera = null;
 				}
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelectorState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				FlxG.sound.music.loopTime = 15920;
-				FlxG.sound.music.time = 15920;
+
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = 16 * 1000;
+				FlxG.sound.music.resume();
+
 				changedDifficulty = false;
 			}
 			transitioning = true;
@@ -3751,7 +3759,6 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
 
-			// if (combo >= 10 || combo == 0)
 			insert(members.indexOf(strumLineNotes), numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {

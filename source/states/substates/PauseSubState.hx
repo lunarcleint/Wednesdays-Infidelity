@@ -275,11 +275,15 @@ class PauseSubState extends MusicBeatSubstate
 					}
 					else
 					{
-						MusicBeatState.switchState(new FreeplayState());
+						MusicBeatState.switchState(new FreeplaySelectorState());
 					}
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					FlxG.sound.music.loopTime = 15920;
-					FlxG.sound.music.time = 15920;
+
+					FlxG.sound.music.pause();
+					FlxG.sound.music.time = 16 * 1000;
+					FlxG.sound.music.resume();
+
 					PlayState.changedDifficulty = false;
 					PlayState.chartingMode = false;
 					Lib.application.window.title = "Wednesday's Infidelity";
