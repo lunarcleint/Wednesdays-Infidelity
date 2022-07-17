@@ -5036,8 +5036,6 @@ class PlayState extends MusicBeatState
 
 		if (hxdata != "")
 		{
-			trace("Loading Script: " + path);
-
 			script = new Script();
 
 			script.setVariable("onSongStart", function()

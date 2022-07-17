@@ -113,7 +113,7 @@ function onStepHit()
 			PlayState.camHUD.alpha = 1;
 		case 137:
 			PlayState.cutsceneText.text = "Let's get this over with.";
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 		case 160:
 			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.5, {
 				onComplete: function(twn)
@@ -170,11 +170,13 @@ function onStepHit()
 			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(255, 255, 255), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "Why should I, even try.";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y);
-		case 1016:
+		case 1014:
 			PlayState.cutsceneText.text = "Gun in hand, my life shall end..";
+			PlayState.cutsceneText.applyMarkup("Gun in hand, $my life shall end..$",
+				[new FlxTextFormatMarkerPair(new FlxTextFormat(fromRGB(214, 32, 32)), "$")]);
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 70, PlayState.dad.getGraphicMidpoint().y);
 		case 1044:
-			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(145, 28, 28), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
+			PlayState.cutsceneText.setFormat(Paths.font("vcr.ttf"), 32, fromRGB(214, 32, 32), CENTER, FlxTextBorderStyle.OUTLINE, fromRGB(0, 0, 0));
 			PlayState.cutsceneText.text = "MY SUFFERING SHALL BE KNOWN, FRIEND!";
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 170, PlayState.dad.getGraphicMidpoint().y - 10);
 		case 1072:
@@ -234,10 +236,23 @@ function onStepHit()
 			PlayState.followChars = false;
 			PlayState.isCameraOnForcedPos = true;
 			PlayState.camZooming = false;
-		case 1728:
+		case 1720:
 			PlayState.followChars = true;
 			PlayState.camZooming = true;
+
+		case 1976:
+			PlayState.addCinematicBars(1);
+
+			PlayState.curCamera.bfZoom += 0.2;
+
+			PlayState.curCamera.dadZoom += 0.2;
 		case 2232:
+			PlayState.removeCinematicBars(1);
+
+			PlayState.curCamera.bfZoom -= 0.2;
+
+			PlayState.curCamera.dadZoom -= 0.2;
+
 			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1.5);
 	}
 }
