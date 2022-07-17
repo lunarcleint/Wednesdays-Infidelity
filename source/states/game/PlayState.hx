@@ -4128,7 +4128,7 @@ class PlayState extends MusicBeatState
 			switch (dad.curCharacter)
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
-					'satan-chad':
+					'satan-chad' | 'oswald-suicide':
 					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
 			}
 
@@ -4137,7 +4137,7 @@ class PlayState extends MusicBeatState
 			switch (dad.curCharacter)
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
-					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad':
+					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad' | 'oswald-suicide':
 					notehealthdmg = 0.025;
 
 					if (health > 0.1)

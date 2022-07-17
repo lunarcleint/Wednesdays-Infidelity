@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "intro",
-			"indices": [],
-			"name": "OSWALD DIALOGUE"
+			"fps": 24,
+			"name": "OSWALD DIALOGUE",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -21,9 +21,9 @@
 	"healthicon": "Oswald",
 	"flip_x": false,
 	"healthbar_colors": [
-		125,
-		128,
-		142
+		83,
+		85,
+		82
 	],
 	"camera_position": [
 		0,
