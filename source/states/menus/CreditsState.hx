@@ -73,7 +73,7 @@ class CreditsState extends MusicBeatState
 				'242846'
 			],
 			[
-				'Zero Animation',
+				'Zero',
 				'Zero',
 				'Main Sprite Artist and Animator',
 				'https://twitter.com/zero_artist02',
@@ -96,20 +96,41 @@ class CreditsState extends MusicBeatState
 			],
 			['Lunar', 'Lunar', 'Main Programmer', 'https://twitter.com/lunarcleint', '6757f3'],
 			['Jloor', 'Jloor', 'Programmer', 'https://twitter.com/GamerJloor', 'fdc4ad'],
-			["Sandi", "Sandi", "Musicain", "link", "eaeaea"],
-			["GoddessAwe", 'Awe', 'Musicain', 'link', "3e2c6b"],
-			["Lean", 'Lean', 'Musicain and Programmer', 'link', "816954"],
+			["Sandi", "Sandi", "Musicain", "https://www.twitter.com/Sandi334_", "eaeaea"],
+			["GoddessAwe", 'Awe', 'Musicain', 'https://twitter.com/GoddessAwe', "3e2c6b"],
+			[
+				"Lean",
+				'Lean',
+				'Musicain and Programmer',
+				'https://twitter.com/NewLeandapper',
+				"816954"
+			],
 			["Flaconadir", 'Flaco', 'Musicain', 'https://youtube.com/c/Flaconadir', "9b2526"],
-			["Tok", 'Tok', 'Charter', 'https://twitter.com/NewLeandapper', "725980"],
+			["Tok", 'Tok', 'Charter', 'https://twitter.com/ThatOne_Kid39', "725980"],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
+			[''],
 			["Specail Thanks"],
 			[
 				"Shader Toy",
-				"Jhaix",
+				"none",
 				"I stole alot of shaders:\nhttps://www.shadertoy.com/view/ldjGzV\nhttps://www.shadertoy.com/view/Ms3XWH\nhttps://www.shadertoy.com/view/XtK3W3",
 				"https://www.shadertoy.com/",
 				"ffffff"
-			]
+			],
+			[
+				"Vs RetroSpector",
+				"none",
+				"I stole your chromatic abberation",
+				"https://gamebanana.com/mods/317366",
+				"16d7e3"
+			],
+			[
+				"Yoshi Engine",
+				"none",
+				"I stole most of HScript.hx lmao",
+				"https://twitter.com/FNFYoshiEngine",
+				"6bd04b"
+			],
 		];
 
 		for (i in pisspoop)
@@ -140,13 +161,17 @@ class CreditsState extends MusicBeatState
 					Paths.currentModDirectory = creditsStuff[i][5];
 				}
 
-				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
-				icon.xAdd = optionText.width + 10;
-				icon.sprTracker = optionText;
+				if (creditsStuff[i][1] != "none")
+				{
+					var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
+					icon.xAdd = optionText.width + 10;
+					icon.sprTracker = optionText;
 
-				// using a FlxGroup is too much fuss!
-				iconArray.push(icon);
-				add(icon);
+					// using a FlxGroup is too much fuss!
+					iconArray.push(icon);
+					add(icon);
+				}
+
 				Paths.currentModDirectory = '';
 
 				if (curSelected == -1)
