@@ -3479,6 +3479,10 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'));
 						FlxG.sound.music.loopTime = 15920;
 						FlxG.sound.music.time = 15920;
+
+						FlxG.sound.music.pause();
+						FlxG.sound.music.time = 16 * 1000;
+						FlxG.sound.music.resume();
 					}));
 
 					if (Progression.weekProgress.exists(WeekData.getWeekFileName()))
@@ -3548,10 +3552,14 @@ class PlayState extends MusicBeatState
 				{
 					CustomFadeTransition.nextCamera = null;
 				}
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelectorState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				FlxG.sound.music.loopTime = 15920;
-				FlxG.sound.music.time = 15920;
+
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = 16 * 1000;
+				FlxG.sound.music.resume();
+
 				changedDifficulty = false;
 			}
 			transitioning = true;
@@ -3751,7 +3759,6 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
 
-			// if (combo >= 10 || combo == 0)
 			insert(members.indexOf(strumLineNotes), numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {
@@ -4016,7 +4023,7 @@ class PlayState extends MusicBeatState
 		{
 			if (daNote.noteType == 'Jeringe Note')
 			{
-				if (char.animOffsets.exists('at') && char.curCharacter.startsWith('jank'))
+				if (char.animOffsets.exists('at'))
 				{
 					doEffect();
 					char.playAnim('at', true);
@@ -4121,7 +4128,7 @@ class PlayState extends MusicBeatState
 			switch (dad.curCharacter)
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
-					'satan-chad':
+					'satan-chad' | 'oswald-suicide':
 					triggerEventNote("Screen Shake", "0.2,0.008", "0.2,0.008");
 			}
 
@@ -4130,7 +4137,7 @@ class PlayState extends MusicBeatState
 			switch (dad.curCharacter)
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
-					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad':
+					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad' | 'oswald-suicide':
 					notehealthdmg = 0.025;
 
 					if (health > 0.1)
@@ -5036,8 +5043,6 @@ class PlayState extends MusicBeatState
 
 		if (hxdata != "")
 		{
-			trace("Loading Script: " + path);
-
 			script = new Script();
 
 			script.setVariable("onSongStart", function()

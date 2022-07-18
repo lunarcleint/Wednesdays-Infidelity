@@ -29,7 +29,7 @@ import util.Discord.DiscordClient;
 
 class FreeplaySelectorState extends MusicBeatState
 {
-	var curSelected:Int = 0;
+	private static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
@@ -37,6 +37,18 @@ class FreeplaySelectorState extends MusicBeatState
 
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
+
+	// image name
+	var items:Array<String> = ["menu_suicide", "menu_julian", "menu_cheddar", "menu_sus", "covers", "extras"];
+
+	var weeks:Array<Array<String>> = [
+		["Week Suicide", "Week Suicide P2"],
+		["Week Julian"],
+		["Week Cheddar"],
+		["Week SUS"],
+		["Covers"],
+		["Extra Songs"]
+	];
 
 	override function create()
 	{
@@ -78,26 +90,21 @@ class FreeplaySelectorState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var mickey:FlxSprite = new FlxSprite(250, -50).loadGraphic(Paths.image('menubackgrounds/menu_suicide'));
-		mickey.ID = 0;
-		menuItems.add(mickey);
+		for (item in items)
+		{
+			var newItem:FlxSprite = new FlxSprite(250, -50 + (230 * items.indexOf(item))).loadGraphic(Paths.image('menubackgrounds/$item'));
+			newItem.ID = items.indexOf(item);
 
-		var julian:FlxSprite = new FlxSprite(mickey.x, mickey.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_julian'));
-		julian.ID = 1;
-		menuItems.add(julian);
+			switch (item)
+			{
+				case "menu_sus":
+					newItem.setGraphicSize(Std.int(newItem.width * 0.6));
+				default:
+					newItem.setGraphicSize(Std.int(newItem.width * 0.55));
+			}
 
-		var chedder:FlxSprite = new FlxSprite(mickey.x, julian.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_cheddar'));
-		chedder.ID = 2;
-		menuItems.add(chedder);
-
-		var sus:FlxSprite = new FlxSprite(mickey.x, chedder.y + 230).loadGraphic(Paths.image('menubackgrounds/menu_sus'));
-		sus.ID = 3;
-		menuItems.add(sus);
-
-		mickey.setGraphicSize(Std.int(mickey.width * 0.55));
-		julian.setGraphicSize(Std.int(julian.width * 0.55));
-		chedder.setGraphicSize(Std.int(chedder.width * 0.55));
-		sus.setGraphicSize(Std.int(sus.width * 0.6));
+			menuItems.add(newItem);
+		}
 
 		if (ClientPrefs.shake)
 			FlxG.camera.shake(0.001, 99999999999);
@@ -168,14 +175,14 @@ class FreeplaySelectorState extends MusicBeatState
 						{
 							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
-								MusicBeatState.switchState(new FreeplayState());
+								MusicBeatState.switchState(new FreeplayState(weeks[curSelected]));
 							});
 						}
 						else
 						{
 							new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
-								MusicBeatState.switchState(new FreeplayState());
+								MusicBeatState.switchState(new FreeplayState(weeks[curSelected]));
 							});
 						}
 					}
@@ -209,15 +216,14 @@ class FreeplaySelectorState extends MusicBeatState
 					FlxG.camera.flash(FlxColor.BLACK, 0.2, null, true);
 				}
 				// FlxG.camera.flash(FlxColor.BLACK, 0.2);
-				if (spr.ID == 3)
+				if (spr.ID >= 3)
 				{
-					camFollow.setPosition(700, spr.getGraphicMidpoint().y + 200);
+					camFollow.setPosition(700, 1055);
 				}
 				else
 				{
 					camFollow.setPosition(700, 350);
 				}
-				FlxG.log.add(spr.frameWidth);
 			}
 		});
 	}

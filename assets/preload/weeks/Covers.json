@@ -16,9 +16,10 @@
 		"dad"
 	],
 	"songs": [
+
 		[
-			"Vesania",
-			"mouse",
+			"Phantasm",
+			"dad",
 			[
 				43,
 				46,
@@ -26,17 +27,8 @@
 			]
 		],
 		[
-			"Kriman't",
-			"mokey",
-			[
-				124,
-				124,
-				124
-			]
-		],
-		[
-			"Untold Loneliness",
-			"Oswald",
+			"Too Slow",
+			"face",
 			[
 				43,
 				46,
@@ -44,8 +36,17 @@
 			]
 		],
 		[
-			"Leak Ma Balls",
-			"Leaker1",
+			"Battered",
+			"battered",
+			[
+				43,
+				46,
+				40
+			]
+		],
+		[
+			"Accelerant",
+			"battered",
 			[
 				43,
 				46,

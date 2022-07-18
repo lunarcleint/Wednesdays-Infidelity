@@ -106,11 +106,15 @@ class GameOverSubstate extends MusicBeatSubstate
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelectorState());
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			FlxG.sound.music.time = 15920;
 			FlxG.sound.music.loopTime = 15920;
+
+			FlxG.sound.music.pause();
+			FlxG.sound.music.time = 16 * 1000;
+			FlxG.sound.music.resume();
 		}
 
 		if (boyfriend.animation.curAnim.name == 'firstDeath')

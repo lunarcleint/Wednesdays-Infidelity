@@ -371,6 +371,10 @@ class NoteOffsetState extends MusicBeatState
 			MusicBeatState.switchState(new OptionsState());
 			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
 			FlxG.mouse.visible = false;
+
+			FlxG.sound.music.pause();
+			FlxG.sound.music.time = 16 * 1000;
+			FlxG.sound.music.resume();
 		}
 
 		Conductor.songPosition = FlxG.sound.music.time;

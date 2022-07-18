@@ -1713,6 +1713,10 @@ class ChartingState extends MusicBeatState
 				// if(onMasterEditor) {
 				MusicBeatState.switchState(new MasterEditorMenu());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = 16 * 1000;
+				FlxG.sound.music.resume();
 				// }
 				FlxG.mouse.visible = false;
 				return;

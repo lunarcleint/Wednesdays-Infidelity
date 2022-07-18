@@ -1,0 +1,59 @@
+{
+	"storyName": "Is Suicide Really the Best Option...?",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "suicide",
+	"weekBefore": "Week Suicide",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Last Day",
+			"badend",
+			[
+				43,
+				46,
+				40
+			]
+		],
+		[
+			"Sunsets",
+			"dad",
+			[
+				43,
+				46,
+				40
+			]
+		],
+		[
+			"Hellhole",
+			"hellholemickey",
+			[
+				63,
+				46,
+				40
+			]
+		],
+		[
+			"Versiculus Iratus",
+			"satan",
+			[
+				63,
+				46,
+				40
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"dad",
+		"dad"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week W.I"
+}

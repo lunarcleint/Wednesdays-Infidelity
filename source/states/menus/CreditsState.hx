@@ -57,128 +57,80 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			// Name - Icon name - Description - Link - BG Color
-			['Box Funkin Team'],
+			["Wednesday's Infidelity Team"],
 			[
 				'Jhaix',
-				'jhaix',
-				'Director & creator of the mod, musician. Charter of Unknown Suffering.',
+				'Jhaix',
+				'Director & Creator, Main Musician',
 				'https://twitter.com/Jhaix3',
-				'DDDDDD'
+				'e2d4ce'
 			],
 			[
 				'Cape',
 				'Cape',
-				'Co Director of the mod, coder. Charter of Wistfulness & Dejection.',
-				'https://twitter.com/capeletin1',
-				'2F2F3A'
+				'Co Director, Main Charter, and Programmer',
+				'https://twitter.com/c4peletini',
+				'242846'
 			],
 			[
-				'Zero Animation',
-				'piola',
-				'Animator and artist of the mod.',
+				'Zero',
+				'Zero',
+				'Main Sprite Artist and Animator',
 				'https://twitter.com/zero_artist02',
-				'194419'
+				'003333'
 			],
-			['ZetaE', 'zetas', 'Background Artist.', 'https://twitter.com/ZetaE18', 'DDDDDD'],
 			[
 				'Nugget',
-				'nuggets',
-				'Logo artist and extras.',
+				'Nugget',
+				'Sprite Artist, Icon Artist, and Promo Artist',
 				'https://twitter.com/NuggetNightmare',
-				'841A4A'
+				'6e034b'
 			],
-			['Jloor', 'jloor', 'Code Help.', 'https://twitter.com/GamerJloor', 'DDDDDD'],
-			['KINGF0X', 'fox', 'Voice actor.', 'https://twitter.com/VOKINGF0X', '821414'],
+			['Oz', 'Oz', 'Main Background Artist', 'https://twitter.com/ozkzz_', '362526'],
+			[
+				'Kass8tto',
+				'Kass8tto',
+				'Background Artist',
+				'https://twitter.com/Kass8tto',
+				'cccccc'
+			],
+			['Lunar', 'Lunar', 'Main Programmer', 'https://twitter.com/lunarcleint', '6757f3'],
+			['Jloor', 'Jloor', 'Programmer', 'https://twitter.com/GamerJloor', 'fdc4ad'],
+			["Sandi", "Sandi", "Musicain", "https://www.twitter.com/Sandi334_", "eaeaea"],
+			["GoddessAwe", 'Awe', 'Musicain', 'https://twitter.com/GoddessAwe', "3e2c6b"],
+			[
+				"Lean",
+				'Lean',
+				'Musicain and Programmer',
+				'https://twitter.com/NewLeandapper',
+				"816954"
+			],
+			["Flaconadir", 'Flaco', 'Musicain', 'https://youtube.com/c/Flaconadir', "9b2526"],
+			["Tok", 'Tok', 'Charter', 'https://twitter.com/ThatOne_Kid39', "725980"],
+			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
-			['Psych Engine Team'],
+			["Specail Thanks"],
 			[
-				'Shadow Mario',
-				'shadowmario',
-				'Main Programmer of Psych Engine',
-				'https://twitter.com/Shadow_Mario_',
-				'FFDD33'
+				"Shader Toy",
+				"none",
+				"I stole alot of shaders:\nhttps://www.shadertoy.com/view/ldjGzV\nhttps://www.shadertoy.com/view/Ms3XWH\nhttps://www.shadertoy.com/view/XtK3W3",
+				"https://www.shadertoy.com/",
+				"ffffff"
 			],
 			[
-				'RiverOaken',
-				'riveroaken',
-				'Main Artist/Animator of Psych Engine',
-				'https://twitter.com/river_oaken',
-				'C30085'
-			],
-			[''],
-			['Engine Contributors'],
-			[
-				'shubs',
-				'shubs',
-				'New Input System Programmer',
-				'https://twitter.com/yoshubs',
-				'4494E6'
+				"Vs RetroSpector",
+				"none",
+				"I stole your chromatic abberation",
+				"https://gamebanana.com/mods/317366",
+				"16d7e3"
 			],
 			[
-				'PolybiusProxy',
-				'polybiusproxy',
-				'.MP4 Video Loader Extension',
-				'https://twitter.com/polybiusproxy',
-				'E01F32'
+				"Yoshi Engine",
+				"none",
+				"I stole most of HScript.hx lmao",
+				"https://twitter.com/FNFYoshiEngine",
+				"6bd04b"
 			],
-			[
-				'gedehari',
-				'gedehari',
-				'Chart Editor\'s Sound Waveform base',
-				'https://twitter.com/gedehari',
-				'FF9300'
-			],
-			[
-				'Keoiki',
-				'keoiki',
-				'Note Splash Animations',
-				'https://twitter.com/Keoiki_',
-				'FFFFFF'
-			],
-			[
-				'SandPlanet',
-				'sandplanet',
-				'Mascot\'s Owner\nMain Supporter of the Engine',
-				'https://twitter.com/SandPlanetNG',
-				'D10616'
-			],
-			[
-				'bubba',
-				'bubba',
-				'Guest Composer for "Hot Dilf"',
-				'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',
-				'61536A'
-			],
-			[''],
-			["Funkin' Crew"],
-			[
-				'ninjamuffin99',
-				'ninjamuffin99',
-				"Programmer of Friday Night Funkin'",
-				'https://twitter.com/ninja_muffin99',
-				'F73838'
-			],
-			[
-				'PhantomArcade',
-				'phantomarcade',
-				"Animator of Friday Night Funkin'",
-				'https://twitter.com/PhantomArcade3K',
-				'FFBB1B'
-			],
-			[
-				'evilsk8r',
-				'evilsk8r',
-				"Artist of Friday Night Funkin'",
-				'https://twitter.com/evilsk8r',
-				'53E52C'
-			],
-			[
-				'kawaisprite',
-				'kawaisprite',
-				"Composer of Friday Night Funkin'",
-				'https://twitter.com/kawaisprite',
-				'6475F3'
-			]
 		];
 
 		for (i in pisspoop)
@@ -209,13 +161,17 @@ class CreditsState extends MusicBeatState
 					Paths.currentModDirectory = creditsStuff[i][5];
 				}
 
-				var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
-				icon.xAdd = optionText.width + 10;
-				icon.sprTracker = optionText;
+				if (creditsStuff[i][1] != "none")
+				{
+					var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[i][1]);
+					icon.xAdd = optionText.width + 10;
+					icon.sprTracker = optionText;
 
-				// using a FlxGroup is too much fuss!
-				iconArray.push(icon);
-				add(icon);
+					// using a FlxGroup is too much fuss!
+					iconArray.push(icon);
+					add(icon);
+				}
+
 				Paths.currentModDirectory = '';
 
 				if (curSelected == -1)
