@@ -4023,7 +4023,7 @@ class PlayState extends MusicBeatState
 		{
 			if (daNote.noteType == 'Jeringe Note')
 			{
-				if (char.animOffsets.exists('at') && char.curCharacter.startsWith('jank'))
+				if (char.animOffsets.exists('at'))
 				{
 					doEffect();
 					char.playAnim('at', true);
