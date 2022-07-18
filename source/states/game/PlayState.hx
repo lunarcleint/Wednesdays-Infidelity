@@ -265,6 +265,8 @@ class PlayState extends MusicBeatState
 	var jumps:FlxSprite;
 	var grain:FlxSprite;
 
+	public var leakSatan:Character = null;
+
 	var satanlaugh:FlxSprite;
 
 	var cutsceneText:FlxText;
@@ -968,6 +970,13 @@ class PlayState extends MusicBeatState
 		if (curStage == 'inferno')
 			satanAparicion.setPosition(gf.x - 80, gf.y - 320); // positions him jumping out
 
+		if (curStage == 'stageLeakers')
+		{
+			leakSatan = new Character(0, 0, "satan-leaked");
+			startCharacterPos(leakSatan, true);
+			dadGroup.add(leakSatan);
+		}
+
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
@@ -1482,6 +1491,16 @@ class PlayState extends MusicBeatState
 				&& !dad.stunned)
 			{
 				dad.dance();
+			}
+			if (leakSatan != null)
+			{
+				if (tmr.loopsLeft % leakSatan.danceEveryNumBeats == 0
+					&& leakSatan.animation.curAnim != null
+					&& !leakSatan.animation.curAnim.name.startsWith('sing')
+					&& !leakSatan.stunned)
+				{
+					leakSatan.dance();
+				}
 			}
 
 			var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -4018,6 +4037,10 @@ class PlayState extends MusicBeatState
 		{
 			char = gf;
 		}
+		if (daNote.devilNote && leakSatan != null)
+		{
+			char = leakSatan;
+		}
 
 		if (char != null && char.hasMissAnimations)
 		{
@@ -4123,6 +4146,10 @@ class PlayState extends MusicBeatState
 			if (note.gfNote)
 			{
 				char = gf;
+			}
+			if (note.devilNote && leakSatan != null)
+			{
+				char = leakSatan;
 			}
 
 			switch (dad.curCharacter)
@@ -4528,6 +4555,14 @@ class PlayState extends MusicBeatState
 						gf.holdTimer = 0;
 					}
 				}
+				else if (note.devilNote)
+				{
+					if (leakSatan != null)
+					{
+						leakSatan.playAnim(animToPlay + daAlt, true);
+						leakSatan.holdTimer = 0;
+					}
+				}
 				else
 				{
 					if (!boyfriend.specialAnim)
@@ -4922,6 +4957,16 @@ class PlayState extends MusicBeatState
 			&& !dad.stunned)
 		{
 			dad.dance();
+		}
+		if (leakSatan != null)
+		{
+			if (curBeat % leakSatan.danceEveryNumBeats == 0
+				&& leakSatan.animation.curAnim != null
+				&& !leakSatan.animation.curAnim.name.startsWith('sing')
+				&& !leakSatan.stunned)
+			{
+				leakSatan.dance();
+			}
 		}
 
 		switch (curStage)

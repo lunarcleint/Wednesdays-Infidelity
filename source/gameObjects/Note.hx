@@ -49,6 +49,7 @@ class Note extends FlxSprite
 
 	public var inEditor:Bool = false;
 	public var gfNote:Bool = false;
+	public var devilNote:Bool = false;
 
 	private var earlyHitMult:Float = 0.5;
 
@@ -134,6 +135,8 @@ class Note extends FlxSprite
 					reloadNote('HURT');
 				case 'GF Sing':
 					gfNote = true;
+				case 'Devil Sing':
+					devilNote = true;
 			}
 			noteType = value;
 		}
