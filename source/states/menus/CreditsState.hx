@@ -57,127 +57,58 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			// Name - Icon name - Description - Link - BG Color
-			['Box Funkin Team'],
+			["Wednesday's Infidelity Team"],
 			[
 				'Jhaix',
-				'jhaix',
-				'Director & creator of the mod, musician. Charter of Unknown Suffering.',
+				'Jhaix',
+				'Director & Creator, Main Musician',
 				'https://twitter.com/Jhaix3',
-				'DDDDDD'
+				'e2d4ce'
 			],
 			[
 				'Cape',
 				'Cape',
-				'Co Director of the mod, coder. Charter of Wistfulness & Dejection.',
-				'https://twitter.com/capeletin1',
-				'2F2F3A'
+				'Co Director, Main Charter, and Programmer',
+				'https://twitter.com/c4peletini',
+				'242846'
 			],
 			[
 				'Zero Animation',
-				'piola',
-				'Animator and artist of the mod.',
+				'Zero',
+				'Main Sprite Artist and Animator',
 				'https://twitter.com/zero_artist02',
-				'194419'
+				'003333'
 			],
-			['ZetaE', 'zetas', 'Background Artist.', 'https://twitter.com/ZetaE18', 'DDDDDD'],
 			[
 				'Nugget',
-				'nuggets',
-				'Logo artist and extras.',
+				'Nugget',
+				'Sprite Artist, Icon Artist, and Promo Artist',
 				'https://twitter.com/NuggetNightmare',
-				'841A4A'
+				'6e034b'
 			],
-			['Jloor', 'jloor', 'Code Help.', 'https://twitter.com/GamerJloor', 'DDDDDD'],
-			['KINGF0X', 'fox', 'Voice actor.', 'https://twitter.com/VOKINGF0X', '821414'],
-			[''],
-			['Psych Engine Team'],
+			['Oz', 'Oz', 'Main Background Artist', 'https://twitter.com/ozkzz_', '362526'],
 			[
-				'Shadow Mario',
-				'shadowmario',
-				'Main Programmer of Psych Engine',
-				'https://twitter.com/Shadow_Mario_',
-				'FFDD33'
+				'Kass8tto',
+				'Kass8tto',
+				'Background Artist',
+				'https://twitter.com/Kass8tto',
+				'cccccc'
 			],
+			['Lunar', 'Lunar', 'Main Programmer', 'https://twitter.com/lunarcleint', '6757f3'],
+			['Jloor', 'Jloor', 'Programmer', 'https://twitter.com/GamerJloor', 'fdc4ad'],
+			["Sandi", "Sandi", "Musicain", "link", "eaeaea"],
+			["GoddessAwe", 'Awe', 'Musicain', 'link', "3e2c6b"],
+			["Lean", 'Lean', 'Musicain and Programmer', 'link', "816954"],
+			["Flaconadir", 'Flaco', 'Musicain', 'https://youtube.com/c/Flaconadir', "9b2526"],
+			["Tok", 'Tok', 'Charter', 'https://twitter.com/NewLeandapper', "725980"],
+			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
+			["Specail Thanks"],
 			[
-				'RiverOaken',
-				'riveroaken',
-				'Main Artist/Animator of Psych Engine',
-				'https://twitter.com/river_oaken',
-				'C30085'
-			],
-			[''],
-			['Engine Contributors'],
-			[
-				'shubs',
-				'shubs',
-				'New Input System Programmer',
-				'https://twitter.com/yoshubs',
-				'4494E6'
-			],
-			[
-				'PolybiusProxy',
-				'polybiusproxy',
-				'.MP4 Video Loader Extension',
-				'https://twitter.com/polybiusproxy',
-				'E01F32'
-			],
-			[
-				'gedehari',
-				'gedehari',
-				'Chart Editor\'s Sound Waveform base',
-				'https://twitter.com/gedehari',
-				'FF9300'
-			],
-			[
-				'Keoiki',
-				'keoiki',
-				'Note Splash Animations',
-				'https://twitter.com/Keoiki_',
-				'FFFFFF'
-			],
-			[
-				'SandPlanet',
-				'sandplanet',
-				'Mascot\'s Owner\nMain Supporter of the Engine',
-				'https://twitter.com/SandPlanetNG',
-				'D10616'
-			],
-			[
-				'bubba',
-				'bubba',
-				'Guest Composer for "Hot Dilf"',
-				'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',
-				'61536A'
-			],
-			[''],
-			["Funkin' Crew"],
-			[
-				'ninjamuffin99',
-				'ninjamuffin99',
-				"Programmer of Friday Night Funkin'",
-				'https://twitter.com/ninja_muffin99',
-				'F73838'
-			],
-			[
-				'PhantomArcade',
-				'phantomarcade',
-				"Animator of Friday Night Funkin'",
-				'https://twitter.com/PhantomArcade3K',
-				'FFBB1B'
-			],
-			[
-				'evilsk8r',
-				'evilsk8r',
-				"Artist of Friday Night Funkin'",
-				'https://twitter.com/evilsk8r',
-				'53E52C'
-			],
-			[
-				'kawaisprite',
-				'kawaisprite',
-				"Composer of Friday Night Funkin'",
-				'https://twitter.com/kawaisprite',
-				'6475F3'
+				"Shader Toy",
+				"Jhaix",
+				"I stole alot of shaders:\nhttps://www.shadertoy.com/view/ldjGzV\nhttps://www.shadertoy.com/view/Ms3XWH\nhttps://www.shadertoy.com/view/XtK3W3",
+				"https://www.shadertoy.com/",
+				"ffffff"
 			]
 		];
 

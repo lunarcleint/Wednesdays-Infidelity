@@ -106,7 +106,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelectorState());
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			FlxG.sound.music.time = 15920;
