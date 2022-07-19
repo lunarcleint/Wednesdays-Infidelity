@@ -81,23 +81,36 @@ class FPS extends TextField
 		if (currentCount != cacheCount /*&& visible*/)
 		{
 			text = "FPS: " + currentFPS;
-
-			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
-			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();
-			text += "\nstageDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE);
-			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);
-			#end
 		}
 
 		cacheCount = currentCount;
 
-		var mem:Float = Math.round(Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1)));
-		if (mem > memPeak)
-			memPeak = mem;
+		if (System.totalMemory > memPeak)
+			memPeak = System.totalMemory;
 
 		if (visible)
 		{
-			text = "FPS:" + currentFPS + "\nMEM: " + mem + " MB\nMEM peak: " + memPeak + " MB";
+			text = "FPS:"
+				+ currentFPS
+				+ "\nMEM: "
+				+ _getFormattedSize(System.totalMemory, 2)
+				+ " \nMEM peak: "
+				+ _getFormattedSize(memPeak, 2);
 		}
+	}
+
+	final sizes:Array<String> = ["Bytes", "KB", "MB", "GB", "TB"];
+
+	@:noCompletion
+	/**
+		Stolen from https://github.com/adireddy/perf/blob/master/src/Perf.hx#L223 lmao
+	**/
+	function _getFormattedSize(bytes:Float, ?frac:Int = 0):String
+	{
+		if (bytes == 0)
+			return "0";
+		var i = Math.floor(Math.log(bytes) / Math.log(1024));
+		var precision = Math.pow(10, i <= 2 ? 0 : frac);
+		return Math.round(bytes * precision / Math.pow(1024, i)) / precision + " " + sizes[i];
 	}
 }
