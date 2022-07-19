@@ -1,35 +1,20 @@
 package openfl.display;
 
-import flixel.math.FlxMath;
-import haxe.Timer;
-import openfl.events.Event;
+import flixel.FlxG;
+import openfl.display.Shader;
+import openfl.filters.ShaderFilter;
 import openfl.system.System;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
-#if gl_stats
-import openfl.display._internal.stats.Context3DStats;
-import openfl.display._internal.stats.DrawCallContext;
-#end
-#if flash
-import openfl.Lib;
-#end
 
-/**
-	The FPS class provides an easy-to-use monitor to display
-	the current frame rate of an OpenFL project
-**/
-#if !openfl_debug
-@:fileXml('tags="haxe,release"')
-@:noDebug
-#end
 class FPS extends TextField
 {
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
-	public var currentFPS(default, null):Int;
+	public var currentFPS(default, null):UInt;
 
-	private var memPeak:Float = 0;
+	var peak:UInt = 0;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -52,7 +37,8 @@ class FPS extends TextField
 		currentTime = 0;
 		times = [];
 
-		width = 150;
+		autoSize = LEFT;
+		backgroundColor = 0;
 
 		#if flash
 		addEventListener(Event.ENTER_FRAME, function(e)
@@ -61,6 +47,8 @@ class FPS extends TextField
 			__enterFrame(time - currentTime);
 		});
 		#end
+
+		width = 350;
 	}
 
 	// Event Handlers
@@ -76,41 +64,38 @@ class FPS extends TextField
 		}
 
 		var currentCount = times.length;
-		currentFPS = Math.round((currentCount + cacheCount) / 2);
+		currentFPS = Math.round((currentCount + cacheCount));
 
-		if (currentCount != cacheCount /*&& visible*/)
-		{
-			text = "FPS: " + currentFPS;
-		}
+		text = "";
 
-		cacheCount = currentCount;
+		text += "FPS: " + currentFPS + "\n";
 
-		if (System.totalMemory > memPeak)
-			memPeak = System.totalMemory;
+		var mem = System.totalMemory;
+		if (mem > peak)
+			peak = mem;
 
-		if (visible)
-		{
-			text = "FPS:"
-				+ currentFPS
-				+ "\nMEM: "
-				+ _getFormattedSize(System.totalMemory, 2)
-				+ " \nMEM peak: "
-				+ _getFormattedSize(memPeak, 2);
-		}
+		text += "MEM: " + getSizeLabel(System.totalMemory) + "\n";
+
+		text += "MEM peak: " + getSizeLabel(peak) + "\n";
 	}
 
-	final sizes:Array<String> = ["Bytes", "KB", "MB", "GB", "TB"];
+	final dataTexts = ["B", "KB", "MB", "GB", "TB", "PB"];
 
-	@:noCompletion
-	/**
-		Stolen from https://github.com/adireddy/perf/blob/master/src/Perf.hx#L223 lmao
-	**/
-	function _getFormattedSize(bytes:Float, ?frac:Int = 0):String
+	function getSizeLabel(num:UInt):String
 	{
-		if (bytes == 0)
-			return "0";
-		var i = Math.floor(Math.log(bytes) / Math.log(1024));
-		var precision = Math.pow(10, i <= 2 ? 0 : frac);
-		return Math.round(bytes * precision / Math.pow(1024, i)) / precision + " " + sizes[i];
+		var size:Float = num;
+		var data = 0;
+		while (size > 1024 && data < dataTexts.length - 1)
+		{
+			data++;
+			size = size / 1024;
+		}
+
+		size = Math.round(size * 100) / 100;
+
+		if (data <= 2)
+			size = Math.round(size);
+
+		return size + " " + dataTexts[data];
 	}
 }

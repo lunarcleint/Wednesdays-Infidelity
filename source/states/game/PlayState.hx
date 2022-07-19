@@ -4693,6 +4693,8 @@ class PlayState extends MusicBeatState
 		}
 		if (script != null)
 		{
+			script.executeFunc("destroy");
+
 			script.destroy();
 		}
 
@@ -5091,6 +5093,10 @@ class PlayState extends MusicBeatState
 			script = new Script();
 
 			script.setVariable("onSongStart", function()
+			{
+			});
+
+			script.setVariable("destroy", function()
 			{
 			});
 
