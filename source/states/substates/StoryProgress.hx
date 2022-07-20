@@ -19,7 +19,7 @@ class StoryProgress extends MusicBeatSubstate
 {
 	var bg:FlxSprite;
 	var alphabetArray:Array<Alphabet> = [];
-	var onYes:Bool = false;
+	var onYes:Bool = true;
 	var yesText:Alphabet;
 	var noText:Alphabet;
 	var text:Alphabet;

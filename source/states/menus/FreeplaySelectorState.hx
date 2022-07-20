@@ -52,6 +52,9 @@ class FreeplaySelectorState extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		Lib.application.window.title = "Wednesday's Infidelity - Freeplay Selection";
 		#if desktop
 		// Updating Discord Rich Presence

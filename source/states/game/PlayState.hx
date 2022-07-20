@@ -1300,9 +1300,9 @@ class PlayState extends MusicBeatState
 		#if desktop
 		// Updating Discord Rich Presence.
 		#if PRIVATE_BUILD
-		DiscordClient.changePresence(detailsText, "CLASSIFIED" + " (" + storyDifficultyText + ")", 'face'); // make sure to remove for public build
+		DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face'); // make sure to remove for public build
 		#else
-		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+		DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter());
 		#end
 		#end
 
@@ -1748,21 +1748,9 @@ class PlayState extends MusicBeatState
 		#if desktop
 		// Updating Discord Rich Presence (with Time Left)
 		#if PRIVATE_BUILD
-		DiscordClient.changePresence(detailsText, "CLASSIFIED"
-			+ " ("
-			+ storyDifficultyText
-			+ ")", 'face', true,
-			songLength
-			- Conductor.songPosition
-			- ClientPrefs.noteOffset);
+		DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face', true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 		#else
-		DiscordClient.changePresence(detailsText, SONG.song
-			+ " ("
-			+ storyDifficultyText
-			+ ")", iconP2.getCharacter(), true,
-			songLength
-			- Conductor.songPosition
-			- ClientPrefs.noteOffset);
+		DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 		#end
 		#end
 	}
@@ -2143,29 +2131,17 @@ class PlayState extends MusicBeatState
 			if (startTimer != null && startTimer.finished)
 			{
 				#if PRIVATE_BUILD
-				DiscordClient.changePresence(detailsText, "CLASSIFIED"
-					+ " ("
-					+ storyDifficultyText
-					+ ")", 'face', true,
-					songLength
-					- Conductor.songPosition
-					- ClientPrefs.noteOffset);
+				DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face', true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 				#else
-				DiscordClient.changePresence(detailsText, SONG.song
-					+ " ("
-					+ storyDifficultyText
-					+ ")", iconP2.getCharacter(), true,
-					songLength
-					- Conductor.songPosition
-					- ClientPrefs.noteOffset);
+				DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 				#end
 			}
 			else
 			{
 				#if PRIVATE_BUILD
-				DiscordClient.changePresence(detailsText, "CLASSIFIED" + " (" + storyDifficultyText + ")", 'face');
+				DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face');
 				#else
-				DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter());
 				#end
 			}
 			#end
@@ -2182,29 +2158,17 @@ class PlayState extends MusicBeatState
 			if (Conductor.songPosition > 0.0)
 			{
 				#if PRIVATE_BUILD
-				DiscordClient.changePresence(detailsText, "CLASSIFIED"
-					+ " ("
-					+ storyDifficultyText
-					+ ")", 'face', true,
-					songLength
-					- Conductor.songPosition
-					- ClientPrefs.noteOffset);
+				DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face', true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 				#else
-				DiscordClient.changePresence(detailsText, SONG.song
-					+ " ("
-					+ storyDifficultyText
-					+ ")", iconP2.getCharacter(), true,
-					songLength
-					- Conductor.songPosition
-					- ClientPrefs.noteOffset);
+				DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.noteOffset);
 				#end
 			}
 			else
 			{
 				#if PRIVATE_BUILD
-				DiscordClient.changePresence(detailsText, "CLASSIFIED" + " (" + storyDifficultyText + ")", 'face');
+				DiscordClient.changePresence(detailsText, "CLASSIFIED", 'face');
 				#else
-				DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter());
 				#end
 			}
 		}
@@ -2218,7 +2182,7 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
-			// DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			// DiscordClient.changePresence(detailsPausedText, SONG.song , iconP2.getCharacter());
 		}
 		#end
 
@@ -2411,9 +2375,9 @@ class PlayState extends MusicBeatState
 
 			#if desktop
 			#if PRIVATE_BUILD
-			DiscordClient.changePresence(detailsPausedText, "CLASSIFIED" + " (" + storyDifficultyText + ")", 'face'); // make sure to remove for public build
+			DiscordClient.changePresence(detailsPausedText, "CLASSIFIED", 'face'); // make sure to remove for public build
 			#else
-			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
 			#end
 			#end
 		}
@@ -2813,9 +2777,9 @@ class PlayState extends MusicBeatState
 			#if desktop
 			// Game Over doesn't get his own variable because it's only used here
 			#if PRIVATE_BUILD
-			DiscordClient.changePresence("Game Over - " + detailsText, "CLASSIFIED" + " (" + storyDifficultyText + ")", 'face');
+			DiscordClient.changePresence("Game Over - " + detailsText, "CLASSIFIED", 'face');
 			#else
-			DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			DiscordClient.changePresence("Game Over - " + detailsText, SONG.song, iconP2.getCharacter());
 			#end
 			#end
 			isDead = true;
