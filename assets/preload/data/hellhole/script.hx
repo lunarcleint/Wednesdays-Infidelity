@@ -91,6 +91,8 @@ function onStepHit()
 		case 1313:
 			PlayState.camFollow.set(600, 120);
 
+			PlayState.cameraStageZoom = false;
+
 			PlayState.defaultCamZoom = 0.6;
 
 		case 1340:
@@ -105,6 +107,7 @@ function onStepHit()
 			PlayState.satanAparicion.alpha = 0;
 		case 1344:
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1);
+			PlayState.cameraStageZoom = true;
 		case 1345:
 			PlayState.changeDadIcon(true);
 		case 1376:
@@ -255,4 +258,10 @@ function addCamZoom(game, hud)
 {
 	PlayState.camGame.zoom += game;
 	PlayState.camHUD.zoom += hud;
+}
+
+function destroy()
+{
+	if (Main.fpsVar.alpha != 1)
+		Main.fpsVar.alpha = 1;
 }
