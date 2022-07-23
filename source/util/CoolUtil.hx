@@ -1,5 +1,6 @@
 package util;
 
+import data.DataType;
 import flixel.FlxG;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
@@ -168,5 +169,18 @@ class CoolUtil
 	public static inline function exactSetGraphicSize(obj:Dynamic, width:Float, height:Float) // ACTULLY WORKS LMAO -lunar
 	{
 		obj.scale.set(Math.abs(((obj.width - width) / obj.width) - 1), Math.abs(((obj.height - height) / obj.height) - 1));
+	}
+
+	public static function getDataTypeStringArray():Array<String>
+	{
+		var enums:Array<DataType> = DataType.createAll();
+		var strs:Array<String> = [];
+
+		for (_enum in enums)
+		{
+			strs[enums.indexOf(_enum)] = Std.string(_enum);
+		}
+
+		return strs;
 	}
 }

@@ -1,5 +1,6 @@
 package util;
 
+import data.DataType;
 import flash.media.Sound;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -269,9 +270,19 @@ class Paths
 		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
 	}
 
+	inline static public function getXMLAtlas(key:String, ?library:String):FlxAtlasFrames
+	{
+		return FlxAtlasFrames.fromTexturePackerXml(image(key, library), file('images/$key.xml', library));
+	}
+
 	inline static public function getPackerAtlas(key:String, ?library:String)
 	{
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
+	}
+
+	inline static public function getJSONAtlas(key:String, ?library:String)
+	{
+		return FlxAtlasFrames.fromTexturePackerJson(image(key, library), file('images/$key.json', library));
 	}
 
 	inline static public function formatToSongPath(path:String)
@@ -326,5 +337,20 @@ class Paths
 		// #end
 		localTrackedAssets.push(key);
 		return currentTrackedSounds.get(gottenPath);
+	}
+
+	inline static public function getAtlasFromData(key:String, data:DataType, ?library:String)
+	{
+		switch (data)
+		{
+			case SPARROW:
+				return getSparrowAtlas(key, library);
+			case GENERICXML:
+				return getXMLAtlas(key, library);
+			case PACKER:
+				return getPackerAtlas(key, library);
+			case JSON:
+				return getJSONAtlas(key, library);
+		}
 	}
 }

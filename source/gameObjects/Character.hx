@@ -1,6 +1,7 @@
 package gameObjects;
 
 import data.ClientPrefs;
+import data.DataType;
 import data.Section.SwagSection;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -27,6 +28,8 @@ typedef CharacterFile =
 	var sing_duration:Float;
 	var healthicon:String;
 
+	@:optional
+	var dataType:String;
 	var position:Array<Float>;
 	var camera_position:Array<Float>;
 	var flip_x:Bool;
@@ -77,6 +80,22 @@ class Character extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
+	public var json:CharacterFile;
+
+	public var dataType(default, set):DataType;
+
+	public function set_dataType(data:DataType):DataType
+	{
+		if (dataType != data)
+		{
+			dataType = data;
+
+			frames = Paths.getAtlasFromData(imageFile, data);
+		}
+
+		return data;
+	}
+
 	public static var DEFAULT_CHARACTER:String = 'bf'; // In case a character is missing, it will use BF on its place
 
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
@@ -91,7 +110,15 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
-		var library:String = null;
+
+		var characterPath:String = 'characters/' + curCharacter + '.json';
+
+		var path:String = Paths.getPreloadPath(characterPath);
+
+		var rawJson = Assets.getText(path);
+
+		json = cast Json.parse(rawJson);
+
 		switch (curCharacter)
 		{
 			// case 'your character name in case you want to hardcode them instead':
@@ -100,38 +127,17 @@ class Character extends FlxSprite
 				var characterPath:String = 'characters/' + curCharacter + '.json';
 
 				var path:String = Paths.getPreloadPath(characterPath);
-				if (!Assets.exists(path))
-				{
-					path = Paths.getPreloadPath('characters/' + DEFAULT_CHARACTER +
-						'.json'); // If a character couldn't be found, change him to BF just to prevent a crash
-				}
 
 				var rawJson = Assets.getText(path);
 
 				var json:CharacterFile = cast Json.parse(rawJson);
-				var spriteType = "sparrow";
-				// sparrow
-				// packer
-				// texture
-				if (Assets.exists(Paths.getPath('images/' + json.image + '.txt', TEXT)))
-				{
-					spriteType = "packer";
-				}
 
-				if (Assets.exists(Paths.getPath('images/' + json.image + '/Animation.json', TEXT)))
-				{
-					spriteType = "texture";
-				}
-
-				switch (spriteType)
-				{
-					case "packer":
-						frames = Paths.getPackerAtlas(json.image);
-
-					case "sparrow":
-						frames = Paths.getSparrowAtlas(json.image);
-				}
 				imageFile = json.image;
+
+				if (json.dataType != null)
+					dataType = DataType.createByName(json.dataType);
+				else
+					dataType = SPARROW;
 
 				if (json.scale != 1)
 				{
@@ -200,26 +206,6 @@ class Character extends FlxSprite
 		if (isPlayer)
 		{
 			flipX = !flipX;
-
-			/*// Doesn't flip for BF, since his are already in the right place???
-				if (!curCharacter.startsWith('bf'))
-				{
-					// var animArray
-					if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
-					{
-						var oldRight = animation.getByName('singRIGHT').frames;
-						animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-						animation.getByName('singLEFT').frames = oldRight;
-					}
-
-					// IF THEY HAVE MISS ANIMATIONS??
-					if (animation.getByName('singLEFTmiss') != null && animation.getByName('singRIGHTmiss') != null)
-					{
-						var oldMiss = animation.getByName('singRIGHTmiss').frames;
-						animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-						animation.getByName('singLEFTmiss').frames = oldMiss;
-					}
-			}*/
 		}
 	}
 
