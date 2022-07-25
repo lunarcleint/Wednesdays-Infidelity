@@ -1,0 +1,159 @@
+{
+  "frames": {
+    "idle": {
+      "frame": {
+        "x": 10,
+        "y": 10,
+        "w": 122,
+        "h": 110
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 122,
+        "h": 110
+      },
+      "sourceSize": {
+        "w": 122,
+        "h": 110
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "angryish0005": {
+      "frame": {
+        "x": 152,
+        "y": 10,
+        "w": 106,
+        "h": 137
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 106,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 137
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "angryish0004": {
+      "frame": {
+        "x": 10,
+        "y": 140,
+        "w": 104,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 4,
+        "w": 104,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 137
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "angryish0003": {
+      "frame": {
+        "x": 134,
+        "y": 167,
+        "w": 109,
+        "h": 131
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 109,
+        "h": 131
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 137
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "angryish0001": {
+      "frame": {
+        "x": 263,
+        "y": 167,
+        "w": 108,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 2,
+        "w": 108,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 137
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "angryish0002": {
+      "frame": {
+        "x": 278,
+        "y": 10,
+        "w": 108,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 4,
+        "w": 108,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 137
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "oswald-suicide.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 396,
+      "h": 308
+    },
+    "scale": 1
+  }
+}

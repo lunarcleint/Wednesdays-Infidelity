@@ -2424,14 +2424,14 @@ class PlayState extends MusicBeatState
 			health = 2;
 
 		if (healthBar.percent < 20)
-			iconP1.animation.curAnim.curFrame = 1;
+			iconP1.animation.play("losing");
 		else
-			iconP1.animation.curAnim.curFrame = 0;
+			iconP1.animation.play("idle");
 
 		if (healthBar.percent > 80)
-			iconP2.animation.curAnim.curFrame = 1;
+			iconP2.animation.play("losing");
 		else
-			iconP2.animation.curAnim.curFrame = 0;
+			iconP2.animation.play("idle");
 
 		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene)
 		{
