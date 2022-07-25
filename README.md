@@ -52,13 +52,13 @@ Also [Character.hx](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/ma
 
 ![](art/DataTypes.png)
 
-####**NOTE**
+**NOTE**
 - You have to click reload image for the data type to update
 - Sometimes it will crash when you do that so you should just add to to the Json
 
 ### Creating Sprite Sheets
 
-####**NOTE**
+**NOTE**
 - **THIS IS FOR SCALING SPRITE SHEETS**
 
 Download [Free Texture Packer](http://free-tex-packer.com/) and Install it.
@@ -66,7 +66,7 @@ Download [Free Texture Packer](http://free-tex-packer.com/) and Install it.
 Now you want to export your adobe animate animations as a PNG Sequence.
 ![](art/adobe.png)
 
-####**NOTE**
+**NOTE**
 - **MAKE SURE YOUR DPI IS 72 (THE DEFAUT)** ![](art/expr.png)
 
 Then put all of it into [Free Texture Packer](http://free-tex-packer.com/) with these settings: ![](art/setting.png)
