@@ -307,7 +307,7 @@ class Paths
 			localTrackedAssets.push(path);
 			return currentTrackedAssets.get(path);
 		}
-		trace('oh no its returning null NOOOO');
+		trace('oh no its returning null NOOOO $path', currentLevel); // MORE INFO CAUSE IDK WHATS WRONG OTHER WISE
 		return null;
 	}
 
@@ -339,18 +339,18 @@ class Paths
 		return currentTrackedSounds.get(gottenPath);
 	}
 
-	inline static public function getAtlasFromData(key:String, data:DataType, ?library:String)
+	inline static public function getAtlasFromData(key:String, data:DataType)
 	{
 		switch (data)
 		{
 			case SPARROW:
-				return getSparrowAtlas(key, library);
+				return getSparrowAtlas(key);
 			case GENERICXML:
-				return getXMLAtlas(key, library);
+				return getXMLAtlas(key);
 			case PACKER:
-				return getPackerAtlas(key, library);
+				return getPackerAtlas(key);
 			case JSON:
-				return getJSONAtlas(key, library);
+				return getJSONAtlas(key);
 		}
 	}
 }

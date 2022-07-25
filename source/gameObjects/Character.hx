@@ -80,21 +80,7 @@ class Character extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
-	public var json:CharacterFile;
-
-	public var dataType(default, set):DataType;
-
-	public function set_dataType(data:DataType):DataType
-	{
-		if (dataType != data)
-		{
-			dataType = data;
-
-			frames = Paths.getAtlasFromData(imageFile, data);
-		}
-
-		return data;
-	}
+	public var dataType:DataType;
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; // In case a character is missing, it will use BF on its place
 
@@ -117,7 +103,7 @@ class Character extends FlxSprite
 
 		var rawJson = Assets.getText(path);
 
-		json = cast Json.parse(rawJson);
+		var json:CharacterFile = cast Json.parse(rawJson);
 
 		switch (curCharacter)
 		{
@@ -138,6 +124,9 @@ class Character extends FlxSprite
 					dataType = DataType.createByName(json.dataType);
 				else
 					dataType = SPARROW;
+
+				if (imageFile != null && dataType != null)
+					frames = Paths.getAtlasFromData(imageFile, dataType);
 
 				if (json.scale != 1)
 				{

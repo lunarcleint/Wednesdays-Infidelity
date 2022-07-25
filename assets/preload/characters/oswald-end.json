@@ -12,11 +12,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/OSWALD IN DA END",
 	"position": [
-		-350,
-		110
+		-200,
+		190
 	],
 	"healthicon": "Oswald",
 	"flip_x": false,
@@ -30,5 +31,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

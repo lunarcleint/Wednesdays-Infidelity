@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="smiler.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Mouse Down0000" x="0" y="0" width="555" height="731" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0001" x="0" y="0" width="555" height="731" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0002" x="555" y="0" width="546" height="731" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0003" x="555" y="0" width="546" height="731" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0004" x="1101" y="0" width="538" height="730" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0005" x="1101" y="0" width="538" height="730" frameX="0" frameY="-1" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0006" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0007" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0008" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0009" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0010" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0011" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0012" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0013" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0014" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0015" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0016" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0017" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Down0018" x="1639" y="0" width="538" height="731" frameX="0" frameY="0" frameWidth="555" frameHeight="732"/>
+	<SubTexture name="Mouse Left0000" x="2177" y="0" width="533" height="785" frameX="0" frameY="-11" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0001" x="2177" y="0" width="533" height="785" frameX="0" frameY="-11" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0002" x="2710" y="0" width="528" height="792" frameX="-2" frameY="-4" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0003" x="2710" y="0" width="528" height="792" frameX="-2" frameY="-4" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0004" x="3238" y="0" width="530" height="796" frameX="0" frameY="0" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0005" x="3238" y="0" width="530" height="796" frameX="0" frameY="0" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0006" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0007" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0008" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0009" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0010" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0011" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0012" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0013" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Left0014" x="3768" y="0" width="529" height="795" frameX="-1" frameY="-1" frameWidth="533" frameHeight="796"/>
+	<SubTexture name="Mouse Rigth0000" x="4297" y="0" width="574" height="785" frameX="0" frameY="-10" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0001" x="4297" y="0" width="574" height="785" frameX="0" frameY="-10" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0002" x="4871" y="0" width="579" height="790" frameX="0" frameY="-5" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0003" x="4871" y="0" width="579" height="790" frameX="0" frameY="-5" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0004" x="5450" y="0" width="577" height="795" frameX="-1" frameY="0" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0005" x="5450" y="0" width="577" height="795" frameX="-1" frameY="0" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0006" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0007" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0008" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0009" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0010" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Rigth0011" x="6027" y="0" width="575" height="793" frameX="-1" frameY="-2" frameWidth="579" frameHeight="795"/>
+	<SubTexture name="Mouse Up0000" x="6602" y="0" width="611" height="746" frameX="-1" frameY="-4" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0001" x="6602" y="0" width="611" height="746" frameX="-1" frameY="-4" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0002" x="7213" y="0" width="603" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0003" x="7213" y="0" width="603" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0004" x="0" y="796" width="592" height="750" frameX="0" frameY="0" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0005" x="0" y="796" width="592" height="750" frameX="0" frameY="0" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0006" x="592" y="796" width="592" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0007" x="592" y="796" width="592" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0008" x="592" y="796" width="592" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse Up0009" x="592" y="796" width="592" height="747" frameX="0" frameY="-3" frameWidth="612" frameHeight="750"/>
+	<SubTexture name="Mouse idle0000" x="1184" y="796" width="577" height="805" frameX="-2" frameY="-7" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0001" x="1184" y="796" width="577" height="805" frameX="-2" frameY="-7" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0002" x="1761" y="796" width="582" height="799" frameX="0" frameY="-13" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0003" x="2343" y="796" width="585" height="796" frameX="0" frameY="-16" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0004" x="2928" y="796" width="578" height="796" frameX="-10" frameY="-16" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0005" x="2928" y="796" width="578" height="796" frameX="-10" frameY="-16" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0006" x="3506" y="796" width="568" height="798" frameX="-22" frameY="-14" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0007" x="3506" y="796" width="568" height="798" frameX="-22" frameY="-14" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0008" x="4074" y="796" width="565" height="804" frameX="-22" frameY="-8" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0009" x="4639" y="796" width="552" height="807" frameX="-35" frameY="-5" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0010" x="5191" y="796" width="550" height="811" frameX="-35" frameY="-1" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0011" x="5741" y="796" width="549" height="812" frameX="-35" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0012" x="5741" y="796" width="549" height="812" frameX="-35" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0013" x="6290" y="796" width="548" height="812" frameX="-35" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0014" x="6290" y="796" width="548" height="812" frameX="-35" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0015" x="6838" y="796" width="549" height="812" frameX="-34" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0016" x="6838" y="796" width="549" height="812" frameX="-34" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0017" x="7387" y="796" width="552" height="812" frameX="-31" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0018" x="0" y="1608" width="476" height="795" frameX="-28" frameY="-17" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0019" x="476" y="1608" width="572" height="812" frameX="-11" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0020" x="476" y="1608" width="572" height="812" frameX="-11" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="Mouse idle0021" x="476" y="1608" width="572" height="812" frameX="-11" frameY="0" frameWidth="590" frameHeight="812"/>
+	<SubTexture name="laugh0000" x="1048" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0001" x="1048" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0002" x="1716" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0003" x="1716" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0004" x="2395" y="1608" width="682" height="772" frameX="0" frameY="-29" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0005" x="3077" y="1608" width="678" height="767" frameX="-2" frameY="-34" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0006" x="3755" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0007" x="3755" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0008" x="4423" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0009" x="4423" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0010" x="2395" y="1608" width="682" height="772" frameX="0" frameY="-29" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0011" x="5102" y="1608" width="678" height="767" frameX="-2" frameY="-34" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0012" x="5780" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0013" x="6448" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0014" x="7116" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0015" x="7116" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0016" x="0" y="2420" width="682" height="772" frameX="0" frameY="-29" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0017" x="682" y="2420" width="678" height="767" frameX="-2" frameY="-34" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0018" x="1360" y="2420" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0019" x="1360" y="2420" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0020" x="2028" y="2420" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0021" x="2707" y="2420" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0022" x="2395" y="1608" width="682" height="772" frameX="0" frameY="-29" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0023" x="3386" y="2420" width="678" height="767" frameX="-2" frameY="-34" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0024" x="4064" y="2420" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0025" x="4064" y="2420" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0026" x="1716" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0027" x="1716" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0028" x="2395" y="1608" width="682" height="772" frameX="0" frameY="-29" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0029" x="4732" y="2420" width="678" height="767" frameX="-2" frameY="-34" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0030" x="3755" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0031" x="3755" y="1608" width="668" height="784" frameX="-10" frameY="-17" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0032" x="4423" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0033" x="4423" y="1608" width="679" height="791" frameX="-7" frameY="-10" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0034" x="5410" y="2420" width="680" height="801" frameX="-6" frameY="0" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0035" x="5410" y="2420" width="680" height="801" frameX="-6" frameY="0" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0036" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0037" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0038" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0039" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0040" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0041" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0042" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0043" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+	<SubTexture name="laugh0044" x="6090" y="2420" width="678" height="791" frameX="-8" frameY="-9" frameWidth="686" frameHeight="801"/>
+</TextureAtlas>

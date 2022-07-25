@@ -1,0 +1,3375 @@
+{
+  "frames": {
+    "OSWALD RIGHT0007": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 24.8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0005": {
+      "frame": {
+        "x": 801.6,
+        "y": 8,
+        "w": 777.6,
+        "h": 475.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 23.200000000000003,
+        "w": 777.6,
+        "h": 475.20000000000005
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0001": {
+      "frame": {
+        "x": 1595.2,
+        "y": 8,
+        "w": 796.8000000000001,
+        "h": 496
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 2.4000000000000004,
+        "w": 796.8000000000001,
+        "h": 496
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0003": {
+      "frame": {
+        "x": 2408,
+        "y": 8,
+        "w": 785.6,
+        "h": 498.40000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0.8,
+        "y": 0,
+        "w": 785.6,
+        "h": 498.40000000000003
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0007": {
+      "frame": {
+        "x": 3209.6000000000004,
+        "y": 8,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9.600000000000001,
+        "y": 73.60000000000001,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0024": {
+      "frame": {
+        "x": 3876,
+        "y": 8,
+        "w": 642.4000000000001,
+        "h": 521.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 153.60000000000002,
+        "y": 106.4,
+        "w": 642.4000000000001,
+        "h": 521.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0003": {
+      "frame": {
+        "x": 4534.400000000001,
+        "y": 8,
+        "w": 635.2,
+        "h": 525.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 103.2,
+        "w": 635.2,
+        "h": 525.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0009": {
+      "frame": {
+        "x": 5185.6,
+        "y": 8,
+        "w": 625.6,
+        "h": 527.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 27.200000000000003,
+        "y": 32.800000000000004,
+        "w": 625.6,
+        "h": 527.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0005": {
+      "frame": {
+        "x": 5827.200000000001,
+        "y": 8,
+        "w": 557.6,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 32,
+        "w": 557.6,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0028": {
+      "frame": {
+        "x": 8,
+        "y": 497.6,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0029": {
+      "frame": {
+        "x": 672.8000000000001,
+        "y": 499.20000000000005,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0031": {
+      "frame": {
+        "x": 1337.6000000000001,
+        "y": 520,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0036": {
+      "frame": {
+        "x": 2002.4,
+        "y": 522.4,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0037": {
+      "frame": {
+        "x": 2667.2000000000003,
+        "y": 544,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0039": {
+      "frame": {
+        "x": 3332,
+        "y": 545.6,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0007": {
+      "frame": {
+        "x": 3996.8,
+        "y": 549.6,
+        "w": 610.4,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25.6,
+        "y": 36,
+        "w": 610.4,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0005": {
+      "frame": {
+        "x": 4623.2,
+        "y": 551.2,
+        "w": 673.6,
+        "h": 531.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14.4,
+        "y": 28.8,
+        "w": 673.6,
+        "h": 531.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0026": {
+      "frame": {
+        "x": 5312.8,
+        "y": 564,
+        "w": 650.4000000000001,
+        "h": 532
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 96,
+        "w": 650.4000000000001,
+        "h": 532
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0005": {
+      "frame": {
+        "x": 5979.200000000001,
+        "y": 564,
+        "w": 384,
+        "h": 564
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 18.400000000000002,
+        "w": 384,
+        "h": 564
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0011": {
+      "frame": {
+        "x": 8,
+        "y": 1042.4,
+        "w": 640,
+        "h": 532.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 27.200000000000003,
+        "w": 640,
+        "h": 532.8000000000001
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0013": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0005": {
+      "frame": {
+        "x": 1324,
+        "y": 1064.8,
+        "w": 658.4000000000001,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 59.2,
+        "w": 658.4000000000001,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0001": {
+      "frame": {
+        "x": 1998.4,
+        "y": 1067.2,
+        "w": 645.6,
+        "h": 535.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 47.2,
+        "y": 93.60000000000001,
+        "w": 645.6,
+        "h": 535.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0007": {
+      "frame": {
+        "x": 2660,
+        "y": 1088.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 28.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0014": {
+      "frame": {
+        "x": 3233.6000000000004,
+        "y": 1090.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0015": {
+      "frame": {
+        "x": 3879.2000000000003,
+        "y": 1094.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0017": {
+      "frame": {
+        "x": 4524.8,
+        "y": 1098.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0018": {
+      "frame": {
+        "x": 5170.400000000001,
+        "y": 1112,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0006": {
+      "frame": {
+        "x": 5816,
+        "y": 1144,
+        "w": 535.2,
+        "h": 546.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 165.60000000000002,
+        "y": 81.60000000000001,
+        "w": 535.2,
+        "h": 546.4
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0020": {
+      "frame": {
+        "x": 8,
+        "y": 1591.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0022": {
+      "frame": {
+        "x": 653.6,
+        "y": 1594.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0007": {
+      "frame": {
+        "x": 1299.2,
+        "y": 1615.2,
+        "w": 598.4,
+        "h": 546.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 165.60000000000002,
+        "y": 81.60000000000001,
+        "w": 598.4,
+        "h": 546.4
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0003": {
+      "frame": {
+        "x": 1913.6000000000001,
+        "y": 1618.4,
+        "w": 684,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0.8,
+        "y": 12.8,
+        "w": 684,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0003": {
+      "frame": {
+        "x": 2613.6000000000004,
+        "y": 1648,
+        "w": 557.6,
+        "h": 549.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 22.400000000000002,
+        "w": 557.6,
+        "h": 549.6
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0012": {
+      "frame": {
+        "x": 3187.2000000000003,
+        "y": 1651.2,
+        "w": 629.6,
+        "h": 548
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 80,
+        "w": 629.6,
+        "h": 548
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0013": {
+      "frame": {
+        "x": 3832.8,
+        "y": 1655.2,
+        "w": 629.6,
+        "h": 548
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 80,
+        "w": 629.6,
+        "h": 548
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0044": {
+      "frame": {
+        "x": 4478.400000000001,
+        "y": 1659.2,
+        "w": 537.6,
+        "h": 556.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 139.20000000000002,
+        "y": 71.2,
+        "w": 537.6,
+        "h": 556.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0008": {
+      "frame": {
+        "x": 5032,
+        "y": 1672.8000000000002,
+        "w": 614.4000000000001,
+        "h": 559.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 162.4,
+        "y": 68.8,
+        "w": 614.4000000000001,
+        "h": 559.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0001": {
+      "frame": {
+        "x": 5662.400000000001,
+        "y": 1706.4,
+        "w": 680.8000000000001,
+        "h": 560
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 680.8000000000001,
+        "h": 560
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0010": {
+      "frame": {
+        "x": 8,
+        "y": 2152,
+        "w": 629.6,
+        "h": 560.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 67.2,
+        "w": 629.6,
+        "h": 560.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0003": {
+      "frame": {
+        "x": 653.6,
+        "y": 2155.2000000000003,
+        "w": 384,
+        "h": 568
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14.4,
+        "w": 384,
+        "h": 568
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0063": {
+      "frame": {
+        "x": 1053.6000000000001,
+        "y": 2177.6,
+        "w": 579.2,
+        "h": 572.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 56,
+        "w": 579.2,
+        "h": 572.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0001": {
+      "frame": {
+        "x": 1648.8000000000002,
+        "y": 2181.6,
+        "w": 561.6,
+        "h": 572.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 561.6,
+        "h": 572.8000000000001
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0001": {
+      "frame": {
+        "x": 2226.4,
+        "y": 2181.6,
+        "w": 368,
+        "h": 582.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 0,
+        "w": 368,
+        "h": 582.4
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0046": {
+      "frame": {
+        "x": 2610.4,
+        "y": 2213.6,
+        "w": 432.8,
+        "h": 576.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 148.8,
+        "y": 51.2,
+        "w": 432.8,
+        "h": 576.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0005": {
+      "frame": {
+        "x": 3059.2000000000003,
+        "y": 2215.2000000000003,
+        "w": 573.6,
+        "h": 578.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 116,
+        "y": 49.6,
+        "w": 573.6,
+        "h": 578.4
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0064": {
+      "frame": {
+        "x": 3648.8,
+        "y": 2219.2000000000003,
+        "w": 573.6,
+        "h": 581.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 47.2,
+        "w": 573.6,
+        "h": 581.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0065": {
+      "frame": {
+        "x": 4238.400000000001,
+        "y": 2232,
+        "w": 573.6,
+        "h": 581.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 47.2,
+        "w": 573.6,
+        "h": 581.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0066": {
+      "frame": {
+        "x": 4828,
+        "y": 2248,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0067": {
+      "frame": {
+        "x": 5416,
+        "y": 2282.4,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0068": {
+      "frame": {
+        "x": 8,
+        "y": 2728.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0069": {
+      "frame": {
+        "x": 596,
+        "y": 2766.4,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0070": {
+      "frame": {
+        "x": 1184,
+        "y": 2770.4,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0071": {
+      "frame": {
+        "x": 1772,
+        "y": 2780,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0072": {
+      "frame": {
+        "x": 2360,
+        "y": 2806.4,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0073": {
+      "frame": {
+        "x": 2948,
+        "y": 2809.6000000000004,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0075": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0042": {
+      "frame": {
+        "x": 4124,
+        "y": 2829.6000000000004,
+        "w": 586.4,
+        "h": 589.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 138.4,
+        "y": 38.400000000000006,
+        "w": 586.4,
+        "h": 589.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0001": {
+      "frame": {
+        "x": 4726.400000000001,
+        "y": 2848.8,
+        "w": 616,
+        "h": 591.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 2.4000000000000004,
+        "w": 616,
+        "h": 591.2
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0003": {
+      "frame": {
+        "x": 5358.400000000001,
+        "y": 2883.2000000000003,
+        "w": 605.6,
+        "h": 593.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 47.2,
+        "y": 0,
+        "w": 605.6,
+        "h": 593.6
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0061": {
+      "frame": {
+        "x": 8,
+        "y": 3329.6000000000004,
+        "w": 558.4,
+        "h": 606.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 22.400000000000002,
+        "w": 558.4,
+        "h": 606.4
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0052": {
+      "frame": {
+        "x": 582.4,
+        "y": 3367.2000000000003,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0054": {
+      "frame": {
+        "x": 1174.4,
+        "y": 3371.2000000000003,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0056": {
+      "frame": {
+        "x": 1766.4,
+        "y": 3380.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0058": {
+      "frame": {
+        "x": 2358.4,
+        "y": 3410.4,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0059": {
+      "frame": {
+        "x": 2950.4,
+        "y": 3417.6000000000004,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0048": {
+      "frame": {
+        "x": 3542.4,
+        "y": 3417.6000000000004,
+        "w": 548,
+        "h": 628
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17.6,
+        "y": 0,
+        "w": 548,
+        "h": 628
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0050": {
+      "frame": {
+        "x": 4106.400000000001,
+        "y": 3435.2000000000003,
+        "w": 573.6,
+        "h": 615.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 12.8,
+        "w": 573.6,
+        "h": 615.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0049": {
+      "frame": {
+        "x": 4696,
+        "y": 3456,
+        "w": 557.6,
+        "h": 628
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17.6,
+        "y": 0,
+        "w": 557.6,
+        "h": 628
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0002": {
+      "frame": {
+        "x": 1998.4,
+        "y": 1067.2,
+        "w": 645.6,
+        "h": 535.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 47.2,
+        "y": 93.60000000000001,
+        "w": 645.6,
+        "h": 535.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0004": {
+      "frame": {
+        "x": 4534.400000000001,
+        "y": 8,
+        "w": 635.2,
+        "h": 525.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 103.2,
+        "w": 635.2,
+        "h": 525.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0009": {
+      "frame": {
+        "x": 5032,
+        "y": 1672.8000000000002,
+        "w": 614.4000000000001,
+        "h": 559.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 162.4,
+        "y": 68.8,
+        "w": 614.4000000000001,
+        "h": 559.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0011": {
+      "frame": {
+        "x": 8,
+        "y": 2152,
+        "w": 629.6,
+        "h": 560.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 67.2,
+        "w": 629.6,
+        "h": 560.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0016": {
+      "frame": {
+        "x": 3879.2000000000003,
+        "y": 1094.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0019": {
+      "frame": {
+        "x": 5170.400000000001,
+        "y": 1112,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0021": {
+      "frame": {
+        "x": 8,
+        "y": 1591.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0023": {
+      "frame": {
+        "x": 653.6,
+        "y": 1594.4,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 163.20000000000002,
+        "y": 83.2,
+        "w": 629.6,
+        "h": 544.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0025": {
+      "frame": {
+        "x": 3876,
+        "y": 8,
+        "w": 642.4000000000001,
+        "h": 521.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 153.60000000000002,
+        "y": 106.4,
+        "w": 642.4000000000001,
+        "h": 521.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0027": {
+      "frame": {
+        "x": 5312.8,
+        "y": 564,
+        "w": 650.4000000000001,
+        "h": 532
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 96,
+        "w": 650.4000000000001,
+        "h": 532
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0030": {
+      "frame": {
+        "x": 672.8000000000001,
+        "y": 499.20000000000005,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0032": {
+      "frame": {
+        "x": 1337.6000000000001,
+        "y": 520,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0033": {
+      "frame": {
+        "x": 1337.6000000000001,
+        "y": 520,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0034": {
+      "frame": {
+        "x": 1337.6000000000001,
+        "y": 520,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0035": {
+      "frame": {
+        "x": 1337.6000000000001,
+        "y": 520,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0038": {
+      "frame": {
+        "x": 2667.2000000000003,
+        "y": 544,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0040": {
+      "frame": {
+        "x": 3332,
+        "y": 545.6,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0041": {
+      "frame": {
+        "x": 3332,
+        "y": 545.6,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143.20000000000002,
+        "y": 99.2,
+        "w": 648.8000000000001,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0043": {
+      "frame": {
+        "x": 4124,
+        "y": 2829.6000000000004,
+        "w": 586.4,
+        "h": 589.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 138.4,
+        "y": 38.400000000000006,
+        "w": 586.4,
+        "h": 589.6
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0045": {
+      "frame": {
+        "x": 4478.400000000001,
+        "y": 1659.2,
+        "w": 537.6,
+        "h": 556.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 139.20000000000002,
+        "y": 71.2,
+        "w": 537.6,
+        "h": 556.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0047": {
+      "frame": {
+        "x": 2610.4,
+        "y": 2213.6,
+        "w": 432.8,
+        "h": 576.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 148.8,
+        "y": 51.2,
+        "w": 432.8,
+        "h": 576.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0051": {
+      "frame": {
+        "x": 4106.400000000001,
+        "y": 3435.2000000000003,
+        "w": 573.6,
+        "h": 615.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 12.8,
+        "w": 573.6,
+        "h": 615.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0053": {
+      "frame": {
+        "x": 582.4,
+        "y": 3367.2000000000003,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0055": {
+      "frame": {
+        "x": 1174.4,
+        "y": 3371.2000000000003,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0057": {
+      "frame": {
+        "x": 1766.4,
+        "y": 3380.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0060": {
+      "frame": {
+        "x": 2950.4,
+        "y": 3417.6000000000004,
+        "w": 576,
+        "h": 603.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 24.8,
+        "w": 576,
+        "h": 603.2
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0062": {
+      "frame": {
+        "x": 8,
+        "y": 3329.6000000000004,
+        "w": 558.4,
+        "h": 606.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 22.400000000000002,
+        "w": 558.4,
+        "h": 606.4
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0074": {
+      "frame": {
+        "x": 2948,
+        "y": 2809.6000000000004,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0076": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0077": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0078": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0079": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD DIALOGUE INTRO0080": {
+      "frame": {
+        "x": 3536,
+        "y": 2816.8,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6.4,
+        "y": 44,
+        "w": 572,
+        "h": 584.8000000000001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 632
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0002": {
+      "frame": {
+        "x": 5662.400000000001,
+        "y": 1706.4,
+        "w": 680.8000000000001,
+        "h": 560
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 680.8000000000001,
+        "h": 560
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0004": {
+      "frame": {
+        "x": 1913.6000000000001,
+        "y": 1618.4,
+        "w": 684,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0.8,
+        "y": 12.8,
+        "w": 684,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0006": {
+      "frame": {
+        "x": 4623.2,
+        "y": 551.2,
+        "w": 673.6,
+        "h": 531.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14.4,
+        "y": 28.8,
+        "w": 673.6,
+        "h": 531.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0008": {
+      "frame": {
+        "x": 3996.8,
+        "y": 549.6,
+        "w": 610.4,
+        "h": 528.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25.6,
+        "y": 36,
+        "w": 610.4,
+        "h": 528.8000000000001
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0010": {
+      "frame": {
+        "x": 5185.6,
+        "y": 8,
+        "w": 625.6,
+        "h": 527.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 27.200000000000003,
+        "y": 32.800000000000004,
+        "w": 625.6,
+        "h": 527.2
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0012": {
+      "frame": {
+        "x": 8,
+        "y": 1042.4,
+        "w": 640,
+        "h": 532.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 27.200000000000003,
+        "w": 640,
+        "h": 532.8000000000001
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0014": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0015": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0016": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0017": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0018": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0019": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD IDLE0020": {
+      "frame": {
+        "x": 664,
+        "y": 1044,
+        "w": 644,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 25.6,
+        "w": 644,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 691.2,
+        "h": 568.8000000000001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0002": {
+      "frame": {
+        "x": 1595.2,
+        "y": 8,
+        "w": 796.8000000000001,
+        "h": 496
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 2.4000000000000004,
+        "w": 796.8000000000001,
+        "h": 496
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0004": {
+      "frame": {
+        "x": 2408,
+        "y": 8,
+        "w": 785.6,
+        "h": 498.40000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0.8,
+        "y": 0,
+        "w": 785.6,
+        "h": 498.40000000000003
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0006": {
+      "frame": {
+        "x": 801.6,
+        "y": 8,
+        "w": 777.6,
+        "h": 475.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 23.200000000000003,
+        "w": 777.6,
+        "h": 475.20000000000005
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0008": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 24.8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0009": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 24.8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0010": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 24.8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "OSWALD RIGHT0011": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 24.8,
+        "w": 777.6,
+        "h": 473.6
+      },
+      "sourceSize": {
+        "w": 804.8000000000001,
+        "h": 501.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0002": {
+      "frame": {
+        "x": 1648.8000000000002,
+        "y": 2181.6,
+        "w": 561.6,
+        "h": 572.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 561.6,
+        "h": 572.8000000000001
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0004": {
+      "frame": {
+        "x": 2613.6000000000004,
+        "y": 1648,
+        "w": 557.6,
+        "h": 549.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 22.400000000000002,
+        "w": 557.6,
+        "h": 549.6
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0006": {
+      "frame": {
+        "x": 5827.200000000001,
+        "y": 8,
+        "w": 557.6,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 32,
+        "w": 557.6,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0008": {
+      "frame": {
+        "x": 2660,
+        "y": 1088.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 28.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0009": {
+      "frame": {
+        "x": 2660,
+        "y": 1088.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 28.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Down0010": {
+      "frame": {
+        "x": 2660,
+        "y": 1088.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4.800000000000001,
+        "y": 28.8,
+        "w": 557.6,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 565.6,
+        "h": 576
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0002": {
+      "frame": {
+        "x": 4726.400000000001,
+        "y": 2848.8,
+        "w": 616,
+        "h": 591.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 2.4000000000000004,
+        "w": 616,
+        "h": 591.2
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0004": {
+      "frame": {
+        "x": 5358.400000000001,
+        "y": 2883.2000000000003,
+        "w": 605.6,
+        "h": 593.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 47.2,
+        "y": 0,
+        "w": 605.6,
+        "h": 593.6
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0006": {
+      "frame": {
+        "x": 1324,
+        "y": 1064.8,
+        "w": 658.4000000000001,
+        "h": 534.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 59.2,
+        "w": 658.4000000000001,
+        "h": 534.4
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0008": {
+      "frame": {
+        "x": 3209.6000000000004,
+        "y": 8,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9.600000000000001,
+        "y": 73.60000000000001,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0009": {
+      "frame": {
+        "x": 3209.6000000000004,
+        "y": 8,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9.600000000000001,
+        "y": 73.60000000000001,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Left0010": {
+      "frame": {
+        "x": 3209.6000000000004,
+        "y": 8,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9.600000000000001,
+        "y": 73.60000000000001,
+        "w": 650.4000000000001,
+        "h": 520
+      },
+      "sourceSize": {
+        "w": 664,
+        "h": 597.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0002": {
+      "frame": {
+        "x": 2226.4,
+        "y": 2181.6,
+        "w": 368,
+        "h": 582.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 0,
+        "w": 368,
+        "h": 582.4
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0004": {
+      "frame": {
+        "x": 653.6,
+        "y": 2155.2000000000003,
+        "w": 384,
+        "h": 568
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14.4,
+        "w": 384,
+        "h": 568
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0006": {
+      "frame": {
+        "x": 5979.200000000001,
+        "y": 564,
+        "w": 384,
+        "h": 564
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 18.400000000000002,
+        "w": 384,
+        "h": 564
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0007": {
+      "frame": {
+        "x": 5979.200000000001,
+        "y": 564,
+        "w": 384,
+        "h": 564
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 18.400000000000002,
+        "w": 384,
+        "h": 564
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0008": {
+      "frame": {
+        "x": 5979.200000000001,
+        "y": 564,
+        "w": 384,
+        "h": 564
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 18.400000000000002,
+        "w": 384,
+        "h": 564
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Oswald Up0009": {
+      "frame": {
+        "x": 5979.200000000001,
+        "y": 564,
+        "w": 384,
+        "h": 564
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 18.400000000000002,
+        "w": 384,
+        "h": 564
+      },
+      "sourceSize": {
+        "w": 387.20000000000005,
+        "h": 585.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "OSWALD PHASE 1.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 6393,
+      "h": 4092
+    },
+    "scale": 0.8
+  }
+}

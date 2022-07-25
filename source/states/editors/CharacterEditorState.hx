@@ -588,10 +588,11 @@ class CharacterEditorState extends MusicBeatState
 			{
 				char.dataType = DataType.createByName(dataString);
 			});
-		dataDropDown.selectedLabel = "SPARROW";
 
 		tab_group.add(dataDropDown);
 		tab_group.add(new FlxText(15, dataDropDown.y - 18, 0, 'Data Type:'));
+		tab_group.add(new FlxText(15, dataDropDown.y + 128, 0,
+			'GENERICXML: Basic XML most used in game engines\nSPARROW: The type adobe animate exports (FNF Default)\nPACKER: TXT File (Week 6)\nJSON: Json File that most programs can export (HASH AND ARRAY)'));
 		UI_characterbox.addGroup(tab_group);
 	}
 
@@ -866,7 +867,8 @@ class CharacterEditorState extends MusicBeatState
 		}
 		var anims:Array<AnimArray> = char.animationsArray.copy();
 
-		char.frames = Paths.getAtlasFromData(char.imageFile, char.dataType);
+		if (char.imageFile != null && char.dataType != null)
+			char.frames = Paths.getAtlasFromData(char.imageFile, char.dataType);
 
 		if (char.animationsArray != null && char.animationsArray.length > 0)
 		{
@@ -961,10 +963,12 @@ class CharacterEditorState extends MusicBeatState
 		}
 		charLayer.clear();
 		ghostChar = new Character(0, 0, daAnim, !isDad);
+
 		ghostChar.debugMode = true;
 		ghostChar.alpha = 0.6;
 
 		char = new Character(0, 0, daAnim, !isDad);
+
 		if (char.animationsArray[0] != null)
 		{
 			char.playAnim(char.animationsArray[0].anim, true);
@@ -1042,6 +1046,12 @@ class CharacterEditorState extends MusicBeatState
 			positionYStepper.value = char.positionArray[1];
 			positionCameraXStepper.value = char.cameraPosition[0];
 			positionCameraYStepper.value = char.cameraPosition[1];
+
+			if (char.dataType != null)
+				dataDropDown.selectedLabel = Std.string(char.dataType);
+			else
+				dataDropDown.selectedLabel = "SPARROW";
+
 			reloadAnimationDropDown();
 			updatePresence();
 		}
@@ -1066,7 +1076,12 @@ class CharacterEditorState extends MusicBeatState
 
 	function reloadMisc()
 	{
-		if (dataDropDown != null)
+		if (dataDropDown == null)
+			return;
+
+		if (char.dataType != null)
+			dataDropDown.selectedLabel = Std.string(char.dataType);
+		else
 			dataDropDown.selectedLabel = "SPARROW";
 	}
 

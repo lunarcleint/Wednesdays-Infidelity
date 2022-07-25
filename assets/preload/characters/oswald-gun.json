@@ -9,14 +9,15 @@
 			"fps": 24,
 			"anim": "intro",
 			"indices": [],
-			"name": "OSWALD"
+			"name": "OSWALD GUN"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/OSWALD_GUN",
 	"position": [
-		-480,
-		90
+		-300,
+		170
 	],
 	"healthicon": "Oswald",
 	"flip_x": false,
@@ -26,9 +27,9 @@
 		82
 	],
 	"camera_position": [
-		0,
-		0
+		40,
+		20
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

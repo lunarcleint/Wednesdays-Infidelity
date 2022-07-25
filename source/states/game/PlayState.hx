@@ -960,7 +960,8 @@ class PlayState extends MusicBeatState
 
 		if (!stageData.hide_girlfriend)
 		{
-			gf = new Character(0, 0, gfVersion);
+			gf = new Character(0, 0, gfVersion, false);
+
 			startCharacterPos(gf);
 			gf.scrollFactor.set(0.95, 0.95);
 			gfGroup.add(gf);
@@ -972,16 +973,19 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'stageLeakers')
 		{
-			leakSatan = new Character(0, 0, "satan-leaked");
+			leakSatan = new Character(0, 0, "satan-leaked", false);
+
 			startCharacterPos(leakSatan, true);
 			dadGroup.add(leakSatan);
 		}
 
-		dad = new Character(0, 0, SONG.player2);
+		dad = new Character(0, 0, SONG.player2, false);
+
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
+
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 
@@ -1117,9 +1121,9 @@ class PlayState extends MusicBeatState
 		moveCameraSection(0);
 
 		grain = new FlxSprite();
-		grain.frames = Paths.getSparrowAtlas('pantalla');
-		grain.animation.addByPrefix('idle', 'pantalla', 24, true);
-		CoolUtil.exactSetGraphicSize(grain, FlxG.width + 6 /*idk*/, FlxG.height + 6);
+		grain.frames = Paths.getJSONAtlas("grain");
+		grain.animation.addByPrefix('idle', 'grain', 24, true);
+		CoolUtil.exactSetGraphicSize(grain, FlxG.width + 6, FlxG.height + 6);
 		grain.screenCenter();
 		grain.x += 3;
 		grain.y += 3;
@@ -1385,7 +1389,7 @@ class PlayState extends MusicBeatState
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
-					var newDad:Character = new Character(0, 0, newCharacter);
+					var newDad:Character = new Character(0, 0, newCharacter, false);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad, true);
@@ -1395,7 +1399,7 @@ class PlayState extends MusicBeatState
 			case 2:
 				if (gf != null && !gfMap.exists(newCharacter))
 				{
-					var newGf:Character = new Character(0, 0, newCharacter);
+					var newGf:Character = new Character(0, 0, newCharacter, false);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
 					gfGroup.add(newGf);

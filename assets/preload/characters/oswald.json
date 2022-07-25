@@ -67,11 +67,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/OSWALD PHASE 1",
 	"position": [
-		-300,
-		90
+		-190,
+		180
 	],
 	"healthicon": "Oswald",
 	"flip_x": false,
@@ -85,5 +86,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }
