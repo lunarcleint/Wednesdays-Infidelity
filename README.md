@@ -68,9 +68,11 @@ Now you want to export your adobe animate animations as a PNG Sequence.
 
 **NOTE**
 - **MAKE SURE YOUR DPI IS 72 (THE DEFAUT)** 
+
 ![](art/expr.png)
 
 Then put all of it into [Free Texture Packer](http://free-tex-packer.com/) with these settings: 
+
 ![](art/setting.png)
 
 and click `Export`!
