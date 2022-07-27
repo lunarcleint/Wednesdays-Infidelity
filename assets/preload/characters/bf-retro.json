@@ -166,11 +166,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/BOYFRIEND_RETRO",
 	"position": [
-		0,
-		370
+		55,
+		425
 	],
 	"healthicon": "bf-suicide",
 	"flip_x": true,
@@ -184,5 +185,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

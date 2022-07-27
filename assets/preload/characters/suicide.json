@@ -1,77 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				80,
 				20
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Suicide Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Suicide Down"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Suicide Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Suicide Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				147,
 				149
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Suicide Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Suicide Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1,
 				143
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Suicide Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Suicide Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-20,
 				182
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Suicide Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Suicide Up"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				42,
 				107
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "dodge",
-			"indices": [],
-			"name": "Hit Mouse"
+			"fps": 24,
+			"name": "Hit Mouse",
+			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/Suicide",
 	"position": [
-		-215,
-		105
+		-105,
+		185
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -85,5 +86,5 @@
 		30
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

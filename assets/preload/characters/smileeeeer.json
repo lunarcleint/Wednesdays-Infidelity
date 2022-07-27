@@ -1,66 +1,67 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				50,
 				-40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "smiler mouse down"
+			"fps": 24,
+			"name": "smiler mouse down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				113,
 				160
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "smiler mouse left"
+			"fps": 24,
+			"name": "smiler mouse left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				50,
 				68
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "smiler mouse rigth"
+			"fps": 24,
+			"name": "smiler mouse rigth",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				89,
 				125
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "smiler mouse up"
+			"fps": 24,
+			"name": "smiler mouse up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "smiler mouse idle"
+			"fps": 24,
+			"name": "smiler mouse idle",
+			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/Smiler_Mouse",
 	"position": [
-		-165,
-		95
+		-85,
+		165
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -74,5 +75,5 @@
 		30
 	],
 	"sing_duration": 5,
-	"scale": 1
+	"scale": 1.2
 }

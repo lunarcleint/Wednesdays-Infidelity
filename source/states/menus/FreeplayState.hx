@@ -766,7 +766,8 @@ class FreeplayState extends MusicBeatState
 
 		FlxGraphic.defaultPersist = true;
 
-		Paths.clearStoredMemory(true);
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 
 		#if cpp
 		cpp.NativeGc.run(true);

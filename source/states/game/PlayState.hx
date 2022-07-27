@@ -1257,6 +1257,13 @@ class PlayState extends MusicBeatState
 		if (isStoryMode && WeekData.getCurrentWeek().songs[0][0] != curSong) // Makes sure it isnt the first song
 			setWeekProgress(curSong);
 
+		if (Progression.weekProgress.exists(WeekData.getWeekFileName())
+			&& WeekData.getCurrentWeek().songs[0][0] == curSong) // Clear week progress if start over
+		{
+			Progression.weekProgress.remove(WeekData.getWeekFileName());
+			Progression.save();
+		}
+
 		if (ClientPrefs.shaders)
 		{
 			switch (daSong) // shaders
