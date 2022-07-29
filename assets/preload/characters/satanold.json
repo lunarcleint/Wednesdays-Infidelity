@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "SATAN IDLE"
+		},
+		{
+			"offsets": [
+				0,
+				8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SATAN LEFT"
+		},
+		{
+			"offsets": [
+				60,
+				-148
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SATAN DOWN"
+		},
+		{
+			"offsets": [
+				60,
+				144
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "SATAN UP"
+		},
+		{
+			"offsets": [
+				-54,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SATAN RIGHT"
+		},
+		{
+			"offsets": [
+				92,
+				320
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "spawn",
+			"indices": [],
+			"name": "SATAN APARICION"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SATAN ASSETSold",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "satan",
+	"flip_x": false,
+	"healthbar_colors": [
+		151,
+		123,
+		122
+	],
+	"camera_position": [
+		-230,
+		-300
+	],
+	"sing_duration": 3.80000000000001,
+	"scale": 1
+}
