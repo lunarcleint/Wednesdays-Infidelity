@@ -1,143 +1,166 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				210,
 				67
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Janc Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-6,
 				62
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Janc Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				29,
 				99
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Janc Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				68,
 				5
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Janc Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Janc Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				164,
 				35
 			],
-			"anim": "singLEFT-shoot",
+			"loop": false,
 			"fps": 24,
-			"name": "Hank Left Shoot",
-			"indices": []
+			"anim": "singLEFT-shoot",
+			"indices": [],
+			"name": "Hank Left Shoot"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-6,
 				65
 			],
-			"anim": "singRIGHT-shoot",
+			"loop": false,
 			"fps": 24,
-			"name": "Hank right shoot",
-			"indices": []
+			"anim": "singRIGHT-shoot",
+			"indices": [],
+			"name": "Hank right shoot"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				12,
 				131
 			],
-			"anim": "singUP-shoot",
+			"loop": false,
 			"fps": 24,
-			"name": "Hank Up shoot",
-			"indices": []
+			"anim": "singUP-shoot",
+			"indices": [],
+			"name": "Hank Up shoot"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				60,
 				100
 			],
-			"anim": "singDOWN-shoot",
+			"loop": false,
 			"fps": 24,
-			"name": "Hank Down Shoot",
-			"indices": []
+			"anim": "singDOWN-shoot",
+			"indices": [],
+			"name": "Hank Down Shoot"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Janc Idle"
+			"fps": 24,
+			"name": "Janc Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				62
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "Hank screamright"
-		},
-		{
-			"loop": true,
-			"offsets": [
-				25,
-				108
-			],
-			"anim": "idle-alt",
 			"fps": 24,
-			"name": "HankScaredIdle",
+			"name": "Hank screamright",
 			"indices": []
 		},
 		{
 			"offsets": [
+				25,
+				108
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "HankScaredIdle"
+		},
+		{
+			"loop": false,
+			"offsets": [
 				115,
 				75
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "hanktaunt",
+			"indices": []
+		},
+		{
+			"offsets": [
+				29,
+				122
+			],
 			"loop": false,
-			"name": "hanktaunt"
+			"fps": 24,
+			"anim": "byeDonald",
+			"indices": [],
+			"name": "HankScaredShootsTiky"
+		},
+		{
+			"offsets": [
+				10,
+				94
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "intro",
+			"indices": [],
+			"name": "HankGetReady"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/Janc_Mouse",
+	"image": "characters/Jank",
 	"position": [
-		-85,
-		205
+		5,
+		275
 	],
 	"healthicon": "battered",
 	"flip_x": false,
@@ -151,5 +174,5 @@
 		-40
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }
