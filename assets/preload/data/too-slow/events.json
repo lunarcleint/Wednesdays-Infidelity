@@ -165,8 +165,13 @@
 				92595.724800184,
 				[
 					[
+						"Change Character",
+						"dad",
+						"tiny-mouse-dialogue"
+					],
+					[
 						"Play Animation",
-						"dialogue",
+						"talk",
 						"dad"
 					]
 				]

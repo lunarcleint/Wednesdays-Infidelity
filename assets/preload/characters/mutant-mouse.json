@@ -1,78 +1,78 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				110,
-				259
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "MONSTER IDLE"
-		},
-		{
 			"offsets": [
 				335,
 				251
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MONSTER LEFT"
+			"fps": 24,
+			"name": "MONSTER LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				96,
 				285
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MONSTER DOWN"
+			"fps": 24,
+			"name": "MONSTER DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				109,
 				392
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "MONSTER UP"
+			"fps": 24,
+			"name": "MONSTER UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				72,
 				261
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MONSTER RIGHT"
+			"fps": 24,
+			"name": "MONSTER RIGHT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				137,
 				272
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "death",
-			"indices": [],
-			"name": "DEATH"
+			"fps": 24,
+			"name": "DEATH",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				110,
+				259
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MONSTER IDLE",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/too-slow/Too_Slow_Mickey",
+	"image": "characters/too-slow/mutant mouse",
 	"position": [
 		0,
-		450
+		425
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -86,5 +86,5 @@
 		-90
 	],
 	"sing_duration": 4.00000000000001,
-	"scale": 1.3
+	"scale": 1.2
 }

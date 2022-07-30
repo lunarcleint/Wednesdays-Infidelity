@@ -1,89 +1,89 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
-				30,
+				31,
 				262
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SATAN MIKI IDLE"
+			"fps": 24,
+			"name": "SATAN MIKI IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				115,
 				321
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SATAN MIKI LEFT"
+			"fps": 24,
+			"name": "SATAN MIKI LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				16,
 				345
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SATAN MIKI DOWN"
+			"fps": 24,
+			"name": "SATAN MIKI DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				79,
 				212
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SATAN MIKI UP"
+			"fps": 24,
+			"name": "SATAN MIKI UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				72,
 				343
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SATAN MIKI RIGHT"
+			"fps": 24,
+			"name": "SATAN MIKI RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				286
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "JUJUJUJA",
+			"indices": []
 		},
 		{
 			"offsets": [
-				96,
+				101,
 				261
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "transform",
-			"indices": [],
-			"name": "TRANSFORMATION"
-		},
-		{
-			"offsets": [
-				21,
-				285
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singUP-alt",
-			"indices": [],
-			"name": "JUJUJUJA"
+			"name": "TRANSFORMATION"
 		}
 	],
 	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/too-slow/Too_Slow_Mickey",
+	"image": "characters/too-slow/tiny mouse satan",
 	"position": [
-		0,
-		450
+		5,
+		425
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -97,5 +97,5 @@
 		-90
 	],
 	"sing_duration": 4.00000000000001,
-	"scale": 1.3
+	"scale": 1.2
 }
