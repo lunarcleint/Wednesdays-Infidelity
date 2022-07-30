@@ -1,43 +1,43 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SATAN IDLE"
+			"fps": 24,
+			"name": "SATAN IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				280,
+				290,
 				-110
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SATAN LEFT"
-		},
-		{
-			"offsets": [
-				150,
-				-180
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "SATAN DOWN"
+			"name": "SATAN LEFT",
+			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				160,
-				60
+				142,
+				-190
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SATAN DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				200,
+				50
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -47,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-40,
-				-170
+				-56,
+				-184
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
@@ -56,11 +56,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/SATAN CHAD",
+	"image": "characters/Sad_Demon",
 	"position": [
-		-340,
-		-280
+		-290,
+		-240
 	],
 	"healthicon": "satan",
 	"flip_x": false,
@@ -70,9 +71,9 @@
 		122
 	],
 	"camera_position": [
-		70,
+		0,
 		0
 	],
-	"sing_duration": 4.8,
-	"scale": 1
+	"sing_duration": 4.00000000000001,
+	"scale": 1.3
 }

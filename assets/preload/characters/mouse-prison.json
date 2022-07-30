@@ -3,7 +3,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-5,
+				0,
 				0
 			],
 			"anim": "idle",
@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-23,
-				38
+				-17,
+				36
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -25,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-4,
-				-18
+				1,
+				-17
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-35,
+				-29,
 				37
 			],
 			"anim": "singUP",
@@ -47,7 +47,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-39,
+				-33,
 				19
 			],
 			"anim": "singRIGHT",
@@ -56,11 +56,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/MIKI_PRISIONERO",
+	"image": "characters/Prisoner_Mickey",
 	"position": [
-		0,
-		350
+		80,
+		370
 	],
 	"healthicon": "face",
 	"flip_x": true,
@@ -73,6 +74,6 @@
 		0,
 		0
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 3.90000000000001,
+	"scale": 1.2
 }
