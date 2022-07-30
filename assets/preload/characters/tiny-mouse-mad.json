@@ -1,92 +1,90 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-40,
-				-8
+				-5
 			],
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12
-			],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "MAD MIKI IDLE"
+			"fps": 24,
+			"name": "MAD MIKI IDLE",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-33,
-				-51
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN",
 			"loop": false,
-			"name": "MAD MIKI DOWN"
-		},
-		{
 			"offsets": [
-				-38,
-				24
+				55,
+				41
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "MAD MIKI UP"
-		},
-		{
-			"offsets": [
-				63,
-				44
-			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MAD MIKI LEFT",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "MAD MIKI LEFT"
+			"offsets": [
+				-34,
+				-43
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MAD MIKI DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				22
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MAD MIKI UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MAD MIKI RIGHT",
+			"indices": []
 		},
 		{
 			"offsets": [
-				-46,
-				2
+				13,
+				234
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "MAD MIKI RIGHT"
+			"fps": 24,
+			"anim": "dialogue",
+			"indices": [],
+			"name": "MIKI DIALOGUE"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/too-slow/TOO_SLOW_SAD_MIKI",
+	"image": "characters/too-slow/Too_Slow_Mickey",
 	"position": [
-		-65,
-		345
+		0,
+		450
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
 	"healthbar_colors": [
-		82,
-		89,
-		81
+		70,
+		73,
+		69
 	],
 	"camera_position": [
-		-50,
-		30
+		-110,
+		-90
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 4.00000000000001,
+	"scale": 1.3
 }

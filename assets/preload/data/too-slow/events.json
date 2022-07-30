@@ -165,13 +165,8 @@
 				92595.724800184,
 				[
 					[
-						"Change Character",
-						"dad",
-						"tiny-mouse-dial"
-					],
-					[
 						"Play Animation",
-						"dial",
+						"dialogue",
 						"dad"
 					]
 				]
@@ -275,11 +270,6 @@
 				141479.898469652,
 				[
 					[
-						"Change Character",
-						"dad",
-						"mutant-mouse"
-					],
-					[
 						"Play Animation",
 						"transform",
 						"dad"
@@ -298,6 +288,11 @@
 						"Flash Black",
 						"",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"mutant-mouse"
 					]
 				]
 			],
@@ -456,7 +451,7 @@
 				[
 					[
 						"Play Animation",
-						"die",
+						"death",
 						"dad"
 					],
 					[
@@ -489,6 +484,6 @@
 		"bpm": 135,
 		"arrowSkin": "",
 		"needsVoices": true,
-		"song": "Too Slow Encore"
+		"song": "Too Slow"
 	}
 }

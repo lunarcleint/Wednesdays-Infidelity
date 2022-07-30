@@ -110,7 +110,7 @@ function onStepHit()
 			PlayState.vocals.volume = 1;
 			PlayState.camZooming = false;
 			FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1);
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 120);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y - 120);
 			FlxTween.tween(PlayState.cutsceneText, {alpha: 1}, 0.3);
 			PlayState.cutsceneText.text = "I'll kill.";
 		case 938:
@@ -130,7 +130,7 @@ function onStepHit()
 			FlxTween.tween(PlayState.cutsceneText, {alpha: 0}, 0.4);
 		case 1012:
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 0.2);
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y + 50);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 175, PlayState.dad.getGraphicMidpoint().y - 150);
 		case 1043:
 			noteMoveSettings = [5, 0];
 
