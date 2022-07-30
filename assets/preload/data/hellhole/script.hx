@@ -168,7 +168,7 @@ function onStepHit()
 
 			PlayState.isCameraOnForcedPos = true;
 
-			PlayState.followChars = false;
+			PlayState.followChars = true;
 
 			PlayState.camFollow.set(600, 120);
 
