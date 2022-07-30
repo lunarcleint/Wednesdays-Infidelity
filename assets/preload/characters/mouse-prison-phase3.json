@@ -2,65 +2,66 @@
 	"animations": [
 		{
 			"offsets": [
-				1,
-				-2
+				-82,
+				170
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"indices": [],
+			"loop": false,
 			"name": "FINAL MIKI IDLE"
 		},
 		{
 			"offsets": [
-				130,
-				-24
+				43,
+				150
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
+			"loop": false,
 			"name": "FINAL MIKI LEFT"
 		},
 		{
 			"offsets": [
-				0,
-				-88
+				-82,
+				89
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
+			"loop": false,
 			"name": "FINAL MIKI DOWN"
 		},
 		{
 			"offsets": [
-				0,
-				96
+				-82,
+				265
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
+			"loop": false,
 			"name": "FINAL MIKI UP"
 		},
 		{
 			"offsets": [
-				0,
-				-10
+				-82,
+				164
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
+			"loop": false,
 			"name": "FINAL MIKI RIGHT"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/FINAL_SUICIDE_MOUSE",
+	"image": "characters/Prisoner_Mickey",
 	"position": [
-		0,
-		170
+		80,
+		370
 	],
 	"healthicon": "face",
 	"flip_x": true,
@@ -73,6 +74,6 @@
 		0,
 		0
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 3.90000000000001,
+	"scale": 1.2
 }

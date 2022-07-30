@@ -1,78 +1,79 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-5,
+				0,
 				0
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "MAD MIKI IDLE",
-			"indices": []
+			"loop": false,
+			"name": "MAD MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-1,
-				13
+				3,
+				11
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "MAD MIKI LEFT",
-			"indices": []
+			"loop": false,
+			"name": "MAD MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				2,
-				-24
+				6,
+				-26
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "MAD MIKI DOWN",
-			"indices": []
+			"loop": false,
+			"name": "MAD MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-43,
-				45
+				-37,
+				41
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "MAD MIKI UP",
-			"indices": []
+			"loop": false,
+			"name": "MAD MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-33,
-				38
+				-29,
+				35
 			],
-			"anim": "singRIGHT",
+			"indices": [],
 			"fps": 24,
-			"name": "MAD MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "MAD MIKI RIGHT"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/MIKI_PRISIONERO",
+	"image": "characters/Prisoner_Mickey",
 	"position": [
-		0,
-		350
+		80,
+		370
 	],
-	"healthicon": "mouse",
+	"healthicon": "face",
 	"flip_x": true,
 	"healthbar_colors": [
-		70,
-		73,
-		69
+		95,
+		103,
+		91
 	],
 	"camera_position": [
 		0,
 		0
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 3.90000000000001,
+	"scale": 1.2
 }
