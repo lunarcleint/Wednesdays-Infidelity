@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				50,
 				-40
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "smiler mouse down",
-			"indices": []
+			"indices": [],
+			"name": "smiler mouse down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				113,
-				160
+				111,
+				150
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "smiler mouse left",
-			"indices": []
+			"indices": [],
+			"name": "smiler mouse left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				50,
-				68
+				53,
+				66
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "smiler mouse rigth",
-			"indices": []
+			"indices": [],
+			"name": "smiler mouse rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				89,
-				125
+				91,
+				121
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "smiler mouse up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "smiler mouse up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "smiler mouse idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "smiler mouse idle"
 		}
 	],
 	"dataType": "JSON",

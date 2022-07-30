@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				80,
-				20
+				28
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Suicide Down"
+			"fps": 24,
+			"name": "Suicide Down",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				90
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Suicide Idle"
+			"fps": 24,
+			"name": "Suicide Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				147,
 				149
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Suicide Left"
+			"fps": 24,
+			"name": "Suicide Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				143
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Suicide Rigth"
+			"fps": 24,
+			"name": "Suicide Rigth",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-20,
-				182
+				162
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Suicide Up"
+			"fps": 24,
+			"name": "Suicide Up",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				42,
-				107
+				40,
+				110
 			],
-			"anim": "dodge",
+			"loop": false,
 			"fps": 24,
-			"name": "Hit Mouse",
-			"indices": []
+			"anim": "dodge",
+			"indices": [],
+			"name": "Hit Mouse"
 		}
 	],
 	"dataType": "JSON",

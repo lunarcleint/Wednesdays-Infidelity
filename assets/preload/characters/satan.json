@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SATAN IDLE"
+			"fps": 24,
+			"name": "SATAN IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
-				8
+				11
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SATAN LEFT"
+			"fps": 24,
+			"name": "SATAN LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				60,
-				-148
+				-143
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SATAN DOWN"
+			"fps": 24,
+			"name": "SATAN DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				60,
-				144
+				154
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SATAN UP"
+			"fps": 24,
+			"name": "SATAN UP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-31,
-				29
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-62,
+				17
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SATAN RIGHT"
+			"fps": 24,
+			"name": "SATAN RIGHT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				92,
-				320
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				86,
+				317
+			],
 			"anim": "spawn",
-			"indices": [],
-			"name": "SATAN APARICION"
+			"fps": 24,
+			"name": "SATAN APARICION",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-18,
-				-21
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-33,
+				-34
+			],
 			"anim": "laugh",
-			"indices": [],
-			"name": "JUJUJUJA"
+			"fps": 24,
+			"name": "JUJUJUJA",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
