@@ -2,18 +2,23 @@
 	"song": {
 		"speed": 2.8,
 		"stage": "jankacStage",
-		"player1": "bf-retro",
+		"player1": "bf-suicide",
 		"player2": "jank",
 		"player3": null,
 		"events": [
 			[
-				95727.2727272727,
+				7363.63636363636,
 				[
 					[
-						"Change Character",
-						"gf",
-						"gf-donald-extra"
-					],
+						"Play Animation",
+						"intro",
+						"dad"
+					]
+				]
+			],
+			[
+				95727.2727272727,
+				[
 					[
 						"Play Animation",
 						"appear",
@@ -25,9 +30,9 @@
 				96000,
 				[
 					[
-						"Change Character",
+						"Alt Idle Animation",
 						"gf",
-						"gf-donald"
+						"-alt"
 					],
 					[
 						"Alt Idle Animation",
@@ -41,7 +46,7 @@
 				[
 					[
 						"Play Animation",
-						"singUP-shoot",
+						"byeDonald",
 						"dad"
 					]
 				]
@@ -50,24 +55,14 @@
 				132136.363636364,
 				[
 					[
-						"Change Character",
-						"gf",
-						"gf-donald-extra"
+						"Play Animation",
+						"die",
+						"gf"
 					],
 					[
-						"Play Animation",
-						"death",
-						"gf"
-					]
-				]
-			],
-			[
-				133090.909090909,
-				[
-					[
 						"Alt Idle Animation",
-						"dad",
-						""
+						"gf",
+						"-dead"
 					]
 				]
 			]

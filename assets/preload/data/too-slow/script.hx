@@ -223,7 +223,7 @@ function onStepHit()
 			PlayState.vocals.volume = 1;
 			PlayState.camZooming = false;
 			FlxTween.tween(FlxG.camera, {zoom: 0.7}, 1);
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x, PlayState.dad.getGraphicMidpoint().y + 30);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 120, PlayState.dad.getGraphicMidpoint().y - 170);
 
 			PlayState.isCameraOnForcedPos = true;
 

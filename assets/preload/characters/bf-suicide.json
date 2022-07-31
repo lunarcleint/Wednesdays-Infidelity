@@ -159,10 +159,10 @@
 				-46,
 				-12
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "at",
-			"loop": false,
+			"indices": [],
 			"name": "BF Jeringa"
 		},
 		{
@@ -170,18 +170,19 @@
 				0,
 				10
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "dodge",
-			"loop": false,
+			"indices": [],
 			"name": "boyfriend dodge"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/BOYFRIEND-SUICIDE",
 	"position": [
-		0,
-		350
+		55,
+		395
 	],
 	"healthicon": "bf-suicide",
 	"flip_x": true,
@@ -195,5 +196,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

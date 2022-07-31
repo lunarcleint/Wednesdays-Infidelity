@@ -1,44 +1,174 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
-				26
+				18
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "sad",
-			"loop": false,
-			"name": "GF JU"
+			"fps": 24,
+			"name": "GF JU",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
-				0
+				-8
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "danceLeft",
+			"fps": 24,
+			"name": "GF IDLE",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "GF IDLE"
+			"offsets": [
+				0,
+				-8
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "GF IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-541,
+				304
+			],
+			"anim": "danceLeft-alt",
+			"fps": 24,
+			"name": "DONALD IDLE",
+			"indices": []
 		},
 		{
 			"offsets": [
-				0,
-				0
+				-541,
+				304
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "danceRight",
 			"loop": false,
-			"name": "GF IDLE"
+			"fps": 24,
+			"anim": "danceRight-alt",
+			"indices": [],
+			"name": "DONALD IDLE"
+		},
+		{
+			"offsets": [
+				-429,
+				220
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "DONALD LEFT"
+		},
+		{
+			"offsets": [
+				-572,
+				279
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DONALD DOWN"
+		},
+		{
+			"offsets": [
+				-611,
+				416
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "DONALD UP"
+		},
+		{
+			"offsets": [
+				-620,
+				340
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "DONALD RIGHT"
+		},
+		{
+			"offsets": [
+				7,
+				1106
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "appear",
+			"indices": [],
+			"name": "DUCK APARITION"
+		},
+		{
+			"offsets": [
+				-623,
+				-355
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft-dead",
+			"indices": [],
+			"name": "DONALD DEATH IDLE"
+		},
+		{
+			"offsets": [
+				-623,
+				-355
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight-dead",
+			"indices": [],
+			"name": "DONALD DEATH IDLE"
+		},
+		{
+			"offsets": [
+				-542,
+				293
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "die",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			],
+			"name": "DONALD DEATH"
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/accelerant/GF_WI",
+	"dataType": "JSON",
+	"no_antialiasing": true,
+	"image": "characters/accelerant/accelerant_gf",
 	"position": [
-		-280,
-		-370
+		-160,
+		-280
 	],
 	"healthicon": "gf",
 	"flip_x": false,
@@ -52,5 +182,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

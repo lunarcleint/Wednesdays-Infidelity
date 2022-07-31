@@ -278,10 +278,6 @@ class PlayState extends MusicBeatState
 	// GF Amongus / Sus
 	var gfSus:BGSprite;
 
-	// Inferno / Satán
-	var satanAparicion:FlxSprite;
-	var satanJijijija:FlxSprite;
-
 	// iratus
 	var basedSkeletons:FlxSprite;
 	var sky:BGSprite;
@@ -780,38 +776,12 @@ class PlayState extends MusicBeatState
 				infernosky.scrollFactor.set(0.8, 0.8);
 				add(infernosky);
 
-				satanAparicion = new FlxSprite(-280, -370);
-				satanAparicion.frames = Paths.getSparrowAtlas('backgrounds/hellhole/SATAN_APARITION');
-				satanAparicion.animation.addByPrefix('aparicion', 'SATAN APARICION', 24, false);
-				satanAparicion.antialiasing = ClientPrefs.globalAntialiasing;
-				satanAparicion.alpha = 0.00001; // preloading purposes
-				satanAparicion.updateHitbox();
-				add(satanAparicion);
-
-				satanAparicion.animation.callback = function(name:String, frameNumber:Int, frameIndex:Int)
-				{
-					if (name == "aparicion" && frameNumber == 6 && infernogroundparts["p2"] != null)
-					{
-						remove(satanAparicion);
-						insert(members.indexOf(infernogroundparts["p2"]), satanAparicion);
-					}
-				};
-
 				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -920, -110);
 				infernogroundp1.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp1.updateHitbox();
 				infernogroundp1.scrollFactor.set(1, 1);
 				add(infernogroundp1);
 				infernogroundparts.set("p1", infernogroundp1);
-
-				satanJijijija = new FlxSprite(-250, -325);
-				satanJijijija.frames = Paths.getSparrowAtlas('backgrounds/hellhole/JUJUJUJA');
-				satanJijijija.animation.addByPrefix('jijijija', 'JUJUJUJA', 24, true);
-				satanJijijija.antialiasing = ClientPrefs.globalAntialiasing;
-				// satanJijijija.visible = false;
-				satanJijijija.alpha = 0.00001; // preloading purposes
-				satanJijijija.updateHitbox();
-				add(satanJijijija);
 
 				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', -920, -110);
 				infernogroundp2.antialiasing = ClientPrefs.globalAntialiasing;
@@ -968,8 +938,6 @@ class PlayState extends MusicBeatState
 			if (curStage == 'inferno')
 				gf.alpha = 0.00001; // preloading purposes
 		}
-		if (curStage == 'inferno')
-			satanAparicion.setPosition(gf.x - 80, gf.y - 320); // positions him jumping out
 
 		if (curStage == 'stageLeakers')
 		{
@@ -1256,6 +1224,13 @@ class PlayState extends MusicBeatState
 
 		if (isStoryMode && WeekData.getCurrentWeek().songs[0][0] != curSong) // Makes sure it isnt the first song
 			setWeekProgress(curSong);
+
+		if (Progression.weekProgress.exists(WeekData.getWeekFileName())
+			&& WeekData.getCurrentWeek().songs[0][0] == curSong) // Clear week progress if start over
+		{
+			Progression.weekProgress.remove(WeekData.getWeekFileName());
+			Progression.save();
+		}
 
 		if (ClientPrefs.shaders)
 		{

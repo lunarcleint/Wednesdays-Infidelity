@@ -1,48 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-10,
-				-79
+				-77
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Mouse Down",
-			"indices": []
+			"indices": [],
+			"name": "Mouse Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				43,
-				-15
+				41,
+				-19
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Mouse Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-1,
-				-15
+				-19
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mouse Rigth"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				3,
-				-48
+				-52
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mouse Up"
+		},
+		{
+			"offsets": [
+				71,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "risa",
+			"indices": [],
+			"name": "laugh"
 		},
 		{
 			"loop": false,
@@ -50,16 +61,9 @@
 				71,
 				-6
 			],
-			"anim": "risa",
+			"anim": "risaSingle",
 			"fps": 24,
 			"name": "laugh",
-			"indices": []
-		},
-		{
-			"offsets": [
-				71,
-				-6
-			],
 			"indices": [
 				28,
 				29,
@@ -71,29 +75,26 @@
 				34,
 				34,
 				34
-			],
-			"fps": 24,
-			"anim": "risaSingle",
-			"loop": false,
-			"name": "laugh"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Mouse idle"
+			"fps": 24,
+			"name": "Mouse idle",
+			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/smiler",
 	"position": [
-		-175,
-		-5
+		-95,
+		75
 	],
 	"healthicon": "dad",
 	"flip_x": false,
@@ -107,5 +108,5 @@
 		30
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				21,
-				-20
+				35,
+				10
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -25,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-49,
-				-7
+				-39,
+				-115
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -36,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-14,
-				-26
+				-16,
+				134
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -47,7 +47,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				-37,
+				-42,
 				12
 			],
 			"anim": "singRIGHT",
@@ -56,11 +56,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/inferno mickey",
 	"position": [
-		-410,
-		-40
+		-470,
+		80
 	],
 	"healthicon": "hellholemickey",
 	"flip_x": false,
@@ -74,5 +75,5 @@
 		-20
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.2
 }

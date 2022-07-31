@@ -1,89 +1,101 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-40,
-				-8
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				31,
+				262
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "SATAN MIKI IDLE"
+			"fps": 24,
+			"name": "SATAN MIKI IDLE",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-53,
-				79
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "SATAN MIKI DOWN"
-		},
-		{
 			"offsets": [
-				2,
-				-74
+				115,
+				321
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "SATAN MIKI UP"
-		},
-		{
-			"offsets": [
-				53,
-				44
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SATAN MIKI LEFT"
+			"fps": 24,
+			"name": "SATAN MIKI LEFT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				14,
-				92
-			],
 			"loop": false,
+			"offsets": [
+				16,
+				345
+			],
+			"anim": "singDOWN",
 			"fps": 24,
+			"name": "SATAN MIKI DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				79,
+				212
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SATAN MIKI UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				72,
+				343
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SATAN MIKI RIGHT"
+			"fps": 24,
+			"name": "SATAN MIKI RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				286
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "JUJUJUJA",
+			"indices": []
 		},
 		{
 			"offsets": [
-				-49,
-				17
+				101,
+				261
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "singUP-alt",
+			"anim": "transform",
 			"loop": false,
-			"name": "JU"
+			"name": "TRANSFORMATION"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/too-slow/TOO_SLOW_SATAN_MOUSE",
+	"image": "characters/too-slow/tiny mouse satan",
 	"position": [
-		-135,
-		55
+		5,
+		425
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
 	"healthbar_colors": [
-		82,
-		89,
-		81
+		70,
+		73,
+		69
 	],
 	"camera_position": [
-		-50,
-		30
+		-110,
+		-90
 	],
-	"sing_duration": 3.5,
-	"scale": 1
+	"sing_duration": 4.00000000000001,
+	"scale": 1.2
 }

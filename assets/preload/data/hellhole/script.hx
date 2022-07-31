@@ -96,81 +96,79 @@ function onStepHit()
 			PlayState.defaultCamZoom = 0.6;
 
 		case 1340:
-			PlayState.satanAparicion.alpha = 1;
-			PlayState.satanAparicion.animation.play("aparicion", false);
+			PlayState.gf.animation.callback = function(name, frameNumber, frameIndex)
+			{
+				if (name == "spawn" && frameNumber == 6 && PlayState.infernogroundparts["p1"] != null)
+				{
+					PlayState.remove(PlayState.gf);
+					PlayState.insert(PlayState.members.indexOf(PlayState.infernogroundparts["p1"]) - 1, PlayState.gf);
+				}
+			};
+
+			PlayState.gf.alpha = 1;
+			PlayState.gf.playAnim("spawn", false);
+			PlayState.gf.specialAnim = true;
 
 			PlayState.isCameraOnForcedPos = false;
 
 			PlayState.followChars = true;
 		case 1343:
-			PlayState.gf.alpha = 1;
-			PlayState.satanAparicion.alpha = 0;
+			PlayState.gf.specialAnim = false;
+			PlayState.gf.dance();
 		case 1344:
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1);
 			PlayState.cameraStageZoom = true;
 		case 1345:
 			PlayState.changeDadIcon(true);
 		case 1376:
-			PlayState.gf.alpha = 0;
-			PlayState.satanJijijija.alpha = 1;
-			PlayState.satanJijijija.animation.play("jijijija", true);
+			PlayState.gf.playAnim("laugh", true);
+			PlayState.gf.specialAnim = true;
 		case 1392:
-			PlayState.gf.alpha = 1;
-			PlayState.satanJijijija.alpha = 0;
+			PlayState.gf.specialAnim = false;
+			PlayState.gf.dance();
 		case 1440:
-			PlayState.gf.alpha = 0;
-			PlayState.satanJijijija.alpha = 1;
-			PlayState.satanJijijija.animation.play("jijijija", true);
+			PlayState.gf.playAnim("laugh", true);
+			PlayState.gf.specialAnim = true;
 		case 1456:
-			PlayState.gf.alpha = 1;
-			PlayState.satanJijijija.alpha = 0;
+			PlayState.gf.specialAnim = false;
+			PlayState.gf.dance();
 		case 1792:
-			PlayState.gf.alpha = 0;
-			PlayState.satanJijijija.alpha = 1;
-			PlayState.satanJijijija.animation.play("jijijija", true);
+			PlayState.gf.playAnim("laugh", true);
+			PlayState.gf.specialAnim = true;
 		case 1808:
-			PlayState.gf.alpha = 1;
-			PlayState.satanJijijija.alpha = 0;
+			PlayState.gf.specialAnim = false;
+			PlayState.gf.dance();
 		case 1856:
-			PlayState.defaultCamZoom = 0.6;
-
-			PlayState.camFollow.set(600, 120);
-
-			PlayState.gf.alpha = 0;
-			PlayState.satanJijijija.alpha = 1;
-			PlayState.satanJijijija.animation.play("jijijija", true);
+			PlayState.gf.playAnim("laugh", true);
+			PlayState.gf.specialAnim = true;
 		case 1867:
-			PlayState.gf.alpha = 1;
-			PlayState.satanJijijija.alpha = 0;
+			PlayState.gf.specialAnim = false;
+			PlayState.gf.dance();
 		case 1868:
 			PlayState.removeCinematicBars(1);
 
-			PlayState.gf.alpha = 0;
-			PlayState.satanAparicion.alpha = 1;
-
-			PlayState.satanAparicion.animation.callback = function(name, frameNumber, frameIndex)
+			PlayState.gf.animation.callback = function(name, frameNumber, frameIndex)
 			{
-				if (name == "aparicion" && frameNumber == 6 && infernogroundparts["p1"] != null)
+				if (name == "spawn" && frameNumber == 6 && PlayState.infernogroundparts["p1"] != null)
 				{
-					PlayState.remove(PlayState.satanAparicion);
-					PlayState.insert(PlayState.members.indexOf(PlayState.infernogroundparts["p1"]) - 1, PlayState.satanAparicion);
+					PlayState.remove(PlayState.gf);
+					PlayState.insert(PlayState.members.indexOf(PlayState.infernogroundparts["p1"]) - 1, PlayState.gf);
 				}
-				if (name == "aparicion" && frameNumber == 0)
+				if (name == "spawn" && frameNumber == 0)
 				{
 					PlayState.changeDadIcon(false);
-					PlayState.gf.alpha = 0;
-					PlayState.satanAparicion.alpha = 0;
-					PlayState.remove(PlayState.satanAparicion);
+					PlayState.remove(PlayState.gf);
+
+					PlayState.gf.visible = false;
 				}
 			};
 
-			PlayState.satanAparicion.animation.play("aparicion", true, true);
+			PlayState.gf.playAnim("spawn", true, true);
+			PlayState.gf.specialAnim = true;
 
 			PlayState.isCameraOnForcedPos = true;
 
-			PlayState.followChars = false;
-
-			PlayState.defaultCamZoom = 0.6;
+			PlayState.followChars = true;
 
 			PlayState.camFollow.set(600, 120);
 
@@ -180,6 +178,9 @@ function onStepHit()
 			PlayState.followChars = true;
 
 		case 2384:
+			PlayState.curCamera.dadPos[1] += 30;
+			PlayState.curCamera.bfPos[1] += 30;
+
 			PlayState.addCinematicBars(1.5);
 
 			var arr = [
@@ -200,6 +201,9 @@ function onStepHit()
 			PlayState.curCamera.dadZoom = 1.2;
 
 		case 2896:
+			PlayState.curCamera.dadPos[1] -= 30;
+			PlayState.curCamera.bfPos[1] -= 30;
+
 			PlayState.removeCinematicBars(0.000000000000000000001);
 
 			PlayState.camGame.visible = false;
@@ -229,6 +233,9 @@ function onStepHit()
 			PlayState.curCamera.dadZoom = 0.8;
 
 		case 3552:
+			PlayState.curCamera.dadPos[1] += 30;
+			PlayState.curCamera.bfPos[1] += 30;
+
 			PlayState.addCinematicBars(1);
 
 			var arr = [

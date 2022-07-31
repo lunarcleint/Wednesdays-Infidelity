@@ -4,63 +4,64 @@
 			"loop": false,
 			"offsets": [
 				0,
-				0
+				-55
 			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Cheddar-idle",
+			"anim": "singRIGHT",
+			"fps": 22,
+			"name": "Cheddar-right",
 			"indices": []
 		},
 		{
-			"offsets": [
-				1,
-				-58
-			],
-			"indices": [],
-			"fps": 22,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "Cheddar-right"
-		},
-		{
 			"offsets": [
 				1,
 				-15
 			],
-			"indices": [],
-			"fps": 22,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "Cheddar-left"
+			"fps": 22,
+			"name": "Cheddar-left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
-				93
+				87
 			],
-			"indices": [],
-			"fps": 22,
 			"anim": "singUP",
+			"fps": 22,
+			"name": "Cheddar-up",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "Cheddar-up"
+			"offsets": [
+				65,
+				-162
+			],
+			"anim": "singDOWN",
+			"fps": 22,
+			"name": "Cheddar-down",
+			"indices": []
 		},
 		{
 			"offsets": [
-				68,
-				-170
+				0,
+				0
 			],
-			"indices": [],
-			"fps": 22,
-			"anim": "singDOWN",
 			"loop": false,
-			"name": "Cheddar-down"
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Cheddar-idle"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/Cheddar_Assets",
+	"image": "characters/Chedder",
 	"position": [
-		-370,
-		-60
+		-250,
+		50
 	],
 	"healthicon": "cheese",
 	"flip_x": false,
@@ -74,5 +75,5 @@
 		50
 	],
 	"sing_duration": 4.00000000000001,
-	"scale": 1
+	"scale": 1.2
 }

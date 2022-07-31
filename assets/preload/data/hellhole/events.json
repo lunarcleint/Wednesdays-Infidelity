@@ -1,11 +1,21 @@
 {
 	"song": {
-		"speed": 2.3,
+		"speed": 2.8,
 		"stage": "inferno",
 		"player1": "bf-retro",
 		"player2": "mouse-smile",
 		"player3": null,
 		"events": [
+			[
+				29700,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"1"
+					]
+				]
+			],
 			[
 				29992.5,
 				[
@@ -120,12 +130,7 @@
 				276000,
 				[
 					[
-						"Flash White",
-						"",
-						""
-					],
-					[
-						"camGame Off",
+						"Flash Black",
 						"",
 						""
 					]

@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				113,
-				160
+				111,
+				150
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				50,
-				68
+				53,
+				66
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				89,
-				125
+				91,
+				121
 			],
 			"loop": false,
 			"fps": 24,
@@ -56,11 +56,12 @@
 			"name": "smiler mouse idle"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/Smiler_Mouse",
 	"position": [
-		-165,
-		95
+		-85,
+		165
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -74,5 +75,5 @@
 		30
 	],
 	"sing_duration": 5,
-	"scale": 1
+	"scale": 1.2
 }
