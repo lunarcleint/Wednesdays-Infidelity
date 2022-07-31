@@ -28,6 +28,9 @@ function onStepHit()
 
 	switch (curStep)
 	{
+		case 1120:
+			PlayState.curCamera.dadZoom = 0.7;
+			PlayState.curCamera.bfZoom = 0.8;
 		case 959:
 			PlayState.isCameraOnForcedPos = true;
 
@@ -58,7 +61,7 @@ function onStepHit()
 			PlayState.removeCinematicBars(1);
 
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1, {startDelay: 1});
-		case 2144:
+		case 2400:
 			PlayState.isCameraOnForcedPos = true;
 
 			PlayState.followChars = false;
@@ -72,7 +75,7 @@ function onStepHit()
 			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
 
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 50, PlayState.dad.getGraphicMidpoint().y - 40);
-		case 2181:
+		case 2437:
 			FlxTween.tween(FlxG.camera, {zoom: 1.2}, 1, {ease: FlxEase.quadInOut});
 
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 40, PlayState.dad.getGraphicMidpoint().y - 100);

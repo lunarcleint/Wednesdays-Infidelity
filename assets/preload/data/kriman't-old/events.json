@@ -1,0 +1,484 @@
+{
+	"song": {
+		"speed": 2.2,
+		"stage": "stageMokey",
+		"player1": "bf-retro",
+		"player2": "mokey-suicide",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				15652.1739130435,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				31434.7826086957,
+				[
+					[
+						"Play Animation",
+						"cry",
+						"mokey-suicide"
+					]
+				]
+			],
+			[
+				33391.3043478261,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				50086.9565217391,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				83478.2608695652,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				100173.913043478,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				125217.391304348,
+				[
+					[
+						"Play Animation",
+						"transforming",
+						"mokey-suicide"
+					]
+				]
+			],
+			[
+				129391.304347826,
+				[
+					[
+						"Change Scroll Speed",
+						"1.3",
+						""
+					]
+				]
+			],
+			[
+				129396.187160326,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				129508.491847826,
+				[
+					[
+						"Change Character",
+						"1",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				129531.929347826,
+				[
+					[
+						"Alt Idle Animation",
+						"mokey-sad-suicide",
+						"-alt"
+					]
+				]
+			],
+			[
+				143453.804347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				143688.179347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				143922.554347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				144039.741847826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				144156.929347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				144274.116847826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.07",
+						""
+					]
+				]
+			],
+			[
+				144391.304347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				144391.304347826,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				144508.491847826,
+				[
+					[
+						"Alt Idle Animation",
+						"mokey-sad-suicide",
+						""
+					]
+				]
+			],
+			[
+				159391.304347826,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				187516.304347826,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				187633.491847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				188102.241847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				188336.616847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				188570.991847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				188805.366847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				189039.741847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				189274.116847826,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"mokey-sad-suicide"
+					]
+				]
+			],
+			[
+				189391.304347826,
+				[
+					[
+						"Change Scroll Speed",
+						"1.3",
+						""
+					]
+				]
+			],
+			[
+				189391.304347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				189401.069972826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					],
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				204391.304347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				204391.304347826,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				219391.304347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				219391.304347826,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				234391.304347826,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				234396.187160326,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						""
+					],
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				249391.304347826,
+				[
+					[
+						"Change Scroll Speed",
+						"1.4",
+						""
+					]
+				]
+			],
+			[
+				249396.187160326,
+				[
+					[
+						"Add Camera Zoom",
+						"0.2",
+						""
+					],
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				256891.304347826,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"7"
+					]
+				]
+			],
+			[
+				264391.304347826,
+				[
+					[
+						"Flash White",
+						"",
+						""
+					]
+				]
+			],
+			[
+				264848.335597826,
+				[
+					[
+						"Screen Shake",
+						"1.9, 0.04",
+						""
+					]
+				]
+			],
+			[
+				264860.054347826,
+				[
+					[
+						"Play Animation",
+						"die",
+						"mokey-sad-suicide"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-invisible",
+		"bpm": 115,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Kriman't"
+	}
+}
