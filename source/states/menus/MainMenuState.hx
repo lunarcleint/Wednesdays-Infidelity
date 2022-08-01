@@ -134,7 +134,21 @@ class MainMenuState extends MusicBeatState
 				FlxG.sound.music.volume = 0;
 
 				LoadingState.loadAndSwitchState(new PlayState());
-			}
+			},
+			[FlxKey.C, FlxKey.O, FlxKey.L, FlxKey.E] => function()
+			{
+				selectedSomethin = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+
+				stopSound();
+
+				MusicBeatState.switchState(new CutsceneState("cole", false, function()
+				{
+					Sys.exit(0);
+				}));
+			},
 		];
 
 		Paths.clearStoredMemory();

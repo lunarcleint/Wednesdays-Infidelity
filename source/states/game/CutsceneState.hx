@@ -83,6 +83,10 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 					video = "PENKARU GRIDDY";
 					skippable = false;
 					focus = false;
+				case 'cole':
+					video = "ongfr";
+					skippable = false;
+					focus = false;
 			}
 		}
 
