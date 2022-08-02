@@ -71,10 +71,10 @@
 				101,
 				261
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "transform",
-			"loop": false,
+			"indices": [],
 			"name": "TRANSFORMATION"
 		}
 	],
@@ -82,8 +82,8 @@
 	"no_antialiasing": false,
 	"image": "characters/too-slow/tiny mouse satan",
 	"position": [
-		5,
-		425
+		55,
+		475
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
