@@ -299,6 +299,10 @@ class PlayState extends MusicBeatState
 	var devs:FlxSprite;
 	var osbaldo:FlxSprite;
 
+	// Vesania
+	var satanBG:FlxSprite;
+	var smallDemons:FlxSprite;
+
 	var danceLeft:Bool = false; // weird ik but ig it works
 	var trumpetsPlaying:Bool = false;
 
@@ -349,6 +353,14 @@ class PlayState extends MusicBeatState
 			gfPos: [952.9, 200], // xx3
 			bfZoom: 1, // mushitsection == true
 			dadZoom: 0.8, // mushitsection == false
+			gfZoom: 0.65 // gfsection == true
+		},
+		"vesania" => {
+			dadPos: [420.95, 313], // xx
+			bfPos: [952.9, 400], // xx2
+			gfPos: [952.9, 200], // xx3
+			bfZoom: 0.7, // mushitsection == true
+			dadZoom: 0.65, // mushitsection == false
 			gfZoom: 0.65 // gfsection == true
 		},
 		"fence" => {
@@ -789,6 +801,36 @@ class PlayState extends MusicBeatState
 				infernogroundp2.scrollFactor.set(1, 1);
 				add(infernogroundp2);
 				infernogroundparts.set("p2", infernogroundp2);
+			case 'vesania':
+				var sky:BGSprite = new BGSprite('backgrounds/vesania/sky', -843.55, -1130.2);
+				sky.antialiasing = ClientPrefs.globalAntialiasing;
+				sky.scrollFactor.set(0.5, 0.5);
+				add(sky);
+
+				var pillar:BGSprite = new BGSprite('backgrounds/vesania/pillar bg', -638, -340);
+				pillar.antialiasing = ClientPrefs.globalAntialiasing;
+				add(pillar);
+
+				satanBG = new FlxSprite(454.2, -363.45);
+				satanBG.frames = Paths.getSparrowAtlas('backgrounds/vesania/satan');
+				satanBG.animation.addByPrefix('Idle', 'CAGADA INFERNAL instance 1', 24, false);
+				satanBG.antialiasing = ClientPrefs.globalAntialiasing;
+				add(satanBG);
+
+				var bg:BGSprite = new BGSprite('backgrounds/vesania/BG', -640, -340);
+				bg.antialiasing = ClientPrefs.globalAntialiasing;
+				add(bg);
+
+				smallDemons = new FlxSprite(-208.95, -201);
+				smallDemons.frames = Paths.getSparrowAtlas('backgrounds/vesania/demons');
+				smallDemons.animation.addByPrefix('idle', 'diablillos instance 1', 24, false);
+				smallDemons.antialiasing = ClientPrefs.globalAntialiasing;
+				add(smallDemons);
+
+				var skulls:BGSprite = new BGSprite('backgrounds/vesania/Skulls', -638, -340);
+				skulls.antialiasing = ClientPrefs.globalAntialiasing;
+				add(skulls);
+
 			case 'hell': // versiculus iratus
 				oscuro = new BGSprite('backgrounds/iratus/bgintro', -608, -482);
 				oscuro.antialiasing = ClientPrefs.globalAntialiasing;
@@ -832,7 +874,8 @@ class PlayState extends MusicBeatState
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
-			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // add stage name here to give it the cool static effect
+			case 'vecindario' | 'chedder' | 'reefer' | 'bobux' | 'toyland' | 'inferno' | 'susNightmare' | 'vecindariocover' | 'hell' | 'fence' |
+				'jankacStage' | 'vesania': // add stage name here to give it the cool static effect
 				var daStatic:FlxSprite = new FlxSprite(0, 0);
 				daStatic.frames = Paths.getSparrowAtlas('daSTAT', 'shared');
 				daStatic.setGraphicSize(FlxG.width, FlxG.height);
@@ -1516,6 +1559,17 @@ class PlayState extends MusicBeatState
 						diablito.animation.play('danceRight', true);
 						danceLeft = !danceLeft;
 					}
+				case 'vesania':
+					if (curBeat % 4 == 0)
+					{
+						satanBG.animation.play('Idle', true);
+					}
+					if (curBeat % 2 == 0)
+					{
+						smallDemons.animation.play('idle', true);
+					}
+					grain.alpha = 1;
+					grain.animation.play('idle');
 				case 'susNightmare':
 					if (curBeat % 1 == 0)
 					{
@@ -4948,6 +5002,16 @@ class PlayState extends MusicBeatState
 				grain.animation.play('idle');
 				if (curBeat % 1 == 0)
 					basedSkeletons.animation.play('idle', true);
+
+			case 'vesania':
+				if (curBeat % 2 == 0)
+				{
+					satanBG.animation.play('Idle', true);
+				}
+				if (curBeat % 2 == 0)
+				{
+					smallDemons.animation.play('idle', true);
+				}
 		}
 		lastBeatHit = curBeat;
 	}

@@ -70,6 +70,19 @@ class Init extends FlxState
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
 		CoolUtil.precacheImage('kevin_normal', 'preload');
 
+		Paths.excludeAsset('assets/shared/images/grain.png');
+		CoolUtil.precacheImage('grain', 'shared');
+
+		Paths.excludeAsset('assets/shared/images/daSTAT.png');
+		CoolUtil.precacheImage('daSTAT', 'shared');
+
+		Paths.excludeAsset('assets/shared/images/go.png');
+		CoolUtil.precacheImage('go', 'shared');
+		Paths.excludeAsset('assets/shared/images/ready.png');
+		CoolUtil.precacheImage('ready', 'shared');
+		Paths.excludeAsset('assets/shared/images/set.png');
+		CoolUtil.precacheImage('set', 'shared');
+
 		FlxG.switchState(Type.createInstance(Main.initialState, []));
 	}
 }
