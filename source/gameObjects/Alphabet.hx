@@ -8,6 +8,8 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
 import flixel.system.FlxSound;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import util.CoolUtil;
 
@@ -52,7 +54,10 @@ class Alphabet extends FlxSpriteGroup
 
 	public var instaLerp:Bool = false;
 
-	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1)
+	public var shaking:Bool = false;
+
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1,
+			?shaking:Bool = false)
 	{
 		super(x, y);
 		forceX = Math.NEGATIVE_INFINITY;
@@ -62,6 +67,7 @@ class Alphabet extends FlxSpriteGroup
 		this.text = text;
 		this.typed = typed;
 		isBold = bold;
+		this.shaking = shaking;
 
 		if (text != "")
 		{
@@ -385,6 +391,8 @@ class Alphabet extends FlxSpriteGroup
 		}
 	}
 
+	var tween:FlxTween = null;
+
 	override function update(elapsed:Float)
 	{
 		if (isMenuItem)
@@ -408,6 +416,14 @@ class Alphabet extends FlxSpriteGroup
 				{
 					x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
 				}
+			}
+		}
+		if (shaking)
+		{
+			if (tween == null)
+			{
+				this.angle = -20;
+				tween = FlxTween.tween(this, {angle: 20}, 0.05, {type: FlxTweenType.PINGPONG});
 			}
 		}
 
