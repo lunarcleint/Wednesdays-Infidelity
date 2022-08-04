@@ -4978,7 +4978,7 @@ class PlayState extends MusicBeatState
 			case 'susNightmare':
 				if (curBeat % 16 == 0)
 				{
-					if (FlxG.random.bool(50))
+					if (FlxG.random.bool(30))
 					{
 						theamonguslys.animation.play('walk', true);
 					}
