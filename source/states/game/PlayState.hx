@@ -875,7 +875,7 @@ class PlayState extends MusicBeatState
 				front.antialiasing = ClientPrefs.globalAntialiasing;
 				add(front);
 			case 'toyland':
-				var toyland:BGSprite = new BGSprite('backgrounds/sus/BG_JULIAN', -600, 0);
+				var toyland:BGSprite = new BGSprite('backgrounds/BG_JULIAN', -600, 0);
 				toyland.scrollFactor.set(1, 1);
 				add(toyland);
 		}
@@ -4978,7 +4978,7 @@ class PlayState extends MusicBeatState
 			case 'susNightmare':
 				if (curBeat % 16 == 0)
 				{
-					if (FlxG.random.bool(30))
+					if (FlxG.random.bool(25))
 					{
 						theamonguslys.animation.play('walk', true);
 					}
