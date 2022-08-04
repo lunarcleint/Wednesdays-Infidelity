@@ -275,8 +275,8 @@ class PlayState extends MusicBeatState
 
 	var stageWhite:FlxSprite;
 
-	// GF Amongus / Sus
-	var gfSus:BGSprite;
+	//  Sus
+	var theamonguslys:FlxSprite;
 
 	// iratus
 	var basedSkeletons:FlxSprite;
@@ -859,16 +859,23 @@ class PlayState extends MusicBeatState
 				ground.visible = false;
 				add(ground);
 			case 'susNightmare': // Week SUS
-				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
+				var nightmare:BGSprite = new BGSprite('backgrounds/sus/bg', -640, -340);
 				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
 				nightmare.updateHitbox();
 				add(nightmare);
 
-				gfSus = new BGSprite('backgrounds/gf-amogus', 1300, 400, ['amongus-gf']);
-				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
-				add(gfSus);
+				theamonguslys = new FlxSprite(-354.95, 129.65);
+				theamonguslys.frames = Paths.getJSONAtlas('backgrounds/sus/flacu y nuggy');
+				theamonguslys.antialiasing = ClientPrefs.globalAntialiasing;
+				theamonguslys.animation.addByPrefix('walk', 'flacu y nuggy', 24, false);
+				theamonguslys.animation.play('walk', false, false, 38);
+				add(theamonguslys);
+
+				var front:BGSprite = new BGSprite('backgrounds/sus/front bg', -639.35, -340);
+				front.antialiasing = ClientPrefs.globalAntialiasing;
+				add(front);
 			case 'toyland':
-				var toyland:BGSprite = new BGSprite('backgrounds/BG_JULIAN', -600, 0);
+				var toyland:BGSprite = new BGSprite('backgrounds/sus/BG_JULIAN', -600, 0);
 				toyland.scrollFactor.set(1, 1);
 				add(toyland);
 		}
@@ -1571,10 +1578,6 @@ class PlayState extends MusicBeatState
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
-					if (curBeat % 1 == 0)
-					{
-						gfSus.dance(true);
-					}
 					grain.alpha = 1;
 					grain.animation.play('idle');
 			}
@@ -4973,12 +4976,13 @@ class PlayState extends MusicBeatState
 			case 'vecindario':
 				grain.animation.play('idle');
 			case 'susNightmare':
-				if (gfSus != null)
-					if (curBeat % 1 == 0)
+				if (curBeat % 16 == 0)
+				{
+					if (FlxG.random.bool(50))
 					{
-						gfSus.dance(true);
+						theamonguslys.animation.play('walk', true);
 					}
-
+				}
 				grain.alpha = 1;
 				grain.animation.play('idle');
 			case 'stageLeakers':
