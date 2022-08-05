@@ -267,11 +267,19 @@ class TitleState extends MusicBeatState
 		super.update(elapsed);
 	}
 
-	function createCoolText(textArray:Array<String>, ?offset:Float = 0)
+	function createCoolText(textArray:Array<String>, ?offset:Float = 0, ?shake:Bool = false)
 	{
 		for (i in 0...textArray.length)
 		{
-			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
+			var money:Alphabet;
+			if (shake)
+			{
+				money = new Alphabet(0, 0, textArray[i], true, false, 0.05, 1, true);
+			}
+			else
+			{
+				money = new Alphabet(0, 0, textArray[i], true, false);
+			}
 			money.screenCenter(X);
 			money.y += (i * 60) + 200 + offset;
 			credGroup.add(money);
@@ -279,11 +287,19 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	function addMoreText(text:String, ?offset:Float = 0)
+	function addMoreText(text:String, ?offset:Float = 0, ?shake:Bool = false)
 	{
 		if (textGroup != null)
 		{
-			var coolText:Alphabet = new Alphabet(0, 0, text, true, false);
+			var coolText:Alphabet;
+			if (shake)
+			{
+				coolText = new Alphabet(0, 0, text, true, false, 0.05, 1, true);
+			}
+			else
+			{
+				coolText = new Alphabet(0, 0, text, true, false);
+			}
 			coolText.screenCenter(X);
 			coolText.y += (textGroup.length * 60) + 200 + offset;
 			credGroup.add(coolText);
@@ -361,9 +377,9 @@ class TitleState extends MusicBeatState
 					{
 						FlxG.camera.shake(0.004, 99999999999);
 					}
-					createCoolText([curWacky[0]]);
+					createCoolText([curWacky[0]], 0, true);
 				case 74:
-					addMoreText(curWacky[1]);
+					addMoreText(curWacky[1], 0, true);
 				case 97:
 					deleteCoolText();
 				case 108:

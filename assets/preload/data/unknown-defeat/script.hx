@@ -52,8 +52,7 @@ function onStepHit()
 			PlayState.followChars = false;
 			PlayState.camFollow.x = 600;
 		case 1855:
-			PlayState.camHUD.alpha = 0;
-			PlayState.curCamera.dadZoom = 1.1;
+			PlayState.curCamera.dadZoom = 1;
 			PlayState.removeCinematicBars(0.1);
 			PlayState.followChars = true;
 			PlayState.curCamera.dadPos[0] = 200;

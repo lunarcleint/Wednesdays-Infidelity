@@ -275,8 +275,9 @@ class PlayState extends MusicBeatState
 
 	var stageWhite:FlxSprite;
 
-	// GF Amongus / Sus
-	var gfSus:BGSprite;
+	//  Sus
+	var theamonguslys:FlxSprite;
+	var leansus:FlxSprite;
 
 	// iratus
 	var basedSkeletons:FlxSprite;
@@ -859,14 +860,28 @@ class PlayState extends MusicBeatState
 				ground.visible = false;
 				add(ground);
 			case 'susNightmare': // Week SUS
-				var nightmare:BGSprite = new BGSprite('backgrounds/BG_SUS', -600, -200);
+				var nightmare:BGSprite = new BGSprite('backgrounds/sus/bg', -640, -340);
 				nightmare.antialiasing = ClientPrefs.globalAntialiasing;
 				nightmare.updateHitbox();
 				add(nightmare);
 
-				gfSus = new BGSprite('backgrounds/gf-amogus', 1300, 400, ['amongus-gf']);
-				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
-				add(gfSus);
+				theamonguslys = new FlxSprite(-354.95, 129.65);
+				theamonguslys.frames = Paths.getJSONAtlas('backgrounds/sus/flacu y nuggy');
+				theamonguslys.antialiasing = ClientPrefs.globalAntialiasing;
+				theamonguslys.animation.addByPrefix('walk', 'flacu y nuggy', 24, false);
+				theamonguslys.animation.play('walk', false, false, 38);
+				add(theamonguslys);
+
+				leansus = new FlxSprite(-354.95, 129.65);
+				leansus.frames = Paths.getJSONAtlas('backgrounds/sus/leansito');
+				leansus.antialiasing = ClientPrefs.globalAntialiasing;
+				leansus.animation.addByPrefix('walk', 'leansito', 24, false);
+				leansus.animation.play('walk', false, false, 32);
+				add(leansus);
+
+				var front:BGSprite = new BGSprite('backgrounds/sus/front bg', -639.35, -340);
+				front.antialiasing = ClientPrefs.globalAntialiasing;
+				add(front);
 			case 'toyland':
 				var toyland:BGSprite = new BGSprite('backgrounds/BG_JULIAN', -600, 0);
 				toyland.scrollFactor.set(1, 1);
@@ -1571,10 +1586,6 @@ class PlayState extends MusicBeatState
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'susNightmare':
-					if (curBeat % 1 == 0)
-					{
-						gfSus.dance(true);
-					}
 					grain.alpha = 1;
 					grain.animation.play('idle');
 			}
@@ -4973,12 +4984,20 @@ class PlayState extends MusicBeatState
 			case 'vecindario':
 				grain.animation.play('idle');
 			case 'susNightmare':
-				if (gfSus != null)
-					if (curBeat % 1 == 0)
+				if (curBeat % 16 == 0)
+				{
+					if (FlxG.random.bool(25))
 					{
-						gfSus.dance(true);
+						switch (FlxG.random.int(1, 2))
+						{
+							case 1:
+								theamonguslys.animation.play('walk', true);
+								trace("poo poo");
+							case 2:
+								leansus.animation.play('walk', true);
+						}
 					}
-
+				}
 				grain.alpha = 1;
 				grain.animation.play('idle');
 			case 'stageLeakers':
