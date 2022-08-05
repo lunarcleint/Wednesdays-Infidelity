@@ -162,6 +162,13 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.alpha = 0.5;
 		add(leftArrow);
 		add(rightArrow);
+
+		var description:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/Description', 'preload'));
+		description.screenCenter();
+		description.y += 40;
+		description.x -= 30;
+		add(description);
+
 		changeWeek();
 
 		super.create();
@@ -284,27 +291,35 @@ class StoryMenuState extends MusicBeatState
 
 	function playGame(songs:Array<String>)
 	{
-		PlayState.storyPlaylist = songs;
-		PlayState.isStoryMode = true;
-		selectedWeek = true;
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+		FlxTween.tween(FlxG.camera, {zoom: 2.1}, 2, {ease: FlxEase.expoInOut});
+		if (ClientPrefs.shake)
+			FlxG.camera.shake(0.008, 0.08);
 
-		var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
-		if (diffic == null)
-			diffic = '';
-
-		PlayState.storyDifficulty = curDifficulty;
-
-		PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-		PlayState.campaignScore = 0;
-		PlayState.campaignMisses = 0;
-
-		LoadingState.loadAndSwitchState(new CutsceneState(PlayState.storyPlaylist[0].toLowerCase(), false, function()
+		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
-			LoadingState.loadAndSwitchState(new PlayState(), true);
-		}), true);
+			PlayState.storyPlaylist = songs;
+			PlayState.isStoryMode = true;
+			selectedWeek = true;
 
-		Lib.application.window.title = "Wednesday's Infidelity";
-		FreeplayState.destroyFreeplayVocals();
+			var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
+			if (diffic == null)
+				diffic = '';
+
+			PlayState.storyDifficulty = curDifficulty;
+
+			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+			PlayState.campaignScore = 0;
+			PlayState.campaignMisses = 0;
+
+			LoadingState.loadAndSwitchState(new CutsceneState(PlayState.storyPlaylist[0].toLowerCase(), false, function()
+			{
+				LoadingState.loadAndSwitchState(new PlayState(), true);
+			}), true);
+
+			Lib.application.window.title = "Wednesday's Infidelity";
+			FreeplayState.destroyFreeplayVocals();
+		});
 	}
 
 	var lerpScore:Int = 0;
