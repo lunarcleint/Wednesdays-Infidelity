@@ -1,22 +1,22 @@
 {
   "frames": {
-    "flacu y nuggy0001": {
+    "flacu y nuggy0007": {
       "frame": {
         "x": 10,
         "y": 10,
         "w": 678,
-        "h": 306
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1380,
-        "y": 17,
+        "x": 1204,
+        "y": 2,
         "w": 678,
-        "h": 306
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -24,143 +24,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0002": {
+    "flacu y nuggy0008": {
       "frame": {
-        "x": 708,
-        "y": 10,
+        "x": 10,
+        "y": 346,
         "w": 678,
-        "h": 306
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1365,
-        "y": 17,
+        "x": 1185,
+        "y": 2,
         "w": 678,
-        "h": 306
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0005": {
-      "frame": {
-        "x": 1406,
-        "y": 10,
-        "w": 679,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1255,
-        "y": 17,
-        "w": 679,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0006": {
-      "frame": {
-        "x": 2105,
-        "y": 10,
-        "w": 679,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1240,
-        "y": 17,
-        "w": 679,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0011": {
-      "frame": {
-        "x": 2804,
-        "y": 10,
-        "w": 675,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1028,
-        "y": 17,
-        "w": 675,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0012": {
-      "frame": {
-        "x": 3499,
-        "y": 10,
-        "w": 675,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1013,
-        "y": 17,
-        "w": 675,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0015": {
-      "frame": {
-        "x": 4194,
-        "y": 10,
-        "w": 676,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 903,
-        "y": 17,
-        "w": 676,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -170,189 +50,21 @@
     },
     "flacu y nuggy0016": {
       "frame": {
-        "x": 4890,
-        "y": 10,
-        "w": 676,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 888,
-        "y": 17,
-        "w": 676,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0021": {
-      "frame": {
-        "x": 5586,
-        "y": 10,
-        "w": 677,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 672,
-        "y": 17,
-        "w": 677,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0022": {
-      "frame": {
-        "x": 6283,
-        "y": 10,
-        "w": 677,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 657,
-        "y": 17,
-        "w": 677,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0025": {
-      "frame": {
-        "x": 6980,
-        "y": 10,
-        "w": 674,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 551,
-        "y": 17,
-        "w": 674,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0026": {
-      "frame": {
-        "x": 7674,
-        "y": 10,
-        "w": 674,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 536,
-        "y": 17,
-        "w": 674,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0031": {
-      "frame": {
-        "x": 8368,
-        "y": 10,
-        "w": 671,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 314,
-        "y": 17,
-        "w": 671,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0032": {
-      "frame": {
-        "x": 9059,
-        "y": 10,
-        "w": 671,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 299,
-        "y": 17,
-        "w": 671,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0035": {
-      "frame": {
         "x": 10,
-        "y": 336,
-        "w": 668,
-        "h": 306
+        "y": 682,
+        "w": 676,
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 193,
-        "y": 17,
-        "w": 668,
-        "h": 306
+        "x": 828,
+        "y": 2,
+        "w": 676,
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -360,143 +72,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0036": {
+    "flacu y nuggy0015": {
       "frame": {
-        "x": 698,
-        "y": 336,
-        "w": 669,
-        "h": 306
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 178,
-        "y": 17,
-        "w": 669,
-        "h": 306
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0003": {
-      "frame": {
-        "x": 1387,
-        "y": 336,
-        "w": 680,
-        "h": 309
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1324,
-        "y": 1,
-        "w": 680,
-        "h": 309
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0004": {
-      "frame": {
-        "x": 2087,
-        "y": 336,
-        "w": 680,
-        "h": 309
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1309,
-        "y": 1,
-        "w": 680,
-        "h": 309
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0013": {
-      "frame": {
-        "x": 2787,
-        "y": 336,
-        "w": 678,
-        "h": 309
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 971,
-        "y": 1,
-        "w": 678,
-        "h": 309
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0014": {
-      "frame": {
-        "x": 3485,
-        "y": 336,
-        "w": 678,
-        "h": 309
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 957,
-        "y": 1,
-        "w": 678,
-        "h": 309
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0023": {
-      "frame": {
-        "x": 4183,
-        "y": 336,
+        "x": 706,
+        "y": 682,
         "w": 675,
-        "h": 309
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 620,
-        "y": 1,
+        "x": 848,
+        "y": 2,
         "w": 675,
-        "h": 309
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -506,21 +98,21 @@
     },
     "flacu y nuggy0024": {
       "frame": {
-        "x": 4878,
-        "y": 336,
-        "w": 676,
-        "h": 309
+        "x": 708,
+        "y": 10,
+        "w": 674,
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 605,
-        "y": 1,
-        "w": 676,
-        "h": 309
+        "x": 472,
+        "y": 2,
+        "w": 674,
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -528,23 +120,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0033": {
+    "flacu y nuggy0023": {
       "frame": {
-        "x": 5574,
-        "y": 336,
-        "w": 669,
-        "h": 309
+        "x": 708,
+        "y": 346,
+        "w": 674,
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 262,
-        "y": 1,
-        "w": 669,
-        "h": 309
+        "x": 491,
+        "y": 2,
+        "w": 674,
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -552,23 +144,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0034": {
+    "flacu y nuggy0032": {
       "frame": {
-        "x": 6263,
-        "y": 336,
-        "w": 670,
-        "h": 309
+        "x": 10,
+        "y": 1018,
+        "w": 667,
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 247,
-        "y": 1,
-        "w": 670,
-        "h": 309
+        "x": 110,
+        "y": 2,
+        "w": 667,
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -576,23 +168,71 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0009": {
+    "flacu y nuggy0031": {
       "frame": {
-        "x": 6953,
-        "y": 336,
-        "w": 675,
-        "h": 311
+        "x": 697,
+        "y": 1018,
+        "w": 667,
+        "h": 316
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1082,
-        "y": 18,
-        "w": 675,
-        "h": 311
+        "x": 129,
+        "y": 2,
+        "w": 667,
+        "h": 316
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0003": {
+      "frame": {
+        "x": 10,
+        "y": 1354,
+        "w": 680,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1367,
+        "y": 1,
+        "w": 680,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0004": {
+      "frame": {
+        "x": 710,
+        "y": 1354,
+        "w": 680,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1347,
+        "y": 1,
+        "w": 680,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -602,21 +242,21 @@
     },
     "flacu y nuggy0010": {
       "frame": {
-        "x": 7648,
-        "y": 336,
+        "x": 1384,
+        "y": 1018,
         "w": 675,
         "h": 311
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1067,
+        "x": 1080,
         "y": 18,
         "w": 675,
         "h": 311
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -624,23 +264,71 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0019": {
+    "flacu y nuggy0009": {
       "frame": {
-        "x": 8343,
-        "y": 336,
-        "w": 671,
+        "x": 1401,
+        "y": 682,
+        "w": 675,
         "h": 311
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 730,
+        "x": 1099,
         "y": 18,
-        "w": 671,
+        "w": 675,
         "h": 311
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0012": {
+      "frame": {
+        "x": 1402,
+        "y": 10,
+        "w": 678,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 991,
+        "y": 1,
+        "w": 678,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0011": {
+      "frame": {
+        "x": 1402,
+        "y": 339,
+        "w": 678,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1010,
+        "y": 1,
+        "w": 678,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -650,21 +338,21 @@
     },
     "flacu y nuggy0020": {
       "frame": {
-        "x": 9034,
-        "y": 336,
-        "w": 671,
-        "h": 311
+        "x": 10,
+        "y": 1683,
+        "w": 676,
+        "h": 309
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 715,
-        "y": 18,
-        "w": 671,
-        "h": 311
+        "x": 635,
+        "y": 1,
+        "w": 676,
+        "h": 309
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -672,23 +360,119 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0029": {
+    "flacu y nuggy0019": {
+      "frame": {
+        "x": 706,
+        "y": 1683,
+        "w": 676,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 654,
+        "y": 1,
+        "w": 676,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0018": {
+      "frame": {
+        "x": 1410,
+        "y": 1349,
+        "w": 671,
+        "h": 311
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 724,
+        "y": 18,
+        "w": 671,
+        "h": 311
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0017": {
+      "frame": {
+        "x": 1410,
+        "y": 1680,
+        "w": 671,
+        "h": 311
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 743,
+        "y": 18,
+        "w": 671,
+        "h": 311
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0026": {
+      "frame": {
+        "x": 1402,
+        "y": 2011,
+        "w": 670,
+        "h": 311
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 363,
+        "y": 18,
+        "w": 670,
+        "h": 311
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0025": {
       "frame": {
         "x": 10,
-        "y": 662,
-        "w": 669,
+        "y": 2012,
+        "w": 670,
         "h": 311
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 374,
+        "x": 382,
         "y": 18,
-        "w": 669,
+        "w": 670,
         "h": 311
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -696,23 +480,263 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0039": {
+    "flacu y nuggy0005": {
       "frame": {
-        "x": 699,
-        "y": 662,
+        "x": 700,
+        "y": 2012,
+        "w": 679,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1289,
+        "y": 17,
+        "w": 679,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0006": {
+      "frame": {
+        "x": 2092,
+        "y": 2011,
+        "w": 679,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1270,
+        "y": 17,
+        "w": 679,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0002": {
+      "frame": {
+        "x": 2079,
+        "y": 1013,
+        "w": 678,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1412,
+        "y": 17,
+        "w": 678,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0001": {
+      "frame": {
+        "x": 2096,
+        "y": 668,
+        "w": 677,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1432,
+        "y": 17,
+        "w": 677,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0014": {
+      "frame": {
+        "x": 2100,
+        "y": 10,
+        "w": 676,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 914,
+        "y": 17,
+        "w": 676,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0013": {
+      "frame": {
+        "x": 2100,
+        "y": 336,
+        "w": 676,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 933,
+        "y": 17,
+        "w": 676,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0027": {
+      "frame": {
+        "x": 2101,
+        "y": 1339,
+        "w": 669,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 292,
+        "y": 1,
+        "w": 669,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0028": {
+      "frame": {
+        "x": 2101,
+        "y": 1668,
+        "w": 669,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 273,
+        "y": 1,
+        "w": 669,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0022": {
+      "frame": {
+        "x": 700,
+        "y": 2338,
+        "w": 674,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 558,
+        "y": 17,
+        "w": 674,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0021": {
+      "frame": {
+        "x": 2092,
+        "y": 2337,
+        "w": 674,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 577,
+        "y": 17,
+        "w": 674,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 2115,
+        "h": 335
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "flacu y nuggy0033": {
+      "frame": {
+        "x": 10,
+        "y": 2343,
         "w": 663,
         "h": 311
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 16,
+        "x": 20,
         "y": 18,
         "w": 663,
         "h": 311
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -720,34 +744,10 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0030": {
+    "flacu y nuggy0034": {
       "frame": {
-        "x": 1382,
-        "y": 665,
-        "w": 669,
-        "h": 311
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 359,
-        "y": 18,
-        "w": 669,
-        "h": 311
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0040": {
-      "frame": {
-        "x": 2071,
-        "y": 665,
+        "x": 1394,
+        "y": 2342,
         "w": 663,
         "h": 311
       },
@@ -760,7 +760,7 @@
         "h": 311
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -768,167 +768,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0007": {
+    "flacu y nuggy0029": {
       "frame": {
-        "x": 2754,
-        "y": 665,
-        "w": 678,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1178,
-        "y": 2,
-        "w": 678,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0008": {
-      "frame": {
-        "x": 3452,
-        "y": 665,
-        "w": 678,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1163,
-        "y": 2,
-        "w": 678,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0017": {
-      "frame": {
-        "x": 4150,
-        "y": 665,
-        "w": 676,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 826,
-        "y": 2,
-        "w": 676,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0018": {
-      "frame": {
-        "x": 4846,
-        "y": 665,
-        "w": 676,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 811,
-        "y": 2,
-        "w": 676,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0027": {
-      "frame": {
-        "x": 5542,
-        "y": 665,
-        "w": 674,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 474,
-        "y": 2,
-        "w": 674,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0028": {
-      "frame": {
-        "x": 6236,
-        "y": 665,
-        "w": 674,
-        "h": 316
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 459,
-        "y": 2,
-        "w": 674,
-        "h": 316
-      },
-      "sourceSize": {
-        "w": 2062,
-        "h": 335
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "flacu y nuggy0037": {
-      "frame": {
-        "x": 6930,
-        "y": 667,
+        "x": 693,
+        "y": 2664,
         "w": 668,
-        "h": 316
+        "h": 306
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 116,
-        "y": 2,
+        "x": 215,
+        "y": 17,
         "w": 668,
-        "h": 316
+        "h": 306
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -936,23 +792,23 @@
         "y": 0.5
       }
     },
-    "flacu y nuggy0038": {
+    "flacu y nuggy0030": {
       "frame": {
-        "x": 7618,
-        "y": 667,
+        "x": 2077,
+        "y": 2663,
         "w": 668,
-        "h": 316
+        "h": 306
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 101,
-        "y": 2,
+        "x": 196,
+        "y": 17,
         "w": 668,
-        "h": 316
+        "h": 306
       },
       "sourceSize": {
-        "w": 2062,
+        "w": 2115,
         "h": 335
       },
       "pivot": {
@@ -967,8 +823,8 @@
     "image": "flacu y nuggy.png",
     "format": "RGBA8888",
     "size": {
-      "w": 9740,
-      "h": 993
+      "w": 2786,
+      "h": 2980
     },
     "scale": 1
   }

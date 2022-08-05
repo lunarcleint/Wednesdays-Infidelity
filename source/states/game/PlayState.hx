@@ -277,6 +277,7 @@ class PlayState extends MusicBeatState
 
 	//  Sus
 	var theamonguslys:FlxSprite;
+	var leansus:FlxSprite;
 
 	// iratus
 	var basedSkeletons:FlxSprite;
@@ -870,6 +871,13 @@ class PlayState extends MusicBeatState
 				theamonguslys.animation.addByPrefix('walk', 'flacu y nuggy', 24, false);
 				theamonguslys.animation.play('walk', false, false, 38);
 				add(theamonguslys);
+
+				leansus = new FlxSprite(-354.95, 129.65);
+				leansus.frames = Paths.getJSONAtlas('backgrounds/sus/leansito');
+				leansus.antialiasing = ClientPrefs.globalAntialiasing;
+				leansus.animation.addByPrefix('walk', 'leansito', 24, false);
+				leansus.animation.play('walk', false, false, 32);
+				add(leansus);
 
 				var front:BGSprite = new BGSprite('backgrounds/sus/front bg', -639.35, -340);
 				front.antialiasing = ClientPrefs.globalAntialiasing;
@@ -4980,7 +4988,14 @@ class PlayState extends MusicBeatState
 				{
 					if (FlxG.random.bool(25))
 					{
-						theamonguslys.animation.play('walk', true);
+						switch (FlxG.random.int(1, 2))
+						{
+							case 1:
+								theamonguslys.animation.play('walk', true);
+								trace("poo poo");
+							case 2:
+								leansus.animation.play('walk', true);
+						}
 					}
 				}
 				grain.alpha = 1;
