@@ -522,7 +522,30 @@ class FreeplayState extends MusicBeatState
 			{
 				persistentUpdate = false;
 
-				selectSong();
+				selectedSomethin = true;
+
+				for (song in grpSongs)
+				{
+					if (song.targetY == 0)
+						continue;
+
+					FlxTween.tween(song, {alpha: 0}, 0.1);
+				}
+
+				for (icon in iconArray)
+				{
+					if (iconArray.indexOf(icon) == curSelected)
+						continue;
+
+					FlxTween.tween(icon, {alpha: 0}, 0.1);
+				}
+
+				new FlxTimer().start(0.1, function(_:FlxTimer)
+				{
+					selectSong();
+				});
+
+				FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.5, {ease: FlxEase.circIn});
 			}
 
 			if (Progression.beatMainWeek && Progression.badEnding && !Progression.beatHell)
@@ -678,13 +701,13 @@ class FreeplayState extends MusicBeatState
 			bullShit++;
 
 			item.alpha = 0.6;
-			item.xAdd = -50;
+			item.xAdd = 0;
 			// item.setGraphicSize(Std.int(item.width * 0.8));
 
 			if (item.targetY == 0)
 			{
 				item.alpha = 1;
-				item.xAdd = 0;
+				item.xAdd = 70;
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}
