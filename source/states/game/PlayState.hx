@@ -782,24 +782,33 @@ class PlayState extends MusicBeatState
 				add(nosexi);
 
 			case 'inferno': // Week Final
-				var infernosky:BGSprite = new BGSprite('backgrounds/hellhole/SKY', -920, -800);
-				infernosky.scale.set(0.9, 0.9);
+				var infernosky:BGSprite = new BGSprite('backgrounds/hellhole/SKY', -420, -200);
 				infernosky.antialiasing = ClientPrefs.globalAntialiasing;
 				infernosky.updateHitbox();
-				infernosky.scrollFactor.set(0.8, 0.8);
+				infernosky.scrollFactor.set(0.7, 0.7);
+				CoolUtil.exactSetGraphicSize(infernosky, infernosky.width * 1.5, infernosky.height * 1.5);
 				add(infernosky);
 
-				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -920, -110);
+				var background:BGSprite = new BGSprite('backgrounds/hellhole/Back', -420, -210);
+				background.antialiasing = ClientPrefs.globalAntialiasing;
+				background.updateHitbox();
+				background.scrollFactor.set(0.75, 0.75);
+				CoolUtil.exactSetGraphicSize(background, background.width * 1.3, background.height * 1.3);
+				add(background);
+
+				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -420, -210);
 				infernogroundp1.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp1.updateHitbox();
 				infernogroundp1.scrollFactor.set(1, 1);
+				CoolUtil.exactSetGraphicSize(infernogroundp1, infernogroundp1.width * 1.3, infernogroundp1.height * 1.3);
 				add(infernogroundp1);
 				infernogroundparts.set("p1", infernogroundp1);
 
-				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', -920, -110);
+				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', -420, -210);
 				infernogroundp2.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp2.updateHitbox();
 				infernogroundp2.scrollFactor.set(1, 1);
+				CoolUtil.exactSetGraphicSize(infernogroundp2, infernogroundp2.width * 1.3, infernogroundp2.height * 1.3);
 				add(infernogroundp2);
 				infernogroundparts.set("p2", infernogroundp2);
 			case 'vesania':
