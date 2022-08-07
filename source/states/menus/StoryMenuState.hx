@@ -51,8 +51,6 @@ class StoryMenuState extends MusicBeatState
 
 	private static var curWeek:Int = 0;
 
-	var txtTracklist:FlxText;
-
 	var grpWeekCharacters:FlxTypedGroup<MenuCharacter>;
 
 	var grpLocks:FlxTypedGroup<FlxSprite>;
@@ -81,12 +79,16 @@ class StoryMenuState extends MusicBeatState
 		bg.screenCenter();
 		add(bg);
 
-		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
-		scoreText.setFormat(Paths.font("waltographUI.ttf"), 32);
+		scoreText = new FlxText(0, 0, 0, "SCORE: 49324858", 36);
+		scoreText.setFormat(Paths.font("waltographUI.ttf"), 32, FlxColor.WHITE, FlxTextAlign.RIGHT);
+		scoreText.screenCenter();
+		scoreText.x += 450;
+		scoreText.y += 320;
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat(Paths.font("waltographUI.ttf"), 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
+		txtWeekTitle.y += 600;
 
 		var rankText:FlxText = new FlxText(0, 10);
 		rankText.text = 'RANK: GREAT';
@@ -94,7 +96,7 @@ class StoryMenuState extends MusicBeatState
 		rankText.size = scoreText.size;
 		rankText.screenCenter(X);
 
-		bgSprite = new FlxSprite(0, 56);
+		bgSprite = new FlxSprite(0, -56);
 		bgSprite.antialiasing = ClientPrefs.globalAntialiasing;
 
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
@@ -132,16 +134,6 @@ class StoryMenuState extends MusicBeatState
 
 		add(bgSprite);
 		add(grpWeekCharacters);
-
-		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 800, bgSprite.y + 480).loadGraphic(Paths.image('Menu_Tracks'));
-		tracksSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		add(tracksSprite);
-
-		txtTracklist = new FlxText(tracksSprite.x - 800, tracksSprite.y + 50, 0, "", 32);
-		txtTracklist.alignment = CENTER;
-		txtTracklist.font = rankText.font;
-		txtTracklist.color = 0xffffffff;
-		add(txtTracklist);
 		// add(rankText);
 		add(scoreText);
 		add(txtWeekTitle);
@@ -150,24 +142,33 @@ class StoryMenuState extends MusicBeatState
 		lockedIcon.screenCenter();
 		lockedIcon.antialiasing = ClientPrefs.globalAntialiasing;
 		lockedIcon.alpha = 0.00001;
+		lockedIcon.y -= 70;
 		add(lockedIcon);
 
-		leftArrow = new FlxSprite(FlxG.width * 0.04).loadGraphic(Paths.image('storymenu/Left Arrow', 'preload'));
+		leftArrow = new FlxSprite(FlxG.width * 0.05).loadGraphic(Paths.image('storymenu/Arrow', 'preload'));
 		leftArrow.screenCenter(Y);
 		leftArrow.alpha = 0.5;
+		leftArrow.y -= 70;
 		add(leftArrow);
 
-		rightArrow = new FlxSprite(FlxG.width * 0.87).loadGraphic(Paths.image('storymenu/Right Arrow', 'preload'));
+		rightArrow = new FlxSprite(FlxG.width * 0.87).loadGraphic(Paths.image('storymenu/Arrow', 'preload'));
 		rightArrow.screenCenter(Y);
 		rightArrow.alpha = 0.5;
+		rightArrow.angle = 180;
+		rightArrow.y -= 70;
 		add(leftArrow);
 		add(rightArrow);
 
 		var description:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/Description', 'preload'));
 		description.screenCenter();
-		description.y += 40;
-		description.x -= 30;
+		description.y -= 10;
+		description.x += 55;
 		add(description);
+
+		var savemouse:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/Save the depressed mouse', 'preload'));
+		savemouse.screenCenter();
+		savemouse.y -= 300;
+		add(savemouse);
 
 		changeWeek();
 
@@ -283,7 +284,9 @@ class StoryMenuState extends MusicBeatState
 		}
 		else
 		{
-			FlxG.sound.play(Paths.sound('cancelMenu'));
+			if (ClientPrefs.shake)
+				FlxG.camera.shake(0.008, 0.08);
+			FlxG.sound.play(Paths.sound('lockedSound'));
 		}
 	}
 
@@ -358,6 +361,7 @@ class StoryMenuState extends MusicBeatState
 			bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
 			CoolUtil.exactSetGraphicSize(bgSprite, bgSprite.width * 0.7, bgSprite.height * 0.7);
 			bgSprite.screenCenter();
+			bgSprite.y -= 70;
 			bgSprite.alpha = 0.5;
 			originalY = bgSprite.y;
 			bgSprite.y = bgSprite.y + 50;
@@ -370,6 +374,7 @@ class StoryMenuState extends MusicBeatState
 			CoolUtil.exactSetGraphicSize(bgSprite, bgSprite.width * 0.7, bgSprite.height * 0.7);
 			bgSprite.screenCenter();
 			bgSprite.alpha = 0;
+			bgSprite.y -= 70;
 			originalY = bgSprite.y;
 			bgSprite.y = bgSprite.y + 50;
 			if (lockedIcon != null)
@@ -463,22 +468,6 @@ class StoryMenuState extends MusicBeatState
 		{
 			stringThing.push(leWeek.songs[i][0]);
 		}
-
-		txtTracklist.text = '';
-		for (i in 0...stringThing.length)
-		{
-			var songText = stringThing[i];
-			if (!unlocked)
-				songText = "???";
-
-			txtTracklist.text += songText + '\n';
-		}
-
-		txtTracklist.text = txtTracklist.text.toUpperCase();
-
-		txtTracklist.screenCenter(X);
-		txtTracklist.x -= FlxG.width * 0.35;
-		txtTracklist.x += 800;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
