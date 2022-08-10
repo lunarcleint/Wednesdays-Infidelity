@@ -782,21 +782,22 @@ class PlayState extends MusicBeatState
 				add(nosexi);
 
 			case 'inferno': // Week Final
-				var infernosky:BGSprite = new BGSprite('backgrounds/hellhole/SKY', -420, -200);
+				var infernosky:BGSprite = new BGSprite('backgrounds/hellhole/SKY', -440, -250);
 				infernosky.antialiasing = ClientPrefs.globalAntialiasing;
 				infernosky.updateHitbox();
 				infernosky.scrollFactor.set(0.7, 0.7);
-				CoolUtil.exactSetGraphicSize(infernosky, infernosky.width * 1.5, infernosky.height * 1.5);
+
+				CoolUtil.exactSetGraphicSize(infernosky, infernosky.width * 1.3, infernosky.height * 1.3);
 				add(infernosky);
 
-				var background:BGSprite = new BGSprite('backgrounds/hellhole/Back', -420, -210);
+				var background:BGSprite = new BGSprite('backgrounds/hellhole/Back', -440, -210);
 				background.antialiasing = ClientPrefs.globalAntialiasing;
 				background.updateHitbox();
 				background.scrollFactor.set(0.75, 0.75);
 				CoolUtil.exactSetGraphicSize(background, background.width * 1.3, background.height * 1.3);
 				add(background);
 
-				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -420, -210);
+				var infernogroundp1:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp1', -440, -210);
 				infernogroundp1.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp1.updateHitbox();
 				infernogroundp1.scrollFactor.set(1, 1);
@@ -804,7 +805,7 @@ class PlayState extends MusicBeatState
 				add(infernogroundp1);
 				infernogroundparts.set("p1", infernogroundp1);
 
-				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', -420, -210);
+				var infernogroundp2:BGSprite = new BGSprite('backgrounds/hellhole/infernogroundp2', infernogroundp1.x, infernogroundp1.y);
 				infernogroundp2.antialiasing = ClientPrefs.globalAntialiasing;
 				infernogroundp2.updateHitbox();
 				infernogroundp2.scrollFactor.set(1, 1);
