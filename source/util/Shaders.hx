@@ -31,9 +31,9 @@ class ChromaticAberrationEffect extends Effect
 
 	public function setChrome(chromeOffset:Float):Void
 	{
-		shader.rOffset.value = [chromeOffset];
+		shader.rOffset.value = [chromeOffset, 0.0];
 		shader.gOffset.value = [0.0];
-		shader.bOffset.value = [chromeOffset * -1];
+		shader.bOffset.value = [-chromeOffset, 0.0];
 	}
 }
 
@@ -67,11 +67,11 @@ class ChromaticAberrationShader extends FlxShader
 	}
 }
 
-class DistortionEffect extends Effect // I need to learn glsl -lunar
+class DistortionEffect extends Effect
 {
 	public var shader:DistortionShader = new DistortionShader();
 
-	public function new(glitchFactor:Float, otherglitch:Float)
+	public function new(glitchFactor:Float, otherglitch:Float, ?pushUpdate:Bool = true)
 	{
 		shader.iTime.value = [0];
 		shader.glitchModifier.value = [glitchFactor];
@@ -84,7 +84,8 @@ class DistortionEffect extends Effect // I need to learn glsl -lunar
 		shader.effectMulti.value = [1.];
 
 		shader.iResolution.value = [Lib.current.stage.stageWidth, Lib.current.stage.stageHeight];
-		PlayState.instance.shaderUpdates.push(update);
+		if (pushUpdate)
+			PlayState.instance.shaderUpdates.push(update);
 	}
 
 	public function update(elapsed:Float)
@@ -476,6 +477,126 @@ class VHSShader extends FlxShader // i HATE shaders xd -lunar https://www.shader
 			
 			gl_FragColor = vec4(video);
 		}
+	')
+	public function new()
+	{
+		super();
+	}
+}
+
+class BloomEffect extends Effect
+{
+	public var shader:BloomShader = new BloomShader();
+
+	public function new(?size:Float = 18.0, ?qualitly:Float = 8.0, ?dim:Float = 1.8, ?directions:Float = 16.0)
+	{
+		shader.Size.value = [size];
+		shader.Quality.value = [qualitly];
+		shader.dim.value = [dim];
+		shader.Directions.value = [directions];
+	}
+
+	public function update(elapsed:Float)
+	{
+	}
+
+	public function setSize(modifier:Float)
+	{
+		shader.Size.value = [modifier];
+	}
+
+	public function setDim(mod:Float)
+	{
+		shader.dim.value = [mod];
+	}
+}
+
+class BloomShader extends FlxShader // BLOOM SHADER BY BBPANZU
+{
+	@:glFragmentSource('
+	#pragma header
+
+    // GAUSSIAN BLUR SETTINGS
+  	uniform float dim;
+    uniform float Directions;
+    uniform float Quality; 
+    uniform float Size; 
+
+	void main(void)
+	{ 
+		vec2 uv = openfl_TextureCoordv.xy ;
+
+		float Pi = 6.28318530718; // Pi*2
+
+		vec4 Color = texture2D( bitmap, uv);
+		
+		for(float d=0.0; d<Pi; d+=Pi/Directions){
+			for(float i=1.0/Quality; i<=1.0; i+=1.0/Quality){
+
+				float ex = (cos(d)*Size*i)/openfl_TextureSize.x;
+				float why = (sin(d)*Size*i)/openfl_TextureSize.y;
+				Color += flixel_texture2D( bitmap, uv+vec2(ex,why));	
+			}
+		}
+		
+		Color /= (dim * Quality) * Directions - 15.0;
+		vec4 bloom =  (flixel_texture2D( bitmap, uv)/ dim)+Color;
+
+		gl_FragColor = bloom;
+
+	}
+	')
+	public function new()
+	{
+		super();
+	}
+}
+
+class SpiralEffect extends Effect
+{
+	public var shader:SpiralSpin = new SpiralSpin();
+
+	public function new(?speed:Float = 4.0)
+	{
+		// shader.speed.value = [speed];
+		shader.iTime.value = [0];
+	}
+
+	public function update(elapsed:Float)
+	{
+		shader.iTime.value[0] += elapsed;
+	}
+
+	public function setSpeed(mod:Float)
+	{
+		// shader.speed.value = [mod];
+	}
+}
+
+class SpiralSpin extends FlxShader // https://www.shadertoy.com/view/lds3WB
+{
+	@:glFragmentSource('
+        #pragma header
+
+        uniform float iTime;
+        uniform vec3 iResolution;
+        uniform float speed;
+        
+        void main() {
+            float aspectRatio = 1.77777777778; // 16/9
+            vec2 p = 2.0 * vec2(openfl_TextureCoordv.x * aspectRatio, openfl_TextureCoordv.y) - vec2(aspectRatio, 1.0);
+            vec2 uv = 0.4 * p;
+            float distSqr = dot(uv, uv);
+            float vignette = 0.7 - distSqr;
+            float angle = atan(p.y, p.x);
+            float shear = sqrt(distSqr);
+            float blur = 0.3;
+            
+            float stripes = smoothstep(-blur, blur, cos(8.0 * angle + speed * iTime - 12.0 * shear));
+            const vec3 color1 = vec3(0.212,0.004,0.043);
+            const vec3 color2 = vec3(0.145,0.,0.016);
+            gl_FragColor = vec4(vignette * mix(color1, color2, stripes), 1.0);
+        }
 	')
 	public function new()
 	{

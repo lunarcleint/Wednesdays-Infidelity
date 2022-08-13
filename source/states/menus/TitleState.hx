@@ -1,9 +1,5 @@
 package states.menus;
 
-#if desktop
-import sys.thread.Thread;
-import util.Discord.DiscordClient;
-#end
 import data.ClientPrefs;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -12,6 +8,7 @@ import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
+import flixel.effects.FlxFlicker;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
@@ -24,15 +21,24 @@ import flixel.system.ui.FlxSoundTray;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.tweens.misc.NumTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import gameObjects.Alphabet;
 import lime.app.Application;
 import openfl.Assets;
 import openfl.Lib;
+import openfl.filters.BitmapFilter;
+import openfl.filters.ShaderFilter;
 import song.Conductor;
+import util.Shaders;
 
 using StringTools;
+
+#if desktop
+import sys.thread.Thread;
+import util.Discord.DiscordClient;
+#end
 
 // import flixel.graphics.FlxGraphic;
 class TitleState extends MusicBeatState
@@ -47,6 +53,7 @@ class TitleState extends MusicBeatState
 	var credGroup:FlxGroup;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
+	var mickey:FlxSprite;
 
 	var ngSpr:FlxSprite;
 
@@ -55,6 +62,15 @@ class TitleState extends MusicBeatState
 	var mustUpdate:Bool = false;
 
 	public static var updateVersion:String = '';
+
+	var bloom:BloomEffect;
+	var distort:DistortionEffect;
+	var chrom:ChromaticAberrationEffect;
+
+	var shaders:Array<ShaderEffect> = [];
+
+	var spiral:SpiralSpin;
+	var spiralbg:FlxSprite;
 
 	override public function create():Void
 	{
@@ -100,11 +116,41 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre', 'preload'));
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		bg.updateHitbox();
-		bg.screenCenter(X);
-		add(bg);
+		if (ClientPrefs.shaders)
+		{
+			bloom = new BloomEffect(0);
+
+			distort = new DistortionEffect(0.25, 0.25, false);
+			distort.shader.working.value = [false];
+
+			chrom = new ChromaticAberrationEffect();
+
+			spiral = new SpiralSpin();
+			spiral.speed.value = [4.0];
+			spiral.iTime.value = [0];
+
+			addShader(distort);
+			addShader(chrom);
+			addShader(bloom);
+		}
+
+		spiralbg = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+		spiralbg.updateHitbox();
+		spiralbg.screenCenter(X);
+		spiralbg.scrollFactor.set(0, 0);
+
+		if (spiral != null)
+			spiralbg.shader = spiral;
+
+		spiral.iResolution.value = [spiralbg.width, spiralbg.height];
+
+		add(spiralbg);
+
+		mickey = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre', 'preload'));
+		mickey.antialiasing = ClientPrefs.globalAntialiasing;
+		mickey.updateHitbox();
+		mickey.screenCenter(X);
+		add(mickey);
 
 		titleText = new FlxSprite(-400, -100).loadGraphic(Paths.image('titleEnter'));
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
@@ -157,10 +203,6 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
 
-		// FlxG.camera.shake(0.004, 4000);
-
-		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
-
 		if (initialized)
 			skipIntro();
 		else
@@ -182,6 +224,23 @@ class TitleState extends MusicBeatState
 		}
 
 		return swagGoodArray;
+	}
+
+	function addShader(effect:ShaderEffect)
+	{
+		if (!ClientPrefs.shaders)
+			return;
+
+		shaders.push(effect);
+
+		var newCamEffects:Array<BitmapFilter> = [];
+
+		for (i in shaders)
+		{
+			newCamEffects.push(new ShaderFilter(i.shader));
+		}
+
+		FlxG.camera.setFilters(newCamEffects);
 	}
 
 	var transitioning:Bool = false;
@@ -226,11 +285,16 @@ class TitleState extends MusicBeatState
 		{
 			if (pressedEnter)
 			{
-				if (titleText != null)
-					titleText.animation.play('press');
-
 				if (ClientPrefs.flashing)
-					FlxG.camera.flash(FlxColor.BLACK, 2.3, null, true);
+				{
+					bloom.setDim(0.1);
+
+					var tween:NumTween = FlxTween.num(0.1, 1.8, 1);
+					tween.onUpdate = function(t:FlxTween)
+					{
+						bloom.setDim(tween.value);
+					}
+				}
 
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
@@ -240,7 +304,7 @@ class TitleState extends MusicBeatState
 
 				transitioning = true;
 
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				new FlxTimer().start(1.7, function(tmr:FlxTimer)
 				{
 					Lib.application.window.title = "Wednesday's Infidelity";
 					if (mustUpdate)
@@ -263,6 +327,18 @@ class TitleState extends MusicBeatState
 			skipIntro();
 		}
 		#end
+
+		if (distort != null)
+			distort.update(elapsed);
+
+		if (bloom != null)
+			bloom.update(elapsed);
+
+		if (spiral != null)
+		{
+			spiral.iTime.value[0] += elapsed;
+			spiral.iResolution.value = [spiralbg.width, spiralbg.height];
+		}
 
 		super.update(elapsed);
 	}
@@ -377,12 +453,25 @@ class TitleState extends MusicBeatState
 					{
 						FlxG.camera.shake(0.004, 99999999999);
 					}
-					createCoolText([curWacky[0]], 0, true);
+					if (bloom != null)
+						bloom.setSize(18.0);
+					if (distort != null)
+						distort.shader.working.value = [true];
+
+					if (chrom != null)
+						doChrome(null, false);
+
+					createCoolText([curWacky[0]], 0);
 				case 74:
-					addMoreText(curWacky[1], 0, true);
+					addMoreText(curWacky[1], 0);
 				case 97:
 					deleteCoolText();
 				case 108:
+					if (distort != null)
+						distort.shader.working.value = [false];
+
+					flickerMickey(null);
+
 					skipIntro();
 			}
 		}
@@ -396,11 +485,48 @@ class TitleState extends MusicBeatState
 		{
 			remove(ngSpr);
 
-			// if (ClientPrefs.flashing)
 			FlxG.camera.flash(FlxColor.BLACK, 2.3, null, true);
+			FlxG.camera.zoom = 1.2;
+
+			FlxTween.tween(FlxG.camera, {zoom: 1}, 1.8, {ease: FlxEase.circOut});
 
 			remove(credGroup);
 			skippedIntro = true;
 		}
+	}
+
+	function flickerMickey(T:FlxTimer)
+	{
+		if (!ClientPrefs.flashing)
+			return;
+
+		if (T != null)
+			T.cancel();
+
+		var a:Float = mickey.alpha == 0.95 ? 1 : 0.95;
+
+		mickey.alpha = a;
+
+		new FlxTimer().start(FlxG.random.float(0.08, 0.12), flickerMickey);
+	}
+
+	function doChrome(T:FlxTimer, ?setChrom:Bool = true)
+	{
+		if (!ClientPrefs.shaders)
+			return;
+
+		if (T != null)
+			T.cancel();
+
+		if (chrom != null && setChrom)
+			chrom.setChrome(FlxG.random.float(0.0, 0.002));
+
+		new FlxTimer().start(FlxG.random.float(0.08, 0.12), function(tmr:FlxTimer)
+		{
+			new FlxTimer().start(FlxG.random.float(0.7, 1.6), function(tmr:FlxTimer)
+			{
+				doChrome(tmr, true);
+			});
+		});
 	}
 }

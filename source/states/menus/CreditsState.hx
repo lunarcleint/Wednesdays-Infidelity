@@ -111,10 +111,18 @@ class CreditsState extends MusicBeatState
 			[''],
 			["Specail Thanks"],
 			[
+				"Prob someone here",
+				'Awe',
+				'Musician',
+				'https://twitter.com/GoddessAwe',
+				"3e2c6b"
+			],
+			["Coder Specail Thanks"],
+			[
 				"Shader Toy",
 				"none",
 				"I stole alot of shaders:\nhttps://www.shadertoy.com/view/ldjGzV\nhttps://www.shadertoy.com/view/Ms3XWH\nhttps://www.shadertoy.com/view/XtK3W3",
-				"https://www.shadertoy.com/",
+				"https://www.shadertoy.com/\nhttps://www.shadertoy.com/view/lds3WB",
 				"ffffff"
 			],
 			[
@@ -127,9 +135,17 @@ class CreditsState extends MusicBeatState
 			[
 				"Yoshi Engine",
 				"none",
-				"I stole most of HScript.hx lmao",
+				"I stole most of HScript.hx (and a little of GameStats.hx) lmao",
 				"https://twitter.com/FNFYoshiEngine",
 				"6bd04b"
+			],
+			["47rooks", "none", "Litteral Shader God", "https://github.com/47rooks", "e37b05"],
+			[
+				"BBPanzu",
+				"none",
+				"Stole Bloom Shader",
+				"https://www.youtube.com/c/bbpanzuRulesSoSubscribeplz123",
+				"238a07"
 			],
 		];
 
