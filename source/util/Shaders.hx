@@ -552,27 +552,6 @@ class BloomShader extends FlxShader // BLOOM SHADER BY BBPANZU
 	}
 }
 
-class SpiralEffect extends Effect
-{
-	public var shader:SpiralSpin = new SpiralSpin();
-
-	public function new(?speed:Float = 4.0)
-	{
-		// shader.speed.value = [speed];
-		shader.iTime.value = [0];
-	}
-
-	public function update(elapsed:Float)
-	{
-		shader.iTime.value[0] += elapsed;
-	}
-
-	public function setSpeed(mod:Float)
-	{
-		// shader.speed.value = [mod];
-	}
-}
-
 class SpiralSpin extends FlxShader // https://www.shadertoy.com/view/lds3WB
 {
 	@:glFragmentSource('

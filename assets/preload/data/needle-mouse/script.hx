@@ -1,6 +1,16 @@
 var curSection = 0;
 var stepDev = 0;
 
+function onCreate()
+{
+	PlayState.camHUD.alpha = 0;
+
+	PlayState.blackFuck = new FlxSprite().makeGraphic(FlxG.width * 5, FlxG.height * 5, fromRGB(0, 0, 0));
+	PlayState.blackFuck.screenCenter();
+	PlayState.add(PlayState.blackFuck);
+}
+	
+
 function onStepHit()
 {
 	if (curStep % 16 == 0)
@@ -10,160 +20,62 @@ function onStepHit()
 
 	stepDev = Math.floor(curStep % 16) + 1;
 
-	if (curSection >= 12 && curSection <= 14 || curSection >= 120 && curSection <= 135 || curSection >= 104 && curSection <= 110)
+	if (curSection >= 8 && curSection <= 11)
 	{
-		if (curStep % 4 == 0)
+		if (curStep % 16 == 0)
 		{
-			addCamZoom(0.15, 0.04);
+			addCamZoom(0.1, 0.04);
 		}
 	}
 
-	if (curSection == 15)
+	if (curSection >= 12 && curSection <= 14 || curSection >= 32 && curSection <= 55)
 	{
+		if (curStep % 4 == 0)
+		{
+			addCamZoom(0.1, 0.04);
+		}
+	}
+
+	if (curStep >= 240 && curStep <= 250) {
 		if (curStep % 2 == 0)
 		{
-			addCamZoom(0.15, 0.04);
+			addCamZoom(0.1, 0.04);
 		}
 	}
 
-	if (curSection >= 32 && curSection <= 35)
+	if (curStep >= 252 && curStep <= 256) {
+		addCamZoom(0.1, 0.04);
+	}
+
+	if (curSection >= 16 && curSection <= 31)
 	{
 		if (curStep % 4 == 0)
 		{
-			addCamZoom(0.15, 0.04);
+			addCamZoom(0.12, 0.08);
 		}
 	}
 
-	if (curSection >= 36 && curSection <= 38)
+	switch (curStep) 
 	{
-		if (stepDev == 1 || stepDev == 4 || stepDev == 7)
-		{
-			addCamZoom(0.15, 0.04);
-		}
+		case 1: 
+			PlayState.isCameraOnForcedPos = true;
+			PlayState.followChars = false;
 
-		if (stepDev == 11 || stepDev == 14)
-		{
-			addCamZoom(0.2, 0.08);
-		}
-	}
+			PlayState.cameraStageZoom = false;
 
-	if (curSection >= 16 && curSection <= 31 || curSection >= 40 && curSection <= 55)
-	{
-		var section = curSection % 2;
+			PlayState.defaultCamZoom = PlayState.curCamera.dadZoom;
 
-		if (section == 0)
-		{
-			if (stepDev == 1 || stepDev == 7 || stepDev == 9)
-			{
-				addCamZoom(0.1, 0.02);
-			}
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 500, PlayState.dad.getGraphicMidpoint().y + 30);
+		case 32:
+			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 2);
+		case 64:
+			FlxTween.tween(PlayState.blackFuck, {alpha: 0}, 5.5);
 
-			if (stepDev == 5 || stepDev == 13)
-			{
-				addCamZoom(0.15, 0.06);
-			}
-		}
-
-		if (section == 1)
-		{
-			if (stepDev == 1 || stepDev == 9)
-			{
-				addCamZoom(0.1, 0.02);
-			}
-			if (stepDev == 5 || stepDev == 13)
-			{
-				addCamZoom(0.15, 0.06);
-			}
-		}
-	}
-
-	if (curStep == 896 || curStep == 912 || curStep == 928 || curStep == 943 || curStep == 944 || curStep == 960 || curStep == 968 || curStep == 976
-		|| curStep == 984 || curStep == 992 || curStep == 1008 || curStep == 1012 || curStep == 1016 || curStep == 1021 || curStep == 1022)
-	{
-		addCamZoom(0.2, 0.08);
-	}
-
-	if (curSection >= 64 && curSection <= 87)
-	{
-		if (curStep % 4 == 0)
-		{
-			addCamZoom(0.15, 0.04);
-		}
-	}
-
-	if (curStep == 1408 || curStep == 1429 || curStep == 1434 || curStep == 1440 || curStep == 1460 || curStep == 1466 || curStep == 1472
-		|| curStep == 1492 || curStep == 1498 || curStep == 1504 || curStep == 1524 || curStep == 1531 || curStep == 1536 || curStep == 1556
-		|| curStep == 1562 || curStep == 1568 || curStep == 1588 || curStep == 1594 || curStep == 1600 || curStep == 1620 || curStep == 1626 || curStep == 1632)
-	{
-		addCamZoom(0.2, 0.09);
-	}
-
-	if (curSection >= 112 && curSection <= 119)
-	{
-		if (curStep % 8 == 0)
-		{
-			addCamZoom(0.15, 0.04);
-		}
-	}
-
-	switch (curStep)
-	{
-		case 1:
-			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
-
-			new FlxTimer().start(2, function(tmr)
-			{
-				PlayState.addCinematicBars(2);
-			});
-
-			FlxTween.tween(FlxG.camera, {zoom: 1.5}, 13, {
-				ease: FlxEase.quadInOut,
-				onComplete: function(tween)
-				{
-					PlayState.defaultCamZoom = 1.5;
-				}
-			});
-
+			FlxTween.tween(PlayState, {defaultCamZoom: PlayState.curCamera.dadZoom - 0.2}, 5.5);
 		case 128:
-			PlayState.removeCinematicBars(1);
+			PlayState.followChars = true;
 
-			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 1, {startDelay: 1});
-
-		case 888:
-			PlayState.addCinematicBars(0.7);
-
-		case 896:
-			PlayState.curCamera.dadZoom = 1.3;
-
-		case 1014:
-			PlayState.removeCinematicBars(1);
-
-		case 1024:
-			PlayState.curCamera.dadZoom = 0.8;
-
-		case 1399:
-			PlayState.addCinematicBars(1);
-
-		case 1408:
-			PlayState.curCamera.dadZoom = 1.1;
-
-		case 1657:
-			PlayState.removeCinematicBars(0.5);
-
-		case 1664:
-			PlayState.curCamera.dadZoom = 0.8;
-
-		case 1788:
-			PlayState.addCinematicBars(0.5);
-
-		case 1792:
-			PlayState.curCamera.dadZoom = 1.1;
-
-		case 1914:
-			PlayState.removeCinematicBars(0.5);
-
-		case 1920:
-			PlayState.curCamera.dadZoom = 0.8;
+			PlayState.cameraStageZoom = true;
 	}
 }
 
@@ -171,4 +83,9 @@ function addCamZoom(game, hud)
 {
 	PlayState.camGame.zoom += game;
 	PlayState.camHUD.zoom += hud;
+}
+
+function addStageZoom(amount) {
+	PlayState.curCamera.bfZoom += amount;
+	PlayState.curCamera.dadZoom += amount;
 }
