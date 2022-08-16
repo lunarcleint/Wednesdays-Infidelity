@@ -134,17 +134,16 @@ class TitleState extends MusicBeatState
 			addShader(bloom);
 		}
 
-		spiralbg = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
-		spiralbg.updateHitbox();
-		spiralbg.screenCenter(X);
-		spiralbg.scrollFactor.set(0, 0);
-
 		if (spiral != null)
+		{
+			spiralbg = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+			spiralbg.updateHitbox();
+			spiralbg.screenCenter(X);
+			spiralbg.scrollFactor.set(0, 0);
 			spiralbg.shader = spiral;
-
-		spiral.iResolution.value = [spiralbg.width, spiralbg.height];
-
-		add(spiralbg);
+			spiral.iResolution.value = [spiralbg.width, spiralbg.height];
+			add(spiralbg);
+		}
 
 		mickey = new FlxSprite(-400, 0).loadGraphic(Paths.image('mickeysangre', 'preload'));
 		mickey.antialiasing = ClientPrefs.globalAntialiasing;
@@ -287,12 +286,15 @@ class TitleState extends MusicBeatState
 			{
 				if (ClientPrefs.flashing)
 				{
-					bloom.setDim(0.1);
-
-					var tween:NumTween = FlxTween.num(0.1, 1.8, 1);
-					tween.onUpdate = function(t:FlxTween)
+					if (ClientPrefs.shaders)
 					{
-						bloom.setDim(tween.value);
+						bloom.setDim(0.1);
+
+						var tween:NumTween = FlxTween.num(0.1, 1.8, 1);
+						tween.onUpdate = function(t:FlxTween)
+						{
+							bloom.setDim(tween.value);
+						}
 					}
 				}
 

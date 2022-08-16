@@ -435,12 +435,12 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.7, // mushitsection == false
 		},
 		"jankacStage" => {
-			dadPos: [420.95, 303], // xx
-			bfPos: [952.9, 450], // xx2
-			gfPos: [600, -300], // xx3
+			dadPos: [250, 270], // xx
+			bfPos: [1152.9, 350], // xx2
+			gfPos: [630, -100], // xx3
 			gfZoom: 0.65,
-			bfZoom: 0.9, // mushitsection == true
-			dadZoom: 0.7, // mushitsection == false
+			bfZoom: 0.7, // mushitsection == true
+			dadZoom: 0.65, // mushitsection == false
 		},
 		"stageMokey" => {
 			dadPos: [420.95, 513], // xx
@@ -674,7 +674,7 @@ class PlayState extends MusicBeatState
 				sexi.updateHitbox();
 				add(sexi);
 			case 'vecindariocover': // Too Slow Encore Song
-				var bg:BGSprite = new BGSprite('backgrounds/BG_MIKICOVER', -600, -200);
+				var bg:BGSprite = new BGSprite('backgrounds/BG_MIKICOVER', -850, -100);
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				bg.updateHitbox();
 				add(bg);
@@ -701,16 +701,14 @@ class PlayState extends MusicBeatState
 				blackFuck.screenCenter(X);
 				add(blackFuck);
 			case 'jankacStage':
-				var sky:BGSprite = new BGSprite('backgrounds/jank/sky', -636, -564, 0.5, 0.5);
-				sky.antialiasing = ClientPrefs.globalAntialiasing;
-				add(sky);
+				var bg:BGSprite = new BGSprite('backgrounds/jank/background', -588, -456, 0.7, 0.7);
+				bg.antialiasing = ClientPrefs.globalAntialiasing;
+				CoolUtil.exactSetGraphicSize(bg, bg.width * 1.4, bg.height * 1.4);
+				add(bg);
 
-				var trees:BGSprite = new BGSprite('backgrounds/jank/trees', -636, -742, 0.85, 0.85);
-				trees.antialiasing = ClientPrefs.globalAntialiasing;
-				add(trees);
-
-				var lol:BGSprite = new BGSprite('backgrounds/jank/ground', -636, -532);
+				var lol:BGSprite = new BGSprite('backgrounds/jank/ground', -588, -456);
 				lol.antialiasing = ClientPrefs.globalAntialiasing;
+				CoolUtil.exactSetGraphicSize(lol, lol.width * 1.4, lol.height * 1.4);
 				add(lol);
 			case 'stageMokey': // Song Kriman't
 				stageWhite = new FlxSprite(-650, -100).makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
