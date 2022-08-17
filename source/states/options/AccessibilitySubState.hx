@@ -41,9 +41,6 @@ class AccessibilitySubState extends BaseOptionsMenu
 		var option:Option = new Option('Screen Shake', "Uncheck this if you're sensitive to Screen Shaking!", 'shake', 'bool', true);
 		addOption(option);
 
-		var option:Option = new Option('Shaders', "Uncheck this if you don't want Shaders!", 'shaders', 'bool', true);
-		addOption(option);
-
 		var option:Option = new Option('Show Warning', "Show the warning menu", 'doNotShowWarnings', 'bool', false);
 		option.opposite = true;
 		addOption(option);

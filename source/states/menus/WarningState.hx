@@ -132,6 +132,9 @@ class WarningState extends MusicBeatState
 		var option:Option = new Option('Shaders', "", 'shaders', 'bool', true);
 		addOption(option);
 
+		var option:Option = new Option('Intensive Shaders', "Uncheck this if you don't want to run Intensive Shaders!", 'intensiveShaders', 'bool', true);
+		addOption(option);
+
 		genOptions();
 	}
 

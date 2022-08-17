@@ -45,6 +45,12 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.onChange = onChangeAntiAliasing; // Changing onChange is only needed if you want to make a special interaction after it changes the value
 		addOption(option);
 
+		var option:Option = new Option('Shaders', "Uncheck this if you don't want any Shaders!", 'shaders', 'bool', true);
+		addOption(option);
+
+		var option:Option = new Option('Intensive Shaders', "Uncheck this if you don't want to run Intensive Shaders!", 'intensiveShaders', 'bool', true);
+		addOption(option);
+
 		#if !html5 // Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		var option:Option = new Option('Framerate', "Pretty self explanatory, isn't it?", 'framerate', 'int', 60);
 		addOption(option);

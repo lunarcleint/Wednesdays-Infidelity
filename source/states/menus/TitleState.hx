@@ -118,20 +118,25 @@ class TitleState extends MusicBeatState
 
 		if (ClientPrefs.shaders)
 		{
-			bloom = new BloomEffect(0);
+			if (ClientPrefs.intensiveShaders)
+			{
+				bloom = new BloomEffect(0);
+
+				spiral = new SpiralSpin();
+				spiral.speed.value = [4.0];
+				spiral.iTime.value = [0];
+			}
 
 			distort = new DistortionEffect(0.25, 0.25, false);
 			distort.shader.working.value = [false];
 
 			chrom = new ChromaticAberrationEffect();
 
-			spiral = new SpiralSpin();
-			spiral.speed.value = [4.0];
-			spiral.iTime.value = [0];
-
 			addShader(distort);
 			addShader(chrom);
-			addShader(bloom);
+
+			if (bloom != null)
+				addShader(bloom);
 		}
 
 		if (spiral != null)
@@ -142,6 +147,14 @@ class TitleState extends MusicBeatState
 			spiralbg.scrollFactor.set(0, 0);
 			spiralbg.shader = spiral;
 			spiral.iResolution.value = [spiralbg.width, spiralbg.height];
+			add(spiralbg);
+		}
+		else
+		{
+			spiralbg = new FlxSprite(0, 0).loadGraphic(Paths.image("Spiral Shader Still"));
+			spiralbg.updateHitbox();
+			spiralbg.screenCenter();
+			spiralbg.scrollFactor.set(0, 0);
 			add(spiralbg);
 		}
 
@@ -206,8 +219,6 @@ class TitleState extends MusicBeatState
 			skipIntro();
 		else
 			initialized = true;
-
-		// credGroup.add(credTextShit);
 	}
 
 	function getIntroTextShit():Array<Array<String>>
@@ -286,7 +297,7 @@ class TitleState extends MusicBeatState
 			{
 				if (ClientPrefs.flashing)
 				{
-					if (ClientPrefs.shaders)
+					if (bloom != null)
 					{
 						bloom.setDim(0.1);
 
@@ -295,6 +306,10 @@ class TitleState extends MusicBeatState
 						{
 							bloom.setDim(tween.value);
 						}
+					}
+					else
+					{
+						FlxG.camera.flash();
 					}
 				}
 
@@ -472,7 +487,8 @@ class TitleState extends MusicBeatState
 					if (distort != null)
 						distort.shader.working.value = [false];
 
-					flickerMickey(null);
+					if (ClientPrefs.flashing)
+						flickerMickey(null);
 
 					skipIntro();
 			}

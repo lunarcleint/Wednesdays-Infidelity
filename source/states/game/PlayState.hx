@@ -1303,9 +1303,13 @@ class PlayState extends MusicBeatState
 			switch (daSong) // shaders
 			{
 				case 'last-day':
-					vhs = new util.Shaders.VHSEffect();
+					if (ClientPrefs.intensiveShaders)
+					{
+						vhs = new util.Shaders.VHSEffect();
 
-					addShaderToCamera('camGame', vhs);
+						addShaderToCamera('camGame', vhs);
+					}
+
 				case 'unknown-suffering':
 					chrom = new util.Shaders.ChromaticAberrationEffect();
 

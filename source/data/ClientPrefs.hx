@@ -41,6 +41,7 @@ class ClientPrefs
 	public static var badWindow:Int = 135;
 	public static var safeFrames:Float = 10;
 	public static var shaders:Bool = true;
+	public static var intensiveShaders:Bool = true;
 	public static var doNotShowWarnings:Bool = false;
 
 	// Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
@@ -107,6 +108,7 @@ class ClientPrefs
 		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.botPlay = botPlay;
 		FlxG.save.data.shaders = shaders;
+		FlxG.save.data.intensiveShaders = intensiveShaders;
 		FlxG.save.data.doNotShowWarnings = doNotShowWarnings;
 
 		FlxG.save.flush();
@@ -266,6 +268,11 @@ class ClientPrefs
 		if (FlxG.save.data.shaders != null)
 		{
 			shaders = FlxG.save.data.shaders;
+		}
+
+		if (FlxG.save.data.intensiveShaders != null)
+		{
+			intensiveShaders = FlxG.save.data.intensiveShaders;
 		}
 
 		if (FlxG.save.data.doNotShowWarnings != null)
