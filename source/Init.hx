@@ -37,6 +37,8 @@ class Init extends FlxState
 
 		FlxG.autoPause = false;
 
+		Main.canToggleFullScreen = true;
+
 		PlayerSettings.reset();
 
 		PlayerSettings.init();

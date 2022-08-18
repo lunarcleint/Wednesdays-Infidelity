@@ -5,6 +5,7 @@ import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.graphics.FlxGraphic;
+import flixel.input.keyboard.FlxKey;
 import haxe.CallStack;
 import input.Controls;
 import openfl.Assets;
@@ -27,6 +28,10 @@ class Main extends Sprite
 	var framerate:Int = 60; // How many frames per second the game should run at.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
+
+	public static var canToggleFullScreen:Bool = false; // Will be set true in Init to make sure everything is ready
+
+	public static var fullscreenKeys:Array<Null<FlxKey>>;
 
 	public static var fpsVar:FPS;
 
@@ -72,6 +77,34 @@ class Main extends Sprite
 
 			trace(error.message);
 		});
+
+		addEventListener(Event.ENTER_FRAME, update);
+	}
+
+	public function update(e:Event)
+	{
+		if (FlxG.keys == null)
+			return;
+
+		if (canToggleFullScreen && fullscreenKeys != null)
+		{
+			var lastPressed:FlxKey = FlxG.keys.firstJustPressed();
+
+			if (!fullscreenKeys.contains(lastPressed))
+				return;
+
+			for (key in fullscreenKeys)
+			{
+				if (key == null || key == FlxKey.NONE)
+					continue;
+
+				if (key == lastPressed)
+				{
+					FlxG.fullscreen = !FlxG.fullscreen;
+					break;
+				}
+			}
+		}
 	}
 
 	private function setupGame():Void
