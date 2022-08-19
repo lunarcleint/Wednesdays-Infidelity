@@ -23,6 +23,7 @@ Run these commands:
 ```
 haxelib install hxp
 haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
+haxelib set flxanimate 1.2.0
 haxelib install hscript
 haxelib install hxCodec
 ```

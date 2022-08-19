@@ -492,6 +492,8 @@ class PlayState extends MusicBeatState
 	// Hscript
 	public var script:Script;
 
+	var calledSteps:Array<Int> = [];
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -4738,6 +4740,12 @@ class PlayState extends MusicBeatState
 	{
 		super.stepHit();
 
+		if (curStep == lastStepHit)
+		{
+			resyncVocals();
+			return;
+		}
+
 		if (script != null)
 		{
 			script.setVariable("curStep", curStep);
@@ -4896,11 +4904,6 @@ class PlayState extends MusicBeatState
 
 					distort = null;
 			}
-		}
-
-		if (curStep == lastStepHit)
-		{
-			return;
 		}
 
 		lastStepHit = curStep;

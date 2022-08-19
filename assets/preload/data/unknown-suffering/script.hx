@@ -15,7 +15,7 @@ function onCreate()
 
 function onSongStart()
 {
-	PlayState.songLength = 121 * 1000;
+	PlayState.songLength = 104.5 * 1000;
 }
 
 function onStepHit()
@@ -33,19 +33,28 @@ function onStepHit()
 			addCamZoom(0.25, 0.082);
 	}
 
-	if (curSection >= 24 && curSection <= 47 || curSection >= 69 && curSection <= 99)
+	if (curSection >= 24 && curSection <= 47 || curSection >= 111 && curSection <= 124)
 	{
 		if (curStep % 4 == 0)
 			addCamZoom(0.2, 0.07);
 	}
 
-	if (curStep == 1096 || curStep == 1100)
+	if (curSection >= 53 && curSection <= 67 || curSection >= 78 && curSection <= 84 || curSection >= 87 && curSection <= 94)
+	{
+		if (curStep % 4 == 0)
+			addCamZoom(0.12, 0.05);
+	}
+
+	if (curStep == 840 || curStep == 844)
 		addCamZoom(0.2, 0.07);
+
+	if (curStep == 1088 || curStep == 1092 || curStep == 1240 || curStep == 1244 || curStep == 1360 || curStep == 1364)
+		addCamZoom(0.12, 0.05);
 
 	if (curStep == 776 || curStep == 1096)
 		addCamZoom(0.15, 0.06);
 
-	if (curSection >= 49 && curSection <= 67 || curSection >= 109 && curSection <= 138)
+	if (curSection >= 49 && curSection <= 51 || curSection >= 95 && curSection <= 110)
 	{
 		if (curStep % 8 == 0)
 			addCamZoom(0.15, 0.06);
@@ -131,26 +140,50 @@ function onStepHit()
 
 			PlayState.followChars = true;
 		case 272:
-			PlayState.curCamera.dadZoom = 1;
+			PlayState.curCamera.dadZoom = 1.1;
 		case 288:
 			PlayState.curCamera.dadZoom = 0.8;
 		case 336:
-			PlayState.curCamera.bfZoom = 1.1;
+			PlayState.curCamera.bfZoom = 1.2;
 		case 352:
 			PlayState.curCamera.bfZoom = 1;
-		case 768:
-			PlayState.curCamera.bfZoom = 1.1;
 		case 776:
-			PlayState.curCamera.bfZoom = 0.9;
-		case 836:
-			PlayState.curCamera.bfZoom = 1;
-		case 856:
-			PlayState.curCamera.dadZoom = 1;
-		case 872:
-			PlayState.curCamera.dadZoom = 0.8;
-		case 1606:
-			PlayState.camGame.visible = false;
-		case 1616:
+			PlayState.curCamera.bfZoom -= 0.2;
+			PlayState.curCamera.dadZoom -= 0.15;
+		case 968:
+			PlayState.curCamera.bfZoom += 0.2 / 2;
+			PlayState.curCamera.dadZoom += 0.15 / 2;
+		case 1032:
+			PlayState.curCamera.bfZoom += 0.2 / 2;
+			PlayState.curCamera.dadZoom += 0.15 / 2;
+
+		case 1112:
+			PlayState.isCameraOnForcedPos = true;
+			PlayState.followChars = false;
+
+			PlayState.cameraStageZoom = false;
+
+			PlayState.defaultCamZoom = PlayState.curCamera.dadZoom -= 0.15;
+
+			FlxTween.tween(PlayState, {defaultCamZoom: PlayState.curCamera.dadZoom + 0.4}, 9.58);
+
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 305, PlayState.dad.getGraphicMidpoint().y - 100);
+
+		case 1240:
+			PlayState.followChars = true;
+
+			PlayState.cameraStageZoom = true;
+		case 1376:
+			PlayState.isCameraOnForcedPos = true;
+			PlayState.followChars = false;
+
+			PlayState.cameraStageZoom = false;
+
+			FlxTween.tween(PlayState, {defaultCamZoom: PlayState.curCamera.dadZoom + 0.7}, 1, {ease: FlxEase.circOut});
+
+			FlxTween.tween(PlayState.camGame, {alpha: 0}, 1, {ease: FlxEase.circOut});
+
+		case 1392:
 			FlxTween.tween(PlayState, {songLength: FlxG.sound.music.length}, 10, {ease: FlxEase.circInOut});
 
 			var objs = [
@@ -169,11 +202,24 @@ function onStepHit()
 			{
 				FlxTween.tween(obj, {alpha: 0}, 1);
 			}
-		case 1744:
-			PlayState.camGame.visible = true;
+		case 1512:
+			PlayState.cameraStageZoom = false;
 
-			PlayState.camGame.alpha = 0;
+			FlxTween.tween(PlayState, {defaultCamZoom: 0.8}, 1, {
+				ease: FlxEase.circIn,
+				onComplete: function(t)
+				{
+					PlayState.cameraStageZoom = true;
+					PlayState.followChars = true;
 
+					PlayState.curCamera.dadZoom = 0.8;
+					PlayState.curCamera.bfZoom = 1;
+				}
+			});
+
+			FlxTween.tween(PlayState.camGame, {alpha: 1}, 1, {ease: FlxEase.circIn});
+
+		case 1520:
 			var objs = [
 				PlayState.healthBar,
 				PlayState.healthBarBG,
@@ -181,27 +227,35 @@ function onStepHit()
 				PlayState.iconP2,
 				PlayState.scoreTxt,
 				PlayState.botplayTxt,
-				PlayState.camGame
 			];
-
-			fadeDadStrum(1, 0.2);
 
 			for (obj in objs)
 			{
 				FlxTween.tween(obj, {alpha: 1}, 0.2);
 			}
-		case 1858:
+
+			fadeDadStrum(1, 0.2);
+		case 1634:
 			fadeBfStrum(1, 1);
-		case 1878:
+		case 1648:
 			fadeDadStrum(0, 1);
-		case 1922:
+		case 1699:
 			fadeDadStrum(1, 1);
-		case 2256:
+		case 2000:
+			PlayState.curCamera.dadZoom += 0.1;
+			PlayState.curCamera.bfZoom += 0.1;
+		case 2016:
+			PlayState.curCamera.dadZoom += 0.1;
+			PlayState.curCamera.bfZoom += 0.1;
+		case 2032:
+			PlayState.curCamera.dadZoom += 0.1;
+			PlayState.curCamera.bfZoom += 0.1;
+		case 2032:
 			fadeDadStrum(0, 1);
 			fadeBfStrum(0, 1);
 
-			PlayState.camGame.visible = false;
-		case 2259:
+			FlxTween.tween(PlayState.camGame, {alpha: 0}, 1);
+
 			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 1);
 	}
 }
