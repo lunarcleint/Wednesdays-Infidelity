@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-20,
 				10
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-56,
 				-60
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Miki DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Miki DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				20
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-54,
 				-7
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MIKI RIGHT"
 		}
 	],
 	"dataType": "JSON",
@@ -63,7 +63,7 @@
 		0,
 		450
 	],
-	"healthicon": "face",
+	"healthicon": "miki1",
 	"flip_x": false,
 	"healthbar_colors": [
 		95,

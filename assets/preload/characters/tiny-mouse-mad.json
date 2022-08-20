@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-40,
 				-5
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "MAD MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				55,
 				41
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MAD MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-34,
 				-43
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MAD MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-41,
 				22
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "MAD MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-48,
 				3
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MAD MIKI RIGHT"
 		}
 	],
 	"dataType": "JSON",
@@ -63,7 +63,7 @@
 		0,
 		460
 	],
-	"healthicon": "mouse",
+	"healthicon": "miki2",
 	"flip_x": false,
 	"healthbar_colors": [
 		70,

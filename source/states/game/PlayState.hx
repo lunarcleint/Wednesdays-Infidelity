@@ -139,6 +139,7 @@ class PlayState extends MusicBeatState
 	var curDifficulty:Int = 0;
 
 	public var vocals:FlxSound;
+	public var satanLaugh:FlxSound;
 
 	public var dad:Character = null;
 	public var gf:Character = null;
@@ -969,6 +970,9 @@ class PlayState extends MusicBeatState
 		devil.cameras = [camOther];
 		devil.alpha = 0.0001;
 		add(devil);
+
+		satanLaugh = new FlxSound().loadEmbedded(Paths.sound('devil_laugh'));
+		FlxG.sound.list.add(satanLaugh);
 
 		blackBack = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5);
 		blackBack.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
@@ -4271,7 +4275,7 @@ class PlayState extends MusicBeatState
 	{
 		devil.anim.play('scape', true);
 		devil.alpha = 1;
-
+		satanLaugh.play(true);
 		devil.anim.onComplete = function()
 		{
 			devil.alpha = 0.0001;

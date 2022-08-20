@@ -316,10 +316,10 @@ class WarningState extends MusicBeatState
 
 		if (canMove)
 		{
-			if (FlxG.keys.justPressed.UP)
+			if (controls.UI_UP_P)
 				changeSelection(-1);
 
-			if (FlxG.keys.justPressed.DOWN)
+			if (controls.UI_DOWN_P)
 				changeSelection(1);
 
 			if (FlxG.keys.justPressed.ENTER)
