@@ -66,27 +66,27 @@ class CreditsState extends MusicBeatState
 				'e2d4ce'
 			],
 			[
-				'Cape',
-				'Cape',
-				'Co Director, Main Charter, and Programmer',
-				'https://twitter.com/c4peletini',
-				'242846'
-			],
-			[
-				'Zero',
-				'Zero',
-				'Main Sprite Artist and Animator',
-				'https://twitter.com/zero_artist02',
-				'003333'
-			],
-			[
 				'Nugget',
 				'Nugget',
-				'Sprite Artist, Icon Artist, and Promo Artist',
+				'Co Director, Artist',
 				'https://twitter.com/NuggetNightmare',
 				'6e034b'
 			],
-			['Oz', 'Oz', 'Main Background Artist', 'https://twitter.com/ozkzz_', '362526'],
+			[
+				'Cape',
+				'Cape',
+				'Main Charter & Extra Coder',
+				'https://twitter.com/c4peletini',
+				'242846'
+			],
+			['Zero', 'Zero', 'Art Director', 'https://twitter.com/zero_artist02', '003333'],
+			[
+				'Kyz',
+				'Kyz',
+				'Main Background Artist',
+				'https://twitter.com/as_cookie',
+				'362526'
+			],
 			[
 				'Kass8tto',
 				'Kass8tto',
@@ -101,12 +101,18 @@ class CreditsState extends MusicBeatState
 			[
 				"Lean",
 				'Lean',
-				'Musician and Programmer',
+				'Musician, Programmer, and some Sound Effects',
 				'https://twitter.com/NewLeandapper',
 				"816954"
 			],
 			["Flaconadir", 'Flaco', 'Musician', 'https://youtube.com/c/Flaconadir', "9b2526"],
-			["Tok", 'Tok', 'Charter', 'https://twitter.com/ThatOne_Kid39', "725980"],
+			[
+				"Tok",
+				'Tok',
+				'Charter and Mokey Icon Artist',
+				'https://twitter.com/ThatOne_Kid39',
+				"725980"
+			],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
 			["Specail Thanks"],
@@ -139,7 +145,7 @@ class CreditsState extends MusicBeatState
 				"https://twitter.com/FNFYoshiEngine",
 				"6bd04b"
 			],
-			["47rooks", "none", "Litteral Shader God", "https://github.com/47rooks", "e37b05"],
+			["47rooks", "none", "Literal Shader God", "https://github.com/47rooks", "e37b05"],
 			[
 				"BBPanzu",
 				"none",
