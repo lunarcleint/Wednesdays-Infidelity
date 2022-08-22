@@ -305,7 +305,7 @@ class PlayState extends MusicBeatState
 	var smallDemons:FlxSprite;
 
 	var danceLeft:Bool = false; // weird ik but ig it works
-	var trumpetsPlaying:Bool = false;
+	var trumpetsPlaying:Bool = false; // sexo
 
 	// Week Misses / Endings
 	public static var weekMisses:Int = 0;
@@ -493,6 +493,16 @@ class PlayState extends MusicBeatState
 	public var script:Script;
 
 	var calledSteps:Array<Int> = [];
+
+	// box funkin hud with 99999 flxtexts bcs im so fucking dumb
+	var scoreSideTxt:FlxText;
+	var missesTxt:FlxText;
+	var acurracyTxt:FlxText;
+	var sickTxt:FlxText;
+	var goodTxt:FlxText;
+	var badTxt:FlxText;
+	var shitTxt:FlxText;
+	var songTxt:FlxText;
 
 	override public function create()
 	{
@@ -1047,42 +1057,34 @@ class PlayState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
-		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		timeTxt.scrollFactor.set();
-		timeTxt.alpha = 0;
-		timeTxt.borderSize = 2;
-		timeTxt.visible = showTime;
-		if (ClientPrefs.downScroll)
-			timeTxt.y = FlxG.height - 44;
-
-		if (ClientPrefs.timeBarType == 'Song Name')
-		{
-			timeTxt.text = SONG.song;
-		}
-		updateTime = showTime;
-
 		timeBarBG = new AttachedSprite('timeBar');
-		timeBarBG.x = timeTxt.x;
-		timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
+		timeBarBG.setGraphicSize(FlxG.width, 22);
+		timeBarBG.y = (ClientPrefs.downScroll ? 3 : 695);
 		timeBarBG.scrollFactor.set();
+		timeBarBG.updateHitbox();
+		timeBarBG.screenCenter(X);
 		timeBarBG.alpha = 0;
-		timeBarBG.visible = showTime;
-		timeBarBG.color = FlxColor.BLACK;
-		timeBarBG.xAdd = -4;
-		timeBarBG.yAdd = -4;
 		add(timeBarBG);
+		timeBarBG.color = FlxColor.BLACK;
+		/*trace(timeBarBG.width);
+			trace(timeBarBG.height); */
 
-		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
-			'songPercent', 0, 1);
+		timeTxt = new FlxText(0, (ClientPrefs.downScroll ? timeBarBG.y + 32 : timeBarBG.y - 32), 400, "", 20);
+		timeTxt.setFormat(Paths.font("MilkyNice.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.alpha = 0;
+		timeTxt.borderSize = 3;
+		timeTxt.screenCenter(X);
+		timeTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		updateTime = true;
+
+		timeBar = new FlxBar(timeBarBG.x + 12, timeBarBG.y + 5, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 24), 13, this, 'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFF7D808E);
+		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
 		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
-		timeBar.visible = showTime;
+		timeBar.screenCenter(X);
 		add(timeBar);
 		add(timeTxt);
-		timeBarBG.sprTracker = timeBar;
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
@@ -1210,8 +1212,67 @@ class PlayState extends MusicBeatState
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = !ClientPrefs.hideHud;
+		scoreTxt.visible = false;
 		add(scoreTxt);
+
+		songTxt = new FlxText(20, (ClientPrefs.downScroll ? timeBarBG.y + 30 : timeBarBG.y - 35), 0, SONG.song, 24);
+		songTxt.setFormat(Paths.font("MilkyNice.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songTxt.scrollFactor.set();
+		songTxt.borderSize = 3;
+		songTxt.visible = !ClientPrefs.hideHud;
+		songTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(songTxt);
+
+		scoreSideTxt = new FlxText(25, (ClientPrefs.downScroll ? songTxt.y + songTxt.height + 10 : songTxt.y - songTxt.height - 10 - (29 * 2)), 0, "", 21);
+		scoreSideTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreSideTxt.borderSize = 3;
+		scoreSideTxt.visible = !ClientPrefs.hideHud;
+		scoreSideTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(scoreSideTxt);
+		// trace(scoreSideTxt.height);
+
+		missesTxt = new FlxText(25, (ClientPrefs.downScroll ? scoreSideTxt.y + scoreSideTxt.height - 5 : songTxt.y - songTxt.height - 10 - 29), 0, "", 21);
+		missesTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		missesTxt.borderSize = 3;
+		missesTxt.visible = !ClientPrefs.hideHud;
+		missesTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(missesTxt);
+		// trace(missesTxt.height);
+
+		acurracyTxt = new FlxText(25, (ClientPrefs.downScroll ? missesTxt.y + missesTxt.height - 5 : songTxt.y - songTxt.height - 10), 0, "", 21);
+		acurracyTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		acurracyTxt.borderSize = 3;
+		acurracyTxt.visible = !ClientPrefs.hideHud;
+		acurracyTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(acurracyTxt);
+
+		sickTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? timeBarBG.y + 35 : timeBarBG.y - 40 - (29 * 3)), 0, "", 21);
+		sickTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		sickTxt.borderSize = 3;
+		sickTxt.visible = !ClientPrefs.hideHud;
+		sickTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(sickTxt);
+
+		goodTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? sickTxt.y + sickTxt.height : timeBarBG.y - 40 - (29 * 2)), 0, "", 21);
+		goodTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		goodTxt.borderSize = 3;
+		goodTxt.visible = !ClientPrefs.hideHud;
+		goodTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(goodTxt);
+
+		badTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? goodTxt.y + goodTxt.height : timeBarBG.y - 40 - 29), 0, "", 21);
+		badTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		badTxt.borderSize = 3;
+		badTxt.visible = !ClientPrefs.hideHud;
+		badTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(badTxt);
+
+		shitTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? badTxt.y + badTxt.height : timeBarBG.y - 40), 0, "", 21);
+		shitTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		shitTxt.borderSize = 3;
+		shitTxt.visible = !ClientPrefs.hideHud;
+		shitTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		add(shitTxt);
 
 		weekMissesTxt = new FlxText(-75, weekMissesBar.y + 18, FlxG.width, "", 20);
 		weekMissesTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1239,6 +1300,14 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		scoreSideTxt.cameras = [camHUD];
+		missesTxt.cameras = [camHUD];
+		acurracyTxt.cameras = [camHUD];
+		songTxt.cameras = [camHUD];
+		sickTxt.cameras = [camHUD];
+		goodTxt.cameras = [camHUD];
+		badTxt.cameras = [camHUD];
+		shitTxt.cameras = [camHUD];
 		weekMissesBar.cameras = [camHUD];
 		weekMissesTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
@@ -1724,6 +1793,40 @@ class PlayState extends MusicBeatState
 				daNote.destroy();
 			}
 			--i;
+		}
+	}
+
+	public function updateScore(miss:Bool = false)
+	{
+		// info
+		scoreSideTxt.text = 'Score: ${songScore}';
+		missesTxt.text = 'Misses: ${songMisses}';
+		acurracyTxt.text = 'Acurracy: ${Highscore.floorDecimal(ratingPercent * 100, 2)}';
+
+		// judgment
+		sickTxt.text = 'Sick: ${sicks}';
+		goodTxt.text = 'Good: ${goods}';
+		badTxt.text = 'Bad: ${bads}';
+		shitTxt.text = 'Shit: ${shits}';
+
+		if (ClientPrefs.scoreZoom && !miss && !cpuControlled)
+		{
+			if (scoreTxtTween != null)
+			{
+				scoreTxtTween.cancel();
+			}
+			var infoText:Array<FlxText> = [songTxt, scoreSideTxt, missesTxt, acurracyTxt, sickTxt, goodTxt, badTxt, shitTxt];
+			for (text in infoText)
+			{
+				if (text != null)
+					text.scale.set(1.075, 1.075);
+				scoreTxtTween = FlxTween.tween(text.scale, {x: 1, y: 1}, 0.2, {
+					onComplete: (twn) ->
+					{
+						scoreTxtTween = null;
+					}
+				});
+			}
 		}
 	}
 
@@ -2538,8 +2641,7 @@ class PlayState extends MusicBeatState
 					if (secondsTotal < 0)
 						secondsTotal = 0;
 
-					if (ClientPrefs.timeBarType != 'Song Name')
-						timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+					timeTxt.text = '${FlxStringUtil.formatTime(secondsTotal, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
 				}
 			}
 
@@ -3690,23 +3792,7 @@ class PlayState extends MusicBeatState
 			{
 				songHits++;
 				totalPlayed++;
-				RecalculateRating();
-			}
-
-			if (ClientPrefs.scoreZoom)
-			{
-				if (scoreTxtTween != null)
-				{
-					scoreTxtTween.cancel();
-				}
-				scoreTxt.scale.x = 1.075;
-				scoreTxt.scale.y = 1.075;
-				scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
-					onComplete: function(twn:FlxTween)
-					{
-						scoreTxtTween = null;
-					}
-				});
+				RecalculateRating(false);
 			}
 		}
 
@@ -4052,7 +4138,7 @@ class PlayState extends MusicBeatState
 			songScore -= 10;
 
 		totalPlayed++;
-		RecalculateRating();
+		RecalculateRating(true);
 
 		var char:Character = boyfriend;
 		if (daNote.gfNote)
@@ -4111,7 +4197,7 @@ class PlayState extends MusicBeatState
 				songMisses++;
 			}
 			totalPlayed++;
-			RecalculateRating();
+			RecalculateRating(true);
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);
@@ -5073,7 +5159,7 @@ class PlayState extends MusicBeatState
 	public var ratingPercent:Float;
 	public var ratingFC:String;
 
-	public function RecalculateRating()
+	public function RecalculateRating(badHit:Bool = false)
 	{
 		if (totalPlayed < 1) // Prevent divide by 0
 			ratingName = '?';
@@ -5113,6 +5199,9 @@ class PlayState extends MusicBeatState
 			ratingFC = "SDCB";
 		else if (songMisses >= 10)
 			ratingFC = "Clear";
+
+		// s
+		updateScore(badHit);
 	}
 
 	var curLight:Int = 0;
