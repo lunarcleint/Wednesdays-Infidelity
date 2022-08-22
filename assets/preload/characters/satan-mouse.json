@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				31,
 				262
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "SATAN MIKI IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SATAN MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				115,
 				321
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SATAN MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				16,
 				345
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN MIKI DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SATAN MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				79,
 				212
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN MIKI UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "SATAN MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				72,
 				343
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SATAN MIKI RIGHT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				20,
 				286
 			],
-			"anim": "singUP-alt",
+			"loop": false,
 			"fps": 24,
-			"name": "JUJUJUJA",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "JUJUJUJA"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				101,
 				261
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "transform",
-			"indices": [],
-			"name": "TRANSFORMATION"
+			"fps": 24,
+			"name": "TRANSFORMATION",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
@@ -85,12 +85,12 @@
 		55,
 		475
 	],
-	"healthicon": "mouse",
+	"healthicon": "evilmiki",
 	"flip_x": false,
 	"healthbar_colors": [
-		70,
-		73,
-		69
+		41,
+		41,
+		41
 	],
 	"camera_position": [
 		-110,

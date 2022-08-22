@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "talk",
-			"loop": false,
-			"name": "MIKI DIALOGUE"
+			"fps": 24,
+			"name": "MIKI DIALOGUE",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
@@ -19,7 +19,7 @@
 		10,
 		230
 	],
-	"healthicon": "mouse",
+	"healthicon": "miki2",
 	"flip_x": false,
 	"healthbar_colors": [
 		70,

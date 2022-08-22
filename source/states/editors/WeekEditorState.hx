@@ -69,7 +69,6 @@ class WeekEditorState extends MusicBeatState
 		txtWeekTitle.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
 
-		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
 		bgSprite = new FlxSprite(0, 56);
 		bgSprite.antialiasing = ClientPrefs.globalAntialiasing;
@@ -83,13 +82,6 @@ class WeekEditorState extends MusicBeatState
 		add(blackBarThingie);
 
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
-
-		lock = new FlxSprite();
-		lock.frames = ui_tex;
-		lock.animation.addByPrefix('lock', 'lock');
-		lock.animation.play('lock');
-		lock.antialiasing = ClientPrefs.globalAntialiasing;
-		add(lock);
 
 		missingFileText = new FlxText(0, 0, FlxG.width, "");
 		missingFileText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -108,17 +100,6 @@ class WeekEditorState extends MusicBeatState
 		add(bgYellow);
 		add(bgSprite);
 		add(grpWeekCharacters);
-
-		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07, bgSprite.y + 435).loadGraphic(Paths.image('Menu_Tracks'));
-		tracksSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		add(tracksSprite);
-
-		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
-		txtTracklist.alignment = CENTER;
-		txtTracklist.font = Paths.font("vcr.ttf");
-		txtTracklist.color = 0xFFe55777;
-		add(txtTracklist);
-		add(txtWeekTitle);
 
 		addEditorBox();
 		reloadAllShit();
@@ -391,9 +372,9 @@ class WeekEditorState extends MusicBeatState
 		#if desktop
 		// Updating Discord Rich Presence
 		#if PRIVATE_BUILD
-		DiscordClient.changePresence("Week Editor", "Editting: " + "CLASSIFIED");
+		DiscordClient.changePresence("Week Editor", "Editing: " + "CLASSIFIED");
 		#else
-		DiscordClient.changePresence("Week Editor", "Editting: " + weekFileName);
+		DiscordClient.changePresence("Week Editor", "Editing: " + weekFileName);
 		#end
 		#end
 	}
