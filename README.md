@@ -1,17 +1,11 @@
-## Friday Night Funkin' - Wednesday's Infidelity [PART 2]
-
-The GitHub repository for Wednesday's Infidelity Part 2.
-
+## Friday Night Funkin' - Wednesday's Infidelity
 For info on usage rights, please read the [license](https://github.com/lunarcleint/Wednesdays-Infidelity-PART-2/blob/master/LICENSE)!
 
-![](art/wilogo.png)
-
-### Credits:
-
-Add these later
+![](art/promoart.png)
 
 ## Documenation
 - [Building the game](#building-instructions)
+- [Debug Features](#debug-features)
 - [Sprite sheet formats](#data-formats)
 
 ### Building Instructions:
@@ -29,6 +23,17 @@ haxelib install hxCodec
 ```
 These libraries are needed and your game will **NOT** build without them!
 
+## Debug Features
+
+With the tag `<define name="PRIVATE_BUILD"/> ` in the [Project.xml](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/Project.xml), you unlock these debug features...
+- Press 3 to pause the game no matter what
+- Press T on the main menu to 100% the game
+- Always allowed to delete your progress even if you just reset
+- Able to skip ANY cutscene/video playing
+- Automatticly hides Discord RPC
+- Able to toggle botplay
+- Able to skip the intro 
+
 ## Data Formats
 
 W.I Supports four built in data types:
@@ -37,46 +42,27 @@ W.I Supports four built in data types:
 - Packer (Week 6 TXT Format)
 - Json Format (HASH and Array Supported)
 
-These are layed out in the enum [Data Type](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/source/data/DataType.hx)
-```haxe
-enum DataType
-{
-	GENERICXML;
-	SPARROW;
-	PACKER;
-	JSON;
-}
-```
 [Paths](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/source/util/Paths.hx) has a easy function to get frames based on a [Data Type](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/source/data/DataType.hx) value. [getAtlasFromData(key:String, data:DataType, ?library:String)](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/source/util/Paths.hx#L342).
 
 Also [Character.hx](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/source/gameObjects/Character.hx) has a data type paramter that can easily be edited.
 
-![](art/DataTypes.png)
+![](art/docs/DataTypes.png)
 
-**NOTE**
-- You have to click reload image for the data type to update
-- Sometimes it will crash when you do that so you should just add to to the Json
+**NOTE:**
+You have to click reload image for the data type to update
+Sometimes it will crash when you do that so you should just add to to the Json
 
-### Creating Sprite Sheets
-
-**NOTE**
-- **THIS IS FOR SCALING SPRITE SHEETS**
+### Scaling Sprite Sheets
 
 Download [Free Texture Packer](http://free-tex-packer.com/) and Install it.
 
-Now you want to export your adobe animate animations as a PNG Sequence.
-![](art/adobe.png)
+Now you want to export your adobe animate animations as a PNG Sequence, **make sure your DPI is 72**.
+![](art/docs/adobe.png)
 
-**NOTE**
-- **MAKE SURE YOUR DPI IS 72 (THE DEFAUT)** 
+![](art/docs/expr.png)
 
-![](art/expr.png)
+Then put all of it into [Free Texture Packer](http://free-tex-packer.com/) with these settings (you can change these to your liking): 
 
-Then put all of it into [Free Texture Packer](http://free-tex-packer.com/) with these settings: 
+![](art/docs/setting.png)
 
-![](art/setting.png)
-
-and click `Export`!
-
-That's it now you can scale you sprite sheet to any scale you want!
-
+After you've made the sprite sheet look good, export the sprite sheet.
