@@ -144,15 +144,15 @@
 			"name": "BF Dead Loop"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-43,
 				-51
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "BF Dead confirm"
+			"fps": 24,
+			"name": "BF Dead confirm",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
@@ -162,11 +162,11 @@
 		130,
 		440
 	],
-	"healthicon": "bf-suicide",
+	"healthicon": "bf-dside",
 	"flip_x": true,
 	"healthbar_colors": [
+		134,
 		125,
-		128,
 		142
 	],
 	"camera_position": [
