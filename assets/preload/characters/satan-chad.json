@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SATAN IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				290,
 				-110
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SATAN LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				142,
 				-190
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SATAN DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				200,
 				50
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "SATAN UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-56,
 				-184
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "SATAN RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SATAN RIGHT"
 		}
 	],
 	"dataType": "JSON",
@@ -66,9 +66,9 @@
 	"healthicon": "satan",
 	"flip_x": false,
 	"healthbar_colors": [
-		151,
-		123,
-		122
+		83,
+		71,
+		71
 	],
 	"camera_position": [
 		0,

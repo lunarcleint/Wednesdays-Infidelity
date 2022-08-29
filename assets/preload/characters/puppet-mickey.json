@@ -1,66 +1,67 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 28,
 			"anim": "idle",
-			"indices": [],
-			"name": "IDLE"
+			"fps": 28,
+			"name": "julian idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-14,
+				-13,
 				-6
 			],
-			"loop": false,
-			"fps": 32,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEFT"
+			"fps": 32,
+			"name": "julian left",
+			"indices": []
 		},
 		{
-			"offsets": [
-				35,
-				-55
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				34,
+				-54
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DOWN"
+			"fps": 24,
+			"name": "julian down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				79,
 				22
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "UP"
+			"fps": 24,
+			"name": "julian up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				34,
-				-77
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				24,
+				-87
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RIGHT"
+			"fps": 24,
+			"name": "julian right",
+			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/puppet-mickey",
 	"position": [
-		20,
-		280
+		130,
+		350
 	],
 	"healthicon": "julian",
 	"flip_x": false,
@@ -74,5 +75,5 @@
 		10
 	],
 	"sing_duration": 4.00000000000001,
-	"scale": 1
+	"scale": 1.2
 }

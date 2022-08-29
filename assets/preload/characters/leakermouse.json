@@ -1,73 +1,74 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				2,
 				-120
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MIKI IDLE"
+			"fps": 24,
+			"name": "MIKI IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-58,
 				-161
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MIKI RIGHT"
+			"fps": 24,
+			"name": "MIKI RIGHT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-58,
 				-190
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MIKI DOWN"
+			"fps": 24,
+			"name": "MIKI DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-28,
 				-110
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "MIKI UP"
+			"fps": 24,
+			"name": "MIKI UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				79,
 				-127
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MIKI LEFT "
+			"fps": 24,
+			"name": "MIKI LEFT ",
+			"indices": []
 		}
 	],
+	"dataType": "SPARROW",
 	"no_antialiasing": false,
 	"image": "characters/MIKI_LEAKED",
 	"position": [
 		-70,
 		0
 	],
-	"healthicon": "sadmouse",
+	"healthicon": "mickeyandsatan",
 	"flip_x": false,
 	"healthbar_colors": [
-		175,
-		175,
-		175
+		83,
+		71,
+		71
 	],
 	"camera_position": [
 		-10,

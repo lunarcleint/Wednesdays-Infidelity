@@ -1,73 +1,74 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "LEAKER IDLE"
+			"fps": 24,
+			"name": "LEAKER IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				-50
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "LEAKER DOWN"
+			"fps": 24,
+			"name": "LEAKER DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-79,
 				97
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "LEAKER UP"
+			"fps": 24,
+			"name": "LEAKER UP",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				39,
 				13
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LEAKER LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				10,
 				-34
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LEAKER RIGHT"
 		}
 	],
+	"dataType": "SPARROW",
 	"no_antialiasing": false,
 	"image": "characters/mwehehehe/LEAKER_1",
 	"position": [
 		0,
 		370
 	],
-	"healthicon": "bf",
+	"healthicon": "leakers",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		56,
+		59,
+		57
 	],
 	"camera_position": [
 		0,
