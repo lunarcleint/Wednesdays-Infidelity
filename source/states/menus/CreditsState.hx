@@ -101,7 +101,7 @@ class CreditsState extends MusicBeatState
 			[
 				"Lean",
 				'Lean',
-				'Musician, Programmer, and some Sound Effects',
+				'Musician, Programmer, Animation Helper, and Sound Effects',
 				'https://twitter.com/NewLeandapper',
 				"816954"
 			],
@@ -112,6 +112,28 @@ class CreditsState extends MusicBeatState
 				'Charter and Mokey Icon Artist',
 				'https://twitter.com/ThatOne_Kid39',
 				"725980"
+			],
+			[
+				"Adam McHummus",
+				'Adam',
+				'Musician',
+				'https://www.youtube.com/channel/UCj1F2IQFcqZqfuyljtxgpXQ',
+				"4287f5"
+			],
+			[
+				"Clowfoe",
+				'Clowfoe',
+				'being clowfoe',
+				'https://www.youtube.com/c/Clowfoe',
+				"f54e42"
+			],
+			["Kenny L", 'Kenny', 'Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
+			[
+				"ReddudeXD",
+				'Reddude',
+				'Artist and Musician',
+				'https://twitter.com/reddudemodderxd',
+				"c9514b"
 			],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
