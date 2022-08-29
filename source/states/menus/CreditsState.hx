@@ -127,7 +127,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/c/Clowfoe',
 				"f54e42"
 			],
-			["Kenny L", 'Kenny', 'Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
+			["iKenny", 'Kenny', 'Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
 			[
 				"ReddudeXD",
 				'Reddude',
