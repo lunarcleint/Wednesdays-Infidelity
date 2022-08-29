@@ -2646,7 +2646,7 @@ class PlayState extends MusicBeatState
 					if (secondsTotal < 0)
 						secondsTotal = 0;
 
-					timeTxt.text = '${FlxStringUtil.formatTime(secondsTotal, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
+					timeTxt.text = '${FlxStringUtil.formatTime(curTime / 1000, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
 				}
 			}
 
