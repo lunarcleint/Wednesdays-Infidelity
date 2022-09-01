@@ -66,8 +66,6 @@ class HealthIcon extends FlxSprite
 						case "badend bf" | "hellholebf":
 							iconOffsets[0] += 8;
 							iconOffsets[1] -= 10;
-						case "satan":
-							iconOffsets[1] += 20;
 						case "crazy-mokey" | "mokey":
 							iconOffsets[1] += 10;
 						case "Oswald":

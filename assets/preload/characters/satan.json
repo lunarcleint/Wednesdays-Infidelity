@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				0,
-				11
+				-90,
+				111
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				60,
-				-143
+				90,
+				-123
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				60,
-				154
+				-50,
+				184
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				-62,
-				17
+				-155,
+				77
 			],
 			"loop": false,
 			"fps": 24,
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				86,
-				317
+				-34,
+				337
 			],
 			"loop": false,
 			"fps": 24,
@@ -68,7 +68,7 @@
 		},
 		{
 			"offsets": [
-				-33,
+				-3,
 				-34
 			],
 			"loop": false,
@@ -82,8 +82,8 @@
 	"no_antialiasing": false,
 	"image": "characters/SATAN ASSETS",
 	"position": [
-		370,
-		220
+		320,
+		300
 	],
 	"healthicon": "satan",
 	"flip_x": false,
