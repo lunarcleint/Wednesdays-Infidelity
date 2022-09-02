@@ -5,7 +5,7 @@ For info on usage rights, please read the [license](https://github.com/lunarclei
 
 ## Documenation
 - [Building the game](#building-instructions)
-- [Debug Features](#debug-features)
+- [Debug features](#debug-features)
 - [Sprite sheet formats](#data-formats)
 
 ### Building Instructions:
@@ -20,7 +20,10 @@ haxelib git flxanimate https://github.com/Dot-Stuff/flxanimate
 haxelib set flxanimate 1.2.0
 haxelib install hscript
 haxelib install hxCodec
+haxelib set hxCodec 2.5.1
 ```
+Or run the setup [bat](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/master/config.bat).
+
 These libraries are needed and your game will **NOT** build without them!
 
 ## Debug Features
@@ -48,7 +51,7 @@ Also [Character.hx](https://github.com/lunarcleint/Wednesdays-Infidelity/blob/ma
 
 ![](art/docs/DataTypes.png)
 
-**NOTE:**
+****NOTE:****
 You have to click reload image for the data type to update
 Sometimes it will crash when you do that so you should just add to to the Json
 
@@ -56,9 +59,8 @@ Sometimes it will crash when you do that so you should just add to to the Json
 
 Download [Free Texture Packer](http://free-tex-packer.com/) and Install it.
 
-Now you want to export your adobe animate animations as a PNG Sequence, **make sure your DPI is 72**.
+Now you want to export your adobe animate animations as a PNG Sequence, ****make sure your DPI is 72****.
 ![](art/docs/adobe.png)
-
 ![](art/docs/expr.png)
 
 Then put all of it into [Free Texture Packer](http://free-tex-packer.com/) with these settings (you can change these to your liking): 
