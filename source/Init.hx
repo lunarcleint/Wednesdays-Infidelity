@@ -24,8 +24,6 @@ class Init extends FlxState
 	{
 		super.create();
 
-		FlxGraphic.defaultPersist = true;
-
 		#if cpp
 		cpp.NativeGc.enable(true);
 		cpp.NativeGc.run(true);

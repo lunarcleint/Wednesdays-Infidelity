@@ -154,8 +154,6 @@ class MainMenuState extends MusicBeatState
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-		FlxGraphic.defaultPersist = false;
-
 		Lib.application.window.title = "Wednesday's Infidelity - Main Menu";
 		#if desktop
 		// Updating Discord Rich Presence
@@ -426,16 +424,6 @@ class MainMenuState extends MusicBeatState
 	public override function destroy()
 	{
 		super.destroy();
-
-		FlxG.bitmap.clearCache();
-
-		FlxGraphic.defaultPersist = true;
-
-		Paths.clearStoredMemory(true);
-
-		#if cpp
-		cpp.NativeGc.run(true);
-		#end
 	}
 
 	public function checkCombos()

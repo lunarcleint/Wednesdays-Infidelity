@@ -172,8 +172,6 @@ class FreeplayState extends MusicBeatState
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-		FlxGraphic.defaultPersist = false;
-
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
@@ -786,17 +784,6 @@ class FreeplayState extends MusicBeatState
 		}
 
 		super.destroy();
-
-		FlxG.bitmap.clearCache();
-
-		FlxGraphic.defaultPersist = true;
-
-		Paths.clearStoredMemory();
-		Paths.clearUnusedMemory();
-
-		#if cpp
-		cpp.NativeGc.run(true);
-		#end
 	}
 
 	public function checkCombos()

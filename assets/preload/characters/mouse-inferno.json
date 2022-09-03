@@ -1,67 +1,67 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "MIKI IDLE",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				79,
 				50
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-19,
 				-115
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				24,
 				154
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Miki UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Miki UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-232,
 				22
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MIKI RIGHT"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "MIKI IDLE"
 		}
 	],
 	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/inferno mickey",
 	"position": [
-		-240,
-		160
+		-320,
+		170
 	],
 	"healthicon": "hellholemickey",
 	"flip_x": false,

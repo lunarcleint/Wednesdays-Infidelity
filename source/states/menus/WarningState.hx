@@ -60,8 +60,6 @@ class WarningState extends MusicBeatState
 
 		Lib.application.window.title = "Wednesday's Infidelity - WARNING";
 
-		FlxGraphic.defaultPersist = false;
-
 		camGame = new FlxCamera();
 
 		camHUD = new FlxCamera();
@@ -343,22 +341,6 @@ class WarningState extends MusicBeatState
 
 				new FlxTimer().start(1.2, function(tmr:FlxTimer)
 				{
-					for (member in members)
-					{
-						remove(member);
-						FlxTween.cancelTweensOf(member);
-						member.destroy();
-						member = null;
-					}
-
-					FlxTween.globalManager.clear();
-
-					FlxG.bitmap.clearCache();
-
-					FlxGraphic.defaultPersist = true;
-
-					Paths.clearStoredMemory(true);
-
 					ClientPrefs.saveSettings();
 
 					MusicBeatState.switchState(new TitleState());

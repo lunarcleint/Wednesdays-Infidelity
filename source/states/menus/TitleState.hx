@@ -84,8 +84,6 @@ class TitleState extends MusicBeatState
 
 		Lib.application.window.title = "Wednesday's Infidelity - Title";
 
-		FlxGraphic.defaultPersist = true;
-
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		new FlxTimer().start(1, function(tmr:FlxTimer)
