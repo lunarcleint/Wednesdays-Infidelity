@@ -196,7 +196,7 @@ function onStepHit()
 			PlayState.healthBarBG.alpha = 0;
 			PlayState.iconP1.alpha = 0;
 			PlayState.iconP2.alpha = 0;
-			PlayState.scoreTxt.alpha = 0;
+			PlayState.scoreGroup.alpha = 0;
 			PlayState.timeBarBG.alpha = 0;
 			PlayState.timeBar.alpha = 0;
 			PlayState.timeTxt.alpha = 0;
@@ -219,7 +219,7 @@ function onStepHit()
 			PlayState.healthBarBG.alpha = 1;
 			PlayState.iconP1.alpha = 1;
 			PlayState.iconP2.alpha = 1; // poop
-			PlayState.scoreTxt.alpha = 1;
+			PlayState.scoreGroup.alpha = 1;
 			PlayState.timeBarBG.alpha = 1;
 			PlayState.timeBar.alpha = 1;
 			PlayState.timeTxt.alpha = 1;

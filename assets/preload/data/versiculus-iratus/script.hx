@@ -72,7 +72,7 @@ function onStepHit()
 			PlayState.addCinematicBars(1, 7);
 
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -100,7 +100,7 @@ function onStepHit()
 			PlayState.curCamera.dadZoom = 1.2;
 		case 496:
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -128,7 +128,7 @@ function onStepHit()
 			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x - 300, PlayState.dad.getGraphicMidpoint().y - 350);
 		case 508:
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -192,7 +192,7 @@ function onStepHit()
 			PlayState.addCinematicBars(1, 7);
 
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -220,7 +220,7 @@ function onStepHit()
 			});
 		case 1512:
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -243,7 +243,7 @@ function onStepHit()
 			PlayState.satanlaugh.animation.play('scape');
 		case 1528:
 			var objs = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,

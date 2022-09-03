@@ -505,6 +505,10 @@ class PlayState extends MusicBeatState
 	var shitTxt:FlxText;
 	var songTxt:FlxText;
 
+	var scoreGroup:FlxTypedSpriteGroup<FlxText>;
+
+	var hudStyle:String = "Default";
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -527,8 +531,12 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right'))
 		];
 
+		// hudStyle = ClientPrefs.hudStyle;
+
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
+
+		hudStyle = ClientPrefs.hudStyle;
 
 		cpuControlled = ClientPrefs.botPlay;
 
@@ -651,7 +659,6 @@ class PlayState extends MusicBeatState
 		weekMissesBar.antialiasing = ClientPrefs.globalAntialiasing;
 		weekMissesBar.scale.set(0.7, 0.7);
 		weekMissesBar.alpha = 0.8;
-		weekMissesBar.visible = !ClientPrefs.hideHud;
 		add(weekMissesBar);
 
 		switch (curStage)
@@ -1060,36 +1067,6 @@ class PlayState extends MusicBeatState
 			strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
-		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
-		timeBarBG = new AttachedSprite('timeBar');
-		timeBarBG.setGraphicSize(FlxG.width, 22);
-		timeBarBG.y = (ClientPrefs.downScroll ? 3 : 695);
-		timeBarBG.scrollFactor.set();
-		timeBarBG.updateHitbox();
-		timeBarBG.screenCenter(X);
-		timeBarBG.alpha = 0;
-		add(timeBarBG);
-		timeBarBG.color = FlxColor.BLACK;
-		/*trace(timeBarBG.width);
-			trace(timeBarBG.height); */
-
-		timeTxt = new FlxText(0, (ClientPrefs.downScroll ? timeBarBG.y + 32 : timeBarBG.y - 32), 400, "", 20);
-		timeTxt.setFormat(Paths.font("MilkyNice.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		timeTxt.alpha = 0;
-		timeTxt.borderSize = 3;
-		timeTxt.screenCenter(X);
-		timeTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		updateTime = true;
-
-		timeBar = new FlxBar(timeBarBG.x + 12, timeBarBG.y + 5, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 24), 13, this, 'songPercent', 0, 1);
-		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
-		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
-		timeBar.alpha = 0;
-		timeBar.screenCenter(X);
-		add(timeBar);
-		add(timeTxt);
-
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
 		add(grpNoteSplashes);
@@ -1178,7 +1155,6 @@ class PlayState extends MusicBeatState
 		healthBarBG.y = FlxG.height * 0.89;
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
-		healthBarBG.visible = !ClientPrefs.hideHud;
 		healthBarBG.xAdd = -4;
 		healthBarBG.yAdd = -4;
 		add(healthBarBG);
@@ -1189,14 +1165,12 @@ class PlayState extends MusicBeatState
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
-		healthBar.visible = !ClientPrefs.hideHud;
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
-		iconP1.visible = !ClientPrefs.hideHud;
 		iconP1.alpha = ClientPrefs.healthBarAlpha;
 		add(iconP1);
 
@@ -1207,76 +1181,11 @@ class PlayState extends MusicBeatState
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
-		iconP2.visible = !ClientPrefs.hideHud;
 		iconP2.alpha = ClientPrefs.healthBarAlpha;
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = false;
-		add(scoreTxt);
-
-		songTxt = new FlxText(20, (ClientPrefs.downScroll ? timeBarBG.y + 30 : timeBarBG.y - 35), 0, SONG.song, 24);
-		songTxt.setFormat(Paths.font("MilkyNice.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		songTxt.scrollFactor.set();
-		songTxt.borderSize = 3;
-		songTxt.visible = !ClientPrefs.hideHud;
-		songTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(songTxt);
-
-		scoreSideTxt = new FlxText(25, (ClientPrefs.downScroll ? songTxt.y + songTxt.height + 10 : songTxt.y - songTxt.height - 10 - (29 * 2)), 0, "", 21);
-		scoreSideTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreSideTxt.borderSize = 3;
-		scoreSideTxt.visible = !ClientPrefs.hideHud;
-		scoreSideTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(scoreSideTxt);
-		// trace(scoreSideTxt.height);
-
-		missesTxt = new FlxText(25, (ClientPrefs.downScroll ? scoreSideTxt.y + scoreSideTxt.height - 5 : songTxt.y - songTxt.height - 10 - 29), 0, "", 21);
-		missesTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		missesTxt.borderSize = 3;
-		missesTxt.visible = !ClientPrefs.hideHud;
-		missesTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(missesTxt);
-		// trace(missesTxt.height);
-
-		acurracyTxt = new FlxText(25, (ClientPrefs.downScroll ? missesTxt.y + missesTxt.height - 5 : songTxt.y - songTxt.height - 10), 0, "", 21);
-		acurracyTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		acurracyTxt.borderSize = 3;
-		acurracyTxt.visible = !ClientPrefs.hideHud;
-		acurracyTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(acurracyTxt);
-
-		sickTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? timeBarBG.y + 35 : timeBarBG.y - 40 - (29 * 3)), 0, "", 21);
-		sickTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		sickTxt.borderSize = 3;
-		sickTxt.visible = !ClientPrefs.hideHud;
-		sickTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(sickTxt);
-
-		goodTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? sickTxt.y + sickTxt.height : timeBarBG.y - 40 - (29 * 2)), 0, "", 21);
-		goodTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		goodTxt.borderSize = 3;
-		goodTxt.visible = !ClientPrefs.hideHud;
-		goodTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(goodTxt);
-
-		badTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? goodTxt.y + goodTxt.height : timeBarBG.y - 40 - 29), 0, "", 21);
-		badTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		badTxt.borderSize = 3;
-		badTxt.visible = !ClientPrefs.hideHud;
-		badTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(badTxt);
-
-		shitTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? badTxt.y + badTxt.height : timeBarBG.y - 40), 0, "", 21);
-		shitTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		shitTxt.borderSize = 3;
-		shitTxt.visible = !ClientPrefs.hideHud;
-		shitTxt.antialiasing = ClientPrefs.globalAntialiasing;
-		add(shitTxt);
+		createHUD(hudStyle);
 
 		weekMissesTxt = new FlxText(-75, weekMissesBar.y + 18, FlxG.width, "", 20);
 		weekMissesTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1303,21 +1212,9 @@ class PlayState extends MusicBeatState
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
-		scoreTxt.cameras = [camHUD];
-		scoreSideTxt.cameras = [camHUD];
-		missesTxt.cameras = [camHUD];
-		acurracyTxt.cameras = [camHUD];
-		songTxt.cameras = [camHUD];
-		sickTxt.cameras = [camHUD];
-		goodTxt.cameras = [camHUD];
-		badTxt.cameras = [camHUD];
-		shitTxt.cameras = [camHUD];
 		weekMissesBar.cameras = [camHUD];
 		weekMissesTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
-		timeBar.cameras = [camHUD];
-		timeBarBG.cameras = [camHUD];
-		timeTxt.cameras = [camHUD];
 		cutsceneText.cameras = [camOther];
 
 		// if (SONG.song == 'South')
@@ -1802,6 +1699,8 @@ class PlayState extends MusicBeatState
 
 	public function updateScore(miss:Bool = false)
 	{
+		if (hudStyle != "Box Funkin")
+			return;
 		// info
 		scoreSideTxt.text = 'Score: ${songScore}';
 		missesTxt.text = 'Misses: ${songMisses}';
@@ -2418,10 +2317,7 @@ class PlayState extends MusicBeatState
 			});
 		}
 
-		if (isStoryMode
-			&& WeekData.getWeekFileName() == 'Week Suicide'
-			&& !ClientPrefs.hideHud
-			&& Paths.formatToSongPath(SONG.song) != 'hellhole')
+		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && Paths.formatToSongPath(SONG.song) != 'hellhole')
 		{
 			weekMissesBar.visible = true;
 			weekMissesTxt.visible = true;
@@ -2495,14 +2391,17 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if (ratingName == '?')
+		if (hudStyle == "Default")
 		{
-			scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		}
-		else
-		{
-			scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%'
-				+ ' [' + ratingFC + ']'; // peeps wanted no integer rating
+			if (ratingName == '?')
+			{
+				scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			}
+			else
+			{
+				scoreTxt.text = 'Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Rating: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%'
+					+ ' [' + ratingFC + ']'; // peeps wanted no integer rating
+			}
 		}
 
 		if (isStoryMode && WeekData.getWeekFileName() == 'Week Suicide' && Paths.formatToSongPath(SONG.song) != 'hellhole')
@@ -2646,7 +2545,13 @@ class PlayState extends MusicBeatState
 					if (secondsTotal < 0)
 						secondsTotal = 0;
 
-					timeTxt.text = '${FlxStringUtil.formatTime(curTime / 1000, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
+					switch (hudStyle)
+					{
+						case "Box Funkin":
+							timeTxt.text = '${FlxStringUtil.formatTime(curTime / 1000, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
+						default:
+							timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+					}
 				}
 			}
 
@@ -3751,7 +3656,7 @@ class PlayState extends MusicBeatState
 		//
 
 		var rating:FlxSprite = new FlxSprite();
-		rating.alpha = scoreTxt.alpha;
+
 		var score:Int = 350;
 
 		// tryna do MS based judgment due to popular demand
@@ -3797,7 +3702,29 @@ class PlayState extends MusicBeatState
 			{
 				songHits++;
 				totalPlayed++;
-				RecalculateRating(false);
+
+				if (ClientPrefs.scoreZoom)
+				{
+					switch (hudStyle)
+					{
+						case "Box Funkin":
+							RecalculateRating(false);
+						default:
+							RecalculateRating(false);
+							if (scoreTxtTween != null)
+							{
+								scoreTxtTween.cancel();
+							}
+							scoreTxt.scale.x = 1.075;
+							scoreTxt.scale.y = 1.075;
+							scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
+								onComplete: function(twn:FlxTween)
+								{
+									scoreTxtTween = null;
+								}
+							});
+					}
+				}
 			}
 		}
 
@@ -3810,6 +3737,14 @@ class PlayState extends MusicBeatState
 			pixelShitPart2 = '-pixel';
 		}
 
+		var daAlpha:Float = switch (hudStyle)
+		{
+			case "Box Funkin":
+				scoreSideTxt.alpha;
+			default:
+				scoreTxt.alpha;
+		};
+
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.cameras = [camHUD];
 		rating.screenCenter();
@@ -3818,9 +3753,10 @@ class PlayState extends MusicBeatState
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
-		rating.visible = (!ClientPrefs.hideHud && showRating);
+		rating.visible = showRating;
 		rating.x += ClientPrefs.comboOffset[0];
 		rating.y -= ClientPrefs.comboOffset[1];
+		rating.alpha = daAlpha;
 
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 		comboSpr.cameras = [camHUD];
@@ -3828,10 +3764,10 @@ class PlayState extends MusicBeatState
 		comboSpr.x = coolText.x;
 		comboSpr.acceleration.y = 600;
 		comboSpr.velocity.y -= 150;
-		comboSpr.visible = (!ClientPrefs.hideHud && showCombo);
+		comboSpr.visible = showCombo;
 		comboSpr.x += ClientPrefs.comboOffset[0];
 		comboSpr.y -= ClientPrefs.comboOffset[1];
-		comboSpr.alpha = scoreTxt.alpha;
+		comboSpr.alpha = daAlpha;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
 		insert(members.indexOf(strumLineNotes), rating);
@@ -3870,7 +3806,7 @@ class PlayState extends MusicBeatState
 			numScore.screenCenter();
 			numScore.x = coolText.x + (43 * daLoop) - 90;
 			numScore.y += 80;
-			numScore.alpha = scoreTxt.alpha;
+			numScore.alpha = daAlpha;
 
 			numScore.x += ClientPrefs.comboOffset[2];
 			numScore.y -= ClientPrefs.comboOffset[3];
@@ -3889,7 +3825,6 @@ class PlayState extends MusicBeatState
 			numScore.acceleration.y = FlxG.random.int(200, 300);
 			numScore.velocity.y -= FlxG.random.int(140, 160);
 			numScore.velocity.x = FlxG.random.float(-5, 5);
-			numScore.visible = !ClientPrefs.hideHud;
 
 			insert(members.indexOf(strumLineNotes), numScore);
 
@@ -5205,8 +5140,8 @@ class PlayState extends MusicBeatState
 		else if (songMisses >= 10)
 			ratingFC = "Clear";
 
-		// s
-		updateScore(badHit);
+		if (hudStyle == "Box Funkin")
+			updateScore(badHit);
 	}
 
 	var curLight:Int = 0;
@@ -5344,5 +5279,156 @@ class PlayState extends MusicBeatState
 		Progression.weekProgress.set(WeekData.getWeekFileName(), {song: song, weekMisees: weekMisses});
 
 		Progression.save();
+	}
+
+	function createHUD(style:String)
+	{
+		switch (style)
+		{
+			case "Box Funkin":
+				scoreGroup = new FlxTypedSpriteGroup<FlxText>();
+
+				var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
+				timeBarBG = new AttachedSprite('timeBar');
+				timeBarBG.setGraphicSize(FlxG.width, 22);
+				timeBarBG.y = (ClientPrefs.downScroll ? 3 : 695);
+				timeBarBG.scrollFactor.set();
+				timeBarBG.updateHitbox();
+				timeBarBG.screenCenter(X);
+				timeBarBG.alpha = 0;
+				add(timeBarBG);
+				timeBarBG.color = FlxColor.BLACK;
+				/*trace(timeBarBG.width);
+				trace(timeBarBG.height); */
+
+				timeTxt = new FlxText(0, (ClientPrefs.downScroll ? timeBarBG.y + 32 : timeBarBG.y - 32), 400, "", 20);
+				timeTxt.setFormat(Paths.font("MilkyNice.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				timeTxt.alpha = 0;
+				timeTxt.borderSize = 3;
+				timeTxt.screenCenter(X);
+				timeTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				updateTime = true;
+
+				timeBar = new FlxBar(timeBarBG.x + 12, timeBarBG.y + 5, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 24), 13, this, 'songPercent', 0, 1);
+				timeBar.scrollFactor.set();
+				timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+				timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+				timeBar.alpha = 0;
+				timeBar.screenCenter(X);
+				add(timeBar);
+				add(timeTxt);
+				songTxt = new FlxText(20, (ClientPrefs.downScroll ? timeBarBG.y + 30 : timeBarBG.y - 35), 0, SONG.song, 24);
+				songTxt.setFormat(Paths.font("MilkyNice.ttf"), 24, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				songTxt.scrollFactor.set();
+				songTxt.borderSize = 3;
+				songTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(songTxt);
+
+				scoreSideTxt = new FlxText(25, (ClientPrefs.downScroll ? songTxt.y + songTxt.height + 10 : songTxt.y - songTxt.height - 10 - (29 * 2)), 0, "",
+					21);
+				scoreSideTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreSideTxt.borderSize = 3;
+				scoreSideTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(scoreSideTxt);
+				// trace(scoreSideTxt.height);
+
+				missesTxt = new FlxText(25, (ClientPrefs.downScroll ? scoreSideTxt.y + scoreSideTxt.height - 5 : songTxt.y - songTxt.height - 10 - 29), 0, "",
+					21);
+				missesTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				missesTxt.borderSize = 3;
+				missesTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(missesTxt);
+				// trace(missesTxt.height);
+
+				acurracyTxt = new FlxText(25, (ClientPrefs.downScroll ? missesTxt.y + missesTxt.height - 5 : songTxt.y - songTxt.height - 10), 0, "", 21);
+				acurracyTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				acurracyTxt.borderSize = 3;
+				acurracyTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(acurracyTxt);
+
+				sickTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? timeBarBG.y + 35 : timeBarBG.y - 40 - (29 * 3)), 0, "", 21);
+				sickTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				sickTxt.borderSize = 3;
+				sickTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(sickTxt);
+
+				goodTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? sickTxt.y + sickTxt.height : timeBarBG.y - 40 - (29 * 2)), 0, "", 21);
+				goodTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				goodTxt.borderSize = 3;
+				goodTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(goodTxt);
+
+				badTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? goodTxt.y + goodTxt.height : timeBarBG.y - 40 - 29), 0, "", 21);
+				badTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				badTxt.borderSize = 3;
+				badTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(badTxt);
+
+				shitTxt = new FlxText(FlxG.width - 140, (ClientPrefs.downScroll ? badTxt.y + badTxt.height : timeBarBG.y - 40), 0, "", 21);
+				shitTxt.setFormat(Paths.font("MilkyNice.ttf"), 21, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				shitTxt.borderSize = 3;
+				shitTxt.antialiasing = ClientPrefs.globalAntialiasing;
+				scoreGroup.add(shitTxt);
+
+				add(scoreGroup);
+
+				scoreGroup.cameras = [camHUD];
+				timeBar.cameras = [camHUD];
+				timeBarBG.cameras = [camHUD];
+				timeTxt.cameras = [camHUD];
+			default:
+				scoreGroup = new FlxTypedSpriteGroup<FlxText>();
+
+				var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
+				timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
+				timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				timeTxt.scrollFactor.set();
+				timeTxt.alpha = 0;
+				timeTxt.borderSize = 2;
+				timeTxt.visible = showTime;
+				if (ClientPrefs.downScroll)
+					timeTxt.y = FlxG.height - 44;
+
+				if (ClientPrefs.timeBarType == 'Song Name')
+				{
+					timeTxt.text = SONG.song;
+				}
+				updateTime = showTime;
+
+				timeBarBG = new AttachedSprite('timeBar');
+				timeBarBG.x = timeTxt.x;
+				timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
+				timeBarBG.scrollFactor.set();
+				timeBarBG.alpha = 0;
+				timeBarBG.visible = showTime;
+				timeBarBG.color = FlxColor.BLACK;
+				timeBarBG.xAdd = -4;
+				timeBarBG.yAdd = -4;
+				add(timeBarBG);
+
+				timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
+					'songPercent', 0, 1);
+				timeBar.scrollFactor.set();
+				timeBar.createFilledBar(0xFF000000, 0xFF7D808E);
+				timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+				timeBar.alpha = 0;
+				timeBar.visible = showTime;
+				add(timeBar);
+				add(timeTxt);
+				timeBarBG.sprTracker = timeBar;
+
+				scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
+				scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreTxt.scrollFactor.set();
+				scoreTxt.borderSize = 1.25;
+				scoreGroup.add(scoreTxt);
+
+				add(scoreGroup);
+
+				scoreGroup.cameras = [camHUD];
+				timeBar.cameras = [camHUD];
+				timeBarBG.cameras = [camHUD];
+				timeTxt.cameras = [camHUD];
+		}
 	}
 }

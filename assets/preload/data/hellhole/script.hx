@@ -184,7 +184,7 @@ function onStepHit()
 			PlayState.addCinematicBars(1.5);
 
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -216,7 +216,7 @@ function onStepHit()
 			PlayState.camHUD.visible = true;
 
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -239,7 +239,7 @@ function onStepHit()
 			PlayState.addCinematicBars(1);
 
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,

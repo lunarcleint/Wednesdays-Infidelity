@@ -97,7 +97,7 @@ function onStepHit()
 				PlayState.healthBarBG,
 				PlayState.iconP1,
 				PlayState.iconP2,
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -119,7 +119,7 @@ function onStepHit()
 				PlayState.healthBarBG,
 				PlayState.iconP1,
 				PlayState.iconP2,
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -191,7 +191,7 @@ function onStepHit()
 				PlayState.healthBarBG,
 				PlayState.iconP1,
 				PlayState.iconP2,
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.botplayTxt
 			];
 			PlayState.strumLineNotes.forEach(function(spr)
@@ -225,7 +225,7 @@ function onStepHit()
 				PlayState.healthBarBG,
 				PlayState.iconP1,
 				PlayState.iconP2,
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.botplayTxt,
 			];
 

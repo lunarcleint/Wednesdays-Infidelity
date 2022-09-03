@@ -18,7 +18,7 @@ function onStepHit()
 		case 511:
 			PlayState.addCinematicBars(1, 5);
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -35,7 +35,7 @@ function onStepHit()
 		case 1023:
 			PlayState.addCinematicBars(1, 5);
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -52,7 +52,7 @@ function onStepHit()
 		case 623:
 			PlayState.removeCinematicBars(0.2);
 			var arr = [
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,

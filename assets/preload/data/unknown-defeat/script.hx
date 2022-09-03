@@ -13,14 +13,14 @@ function onStepHit()
 	switch (curStep)
 	{
 		case 1:
-			PlayState.addCinematicBars(0.5,6);
+			PlayState.addCinematicBars(0.5, 6);
 			FlxTween.tween(PlayState.camHUD, {alpha: 0}, 0.5);
 		case 64:
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 0.2);
 		case 192:
 			PlayState.removeCinematicBars(0.5);
 		case 1215:
-			PlayState.addCinematicBars(0.5,9);
+			PlayState.addCinematicBars(0.5, 9);
 			PlayState.defaultCamZoom = 0.65;
 			PlayState.followChars = false;
 			PlayState.camFollow.x = 600;
@@ -37,7 +37,7 @@ function onStepHit()
 				PlayState.iconP2,
 				PlayState.healthBar,
 				PlayState.healthBarBG
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
@@ -62,7 +62,7 @@ function onStepHit()
 				PlayState.iconP2,
 				PlayState.healthBar,
 				PlayState.healthBarBG
-				PlayState.scoreTxt,
+				PlayState.scoreGroup,
 				PlayState.timeBar,
 				PlayState.timeBarBG,
 				PlayState.timeTxt,
