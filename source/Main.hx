@@ -1,6 +1,7 @@
 package;
 
 import data.ClientPrefs;
+import data.CppAPI;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
@@ -142,5 +143,7 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
+
+		// CppAPI.darkMode(); thats stupid lol
 	}
 }

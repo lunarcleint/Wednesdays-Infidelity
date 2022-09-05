@@ -67,6 +67,8 @@ class Init extends FlxState
 
 		Progression.load();
 
+		CppAPI.darkMode();
+
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
 		CoolUtil.precacheImage('kevin_normal', 'preload');
 
@@ -89,6 +91,6 @@ class Init extends FlxState
 		Paths.excludeAsset('assets/shared/images/NOTE_assets.png');
 		CoolUtil.precacheImage('NOTE_assets', 'shared');
 
-		FlxG.switchState(Type.createInstance(Main.initialState, []));
+		FlxG.switchState(Type.createInstance(SpecsDetector, []));
 	}
 }

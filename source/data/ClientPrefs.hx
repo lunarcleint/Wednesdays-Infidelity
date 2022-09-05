@@ -43,7 +43,7 @@ class ClientPrefs
 	public static var shaders:Bool = true;
 	public static var intensiveShaders:Bool = true;
 	public static var doNotShowWarnings:Bool = false;
-	public static var hudStyle = "Default";
+	public static var hudStyle = "Box Funkin";
 
 	// Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
