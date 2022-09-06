@@ -466,7 +466,7 @@ class TitleState extends MusicBeatState
 				case 63:
 					if (ClientPrefs.shake)
 					{
-						FlxG.camera.shake(0.004, 99999999999);
+						FlxG.camera.shake(0.004, 9999999999);
 					}
 					if (bloom != null)
 						bloom.setSize(18.0);
@@ -482,12 +482,6 @@ class TitleState extends MusicBeatState
 				case 97:
 					deleteCoolText();
 				case 108:
-					if (distort != null)
-						distort.shader.working.value = [false];
-
-					if (ClientPrefs.flashing)
-						flickerMickey(null);
-
 					skipIntro();
 			}
 		}
@@ -501,9 +495,21 @@ class TitleState extends MusicBeatState
 		{
 			remove(ngSpr);
 
+			if (ClientPrefs.shake)
+			{
+				FlxG.camera.shake(0.004, 9999999999);
+			}
+
+			if (distort != null)
+				distort.shader.working.value = [false];
+
+			if (ClientPrefs.flashing)
+				flickerMickey(null);
+
 			FlxG.camera.flash(FlxColor.BLACK, 2.3, null, true);
 			FlxG.camera.zoom = 1.2;
 
+			FlxG.sound.music.time = 15800;
 			FlxTween.tween(FlxG.camera, {zoom: 1}, 1.8, {ease: FlxEase.circOut});
 
 			remove(credGroup);
@@ -528,7 +534,7 @@ class TitleState extends MusicBeatState
 
 	function doChrome(T:FlxTimer, ?setChrom:Bool = true)
 	{
-		if (!ClientPrefs.shaders)
+		if (!ClientPrefs.shaders || skippedIntro)
 			return;
 
 		if (T != null)

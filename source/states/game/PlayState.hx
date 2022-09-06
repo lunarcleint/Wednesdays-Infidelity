@@ -1071,12 +1071,6 @@ class PlayState extends MusicBeatState
 		add(strumLineNotes);
 		add(grpNoteSplashes);
 
-		if (ClientPrefs.timeBarType == 'Song Name')
-		{
-			timeTxt.size = 24;
-			timeTxt.y += 3;
-		}
-
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.0;
@@ -2538,17 +2532,19 @@ class PlayState extends MusicBeatState
 					songPercent = (curTime / songLength);
 
 					var songCalc:Float = (songLength - curTime);
-					if (ClientPrefs.timeBarType == 'Time Elapsed')
+					if (hudStyle == 'Box Funkin')
 						songCalc = curTime;
 
 					var secondsTotal:Int = Math.floor(songCalc / 1000);
 					if (secondsTotal < 0)
 						secondsTotal = 0;
+					else if (secondsTotal >= Math.floor(songLength / 1000))
+						secondsTotal = Math.floor(songLength / 1000);
 
 					switch (hudStyle)
 					{
 						case "Box Funkin":
-							timeTxt.text = '${FlxStringUtil.formatTime(curTime / 1000, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
+							timeTxt.text = '${FlxStringUtil.formatTime(secondsTotal, false)} - ${FlxStringUtil.formatTime(Math.floor(songLength / 1000), false)}';
 						default:
 							timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 					}
