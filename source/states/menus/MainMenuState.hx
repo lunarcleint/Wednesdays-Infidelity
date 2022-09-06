@@ -1,9 +1,11 @@
 package states.menus;
 
 import data.ClientPrefs;
+import data.CppAPI;
 import data.Highscore;
 import data.Progression;
 import data.Song;
+import data.WindowsData;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -18,11 +20,13 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.tweens.misc.NumTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxSignal.IFlxSignal;
 import flixel.util.FlxTimer;
 import lime.app.Application;
 import lime.graphics.Image;
+import lime.tools.WindowData;
 import openfl.Lib;
 import states.editors.MasterEditorMenu;
 import states.game.CutsceneState;
@@ -342,12 +346,30 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = false;
 				}, function()
 				{
+					#if cpp
+					CppAPI._setWindowLayered();
+
+					var numTween:NumTween = FlxTween.num(1, 0, 1, {
+						onComplete: function(twn:FlxTween)
+						{
+							Sys.exit(0);
+						}
+					});
+
+					numTween.onUpdate = function(twn:FlxTween)
+					{
+						#if windows
+						CppAPI.setWindowOppacity(numTween.value);
+						#end
+					}
+					#else
 					FlxTween.tween(FlxG.camera, {alpha: 0}, 1, {
 						onComplete: function(twn:FlxTween)
 						{
 							Sys.exit(0);
 						}
 					});
+					#end
 					FlxTween.tween(FlxG.sound, {volume: 0}, 1);
 				}));
 			}

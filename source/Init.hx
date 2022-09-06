@@ -61,13 +61,13 @@ class Init extends FlxState
 		});
 		#end
 
-		Lib.application.window.focus();
-
 		ClientPrefs.loadDefaultKeys();
 
 		Progression.load();
 
+		#if cpp
 		CppAPI.darkMode();
+		#end
 
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
 		CoolUtil.precacheImage('kevin_normal', 'preload');

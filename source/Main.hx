@@ -143,7 +143,5 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
-
-		// CppAPI.darkMode(); thats stupid lol
 	}
 }

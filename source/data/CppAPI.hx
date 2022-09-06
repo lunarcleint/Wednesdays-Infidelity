@@ -2,6 +2,7 @@ package data;
 
 class CppAPI
 {
+	#if cpp
 	public static function obtainRAM():Int
 	{
 		return WindowsData.obtainRAM();
@@ -9,6 +10,22 @@ class CppAPI
 
 	public static function darkMode()
 	{
-		WindowsData.setWindowToDarkMode();
+		WindowsData.setWindowColorMode(DARK);
 	}
+
+	public static function lightMode()
+	{
+		WindowsData.setWindowColorMode(LIGHT);
+	}
+
+	public static function setWindowOppacity(a:Float)
+	{
+		WindowsData.setWindowAlpha(a);
+	}
+
+	public static function _setWindowLayered()
+	{
+		WindowsData._setWindowLayered();
+	}
+	#end
 }
