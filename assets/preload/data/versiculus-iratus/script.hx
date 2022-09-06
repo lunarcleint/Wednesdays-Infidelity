@@ -241,6 +241,9 @@ function onStepHit()
 		case 1519:
 			PlayState.satanlaugh.alpha = 1;
 			PlayState.satanlaugh.animation.play('scape');
+
+			// Being nice :) -lunar
+			PlayState.health += 0.4;
 		case 1528:
 			var objs = [
 				PlayState.scoreGroup,

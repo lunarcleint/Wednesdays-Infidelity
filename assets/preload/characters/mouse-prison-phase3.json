@@ -63,12 +63,12 @@
 		80,
 		370
 	],
-	"healthicon": "face",
+	"healthicon": "mickeyprison",
 	"flip_x": true,
 	"healthbar_colors": [
-		95,
-		103,
-		91
+		127,
+		130,
+		126
 	],
 	"camera_position": [
 		0,
