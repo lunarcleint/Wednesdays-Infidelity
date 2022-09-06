@@ -2442,9 +2442,31 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (FlxG.keys.justPressed.ENTER && canPause && startedCountdown && !inCutscene)
+		if (controls.PAUSE && canPause && startedCountdown && !inCutscene)
 		{
-			diablo();
+			if (isStoryMode)
+				diablo();
+			else
+			{
+				persistentUpdate = false;
+				persistentDraw = true;
+				paused = true;
+
+				if (FlxG.sound.music != null)
+				{
+					FlxG.sound.music.pause();
+					vocals.pause();
+				}
+				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+
+				#if desktop
+				#if PRIVATE_BUILD
+				DiscordClient.changePresence(detailsPausedText, "CLASSIFIED", 'face'); // make sure to remove for public build
+				#else
+				DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
+				#end
+				#end
+			}
 		}
 
 		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
