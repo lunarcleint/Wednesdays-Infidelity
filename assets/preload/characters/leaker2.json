@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-5,
 				2
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER 2 IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "LEAKER 2 IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-31,
 				-7
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "leaker 2 DOWN0",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "leaker 2 DOWN0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				81,
-				247
+				241
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER 2 UP",
+			"anim": "singUP",
+			"indices": [],
+			"name": "LEAKER 2 UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				287,
+				3
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LEAKER 2 LEFT",
 			"indices": []
 		},
 		{
-			"offsets": [
-				299,
-				3
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEAKER 2 LEFT"
-		},
-		{
 			"offsets": [
-				-110,
-				-44
+				-109,
+				-36
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "LEAKER 2 RIGHT"
+			"fps": 24,
+			"name": "LEAKER 2 RIGHT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				117,
 				15
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "floss",
-			"loop": true,
-			"name": "floss"
+			"fps": 24,
+			"name": "floss",
+			"indices": []
 		},
 		{
-			"offsets": [
-				20,
-				33
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "kiss ass",
 			"loop": false,
-			"name": "Leaker amante del poto"
+			"offsets": [
+				-7,
+				40
+			],
+			"anim": "kiss ass",
+			"fps": 24,
+			"name": "Leaker amante del poto",
+			"indices": []
 		}
 	],
 	"dataType": "JSON",
@@ -86,7 +86,7 @@
 		120
 	],
 	"healthicon": "leakers",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		56,
 		59,
