@@ -1,48 +1,48 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-327,
 				-334
 			],
-			"anim": "deathLoop",
+			"loop": true,
 			"fps": 24,
-			"name": "LEAKERS DEATH LOOP",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "LEAKERS DEATH LOOP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-303,
 				-140
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKERS DEATH CONFIRM",
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "LEAKERS DEATH CONFIRM"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-137,
+				130
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "LEAKERS DEATH0",
 			"indices": []
 		},
 		{
 			"offsets": [
-				0,
-				0
+				154,
+				270
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "shoot",
 			"loop": false,
 			"name": "LEAKERS BALACEADOS"
-		},
-		{
-			"offsets": [
-				-137,
-				130
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "firstDeath",
-			"loop": false,
-			"name": "LEAKERS DEATH0"
 		}
 	],
 	"dataType": "JSON",

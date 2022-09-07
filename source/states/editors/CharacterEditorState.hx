@@ -84,6 +84,8 @@ class CharacterEditorState extends MusicBeatState
 	var cameraFollowPointer:FlxSprite;
 	var healthBarBG:FlxSprite;
 
+	var bf:Character;
+
 	override function create()
 	{
 		// FlxG.sound.playMusic(Paths.music('breakfast'), 0.5);
@@ -103,6 +105,12 @@ class CharacterEditorState extends MusicBeatState
 		add(bgLayer);
 		charLayer = new FlxTypedGroup<Character>();
 		add(charLayer);
+
+		bf = new Character(400, 350, "leaker1");
+		bf.color = 0xFF000000;
+		bf.alpha = 1 / 3;
+		bf.visible = true;
+		add(bf);
 
 		var pointer:FlxGraphic = FlxGraphic.fromClass(GraphicCursorCross);
 		cameraFollowPointer = new FlxSprite().loadGraphic(pointer);
@@ -1177,6 +1185,8 @@ class CharacterEditorState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		bf.flipX = !char.isPlayer;
+
 		if (char.animationsArray[curAnim] != null)
 		{
 			textAnim.text = char.animationsArray[curAnim].anim;

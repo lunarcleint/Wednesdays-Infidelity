@@ -775,6 +775,7 @@ class PlayState extends MusicBeatState
 				osbaldo.updateHitbox();
 				osbaldo.setPosition(1300, 150);
 				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, false);
+				osbaldo.animation.addByPrefix('die', 'OSWALD MANCO NO PUSO PARED', 24, false);
 				osbaldo.scrollFactor.set(1.05, 1.05);
 				osbaldo.antialiasing = ClientPrefs.globalAntialiasing;
 				osbaldo.scale.set(0.96, 0.96);
@@ -2374,6 +2375,11 @@ class PlayState extends MusicBeatState
 
 		switch (boyfriend.curCharacter)
 		{
+			case "leaker1" | "leaker2":
+				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
+				GameOverSubstate.loopSoundName = 'gameOver';
+				GameOverSubstate.endSoundName = 'gameOverEnd';
+				GameOverSubstate.characterName = 'leakersdead';
 			case "bf-sus":
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx';
 				GameOverSubstate.loopSoundName = 'gameOver';
@@ -2482,24 +2488,35 @@ class PlayState extends MusicBeatState
 				diablo();
 			else
 			{
-				persistentUpdate = false;
-				persistentDraw = true;
-				paused = true;
-
-				if (FlxG.sound.music != null)
+				switch (PlayState.SONG.stage)
 				{
-					FlxG.sound.music.pause();
-					vocals.pause();
-				}
-				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+					case "susNightmare" | "fence":
+						diablo();
+					default:
+						if (curSong == 'hellhole')
+							diablo();
+						else
+						{
+							persistentUpdate = false;
+							persistentDraw = true;
+							paused = true;
 
-				#if desktop
-				#if PRIVATE_BUILD
-				DiscordClient.changePresence(detailsPausedText, "CLASSIFIED", 'face'); // make sure to remove for public build
-				#else
-				DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
-				#end
-				#end
+							if (FlxG.sound.music != null)
+							{
+								FlxG.sound.music.pause();
+								vocals.pause();
+							}
+							openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+
+							#if desktop
+							#if PRIVATE_BUILD
+							DiscordClient.changePresence(detailsPausedText, "CLASSIFIED", 'face'); // make sure to remove for public build
+							#else
+							DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
+							#end
+							#end
+						}
+				}
 			}
 		}
 
@@ -5096,7 +5113,8 @@ class PlayState extends MusicBeatState
 			case 'stageLeakers':
 				if (curBeat % 2 == 0)
 				{
-					osbaldo.animation.play('idle', true);
+					if (curBeat < 502)
+						osbaldo.animation.play('idle', true);
 					devs.animation.play('idle', true);
 				}
 				if (!danceLeft && !trumpetsPlaying)

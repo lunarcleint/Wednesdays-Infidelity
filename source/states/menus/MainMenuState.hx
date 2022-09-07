@@ -54,12 +54,10 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		#if ACHIEVEMENTS_ALLOWED
-		'awards',
+		#if ACHIEVEMENTS_ALLOWED 'awards',
 		#end
 		'credits',
-		#if !switch
-		'discord',
+		#if !switch 'discord',
 		#end
 		'options'
 	];
@@ -331,12 +329,14 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
+			#if PRIVATE_BUILD
 			#if desktop
 			else if (FlxG.keys.justPressed.SEVEN)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
+			#end
 			#end
 			if (#if PRIVATE_BUILD true #else Progression.beatMainWeek #end && FlxG.keys.justPressed.DELETE)
 			{
