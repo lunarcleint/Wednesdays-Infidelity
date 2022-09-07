@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Mickey_Among_us_lebronjames.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="NeedleDown0000" x="0" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0001" x="805" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0002" x="805" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0003" x="1610" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0004" x="1610" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0005" x="1610" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0006" x="2415" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0007" x="2415" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0008" x="2415" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0009" x="2415" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleDown0010" x="2415" y="0" width="795" height="813"/>
+	<SubTexture name="NeedleIdle0000" x="3220" y="0" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0001" x="0" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0002" x="0" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0003" x="717" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0004" x="717" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0005" x="1434" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0006" x="1434" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0007" x="1434" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0008" x="2151" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0009" x="2151" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0010" x="2151" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0011" x="2868" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0012" x="2868" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0013" x="2868" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleIdle0014" x="2868" y="823" width="707" height="782"/>
+	<SubTexture name="NeedleLeft0000" x="0" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0001" x="1007" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0002" x="1007" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0003" x="2014" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0004" x="2014" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0005" x="3021" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0006" x="3021" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0007" x="3021" y="1615" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0008" x="0" y="2405" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0009" x="0" y="2405" width="997" height="780"/>
+	<SubTexture name="NeedleLeft0010" x="0" y="2405" width="997" height="780"/>
+	<SubTexture name="NeedleRight0000" x="1007" y="2405" width="838" height="794"/>
+	<SubTexture name="NeedleRight0001" x="1855" y="2405" width="838" height="794"/>
+	<SubTexture name="NeedleRight0002" x="1855" y="2405" width="838" height="794"/>
+	<SubTexture name="NeedleRight0003" x="2703" y="2405" width="838" height="794"/>
+	<SubTexture name="NeedleRight0004" x="2703" y="2405" width="838" height="794"/>
+	<SubTexture name="NeedleRight0005" x="0" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleRight0006" x="0" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleRight0007" x="0" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleRight0008" x="848" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleRight0009" x="848" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleRight0010" x="848" y="3209" width="838" height="794"/>
+	<SubTexture name="NeedleUp0000" x="1696" y="3209" width="834" height="830"/>
+	<SubTexture name="NeedleUp0001" x="2540" y="3209" width="834" height="830"/>
+	<SubTexture name="NeedleUp0002" x="2540" y="3209" width="834" height="830"/>
+	<SubTexture name="NeedleUp0003" x="0" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0004" x="0" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0005" x="844" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0006" x="844" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0007" x="844" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0008" x="1688" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0009" x="1688" y="4049" width="834" height="830"/>
+	<SubTexture name="NeedleUp0010" x="1688" y="4049" width="834" height="830"/>
+</TextureAtlas>
