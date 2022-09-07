@@ -3588,14 +3588,17 @@ class PlayState extends MusicBeatState
 
 				if (WeekData.getWeekFileName() == 'Week Suicide')
 				{
-					switch (lastSong.toLowerCase())
+					if (!cpuControlled && !practiceMode)
 					{
-						case 'unknown-suffering' | 'unknown suffering':
-							storyPlaylist[storyPlaylist.length] = weekMisses >= 30 ? 'last-day' : 'sunsets';
+						switch (lastSong.toLowerCase())
+						{
+							case 'unknown-suffering' | 'unknown suffering':
+								storyPlaylist[storyPlaylist.length] = weekMisses >= 30 ? 'last-day' : 'sunsets';
 
-							Progression.beatMainWeek = true;
+								Progression.beatMainWeek = true;
 
-							Progression.save();
+								Progression.save();
+						}
 					}
 				}
 

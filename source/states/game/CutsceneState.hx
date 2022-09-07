@@ -63,6 +63,9 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 		{
 			switch (StringTools.replace(songName.toLowerCase(), '-', ' '))
 			{
+				case 'sunsets':
+					video = "Good ending cinematica";
+					skippable = Progression.goodEnding;
 				case 'hellhole':
 					video = "HellholeIntro";
 					skippable = Progression.beatHell;
