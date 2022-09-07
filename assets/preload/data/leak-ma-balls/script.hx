@@ -210,7 +210,7 @@ function onStepHit()
 			}
 		case 2006:
 			PlayState.osbaldo.animation.play('die', true);
-			PlayState.osbaldo.offset.set(0.6, 4.8);
+			PlayState.osbaldo.setPosition(PlayState.osbaldo.x - 6, PlayState.osbaldo.y - 48); // the offsets doesn't work
 		case 2021:
 			if (PlayState.gf != null)
 				PlayState.gf.visible = false;

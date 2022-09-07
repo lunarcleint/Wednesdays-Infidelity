@@ -787,7 +787,7 @@ class PlayState extends MusicBeatState
 				devs.animation.addByPrefix('idle', 'DEVS', 24, false);
 				devs.scale.set(1.2, 1.2);
 				devs.updateHitbox();
-				devs.setPosition(200, 100);
+				devs.setPosition(100, 105);
 				devs.scrollFactor.set(1.05, 1.05);
 				devs.antialiasing = ClientPrefs.globalAntialiasing;
 
