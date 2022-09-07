@@ -68,38 +68,37 @@ class CreditsState extends MusicBeatState
 			[
 				'Nugget',
 				'Nugget',
-				'Co Director, Artist',
+				'Co Director, Icon, Thumbail, Logo and Sprite Artist',
 				'https://twitter.com/NuggetNightmare',
 				'6e034b'
 			],
 			[
 				'Cape',
 				'Cape',
-				'Main Charter & Extra Coder',
+				'Main charter of 13 songs and Coder',
 				'https://twitter.com/c4peletini',
 				'242846'
 			],
-			['Zero', 'Zero', 'Art Director', 'https://twitter.com/zero_artist02', '003333'],
-			['Kyz', 'Kyz', 'leaker', 'https://twitter.com/as_cookie', '362526'],
+			['Zero', 'Zero', 'Story Writer, Art Director, Sprite Artist and BG Artist', 'https://twitter.com/zero_artist02', '003333'],
 			[
 				'Kass8tto',
 				'Kass8tto',
-				'Background Artist',
+				'Part 1 background artist and part 2 among us sprite artist',
 				'https://twitter.com/Kass8tto',
 				'cccccc'
 			],
 			['Lunar', 'Lunar', 'Main Programmer', 'https://twitter.com/lunarcleint', '6757f3'],
 			['Jloor', 'Jloor', 'Programmer', 'https://twitter.com/GamerJloor', 'fdc4ad'],
-			["Sandi", "Sandi", "Musician", "https://www.twitter.com/Sandi334_", "eaeaea"],
-			["GoddessAwe", 'Awe', 'Musician', 'https://twitter.com/GoddessAwe', "3e2c6b"],
+			["Sandi", "Sandi", "Hellhole, Untold Loneliness, Vesania and Spring March musician", "https://www.twitter.com/Sandi334_", "eaeaea"],
+			["Awe", 'Awe', 'U.S, Versiculus Iratus, Needlemouse and Leak ma balls musician.', 'https://twitter.com/GoddessAwe', "3e2c6b"],
 			[
 				"Lean",
 				'Lean',
-				'Musician, Programmer, Animation Helper, and Sound Effects',
+				'Extra Musician, Coder, Animation Helper, and Sound Effects',
 				'https://twitter.com/NewLeandapper',
 				"816954"
 			],
-			["Flaconadir", 'Flaco', 'Musician', 'https://youtube.com/c/Flaconadir', "9b2526"],
+			["Flaconadir", 'Flaco', 'Cheddar week musician. Mickey and Oswald VA', 'https://youtube.com/c/Flaconadir', "9b2526"],
 			[
 				"Tok",
 				'Tok',
@@ -109,37 +108,30 @@ class CreditsState extends MusicBeatState
 			],
 			["Royal", 'Royal', 'Coder', 'https://twitter.com/CoderRoyal', "e3baf7"],
 			[
-				"Adam McHummus",
-				'Adam',
-				'Musician',
-				'https://www.youtube.com/channel/UCj1F2IQFcqZqfuyljtxgpXQ',
-				"4287f5"
-			],
-			[
 				"Marco Antonio",
 				'Marco',
-				'Artist, Album Artist',
+				'Among us sprite animator and oswald album artist',
 				'https://twitter.com/MarcoJurez19',
 				"f5d482"
-			],
-			[
-				"Clowfoe",
-				'Clowfoe',
-				'being clowfoe and also supervising the sus week',
-				'https://www.youtube.com/c/Clowfoe',
-				"f54e42"
 			],
 			["iKenny", 'Kenny', 'Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
 			[
 				"ReddudeXD",
 				'Reddude',
-				'Artist and Musician',
+				'Carnival in toyland Musician',
 				'https://twitter.com/reddudemodderxd',
 				"c9514b"
 			],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
 			["Special Thanks"],
+			[
+				"Adam McHummus",
+				'Adam',
+				'Corpse Base Musician',
+				'https://www.youtube.com/channel/UCj1F2IQFcqZqfuyljtxgpXQ',
+				"4287f5"
+			],
 			[
 				"FNF D-SIDES TEAM",
 				'D-side credits ',
@@ -205,6 +197,14 @@ class CreditsState extends MusicBeatState
 				"https://www.youtube.com/c/bbpanzuRulesSoSubscribeplz123",
 				"238a07"
 			],
+			[
+				"Clowfoe",
+				'Clowfoe',
+				'being clowfoe',
+				'https://www.youtube.com/c/Clowfoe',
+				"f54e42"
+			],
+			['Kyz', 'Kyz', 'leaker', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', '362526'],
 		];
 
 		for (i in pisspoop)
