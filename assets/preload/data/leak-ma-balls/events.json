@@ -342,16 +342,19 @@
 				]
 			],
 			[
-				213428.571428571,
+				216428.571428571,
 				[
 					[
-						"camGame Off",
-						"",
-						""
+						"Change Character",
+						"bf",
+						"leakersdead"
+					],
+					[
+						"Play Animation",
+						"shoot",
+						"bf"
 					]
-				],
-				null,
-				""
+				]
 			]
 		],
 		"notes": [],

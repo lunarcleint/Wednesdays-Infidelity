@@ -199,5 +199,11 @@ function onStepHit()
 					}
 				});
 			}
+		case 2008:
+			PlayState.osbaldo.animation.play('die', true);
+			PlayState.osbaldo.offset.set(6, 58 / 10);
+		case 2021:
+			if (PlayState.gf != null)
+				PlayState.gf.visible = false;
 	}
 }
