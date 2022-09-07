@@ -80,13 +80,7 @@ class CreditsState extends MusicBeatState
 				'242846'
 			],
 			['Zero', 'Zero', 'Art Director', 'https://twitter.com/zero_artist02', '003333'],
-			[
-				'Kyz',
-				'Kyz',
-				'Main Background Artist',
-				'https://twitter.com/as_cookie',
-				'362526'
-			],
+			['Kyz', 'Kyz', 'leaker', 'https://twitter.com/as_cookie', '362526'],
 			[
 				'Kass8tto',
 				'Kass8tto',
@@ -113,6 +107,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/ThatOne_Kid39',
 				"725980"
 			],
+			["Royal", 'Royal', 'Coder', 'https://twitter.com/CoderRoyal', "e3baf7"],
 			[
 				"Adam McHummus",
 				'Adam',
@@ -121,9 +116,16 @@ class CreditsState extends MusicBeatState
 				"4287f5"
 			],
 			[
+				"Marco Antonio",
+				'Marco',
+				'Artist, Album Artist',
+				'https://twitter.com/MarcoJurez19',
+				"f5d482"
+			],
+			[
 				"Clowfoe",
 				'Clowfoe',
-				'being clowfoe',
+				'being clowfoe and also supervising the sus week',
 				'https://www.youtube.com/c/Clowfoe',
 				"f54e42"
 			],
@@ -137,15 +139,43 @@ class CreditsState extends MusicBeatState
 			],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
-			["Specail Thanks"],
+			["Special Thanks"],
 			[
-				"Prob someone here",
-				'Awe',
-				'Musician',
-				'https://twitter.com/GoddessAwe',
-				"3e2c6b"
+				"FNF D-SIDES TEAM",
+				'D-side credits ',
+				'Using the D-Sides Concept for Oswald',
+				'https://gamebanana.com/mods/305122',
+				"dee4ff"
 			],
-			["Coder Specail Thanks"],
+			[
+				"FNF Antipathy TEAM",
+				'Cover credits',
+				'Originally made Battered',
+				'https://gamebanana.com/mods/325348',
+				"dee4ff"
+			],
+			[
+				"KaranXD",
+				'Cover credits',
+				'Made the remixed Accelerant Instrumental used here',
+				'https://twitter.com/karanxd_',
+				"dee4ff"
+			],
+			[
+				"FNF Online VS. TEAM",
+				'Cover credits',
+				'Originally made Accelerant',
+				'https://gamebanana.com/mods/286594',
+				"dee4ff"
+			],
+			[
+				"FNF VS Sonic.EXE TEAM",
+				'Cover credits',
+				'Originally made Too Slow Encore',
+				'https://gamebanana.com/mods/316022',
+				"dee4ff"
+			],
+			["Coder Special Thanks"],
 			[
 				"Shader Toy",
 				"none",
