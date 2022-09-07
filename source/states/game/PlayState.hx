@@ -301,6 +301,10 @@ class PlayState extends MusicBeatState
 	var devs:FlxSprite;
 	var osbaldo:FlxSprite;
 
+	// juliansito
+	var pipipis:BGSprite;
+	var toylandS:BGSprite;
+
 	// Vesania
 	var satanBG:FlxSprite;
 	var smallDemons:FlxSprite;
@@ -418,8 +422,8 @@ class PlayState extends MusicBeatState
 		"toyland" => {
 			dadPos: [450.95, 520], // xx
 			bfPos: [852.9, 530], // xx2
-			bfZoom: 1, // mushitsection == true
-			dadZoom: 0.8, // mushitsection == false
+			bfZoom: 0.45, // mushitsection == true
+			dadZoom: 0.45, // mushitsection == false
 		},
 		"vecindario" => {
 			dadPos: [420.95, 513], // xx
@@ -508,6 +512,8 @@ class PlayState extends MusicBeatState
 	var scoreGroup:FlxTypedSpriteGroup<FlxText>;
 
 	var hudStyle:String = "Default";
+
+	var stageTweens:Array<FlxTween> = [];
 
 	override public function create()
 	{
@@ -886,8 +892,10 @@ class PlayState extends MusicBeatState
 				basedSkeletons.scrollFactor.set(0.85, 0.9);
 				add(basedSkeletons);
 
-				FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
-				FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				var skeleTween = FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				var skyTween = FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				stageTweens.push(skeleTween);
+				stageTweens.push(skyTween);
 
 				ground = new BGSprite('backgrounds/iratus/ROCK_BG', -608, 324);
 				ground.antialiasing = ClientPrefs.globalAntialiasing;
@@ -917,9 +925,15 @@ class PlayState extends MusicBeatState
 				front.antialiasing = ClientPrefs.globalAntialiasing;
 				add(front);
 			case 'toyland':
-				var toyland:BGSprite = new BGSprite('backgrounds/BG_JULIAN', -600, 0);
-				toyland.scrollFactor.set(1, 1);
-				add(toyland);
+				toylandS = new BGSprite('backgrounds/julian', -1200, -350);
+				toylandS.scrollFactor.set(1, 1);
+				toylandS.scale.set(0.75, 0.75);
+				toylandS.antialiasing = ClientPrefs.globalAntialiasing;
+				add(toylandS);
+
+				pipipis = new BGSprite('backgrounds/pipi', -1500, -200);
+				pipipis.scrollFactor.set(0.8, 0.8);
+				pipipis.scale.set(0.9, 0.9);
 		}
 		switch (curStage)
 		{ // did another switch for stages here just to make sure it layers properly and it looks clean!! :P
@@ -976,6 +990,8 @@ class PlayState extends MusicBeatState
 		{
 			case 'stageLeakers':
 				add(mesacuatro);
+			case 'toyland':
+				add(pipipis);
 		}
 
 		devil = new FlxAnimate(0, 0, switch (PlayState.SONG.stage)
@@ -2128,6 +2144,12 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			for (tween in stageTweens)
+			{
+				if (tween != null)
+					tween.active = false;
+			}
+
 			for (tween in noteXYTweens)
 			{
 				if (tween != null)
@@ -2173,6 +2195,12 @@ class PlayState extends MusicBeatState
 				{
 					char.colorTween.active = true;
 				}
+			}
+
+			for (tween in stageTweens)
+			{
+				if (tween != null)
+					tween.active = true;
 			}
 
 			for (tween in noteXYTweens)
