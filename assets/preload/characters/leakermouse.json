@@ -52,13 +52,46 @@
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "MIKI LEFT ",
+			"name": "MIKI LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				92,
+				-78
+			],
+			"anim": "wafiu",
+			"fps": 24,
+			"name": "MIKI WAIFU",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-71
+			],
+			"anim": "book",
+			"fps": 24,
+			"name": "LEAKERS NOOBS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-105
+			],
+			"anim": "whats that",
+			"fps": 24,
+			"name": "MIKI WHATS THAT",
 			"indices": []
 		}
 	],
-	"dataType": "SPARROW",
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/MIKI_LEAKED",
+	"image": "characters/leakers/MICKEY LEAKER",
 	"position": [
 		-70,
 		0
@@ -75,5 +108,5 @@
 		-480
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

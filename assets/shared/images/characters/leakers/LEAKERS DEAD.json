@@ -1,0 +1,4167 @@
+{
+  "frames": {
+    "LEAKERS BALACEADOS0026": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 935.2,
+        "h": 186.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 423.20000000000005,
+        "w": 935.2,
+        "h": 186.4
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0028": {
+      "frame": {
+        "x": 8,
+        "y": 210.4,
+        "w": 924,
+        "h": 192.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 416.8,
+        "w": 924,
+        "h": 192.8
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0030": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0024": {
+      "frame": {
+        "x": 8,
+        "y": 630.4000000000001,
+        "w": 820.8000000000001,
+        "h": 359.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 250.4,
+        "w": 820.8000000000001,
+        "h": 359.20000000000005
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0002": {
+      "frame": {
+        "x": 959.2,
+        "y": 8,
+        "w": 738.4000000000001,
+        "h": 403.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21.6,
+        "y": 264,
+        "w": 738.4000000000001,
+        "h": 403.20000000000005
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0026": {
+      "frame": {
+        "x": 947.2,
+        "y": 427.20000000000005,
+        "w": 711.2,
+        "h": 558.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 104.80000000000001,
+        "w": 711.2,
+        "h": 558.4
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0025": {
+      "frame": {
+        "x": 8,
+        "y": 1005.6,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0009": {
+      "frame": {
+        "x": 726.4000000000001,
+        "y": 1005.6,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0005": {
+      "frame": {
+        "x": 8,
+        "y": 1678.4,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0013": {
+      "frame": {
+        "x": 726.4000000000001,
+        "y": 1678.4,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0014": {
+      "frame": {
+        "x": 1713.6000000000001,
+        "y": 8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8.8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0006": {
+      "frame": {
+        "x": 1674.4,
+        "y": 674.4000000000001,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8.8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0010": {
+      "frame": {
+        "x": 1444.8000000000002,
+        "y": 1340.8000000000002,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8.8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0001": {
+      "frame": {
+        "x": 8,
+        "y": 2351.2000000000003,
+        "w": 686.4000000000001,
+        "h": 376
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18.400000000000002,
+        "y": 285.6,
+        "w": 686.4000000000001,
+        "h": 376
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0011": {
+      "frame": {
+        "x": 1444.8000000000002,
+        "y": 2007.2,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0007": {
+      "frame": {
+        "x": 2428.8,
+        "y": 8,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0003": {
+      "frame": {
+        "x": 2428.8,
+        "y": 648,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0015": {
+      "frame": {
+        "x": 2389.6,
+        "y": 1288,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0016": {
+      "frame": {
+        "x": 2134.4,
+        "y": 2007.2,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0008": {
+      "frame": {
+        "x": 8,
+        "y": 2743.2000000000003,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0004": {
+      "frame": {
+        "x": 688,
+        "y": 2743.2000000000003,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0012": {
+      "frame": {
+        "x": 1368,
+        "y": 2647.2000000000003,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0024": {
+      "frame": {
+        "x": 2048,
+        "y": 2647.2000000000003,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0027": {
+      "frame": {
+        "x": 3118.4,
+        "y": 8,
+        "w": 612,
+        "h": 485.6
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55.2,
+        "y": 180.8,
+        "w": 612,
+        "h": 485.6
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0022": {
+      "frame": {
+        "x": 3118.4,
+        "y": 509.6,
+        "w": 596,
+        "h": 392.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 188.8,
+        "y": 149.6,
+        "w": 596,
+        "h": 392.8
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0028": {
+      "frame": {
+        "x": 710.4000000000001,
+        "y": 2351.2000000000003,
+        "w": 580.8000000000001,
+        "h": 355.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 318.40000000000003,
+        "w": 580.8000000000001,
+        "h": 355.20000000000005
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0003": {
+      "frame": {
+        "x": 3118.4,
+        "y": 918.4000000000001,
+        "w": 556.8000000000001,
+        "h": 236.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 209.60000000000002,
+        "w": 556.8000000000001,
+        "h": 236.8
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0004": {
+      "frame": {
+        "x": 3118.4,
+        "y": 1171.2,
+        "w": 508.8,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 184,
+        "y": 0,
+        "w": 508.8,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0007": {
+      "frame": {
+        "x": 3079.2000000000003,
+        "y": 1734.4,
+        "w": 528,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 165.60000000000002,
+        "y": 0,
+        "w": 528,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0006": {
+      "frame": {
+        "x": 2728,
+        "y": 2639.2000000000003,
+        "w": 522.4,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 171.20000000000002,
+        "y": 0,
+        "w": 522.4,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0005": {
+      "frame": {
+        "x": 8,
+        "y": 3375.2000000000003,
+        "w": 520.8000000000001,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 172,
+        "y": 0,
+        "w": 520.8000000000001,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0008": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0016": {
+      "frame": {
+        "x": 1032.8,
+        "y": 3375.2000000000003,
+        "w": 476.8,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 219.20000000000002,
+        "y": 4,
+        "w": 476.8,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0001": {
+      "frame": {
+        "x": 1525.6000000000001,
+        "y": 3279.2000000000003,
+        "w": 488,
+        "h": 542.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 189.60000000000002,
+        "y": 4.800000000000001,
+        "w": 488,
+        "h": 542.4
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0002": {
+      "frame": {
+        "x": 2029.6000000000001,
+        "y": 3279.2000000000003,
+        "w": 491.20000000000005,
+        "h": 542.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 189.60000000000002,
+        "y": 4.800000000000001,
+        "w": 491.20000000000005,
+        "h": 542.4
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0003": {
+      "frame": {
+        "x": 2536.8,
+        "y": 3279.2000000000003,
+        "w": 470.40000000000003,
+        "h": 542.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 210.4,
+        "y": 4.800000000000001,
+        "w": 470.40000000000003,
+        "h": 542.4
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0018": {
+      "frame": {
+        "x": 3023.2000000000003,
+        "y": 3202.4,
+        "w": 481.6,
+        "h": 539.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 215.20000000000002,
+        "y": 8,
+        "w": 481.6,
+        "h": 539.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0020": {
+      "frame": {
+        "x": 3746.4,
+        "y": 8,
+        "w": 504.8,
+        "h": 528
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 205.60000000000002,
+        "y": 18.400000000000002,
+        "w": 504.8,
+        "h": 528
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0044": {
+      "frame": {
+        "x": 3730.4,
+        "y": 552,
+        "w": 520,
+        "h": 348.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 321.6,
+        "w": 520,
+        "h": 348.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0001": {
+      "frame": {
+        "x": 3730.4,
+        "y": 916.8000000000001,
+        "w": 504.8,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 163.20000000000002,
+        "w": 504.8,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0029": {
+      "frame": {
+        "x": 2814.4,
+        "y": 2297.6,
+        "w": 496,
+        "h": 234.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 123.2,
+        "y": 433.6,
+        "w": 496,
+        "h": 234.4
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0046": {
+      "frame": {
+        "x": 3643.2000000000003,
+        "y": 1216,
+        "w": 492.8,
+        "h": 272.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 397.6,
+        "w": 492.8,
+        "h": 272.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH LOOP0002": {
+      "frame": {
+        "x": 3643.2000000000003,
+        "y": 1504.8000000000002,
+        "w": 488.8,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0.8,
+        "w": 488.8,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 488.8,
+        "h": 284
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0050": {
+      "frame": {
+        "x": 3623.2000000000003,
+        "y": 1804,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 387.20000000000005,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH LOOP0001": {
+      "frame": {
+        "x": 3623.2000000000003,
+        "y": 2103.2000000000003,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0.8,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 488.8,
+        "h": 284
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0030": {
+      "frame": {
+        "x": 3520.8,
+        "y": 2402.4,
+        "w": 483.20000000000005,
+        "h": 208
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 467.20000000000005,
+        "w": 483.20000000000005,
+        "h": 208
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0048": {
+      "frame": {
+        "x": 3520.8,
+        "y": 2626.4,
+        "w": 483.20000000000005,
+        "h": 284.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 385.6,
+        "w": 483.20000000000005,
+        "h": 284.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH LOOP0003": {
+      "frame": {
+        "x": 3520.8,
+        "y": 2927.2000000000003,
+        "w": 482.40000000000003,
+        "h": 284
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 482.40000000000003,
+        "h": 284
+      },
+      "sourceSize": {
+        "w": 488.8,
+        "h": 284
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0031": {
+      "frame": {
+        "x": 3023.2000000000003,
+        "y": 3757.6000000000004,
+        "w": 463.20000000000005,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 157.60000000000002,
+        "y": 522.4,
+        "w": 463.20000000000005,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0032": {
+      "frame": {
+        "x": 3502.4,
+        "y": 3757.6000000000004,
+        "w": 463.20000000000005,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 157.60000000000002,
+        "y": 525.6,
+        "w": 463.20000000000005,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0005": {
+      "frame": {
+        "x": 3520.8,
+        "y": 3227.2000000000003,
+        "w": 461.6,
+        "h": 364
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 82.4,
+        "w": 461.6,
+        "h": 364
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0006": {
+      "frame": {
+        "x": 8,
+        "y": 3938.4,
+        "w": 461.6,
+        "h": 446.40000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 0,
+        "w": 461.6,
+        "h": 446.40000000000003
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0034": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0008": {
+      "frame": {
+        "x": 485.6,
+        "y": 3938.4,
+        "w": 461.6,
+        "h": 314.40000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 132,
+        "w": 461.6,
+        "h": 314.40000000000003
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0009": {
+      "frame": {
+        "x": 2814.4,
+        "y": 2548,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 384,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0007": {
+      "frame": {
+        "x": 963.2,
+        "y": 3938.4,
+        "w": 461.6,
+        "h": 390.40000000000003
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.200000000000003,
+        "y": 56,
+        "w": 461.6,
+        "h": 390.40000000000003
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0033": {
+      "frame": {
+        "x": 485.6,
+        "y": 4268.8,
+        "w": 461.6,
+        "h": 96.80000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 573.6,
+        "w": 461.6,
+        "h": 96.80000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0009": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0010": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0011": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0012": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0013": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0014": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0015": {
+      "frame": {
+        "x": 544.8000000000001,
+        "y": 3375.2000000000003,
+        "w": 472,
+        "h": 547.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 221.60000000000002,
+        "y": 0,
+        "w": 472,
+        "h": 547.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0017": {
+      "frame": {
+        "x": 1032.8,
+        "y": 3375.2000000000003,
+        "w": 476.8,
+        "h": 543.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 219.20000000000002,
+        "y": 4,
+        "w": 476.8,
+        "h": 543.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0019": {
+      "frame": {
+        "x": 3023.2000000000003,
+        "y": 3202.4,
+        "w": 481.6,
+        "h": 539.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 215.20000000000002,
+        "y": 8,
+        "w": 481.6,
+        "h": 539.2
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0021": {
+      "frame": {
+        "x": 3746.4,
+        "y": 8,
+        "w": 504.8,
+        "h": 528
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 205.60000000000002,
+        "y": 18.400000000000002,
+        "w": 504.8,
+        "h": 528
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0023": {
+      "frame": {
+        "x": 3118.4,
+        "y": 509.6,
+        "w": 596,
+        "h": 392.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 188.8,
+        "y": 149.6,
+        "w": 596,
+        "h": 392.8
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0025": {
+      "frame": {
+        "x": 8,
+        "y": 630.4000000000001,
+        "w": 820.8000000000001,
+        "h": 359.20000000000005
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 250.4,
+        "w": 820.8000000000001,
+        "h": 359.20000000000005
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0027": {
+      "frame": {
+        "x": 8,
+        "y": 8,
+        "w": 935.2,
+        "h": 186.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 423.20000000000005,
+        "w": 935.2,
+        "h": 186.4
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0029": {
+      "frame": {
+        "x": 8,
+        "y": 210.4,
+        "w": 924,
+        "h": 192.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 416.8,
+        "w": 924,
+        "h": 192.8
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0031": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0032": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0033": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0034": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0035": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0036": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0037": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0038": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0039": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0040": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0041": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0042": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0043": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0044": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0045": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0046": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0047": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0048": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0049": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0050": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0051": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0052": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0053": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0054": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0055": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0056": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0057": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0058": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0059": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0060": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0061": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0062": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0063": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0064": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0065": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0066": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0067": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0068": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0069": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0070": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0071": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0072": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0073": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0074": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0075": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0076": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0077": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0078": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0079": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0080": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0081": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0082": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0083": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0084": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0085": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0086": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0087": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0088": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0089": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0090": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0091": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0092": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0093": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0094": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0095": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0096": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0097": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0098": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0099": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0100": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0101": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0102": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0103": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0104": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0105": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0106": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0107": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS BALACEADOS0108": {
+      "frame": {
+        "x": 8,
+        "y": 419.20000000000005,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8.8,
+        "y": 414.40000000000003,
+        "w": 923.2,
+        "h": 195.20000000000002
+      },
+      "sourceSize": {
+        "w": 943.2,
+        "h": 609.6
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0002": {
+      "frame": {
+        "x": 3730.4,
+        "y": 916.8000000000001,
+        "w": 504.8,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 163.20000000000002,
+        "w": 504.8,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH CONFIRM0004": {
+      "frame": {
+        "x": 3118.4,
+        "y": 918.4000000000001,
+        "w": 556.8000000000001,
+        "h": 236.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22.400000000000002,
+        "y": 209.60000000000002,
+        "w": 556.8000000000001,
+        "h": 236.8
+      },
+      "sourceSize": {
+        "w": 579.2,
+        "h": 446.40000000000003
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0017": {
+      "frame": {
+        "x": 8,
+        "y": 1678.4,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0018": {
+      "frame": {
+        "x": 1674.4,
+        "y": 674.4000000000001,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8.8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0019": {
+      "frame": {
+        "x": 2428.8,
+        "y": 8,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0020": {
+      "frame": {
+        "x": 8,
+        "y": 2743.2000000000003,
+        "w": 664,
+        "h": 616
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20.8,
+        "y": 52,
+        "w": 664,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0021": {
+      "frame": {
+        "x": 726.4000000000001,
+        "y": 1005.6,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11.200000000000001,
+        "y": 0,
+        "w": 702.4000000000001,
+        "h": 656.8000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0022": {
+      "frame": {
+        "x": 1444.8000000000002,
+        "y": 1340.8000000000002,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8.8,
+        "w": 699.2,
+        "h": 650.4000000000001
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0023": {
+      "frame": {
+        "x": 1444.8000000000002,
+        "y": 2007.2,
+        "w": 673.6,
+        "h": 624
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10.4,
+        "y": 45.6,
+        "w": 673.6,
+        "h": 624
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0035": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0036": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0037": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0038": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0039": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0040": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0041": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0042": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0043": {
+      "frame": {
+        "x": 2160,
+        "y": 1928,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 608,
+        "w": 461.6,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0045": {
+      "frame": {
+        "x": 3730.4,
+        "y": 552,
+        "w": 520,
+        "h": 348.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 321.6,
+        "w": 520,
+        "h": 348.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0047": {
+      "frame": {
+        "x": 3643.2000000000003,
+        "y": 1216,
+        "w": 492.8,
+        "h": 272.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 397.6,
+        "w": 492.8,
+        "h": 272.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0049": {
+      "frame": {
+        "x": 3520.8,
+        "y": 2626.4,
+        "w": 483.20000000000005,
+        "h": 284.8
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 385.6,
+        "w": 483.20000000000005,
+        "h": 284.8
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0051": {
+      "frame": {
+        "x": 3623.2000000000003,
+        "y": 1804,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 387.20000000000005,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0052": {
+      "frame": {
+        "x": 3623.2000000000003,
+        "y": 1804,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 387.20000000000005,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LEAKERS DEATH0053": {
+      "frame": {
+        "x": 3623.2000000000003,
+        "y": 1804,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 158.4,
+        "y": 387.20000000000005,
+        "w": 485.6,
+        "h": 283.2
+      },
+      "sourceSize": {
+        "w": 760,
+        "h": 675.2
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "LEAKERS DEAD.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 4259,
+      "h": 4393
+    },
+    "scale": 0.8
+  }
+}

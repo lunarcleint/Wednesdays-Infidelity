@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				2,
+				-120
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BOOK MIKI IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				-137
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BOOK MIKI RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-148,
+				-131
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BOOK MIKI LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-89,
+				-91
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BOOK MIKI UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-87,
+				-175
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BOOK MIKI DOWN",
+			"indices": []
+		}
+	],
+	"dataType": "JSON",
+	"no_antialiasing": false,
+	"image": "characters/leakers/MICKEY LEAKER",
+	"position": [
+		-70,
+		0
+	],
+	"healthicon": "mickeyandsatan",
+	"flip_x": true,
+	"healthbar_colors": [
+		83,
+		71,
+		71
+	],
+	"camera_position": [
+		-10,
+		-480
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

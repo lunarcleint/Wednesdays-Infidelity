@@ -54,25 +54,48 @@
 			"anim": "singRIGHT",
 			"indices": [],
 			"name": "LEAKER 2 RIGHT"
+		},
+		{
+			"offsets": [
+				117,
+				15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "floss",
+			"loop": true,
+			"name": "floss"
+		},
+		{
+			"offsets": [
+				20,
+				33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "kiss ass",
+			"loop": false,
+			"name": "Leaker amante del poto"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/mwehehehe/LEAKER_2",
+	"image": "characters/leakers/LEAKER 2",
 	"position": [
 		10,
 		120
 	],
-	"healthicon": "bf",
+	"healthicon": "leakers",
 	"flip_x": false,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		56,
+		59,
+		57
 	],
 	"camera_position": [
 		0,
 		0
 	],
 	"sing_duration": 4.5,
-	"scale": 1
+	"scale": 1.2
 }

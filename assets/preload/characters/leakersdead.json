@@ -1,0 +1,68 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-327,
+				-334
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "LEAKERS DEATH LOOP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-303,
+				-140
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "LEAKERS DEATH CONFIRM",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shoot",
+			"loop": false,
+			"name": "LEAKERS BALACEADOS"
+		},
+		{
+			"offsets": [
+				-137,
+				130
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "LEAKERS DEATH0"
+		}
+	],
+	"dataType": "JSON",
+	"no_antialiasing": false,
+	"image": "characters/leakers/LEAKERS DEAD",
+	"position": [
+		0,
+		370
+	],
+	"healthicon": "leakers",
+	"flip_x": true,
+	"healthbar_colors": [
+		56,
+		59,
+		57
+	],
+	"camera_position": [
+		40,
+		140
+	],
+	"sing_duration": 4.2,
+	"scale": 1.2
+}

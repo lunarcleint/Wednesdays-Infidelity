@@ -1,3 +1,21 @@
+function onCreate()
+{
+	if (PlayState.leakSatan != null)
+	{
+		PlayState.leakSatan.animation.callback = function(n, f, i)
+		{
+			if (n == "idle")
+			{
+				PlayState.leakSatan.visible = false;
+			}
+			else
+			{
+				PlayState.leakSatan.visible = true;
+			}
+		}
+	}
+}
+
 function onStepHit()
 {
 	switch (curStep)
@@ -32,6 +50,13 @@ function onStepHit()
 					}
 				});
 			}
+		case 15:
+			if (PlayState.leakSatan != null)
+			{
+				PlayState.leakSatan.playAnim("leakers");
+				PlayState.leakSatan.specialAnim = true;
+			}
+
 		case 320:
 			PlayState.removeCinematicBars(0.000001);
 			var objs = [

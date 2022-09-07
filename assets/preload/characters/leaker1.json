@@ -54,11 +54,44 @@
 			"anim": "singRIGHT",
 			"indices": [],
 			"name": "LEAKER RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				26
+			],
+			"anim": "dig in ass",
+			"fps": 24,
+			"name": "CELPHONE",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				174,
+				137
+			],
+			"anim": "bitch",
+			"fps": 24,
+			"name": "leaker angry",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				12,
+				26
+			],
+			"anim": "dig in assEnd",
+			"fps": 24,
+			"name": "CELPHONE0092",
+			"indices": []
 		}
 	],
-	"dataType": "SPARROW",
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/mwehehehe/LEAKER_1",
+	"image": "characters/leakers/LEAKER 1",
 	"position": [
 		0,
 		370
@@ -75,5 +108,5 @@
 		0
 	],
 	"sing_duration": 4.2,
-	"scale": 1
+	"scale": 1.2
 }

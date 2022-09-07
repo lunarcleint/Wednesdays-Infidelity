@@ -25,6 +25,10 @@ class Init extends FlxState
 		super.create();
 
 		#if cpp
+		CppAPI.darkMode();
+		#end
+
+		#if cpp
 		cpp.NativeGc.enable(true);
 		cpp.NativeGc.run(true);
 		#end
@@ -64,10 +68,6 @@ class Init extends FlxState
 		ClientPrefs.loadDefaultKeys();
 
 		Progression.load();
-
-		#if cpp
-		CppAPI.darkMode();
-		#end
 
 		Paths.excludeAsset('assets/preload/images/kevin_normal.png');
 		CoolUtil.precacheImage('kevin_normal', 'preload');

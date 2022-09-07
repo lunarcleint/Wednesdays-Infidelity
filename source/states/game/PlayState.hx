@@ -763,16 +763,22 @@ class PlayState extends MusicBeatState
 				mesacuatro.scrollFactor.set(1.1, 0.9);
 				mesacuatro.antialiasing = ClientPrefs.globalAntialiasing;
 
-				osbaldo = new FlxSprite(1300, 150);
-				osbaldo.frames = Paths.getSparrowAtlas('backgrounds/leakers/OSWALD');
+				osbaldo = new FlxSprite();
+				osbaldo.frames = Paths.getJSONAtlas('backgrounds/leakers/oswald');
+				osbaldo.scale.set(1.2, 1.2);
+				osbaldo.updateHitbox();
+				osbaldo.setPosition(1300, 150);
 				osbaldo.animation.addByPrefix('idle', 'mesa OSWALD', 24, false);
 				osbaldo.scrollFactor.set(1.05, 1.05);
 				osbaldo.antialiasing = ClientPrefs.globalAntialiasing;
-				osbaldo.scale.set(0.76, 0.76);
+				osbaldo.scale.set(0.96, 0.96);
 
-				devs = new FlxSprite(200, 100);
-				devs.frames = Paths.getSparrowAtlas('backgrounds/leakers/DEVS_LEAKED');
+				devs = new FlxSprite();
+				devs.frames = Paths.getJSONAtlas('backgrounds/leakers/DEVS');
 				devs.animation.addByPrefix('idle', 'DEVS', 24, false);
+				devs.scale.set(1.2, 1.2);
+				devs.updateHitbox();
+				devs.setPosition(200, 100);
 				devs.scrollFactor.set(1.05, 1.05);
 				devs.antialiasing = ClientPrefs.globalAntialiasing;
 
