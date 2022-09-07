@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-75,
+				-150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "risa",
+			"indices": [],
+			"name": "Satan-laugh"
+		},
+		{
+			"offsets": [
+				-70,
+				-130
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle-fiddle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/fiddles-test",
+	"position": [
+		130,
+		-80
+	],
+	"healthicon": "squid-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		35,
+		251
+	],
+	"camera_position": [
+		-160,
+		30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

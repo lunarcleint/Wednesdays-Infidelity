@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fiddles-test.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Satan-laugh0000" x="0" y="0" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0001" x="552" y="0" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0002" x="1104" y="0" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0003" x="0" y="781" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0004" x="552" y="781" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0005" x="1104" y="781" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0006" x="0" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0007" x="552" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0008" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0009" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0010" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0011" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0012" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0013" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="Satan-laugh0014" x="1104" y="1562" width="552" height="781"/>
+	<SubTexture name="idle-fiddles0000" x="0" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0001" x="0" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0002" x="565" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0003" x="565" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0004" x="1130" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0005" x="1130" y="2343" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0006" x="0" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0007" x="0" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0008" x="565" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0009" x="565" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0010" x="1130" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0011" x="1130" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0012" x="1130" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0013" x="1130" y="3132" width="565" height="789"/>
+	<SubTexture name="idle-fiddles0014" x="1130" y="3132" width="565" height="789"/>
+</TextureAtlas>
