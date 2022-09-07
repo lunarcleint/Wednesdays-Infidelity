@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Mouse idle",
-			"indices": []
+			"indices": [],
+			"name": "Mouse idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-6,
-				15
+				64,
+				-5
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Mouse Left",
-			"indices": []
+			"indices": [],
+			"name": "Mouse Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				9,
-				-154
+				-81,
+				-244
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Mouse Down",
-			"indices": []
+			"indices": [],
+			"name": "Mouse Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				6,
-				44
+				12,
+				-23
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "Mouse Up",
-			"indices": []
+			"indices": [],
+			"name": "Mouse Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-2,
-				3
+				-91,
+				-12
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Mouse Rigth",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mouse Rigth"
 		}
 	],
 	"dataType": "SPARROW",
