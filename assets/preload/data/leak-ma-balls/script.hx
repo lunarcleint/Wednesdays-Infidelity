@@ -18,7 +18,7 @@ function onCreate()
 
 function onUpdate()
 {
-	if (curStep >= 63 && curStep < 192)
+	if (curStep >= 57 && curStep < 192)
 	{
 		PlayState.defaultCamZoom = .9;
 		PlayState.camFollow.set(PlayState.boyfriend.getMidpoint().x + 120, PlayState.boyfriend.getMidpoint().y - 150);
