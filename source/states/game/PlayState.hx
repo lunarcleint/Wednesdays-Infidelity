@@ -422,10 +422,10 @@ class PlayState extends MusicBeatState
 			dadZoom: 0.8, // mushitsection == false
 		},
 		"toyland" => {
-			dadPos: [450.95, 520], // xx
-			bfPos: [852.9, 530], // xx2
-			bfZoom: 0.45, // mushitsection == true
-			dadZoom: 0.45, // mushitsection == false
+			dadPos: [550, 620], // xx
+			bfPos: [770, 600], // xx2
+			bfZoom: 0.5, // mushitsection == true
+			dadZoom: 0.5, // mushitsection == false
 		},
 		"vecindario" => {
 			dadPos: [420.95, 513], // xx
@@ -933,13 +933,13 @@ class PlayState extends MusicBeatState
 				add(gfSus);
 
 			case 'toyland':
-				toylandS = new BGSprite('backgrounds/julian', -1200, -350);
+				toylandS = new BGSprite('backgrounds/julian', -1840, -635);
 				toylandS.scrollFactor.set(1, 1);
 				toylandS.scale.set(0.75, 0.75);
 				toylandS.antialiasing = ClientPrefs.globalAntialiasing;
 				add(toylandS);
 
-				pipipis = new BGSprite('backgrounds/pipi', -1500, -200);
+				pipipis = new BGSprite('backgrounds/pipi', -1930, -580);
 				pipipis.scrollFactor.set(0.8, 0.8);
 				pipipis.scale.set(0.9, 0.9);
 		}
@@ -2507,7 +2507,7 @@ class PlayState extends MusicBeatState
 					case "susNightmare" | "fence":
 						diablo();
 					default:
-						if (curSong == 'hellhole')
+						if (curSong == 'Hellhole')
 							diablo();
 						else
 						{

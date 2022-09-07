@@ -199,9 +199,9 @@ function onStepHit()
 					}
 				});
 			}
-		case 2008:
+		case 2006:
 			PlayState.osbaldo.animation.play('die', true);
-			PlayState.osbaldo.offset.set(6, 58 / 10);
+			PlayState.osbaldo.offset.set(0.6, 4.8);
 		case 2021:
 			if (PlayState.gf != null)
 				PlayState.gf.visible = false;

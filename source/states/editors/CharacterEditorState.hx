@@ -109,7 +109,7 @@ class CharacterEditorState extends MusicBeatState
 		bf = new Character(400, 350, "leaker1");
 		bf.color = 0xFF000000;
 		bf.alpha = 1 / 3;
-		bf.visible = true;
+		bf.visible = false;
 		add(bf);
 
 		var pointer:FlxGraphic = FlxGraphic.fromClass(GraphicCursorCross);
