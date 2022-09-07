@@ -319,8 +319,6 @@ class PlayState extends MusicBeatState
 
 	var weekMissesBar:FlxSprite;
 
-	var gfSus:BGSprite;
-
 	// DODGE
 	private var dodgeKeys:Array<FlxKey> = [];
 
@@ -927,10 +925,6 @@ class PlayState extends MusicBeatState
 				var front:BGSprite = new BGSprite('backgrounds/sus/front bg', -639.35, -340);
 				front.antialiasing = ClientPrefs.globalAntialiasing;
 				add(front);
-
-				gfSus = new BGSprite('backgrounds/gf-amogus', 1300, 400, ['amongus-gf']);
-				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
-				add(gfSus);
 
 			case 'toyland':
 				toylandS = new BGSprite('backgrounds/julian', -1840, -635);
@@ -1563,14 +1557,8 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // make sure to also add the stage name here too
-					grain.alpha = 1;
-					grain.animation.play('idle');
-				case 'susNightmare':
-					if (curBeat % 1 == 0)
-					{
-						gfSus.dance(true);
-					}
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage' |
+					'susNightmare': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'stageLeakers':
@@ -1598,9 +1586,6 @@ class PlayState extends MusicBeatState
 					{
 						smallDemons.animation.play('idle', true);
 					}
-					grain.alpha = 1;
-					grain.animation.play('idle');
-				case 'susNightmare':
 					grain.alpha = 1;
 					grain.animation.play('idle');
 			}
@@ -5149,16 +5134,6 @@ class PlayState extends MusicBeatState
 				grain.animation.play('idle');
 				if (curBeat % 1 == 0)
 					basedSkeletons.animation.play('idle', true);
-
-			case 'susNightmare':
-				if (gfSus != null)
-					if (curBeat % 1 == 0)
-					{
-						gfSus.dance(true);
-					}
-
-				grain.alpha = 1;
-				grain.animation.play('idle');
 
 			case 'vesania':
 				if (curBeat % 2 == 0)

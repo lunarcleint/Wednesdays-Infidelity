@@ -1,97 +1,97 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "LEAKER IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				-50
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "LEAKER DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-79,
 				97
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKER UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "LEAKER UP"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				39,
 				13
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEAKER LEFT"
+			"fps": 24,
+			"name": "LEAKER LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				10,
 				-34
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "LEAKER RIGHT"
+			"fps": 24,
+			"name": "LEAKER RIGHT",
+			"indices": []
 		},
 		{
+			"offsets": [
+				12,
+				26
+			],
 			"loop": false,
-			"offsets": [
-				12,
-				26
-			],
+			"fps": 24,
 			"anim": "dig in ass",
-			"fps": 24,
-			"name": "CELPHONE",
-			"indices": []
+			"indices": [],
+			"name": "CELPHONE"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				174,
-				137
+				186,
+				139
 			],
-			"anim": "bitch",
+			"loop": true,
 			"fps": 24,
-			"name": "leaker angry",
-			"indices": []
+			"anim": "bitch",
+			"indices": [],
+			"name": "leaker angry"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				12,
 				26
 			],
-			"anim": "dig in assEnd",
+			"loop": true,
 			"fps": 24,
-			"name": "CELPHONE0092",
-			"indices": []
+			"anim": "dig in assEnd",
+			"indices": [],
+			"name": "CELPHONE0092"
 		}
 	],
 	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/leakers/LEAKER 1",
+	"image": "wcharacters/leakers/LEAKER 1",
 	"position": [
 		0,
 		370

@@ -9,7 +9,6 @@ function onCreate()
 	PlayState.blackFuck.screenCenter();
 	PlayState.add(PlayState.blackFuck);
 }
-	
 
 function onStepHit()
 {
@@ -36,14 +35,16 @@ function onStepHit()
 		}
 	}
 
-	if (curStep >= 240 && curStep <= 250) {
+	if (curStep >= 240 && curStep <= 250)
+	{
 		if (curStep % 2 == 0)
 		{
 			addCamZoom(0.1, 0.04);
 		}
 	}
 
-	if (curStep >= 252 && curStep <= 256) {
+	if (curStep >= 252 && curStep <= 256)
+	{
 		addCamZoom(0.1, 0.04);
 	}
 
@@ -55,9 +56,9 @@ function onStepHit()
 		}
 	}
 
-	switch (curStep) 
+	switch (curStep)
 	{
-		case 1: 
+		case 1:
 			PlayState.isCameraOnForcedPos = true;
 			PlayState.followChars = false;
 
@@ -65,7 +66,7 @@ function onStepHit()
 
 			PlayState.defaultCamZoom = PlayState.curCamera.dadZoom;
 
-			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 500, PlayState.dad.getGraphicMidpoint().y + 30);
+			PlayState.camFollow.set(PlayState.dad.getGraphicMidpoint().x + 400, PlayState.dad.getGraphicMidpoint().y - 30);
 		case 32:
 			FlxTween.tween(PlayState.camHUD, {alpha: 1}, 2);
 		case 64:
@@ -85,7 +86,8 @@ function addCamZoom(game, hud)
 	PlayState.camHUD.zoom += hud;
 }
 
-function addStageZoom(amount) {
+function addStageZoom(amount)
+{
 	PlayState.curCamera.bfZoom += amount;
 	PlayState.curCamera.dadZoom += amount;
 }

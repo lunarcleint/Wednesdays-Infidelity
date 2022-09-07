@@ -79,7 +79,13 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/c4peletini',
 				'242846'
 			],
-			['Zero', 'Zero', 'Story Writer, Art Director, Sprite Artist and BG Artist', 'https://twitter.com/zero_artist02', '003333'],
+			[
+				'Zero',
+				'Zero',
+				'Story Writer, Art Director, Sprite Artist and BG Artist',
+				'https://twitter.com/zero_artist02',
+				'003333'
+			],
 			[
 				'Kass8tto',
 				'Kass8tto',
@@ -87,10 +93,30 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/Kass8tto',
 				'cccccc'
 			],
+			[
+				"Marco Antonio",
+				'Marco',
+				'Among us sprite animator and oswald album artist',
+				'https://twitter.com/MarcoJurez19',
+				"f5d482"
+			],
 			['Lunar', 'Lunar', 'Main Programmer', 'https://twitter.com/lunarcleint', '6757f3'],
 			['Jloor', 'Jloor', 'Programmer', 'https://twitter.com/GamerJloor', 'fdc4ad'],
-			["Sandi", "Sandi", "Hellhole, Untold Loneliness, Vesania and Spring March musician", "https://www.twitter.com/Sandi334_", "eaeaea"],
-			["Awe", 'Awe', 'U.S, Versiculus Iratus, Needlemouse and Leak ma balls musician.', 'https://twitter.com/GoddessAwe', "3e2c6b"],
+			["Royal", 'Royal', 'Programmer', 'https://twitter.com/CoderRoyal', "e3baf7"],
+			[
+				"Sandi",
+				"Sandi",
+				"Hellhole, Untold Loneliness, Vesania and Spring March musician",
+				"https://www.twitter.com/Sandi334_",
+				"eaeaea"
+			],
+			[
+				"Awe",
+				'Awe',
+				'U.S, Versiculus Iratus, Needlemouse and Leak ma balls musician.',
+				'https://twitter.com/GoddessAwe',
+				"3e2c6b"
+			],
 			[
 				"Lean",
 				'Lean',
@@ -98,21 +124,12 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/NewLeandapper',
 				"816954"
 			],
-			["Flaconadir", 'Flaco', 'Cheddar week musician. Mickey and Oswald VA', 'https://youtube.com/c/Flaconadir', "9b2526"],
 			[
-				"Tok",
-				'Tok',
-				'Charter and Mokey Icon Artist',
-				'https://twitter.com/ThatOne_Kid39',
-				"725980"
-			],
-			["Royal", 'Royal', 'Coder', 'https://twitter.com/CoderRoyal', "e3baf7"],
-			[
-				"Marco Antonio",
-				'Marco',
-				'Among us sprite animator and oswald album artist',
-				'https://twitter.com/MarcoJurez19',
-				"f5d482"
+				"Flaconadir",
+				'Flaco',
+				'Cheddar week musician. Mickey and Oswald VA',
+				'https://youtube.com/c/Flaconadir',
+				"9b2526"
 			],
 			["iKenny", 'Kenny', 'Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
 			[
@@ -121,6 +138,13 @@ class CreditsState extends MusicBeatState
 				'Carnival in toyland Musician',
 				'https://twitter.com/reddudemodderxd',
 				"c9514b"
+			],
+			[
+				"Tok",
+				'Tok',
+				'Charter and Mokey Icon Artist',
+				'https://twitter.com/ThatOne_Kid39',
+				"725980"
 			],
 			['KINGF0X', 'Kingfox_', 'Voice actor', 'https://twitter.com/VOKINGF0X', '8f040b'],
 			[''],
