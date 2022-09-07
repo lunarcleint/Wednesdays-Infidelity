@@ -2493,7 +2493,7 @@ class PlayState extends MusicBeatState
 					case "susNightmare" | "fence":
 						diablo();
 					default:
-						if (curSong == 'hellhole')
+						if (curSong == 'Hellhole')
 							diablo();
 						else
 						{
