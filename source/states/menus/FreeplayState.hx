@@ -543,7 +543,7 @@ class FreeplayState extends MusicBeatState
 					selectSong();
 				});
 
-				FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.5, {ease: FlxEase.circIn});
+				FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.3, {ease: FlxEase.circIn});
 			}
 
 			if (Progression.beatMainWeek && Progression.badEnding && !Progression.beatHell)

@@ -33,13 +33,15 @@ class SpecsDetector extends MusicBeatState
 		var cpu:Bool = Capabilities.supports64BitProcesses;
 		var ram:UInt64 = CppAPI.obtainRAM();
 
+		trace('\n--- SYSTEM INFO ---\nMEMORY AMOUNT: $ram\nCPU 64 BITS: $cpu');
+
 		// cpu = false; testing methods
 		if (cpu && ram >= 4096)
 			return true;
 		else
 		{
-			return messageBox("WEDNESDAY'S INFIDELITY",
-				"Your PC does not meet the requirements W.I has.\nWhile you can still play the mod, you may experience framedrops and/or lag spikes.\n\nDo you want to play anyway?");
+			return messageBox("Wednesday's Infidelity",
+				"Your PC does not meet the requirements Wednesday's Infidelity has.\nWhile you can still play the mod, you may experience framedrops and/or lag spikes.\n\nDo you want to play anyway?");
 		}
 
 		return true;
