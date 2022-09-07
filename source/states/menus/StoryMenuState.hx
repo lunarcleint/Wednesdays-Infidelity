@@ -45,7 +45,6 @@ class StoryMenuState extends MusicBeatState
 
 	var curDifficulty:Int = 1;
 
-	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
 
 	private static var curWeek:Int = 0;
@@ -95,14 +94,8 @@ class StoryMenuState extends MusicBeatState
 
 		scoreText = new FlxText(0, 0, 0, "SCORE: 49324858", 36);
 		scoreText.setFormat(Paths.font("waltographUI.ttf"), 32, FlxColor.WHITE, FlxTextAlign.RIGHT);
-		scoreText.screenCenter();
-		scoreText.x += 450;
-		scoreText.y += 320;
-
-		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
-		txtWeekTitle.setFormat(Paths.font("waltographUI.ttf"), 32, FlxColor.WHITE, RIGHT);
-		txtWeekTitle.alpha = 0.7;
-		txtWeekTitle.y += 600;
+		scoreText.x = FlxG.width - 300;
+		scoreText.y = FlxG.height - 200;
 
 		var rankText:FlxText = new FlxText(0, 10);
 		rankText.text = 'RANK: GREAT';
@@ -150,7 +143,6 @@ class StoryMenuState extends MusicBeatState
 		add(grpWeekCharacters);
 		// add(rankText);
 		add(scoreText);
-		add(txtWeekTitle);
 
 		lockedIcon = new FlxSprite(0, 0).loadGraphic(Paths.image('storymenu/Locked', 'preload'));
 		lockedIcon.screenCenter();
@@ -202,6 +194,9 @@ class StoryMenuState extends MusicBeatState
 			lerpScore = intendedScore;
 
 		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.updateHitbox();
+		scoreText.x = FlxG.width - scoreText.width - 10;
+		scoreText.y = FlxG.height - scoreText.height - 10;
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
@@ -362,12 +357,6 @@ class StoryMenuState extends MusicBeatState
 		var unlocked:Bool = !weekIsLocked(leWeek.fileName);
 
 		var leName:String = leWeek.storyName;
-		txtWeekTitle.text = leName.toUpperCase();
-		if (!unlocked)
-		{
-			txtWeekTitle.text = "???";
-		}
-		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
 
 		var bullShit:Int = 0;
 
