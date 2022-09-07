@@ -763,11 +763,11 @@ class PlayState extends MusicBeatState
 				mesatwo.scrollFactor.set(1.01, 1.01);
 				mesatwo.antialiasing = ClientPrefs.globalAntialiasing;
 
-				mesatres = new BGSprite('backgrounds/leakers/mesa3', -1400, 500);
+				mesatres = new BGSprite('backgrounds/leakers/mesa3', -1400, 550);
 				mesatres.scrollFactor.set(1.1, 0.9);
 				mesatres.antialiasing = ClientPrefs.globalAntialiasing;
 
-				mesacuatro = new BGSprite('backgrounds/leakers/mesa4', 1600, 500);
+				mesacuatro = new BGSprite('backgrounds/leakers/mesa4', 1600, 550);
 				mesacuatro.scrollFactor.set(1.1, 0.9);
 				mesacuatro.antialiasing = ClientPrefs.globalAntialiasing;
 
