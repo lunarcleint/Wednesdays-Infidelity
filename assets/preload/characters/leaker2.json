@@ -26,7 +26,7 @@
 			"loop": false,
 			"offsets": [
 				81,
-				247
+				241
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -35,7 +35,7 @@
 		},
 		{
 			"offsets": [
-				299,
+				287,
 				3
 			],
 			"loop": false,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				-110,
-				-44
+				-109,
+				-36
 			],
 			"loop": false,
 			"fps": 24,
@@ -60,21 +60,21 @@
 				117,
 				15
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "floss",
-			"loop": true,
+			"indices": [],
 			"name": "floss"
 		},
 		{
 			"offsets": [
-				20,
-				33
+				-7,
+				40
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "kiss ass",
-			"loop": false,
+			"indices": [],
 			"name": "Leaker amante del poto"
 		}
 	],

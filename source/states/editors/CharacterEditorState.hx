@@ -106,7 +106,7 @@ class CharacterEditorState extends MusicBeatState
 		charLayer = new FlxTypedGroup<Character>();
 		add(charLayer);
 
-		bf = new Character(400, 350, "leaker1");
+		bf = new Character(400, 350, "leaker2");
 		bf.color = 0xFF000000;
 		bf.alpha = 1 / 3;
 		bf.visible = false;
