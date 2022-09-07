@@ -513,6 +513,8 @@ class PlayState extends MusicBeatState
 
 	var hudStyle:String = "Default";
 
+	var stageTweens:Array<FlxTween> = [];
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -884,8 +886,10 @@ class PlayState extends MusicBeatState
 				basedSkeletons.scrollFactor.set(0.85, 0.9);
 				add(basedSkeletons);
 
-				FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
-				FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				var skeleTween = FlxTween.tween(basedSkeletons, {y: basedSkeletons.y + 60}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				var skyTween = FlxTween.tween(sky, {y: sky.y + 15}, 6, {ease: FlxEase.sineInOut, type: PINGPONG});
+				stageTweens.push(skeleTween);
+				stageTweens.push(skyTween);
 
 				ground = new BGSprite('backgrounds/iratus/ROCK_BG', -608, 324);
 				ground.antialiasing = ClientPrefs.globalAntialiasing;
@@ -2134,6 +2138,12 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			for (tween in stageTweens)
+			{
+				if (tween != null)
+					tween.active = false;
+			}
+
 			for (tween in noteXYTweens)
 			{
 				if (tween != null)
@@ -2179,6 +2189,12 @@ class PlayState extends MusicBeatState
 				{
 					char.colorTween.active = true;
 				}
+			}
+
+			for (tween in stageTweens)
+			{
+				if (tween != null)
+					tween.active = true;
 			}
 
 			for (tween in noteXYTweens)
