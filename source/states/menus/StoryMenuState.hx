@@ -47,7 +47,6 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
-	var stSprite:FlxSprite;
 
 	private static var curWeek:Int = 0;
 
@@ -61,6 +60,21 @@ class StoryMenuState extends MusicBeatState
 
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
+
+	final weekDescs:Map<String, String> = [
+		"Week Suicide" => "Description",
+		"Week Cheddar" => "Description_Cheddar",
+		"Week Julian" => "Description_Julian"
+	];
+
+	final weekTitles:Map<String, String> = [
+		"Week Suicide" => "Save the depressed mouse",
+		"Week Cheddar" => "Father_i_crave_cheddar",
+		"Week Julian" => "Brick_of_friendship"
+	];
+
+	var description:FlxSprite;
+	var weekTitle:FlxSprite;
 
 	override function create()
 	{
@@ -159,16 +173,21 @@ class StoryMenuState extends MusicBeatState
 		add(leftArrow);
 		add(rightArrow);
 
-		var description:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/Description', 'preload'));
-		description.screenCenter();
-		description.y -= 10;
-		description.x += 55;
+		description = new FlxSprite();
 		add(description);
 
-		var savemouse:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/Save the depressed mouse', 'preload'));
-		savemouse.screenCenter();
-		savemouse.y -= 300;
-		add(savemouse);
+		weekTitle = new FlxSprite();
+		add(weekTitle);
+
+		// Cache Images
+
+		for (map in [weekTitles, weekDescs])
+		{
+			for (week => image in map)
+			{
+				Paths.image('storymenu/$image', 'preload');
+			}
+		}
 
 		changeWeek();
 
@@ -380,6 +399,28 @@ class StoryMenuState extends MusicBeatState
 			if (lockedIcon != null)
 				lockedIcon.alpha = 0;
 		}
+
+		if (weekDescs.exists(leWeek.fileName))
+		{
+			description.loadGraphic(Paths.image('storymenu/${weekDescs[leWeek.fileName]}', 'preload'));
+			description.screenCenter();
+			description.y -= 10;
+			description.x += 55;
+			description.visible = true;
+		}
+		else
+			description.visible = false;
+
+		if (weekTitles.exists(leWeek.fileName))
+		{
+			weekTitle.loadGraphic(Paths.image('storymenu/${weekTitles[leWeek.fileName]}', 'preload'));
+			weekTitle.screenCenter();
+			weekTitle.y -= 300;
+			weekTitle.visible = true;
+		}
+		else
+			weekTitle.visible = false;
+
 		PlayState.storyWeek = curWeek;
 
 		CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
