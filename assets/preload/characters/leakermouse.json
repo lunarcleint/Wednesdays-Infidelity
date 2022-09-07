@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
-			"loop": true,
-			"offsets": [
-				2,
-				-120
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "MIKI IDLE",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				-58,
 				-161
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MIKI RIGHT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-58,
 				-190
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-28,
 				-110
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				79,
 				-127
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				92,
 				-78
 			],
-			"anim": "wafiu",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI WAIFU",
-			"indices": []
+			"anim": "wafiu",
+			"indices": [],
+			"name": "MIKI WAIFU"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-7,
 				-71
 			],
-			"anim": "book",
+			"loop": false,
 			"fps": 24,
-			"name": "LEAKERS NOOBS",
-			"indices": []
+			"anim": "book",
+			"indices": [],
+			"name": "LEAKERS NOOBS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				21,
 				-105
 			],
-			"anim": "whats that",
+			"loop": false,
 			"fps": 24,
-			"name": "MIKI WHATS THAT",
-			"indices": []
+			"anim": "whats that",
+			"indices": [],
+			"name": "MIKI WHATS THAT"
+		},
+		{
+			"offsets": [
+				2,
+				-120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "MIKI IDLE"
 		}
 	],
 	"dataType": "JSON",
