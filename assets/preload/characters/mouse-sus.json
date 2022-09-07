@@ -8,7 +8,7 @@
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Mickey SUS izquierda",
+			"name": "NeedleLeft",
 			"indices": []
 		},
 		{
@@ -19,7 +19,7 @@
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Mickey SUS down",
+			"name": "NeedleDown",
 			"indices": []
 		},
 		{
@@ -30,7 +30,7 @@
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "Mickey SUS arriba",
+			"name": "NeedleUp",
 			"indices": []
 		},
 		{
@@ -41,7 +41,7 @@
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Mickey SUS derecha",
+			"name": "NeedleRight",
 			"indices": []
 		},
 		{
@@ -53,11 +53,11 @@
 			"fps": 24,
 			"anim": "idle",
 			"loop": true,
-			"name": "Mickey SUS idle"
+			"name": "NeedleIdle"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Mickey_SUS",
+	"image": "characters/Mickey_Among_us_lebronjames",
 	"position": [
 		0,
 		0
