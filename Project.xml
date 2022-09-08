@@ -25,7 +25,7 @@
 		
 		COMMENT IN FINAL BUILD!!!
 	-->
-	<define name="PRIVATE_BUILD"/> 
+	<!--<define name="PRIVATE_BUILD"/> -->
 
 	<define name="VIDEOS_ALLOWED" if="windows" unless="32bits"/>
 
