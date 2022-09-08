@@ -102,72 +102,7 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		keyCombos = [
-			[FlxKey.SIX, FlxKey.SIX, FlxKey.SIX] => function()
-			{
-				selectedSomethin = true;
-
-				songs.remove(songs[curSelected]);
-				songs.insert(curSelected, new SongMetadata("Hellhole", 0, "icon-hellholemickey", FlxColor.fromRGB(42, 46, 40)));
-
-				grpSongs.remove(grpSongs.members[curSelected]);
-
-				iconArray[curSelected].visible = false;
-				iconArray.remove(iconArray[curSelected]);
-
-				var songText:Alphabet = new Alphabet(0, (70 * curSelected) + 30, songs[curSelected].songName, true, false);
-				songText.isMenuItem = true;
-				songText.instaLerp = true;
-				songText.targetY = 0; // yeah idk either
-				grpSongs.insert(curSelected, songText);
-
-				for (letter in songText.lettersArray)
-				{
-					FlxFlicker.flicker(letter, 1.6, 0.06, false);
-				}
-
-				if (songText.width > 980)
-				{
-					var textScale:Float = 980 / songText.width;
-					songText.scale.x = textScale;
-					for (letter in songText.lettersArray)
-					{
-						letter.x *= textScale;
-						letter.offset.x *= textScale;
-					}
-				}
-
-				Paths.currentModDirectory = songs[curSelected].folder;
-				var icon:HealthIcon = new HealthIcon(songs[curSelected].songCharacter);
-				icon.sprTracker = songText;
-
-				iconArray.insert(curSelected, icon);
-				add(icon);
-
-				FlxFlicker.flicker(icon, 1.6, 0.06, false);
-
-				// Lib.application.window.title = "66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666";
-
-				FlxG.sound.music.volume = 0;
-				stopmusic = true;
-				FlxG.camera.flash(FlxColor.BLACK, 1.2);
-				FlxG.sound.play(Paths.sound('hellholeSFX'));
-
-				remove(daStatic);
-				insert(members.indexOf(icon) + 1, daStatic);
-
-				FlxTween.tween(daStatic, {alpha: 0.5}, 1.4);
-
-				FlxTween.tween(FlxG.camera, {zoom: 1.7}, 1.4, {ease: FlxEase.circIn});
-
-				new FlxTimer().start(1.4, function(tmr:FlxTimer)
-				{
-					selectSong(true, true);
-				});
-
-				destroyFreeplayVocals();
-			}
-		];
+		keyCombos = [];
 
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
@@ -548,7 +483,6 @@ class FreeplayState extends MusicBeatState
 
 			if (Progression.beatMainWeek && Progression.badEnding && !Progression.beatHell)
 			{
-				checkCombos();
 			}
 		}
 

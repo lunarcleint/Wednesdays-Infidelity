@@ -1252,7 +1252,10 @@ class PlayState extends MusicBeatState
 				{
 					case 'wistfulness':
 						fadeIn(1);
-
+					case 'sunsets':
+						fadeIn(1);
+					case 'lastday':
+						fadeIn(1.5);
 					case 'hellhole':
 						fadeIn(0.6);
 
@@ -3583,6 +3586,10 @@ class PlayState extends MusicBeatState
 								Progression.beatMainWeek = true;
 
 								Progression.save();
+							case 'sunsets':
+								storyPlaylist[storyPlaylist.length] = 'versiculus-iratus';
+							case 'last-day' | 'last day':
+								storyPlaylist[storyPlaylist.length] = 'hellhole';
 						}
 					}
 				}
@@ -3617,15 +3624,13 @@ class PlayState extends MusicBeatState
 
 					if (WeekData.getWeekFileName() == 'Week Suicide')
 					{
-						switch (Paths.formatToSongPath(SONG.song))
+						switch (Paths.formatToSongPath(SONG.song).toLowerCase())
 						{
-							case 'sunsets':
+							case 'versiculus iratus' | 'versiculus-iratus':
 								Progression.goodEnding = true;
 
-							case 'last-day':
-								Progression.badEnding = true;
-
 							case 'hellhole':
+								Progression.badEnding = true;
 								Progression.beatHell = true;
 						}
 

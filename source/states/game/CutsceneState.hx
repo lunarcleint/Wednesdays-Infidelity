@@ -78,6 +78,9 @@ class CutsceneState extends MusicBeatState // PlayState is alreadly laggy enough
 				case 'unknown suffering':
 					video = "TransformUN";
 					skippable = Progression.beatMainWeek;
+				case 'versiculus iratus':
+					video = "good ending oh no";
+					skippable = Progression.goodEnding;
 				case 'dook':
 					video = "LIL DROPTOP - DOOK";
 					skippable = false;

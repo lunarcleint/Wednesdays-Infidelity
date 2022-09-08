@@ -447,8 +447,6 @@ class MainMenuState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 
-		trace(camFollow.x, camFollow.y);
-
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.animation.play('idle');
