@@ -463,7 +463,7 @@ class MainMenuState extends MusicBeatState
 					FlxG.camera.flash(FlxColor.BLACK, 0.2, null, true);
 				}
 				// FlxG.camera.flash(FlxColor.BLACK, 0.2);
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
+				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y + (20 * curSelected));
 				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
 				spr.offset.y = 0.15 * spr.frameHeight;
 				FlxG.log.add(spr.frameWidth);
