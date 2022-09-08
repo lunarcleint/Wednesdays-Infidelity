@@ -28,6 +28,8 @@ import lime.app.Application;
 import lime.graphics.Image;
 import lime.tools.WindowData;
 import openfl.Lib;
+import openfl.filters.BitmapFilter;
+import openfl.filters.ShaderFilter;
 import states.editors.MasterEditorMenu;
 import states.game.CutsceneState;
 import states.game.PlayState;
@@ -36,6 +38,7 @@ import states.menus.FreeplaySelectorState.ColorSwap;
 import states.options.OptionsState;
 import states.substates.ResetScoreSubState;
 import util.CoolUtil;
+import util.Shaders;
 
 using StringTools;
 
@@ -54,10 +57,12 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		#if ACHIEVEMENTS_ALLOWED 'awards',
+		#if ACHIEVEMENTS_ALLOWED
+		'awards',
 		#end
 		'credits',
-		#if !switch 'discord',
+		#if !switch
+		'discord',
 		#end
 		'options'
 	];
@@ -69,6 +74,11 @@ class MainMenuState extends MusicBeatState
 
 	@:isVar
 	var keyCombos(default, set):Map<Array<FlxKey>, Void->Void> = [];
+
+	var bloom:BloomEffect;
+	var chrom:ChromaticAberrationEffect;
+
+	var shaders:Array<ShaderEffect> = [];
 
 	function set_keyCombos(newCombos:Map<Array<FlxKey>, Void->Void>):Map<Array<FlxKey>, Void->Void>
 	{
@@ -175,6 +185,21 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		if (ClientPrefs.shaders)
+		{
+			if (ClientPrefs.intensiveShaders)
+			{
+				bloom = new BloomEffect(5.0);
+				addShader(bloom);
+			}
+
+			chrom = new ChromaticAberrationEffect();
+
+			addShader(chrom);
+		}
+
+		doChrome(null, false);
+
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.set(0, yScroll);
@@ -239,6 +264,7 @@ class MainMenuState extends MusicBeatState
 		resetText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		resetText.x = (FlxG.width - resetText.width) - 12;
 		resetText.visible = Progression.beatMainWeek;
+		resetText.cameras = [camAchievement];
 		add(resetText);
 
 		if (Progression.beatMainWeek)
@@ -282,7 +308,7 @@ class MainMenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'discord')
 				{
-					CoolUtil.browserLoad('https://discord.gg/S8Jrsau4Wm');
+					CoolUtil.browserLoad('https://discord.gg/KYGJvPkN8C');
 				}
 				else if (!Progression.beatMainWeek && optionShit[curSelected] == 'freeplay')
 				{
@@ -421,6 +447,8 @@ class MainMenuState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 
+		trace(camFollow.x, camFollow.y);
+
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.animation.play('idle');
@@ -506,5 +534,42 @@ class MainMenuState extends MusicBeatState
 		FlxG.sound.volume = 1;
 
 		Lib.application.window.title = "Wednesday's Infidelity";
+	}
+
+	function addShader(effect:ShaderEffect)
+	{
+		if (!ClientPrefs.shaders)
+			return;
+
+		shaders.push(effect);
+
+		var newCamEffects:Array<BitmapFilter> = [];
+
+		for (i in shaders)
+		{
+			newCamEffects.push(new ShaderFilter(i.shader));
+		}
+
+		FlxG.camera.setFilters(newCamEffects);
+	}
+
+	function doChrome(T:FlxTimer, ?setChrom:Bool = true)
+	{
+		if (!ClientPrefs.shaders)
+			return;
+
+		if (T != null)
+			T.cancel();
+
+		if (chrom != null && setChrom)
+			chrom.setChrome(FlxG.random.float(0.0, 0.002));
+
+		new FlxTimer().start(FlxG.random.float(0.08, 0.12), function(tmr:FlxTimer)
+		{
+			new FlxTimer().start(FlxG.random.float(0.7, 1.6), function(tmr:FlxTimer)
+			{
+				doChrome(tmr, true);
+			});
+		});
 	}
 }
