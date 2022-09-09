@@ -119,32 +119,12 @@
 				]
 			],
 			[
-				84610.430682537,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
 				87169.2542119488,
 				[
 					[
 						"Change Scroll Speed",
 						"1.2",
 						"1"
-					]
-				]
-			],
-			[
-				87433.9600943017,
-				[
-					[
-						"Flash White",
-						"",
-						""
 					]
 				]
 			],
@@ -219,42 +199,12 @@
 				]
 			],
 			[
-				114719.114155926,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				120052.44748926,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
 				125302.44748926,
 				[
 					[
 						"Change Scroll Speed",
 						"1.15",
 						"1"
-					]
-				]
-			],
-			[
-				125385.780822593,
-				[
-					[
-						"Flash White",
-						"",
-						""
 					]
 				]
 			],
@@ -309,26 +259,6 @@
 				]
 			],
 			[
-				147498.946088699,
-				[
-					[
-						"Change Scroll Speed",
-						"1.2",
-						"1"
-					]
-				]
-			],
-			[
-				147498.946088699,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
 				150165.612755366,
 				[
 					[
@@ -339,102 +269,12 @@
 				]
 			],
 			[
-				152832.279422033,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				154165.612755366,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				158165.612755366,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				159498.946088699,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				160832.279422033,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				162165.612755366,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
 				163498.946088699,
 				[
 					[
 						"Change Scroll Speed",
 						"1.15",
 						"0.5"
-					]
-				]
-			],
-			[
-				166165.612755366,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				168832.279422033,
-				[
-					[
-						"Flash White",
-						"",
-						""
-					]
-				]
-			],
-			[
-				171498.946088699,
-				[
-					[
-						"Flash White",
-						"",
-						""
 					]
 				]
 			],
@@ -9636,6 +9476,46 @@
 				"bpm": 135
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 135,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 135
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 135
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 135
+			},
+			{
 				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -9654,7 +9534,7 @@
 		"validScore": true,
 		"arrowSkin": "",
 		"needsVoices": true,
-		"speed": 2.5,
+		"speed": 2.3,
 		"bpm": 135
 	}
 }

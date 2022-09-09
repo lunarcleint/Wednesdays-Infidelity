@@ -327,9 +327,9 @@ class PlayState extends MusicBeatState
 	var dodgeTimers = new FlxTimerManager();
 
 	final dodgingInfo:Map<String, Float> = [
-		"time" => 0.9, // time given to dodge
-		"cooldown" => 0.2, // cool down
-		"lasting" => 0.4, // how much time hitting space lasts
+		"time" => (60 / 200) * 3, // time given to dodge
+		"cooldown" => (60 / 200) / 2, // cool down
+		"lasting" => (60 / 200) * 2, // how much time hitting space lasts
 	];
 
 	var _onCoolDown:Bool = false;
@@ -1298,9 +1298,16 @@ class PlayState extends MusicBeatState
 				case 'last-day':
 					if (ClientPrefs.intensiveShaders)
 					{
-						vhs = new util.Shaders.VHSEffect();
+						try
+						{
+							vhs = new util.Shaders.VHSEffect();
 
-						addShaderToCamera('camGame', vhs);
+							addShaderToCamera('camGame', vhs);
+						}
+						catch (e)
+						{
+							trace("SHADER PROBLEM");
+						}
 					}
 
 				case 'unknown-suffering':
@@ -2028,7 +2035,7 @@ class PlayState extends MusicBeatState
 				var newCharacter:String = event.value2;
 				addCharacterToList(newCharacter, charType);
 			case 'Do Syringe':
-				if (spaceBar == null)
+				if (spaceBar == null && !ClientPrefs.nubMode)
 				{
 					spaceBar = new FlxSprite(0, 0);
 					spaceBar.frames = Paths.getSparrowAtlas('mechanics/warning');
@@ -3379,7 +3386,8 @@ class PlayState extends MusicBeatState
 				camGame.visible = true;
 
 			case 'Do Syringe':
-				startDodge();
+				if (!ClientPrefs.nubMode)
+					startDodge();
 
 			case 'camGame Off':
 				camGame.visible = false;
@@ -3681,7 +3689,15 @@ class PlayState extends MusicBeatState
 				{
 					CustomFadeTransition.nextCamera = null;
 				}
-				MusicBeatState.switchState(new FreeplaySelectorState());
+				if (Progression.beatMainWeek)
+				{
+					MusicBeatState.switchState(new FreeplaySelectorState());
+				}
+				else
+				{
+					MusicBeatState.switchState(new MainMenuState());
+				}
+
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				FlxG.sound.music.loopTime = 15920;
 
@@ -4291,10 +4307,10 @@ class PlayState extends MusicBeatState
 					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad' | 'oswald-suicide':
 					notehealthdmg = 0.025;
 
-					if (health > 0.1)
+					if (health > 0.6)
 						if (note.isSustainNote)
 						{
-							health -= notehealthdmg / 2;
+							health -= notehealthdmg / 3;
 						}
 						else
 						{

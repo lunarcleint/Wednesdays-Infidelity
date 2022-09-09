@@ -37,7 +37,7 @@ class Init extends FlxState
 		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
 		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
 
-		FlxG.autoPause = false;
+		FlxG.autoPause = true;
 
 		Main.canToggleFullScreen = true;
 

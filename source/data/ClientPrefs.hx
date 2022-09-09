@@ -43,7 +43,8 @@ class ClientPrefs
 	public static var shaders:Bool = true;
 	public static var intensiveShaders:Bool = true;
 	public static var doNotShowWarnings:Bool = false;
-	public static var hudStyle = "Box Funkin";
+	public static var hudStyle:String = "Box Funkin";
+	public static var nubMode:Bool = false;
 
 	// Every key has two binds, add your key bind down here and then add your control on options/ControlsSubState.hx and Controls.hx
 	public static var keyBinds:Map<String, Array<FlxKey>> = [
@@ -113,6 +114,7 @@ class ClientPrefs
 		FlxG.save.data.intensiveShaders = intensiveShaders;
 		FlxG.save.data.doNotShowWarnings = doNotShowWarnings;
 		FlxG.save.data.hudStyle = hudStyle;
+		FlxG.save.data.nubMode = nubMode;
 
 		FlxG.save.flush();
 
@@ -281,6 +283,11 @@ class ClientPrefs
 		if (FlxG.save.data.doNotShowWarnings != null)
 		{
 			doNotShowWarnings = FlxG.save.data.doNotShowWarnings;
+		}
+
+		if (FlxG.save.data.nubMode != null)
+		{
+			nubMode = FlxG.save.data.nubMode;
 		}
 
 		if (FlxG.save.data.hudStyle != null)
