@@ -4,9 +4,6 @@
 
 	<app title="Wednesday's Infidelity" file="Wednesday's Infidelity" packageName="com.boxfunkin.infidelity" package="com.boxfunkin.infidelity" main="Main" version="PART 2" company="Box Funkin" />
 
-	<!--Switch Export with Unique ApplicationID and Icon-->
-	<set name="APP_ID" value="0x0100f6c013bbc000" />
-
 	<app preloader="flixel.system.FlxPreloader" />
 
 	<!--Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2-->
@@ -68,6 +65,9 @@
 	<assets path="assets/fonts" embed='true'/>
 
 	<assets path='assets/menu codes.txt' rename='MENU CODES.txt' />
+
+	<!-- No compiling to nintendo switch. -->
+	<error value="Nintendo switch is not supported" if="switch"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
