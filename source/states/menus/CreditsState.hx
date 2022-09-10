@@ -135,11 +135,17 @@ class CreditsState extends MusicBeatState
 			[
 				"ReddudeXD",
 				'Reddude',
-				'Kriman't Musician and Artist',
+				"Kriman't Musician and Artist",
 				'https://twitter.com/reddudemodderxd',
 				"c9514b"
 			],
-			["iKenny", 'Kenny', 'Carnival in Toyland Musician', 'https://twitter.com/KennyL_UwU', "7d5327"],
+			[
+				"iKenny",
+				'Kenny',
+				'Carnival in Toyland Musician',
+				'https://twitter.com/KennyL_UwU',
+				"7d5327"
+			],
 			[
 				"Tok",
 				'Tok',
