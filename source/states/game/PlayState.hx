@@ -4307,7 +4307,7 @@ class PlayState extends MusicBeatState
 					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad' | 'oswald-suicide':
 					notehealthdmg = 0.025;
 
-					if (health > 0.6)
+					if (health > 0.5)
 						if (note.isSustainNote)
 						{
 							health -= notehealthdmg / 3;
