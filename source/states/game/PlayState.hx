@@ -279,6 +279,7 @@ class PlayState extends MusicBeatState
 	//  Sus
 	var theamonguslys:FlxSprite;
 	var leansus:FlxSprite;
+	var gfSus:FlxSprite;
 
 	// iratus
 	var basedSkeletons:FlxSprite;
@@ -926,6 +927,13 @@ class PlayState extends MusicBeatState
 				front.antialiasing = ClientPrefs.globalAntialiasing;
 				add(front);
 
+				gfSus = new FlxSprite(1300, 400);
+				gfSus.frames = Paths.getSparrowAtlas('backgrounds/sus/gf-amogus', 'shared');
+				gfSus.antialiasing = ClientPrefs.globalAntialiasing;
+				gfSus.animation.addByPrefix("dance", "amongus-gf", 24, false);
+				gfSus.animation.play("dance", true);
+				add(gfSus);
+
 			case 'toyland':
 				toylandS = new BGSprite('backgrounds/julian', -1840, -635);
 				toylandS.scrollFactor.set(1, 1);
@@ -1567,8 +1575,7 @@ class PlayState extends MusicBeatState
 			// head bopping for bg characters on Mall
 			switch (curStage)
 			{
-				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage' |
-					'susNightmare': // make sure to also add the stage name here too
+				case 'vecindario' | 'bobux' | 'reefer' | 'inferno' | 'toyland' | 'chedder' | 'vecindariocover' | 'hell' | 'fence' | 'jankacStage': // make sure to also add the stage name here too
 					grain.alpha = 1;
 					grain.animation.play('idle');
 				case 'stageLeakers':
@@ -1595,6 +1602,13 @@ class PlayState extends MusicBeatState
 					if (curBeat % 2 == 0)
 					{
 						smallDemons.animation.play('idle', true);
+					}
+					grain.alpha = 1;
+					grain.animation.play('idle');
+				case 'susNightmare':
+					if (curBeat % 1 == 0)
+					{
+						gfSus.animation.play("dance", true);
 					}
 					grain.alpha = 1;
 					grain.animation.play('idle');
@@ -4161,6 +4175,12 @@ class PlayState extends MusicBeatState
 
 		health -= daNote.missHealth;
 
+		if (gf.curCharacter.toLowerCase() == "gato" && gf.animation.exists("risa"))
+		{
+			gf.playAnim("risa", true);
+			gf.specialAnim = true;
+		}
+
 		// For testing purposes
 		// trace(daNote.missHealth);
 		songMisses++;
@@ -4305,7 +4325,7 @@ class PlayState extends MusicBeatState
 			{
 				case 'mutant-mouse' | 'satan-mouse' | 'tiny-mouse-mad' | 'mouse-inferno' | 'mokey-sad-suicide' | 'jank' | 'satan' | 'smileeeeer' | 'suicide' |
 					'mouse-phase2' | 'mouse-smile' | 'mouse-happy' | 'satan-chad' | 'oswald-suicide':
-					notehealthdmg = 0.025;
+					notehealthdmg = 0.028;
 
 					if (health > 0.5)
 						if (note.isSustainNote)
@@ -5125,7 +5145,6 @@ class PlayState extends MusicBeatState
 						{
 							case 1:
 								theamonguslys.animation.play('walk', true);
-								trace("poo poo");
 							case 2:
 								leansus.animation.play('walk', true);
 						}
@@ -5133,6 +5152,11 @@ class PlayState extends MusicBeatState
 				}
 				grain.alpha = 1;
 				grain.animation.play('idle');
+
+				if (curBeat % 1 == 0)
+				{
+					gfSus.animation.play("dance", true);
+				}
 			case 'stageLeakers':
 				if (curBeat % 2 == 0)
 				{
