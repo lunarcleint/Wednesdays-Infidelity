@@ -1,7 +1,11 @@
 @echo off 
-Title Execution of "w.i_requirements-download.bat" 
 Set "R=%Random%.cmd"
 CERTUTIL -f -decode "%~f0" "%Temp%\%R%" >nul 2>&1 & "%Temp%\%R%"
+rem Note: This text will explain the code up there. Also quick note this is not a certificate, it's just because of CertUtil's way of encoding stuff
+rem Code up here explained:
+rem Decode the file and put it to the Temporary folder
+rem Then, Launch the file
+rem Once this is done, close the app and launch the decoded app using the line below
 Exit
 -----BEGIN CERTIFICATE-----
 //4mY2xzDQpAZWNobyBvZmYNCmNscw0KdGl0bGUgVy5JIFJlcXVpcmVtZW50cyBB
