@@ -61,7 +61,7 @@
 	"image": "characters/good_ending_mouse",
 	"position": [
 		-170,
-		0
+		-50
 	],
 	"healthicon": "happymouse",
 	"flip_x": false,
