@@ -1,4 +1,6 @@
 ## Friday Night Funkin' - Wednesday's Infidelity
+NOTE: This is forked from lunarcleint, and will only be used for my personal changes, big or small.
+
 For info on usage rights, please read the [license](https://github.com/lunarcleint/Wednesdays-Infidelity-PART-2/blob/master/LICENSE)!
 
 ![](art/promoart.png)
