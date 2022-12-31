@@ -1,5 +1,5 @@
 name: Feature Request
-description: No, i won't add 6K/etc to the engine or winning icons, stop asking for it. REQUESTING FOR A STAGE EDITOR WILL RESULT IN A BAN, I ALREADY SAID I WILL DO IT LATER GOD DAMN IT.
+description: If you want 6K+, Winning icons, etc., do them yourself, for pete's sake. And don't pester lunarcleint for features he ain't wanna do, either.
 labels: [enhancement]
 body:
   - type: textarea
@@ -20,5 +20,14 @@ body:
         - Stage Editor, 6K+ support, and winning icons.
         - Better LUA mod support idea
         - Code optimization that would make the game faster. (You should make a PR if this is your request, by the way.)
+    validations:
+      required: true
+  - type: dropdown
+    id: confirmacknowledgement
+    attributes:
+      label: One last thing - Do you acknowledge that you must do any of what you answered above if you request it?
+      options:
+        - Yeah, I'm well aware that I'd need to do this if I request it.
+        - Nah, I'll just whine about it.
     validations:
       required: true
