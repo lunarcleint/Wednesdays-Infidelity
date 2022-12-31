@@ -75,5 +75,6 @@
 		0
 	],
 	"sing_duration": 3.90000000000001,
-	"scale": 1.2
+	"scale": 1.2,
+	"//camshake_on_sing": "We should try to figure out how we're gonna shake the camera on specific characters singing."
 }
